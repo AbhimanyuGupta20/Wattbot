@@ -10,6 +10,12 @@ from llama_index.core.llms import ChatMessage, MessageRole
 import base64
 import json
 
+api_key = st.sidebar.text_input("Enter your OpenAI API Key here", type="password")
+if not api_key:
+    st.info("Please enter your OpenAI API key in the sidebar to continue.")
+    st.stop()
+os.environ["OPENAI_API_KEY"] = api_key
+
 @st.cache_resource
 def load_data():
     storage_context = StorageContext.from_defaults(persist_dir="./storage")
@@ -24,12 +30,12 @@ for message in st.session_state.messages:
         st.markdown(message["content"])   
 
 with st.chat_message("user"):
-    st.write("Hello! Feel free to ask any questions you may have about the environmental impact of Artificial Intelligence. Before we begin, please enter a valid OpenAI API key.")
+    st.write("Hello! Feel free to ask any questions you may have about the environmental impact of Artificial Intelligence.")
 
-api_key = st.sidebar.text_input("Enter your OpenAI API Key here", type="password")
-if not api_key:
-    st.info("Please enter your OpenAI API key in the sidebar to continue.")
-    st.stop()
+# api_key = st.sidebar.text_input("Enter your OpenAI API Key here", type="password")
+# if not api_key:
+#     st.info("Please enter your OpenAI API key in the sidebar to continue.")
+#     st.stop()
 
 def encode_image(img_path):
     with open(img_path, "rb") as image_file:
