@@ -1,0 +1,282 @@
+[
+    {
+        "doc_path": "extracted_data/document_5/doc_5.md",
+        "ref_id": "dodge2022",
+        "ref_url": "https://arxiv.org/pdf/2206.05229",
+        "img_id": "img-0.jpeg",
+        "img_uid": "dodge2022img-0.jpeg",
+        "context": "oth the energy consumed and the marginal carbon intensity during that time is what we want to record. This time-series data can estimate the cumulative emissions for that experiment at the end.\n\n# 5.1 Region\n\nHow much does the choice of datacenter region impact the emissions? And for a single region, how much variation occurs throughout the year? We address these questions in Figure 1, which shows carbon emissions that would beFAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\nDodge et al.\n\n![img-0.jpeg](img-0.jpeg)\nCO2 Grams Emitted, BERT Language Modeling\n2021\nFig. 1. Carbon emissions that would be emitted from training BERT (language modeling on 8 V100s for 36 hours) in 16 different regions (one region per line) at different times throughout the year. Each line is relatively flat, indicating the emissions in a single region during different months are relatively similar. There is large variation between the least carbon-intensive regions (the lowest lines) compared to the most carbon-intensive regions (",
+        "img_path": "extracted_data/document_5/img-0.jpeg",
+        "img_description": "The graph displays the monthly CO2 emissions in grams for different regions throughout the year 2021, illustrating notable fluctuations across regions such as Central US, Germany, and Australia. The y-axis represents CO2 emissions in grams ranging from 0k to 28k, while the x-axis indicates months from January to December. Each colored line corresponds to a specific region, allowing for a comparative analysis of CO2 output trends over the 12-month period."
+    },
+    {
+        "doc_path": "extracted_data/document_5/doc_5.md",
+        "ref_id": "dodge2022",
+        "ref_url": "https://arxiv.org/pdf/2206.05229",
+        "img_id": "img-1.jpeg",
+        "img_uid": "dodge2022img-1.jpeg",
+        "context": "f gasoline consumed is estimated to emit  $8.887 \\times 10^{-3}$  metric tons, one barrel of crude oil consumed is estimated to emit 0.43 metric tons, one average US home energy use is estimated to emit 8.30 metric tons (using the sum of emissions from generating electricity, natural gas, liquid petroleum, and fuel oil), and one rail car of coal is estimated to emit 181.29 metric tons.Measuring the Carbon Intensity of Al in Cloud Instances\n\nFAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\n![img-1.jpeg](img-1.jpeg)\nFig. 2. Emissions for our 11 experiments described in \u00a74. For each model we show a vertical blue bar, where the top of the bar is the max, the bottom is the min, and the black line represents the average emissions (across regions and time of year). First and fourth quartiles are represented by the light blue at the top and bottom of each vertical blue bar. The largest training runs (e.g., 6 billion parameter LM) releases a significant amount of emissions, no matter the region (and recall the 6 ",
+        "img_path": "extracted_data/document_5/img-1.jpeg",
+        "img_description": "The image is a bar graph comparing the CO2 emissions (in grams, log scale) of different models during operations, ranging from BERT fine-tune to ViT huge. Each model's CO2 emissions are depicted by blue bars, with labels on the y-axis for emissions alongside equivalent real-world activities such as charging a phone, driving a mile, or consuming a barrel of oil. The emission scale ranges from hundreds to over ten million grams, highlighting significant environmental impacts of larger models like ViT large and ViT huge."
+    },
+    {
+        "doc_path": "extracted_data/document_5/doc_5.md",
+        "ref_id": "dodge2022",
+        "ref_url": "https://arxiv.org/pdf/2206.05229",
+        "img_id": "img-2.jpeg",
+        "img_uid": "dodge2022img-2.jpeg",
+        "context": "imizing its total carbon emissions. This involves pausing and resuming the job, possibly multiple times, to avoid consuming energy when carbon intensity is high. Implementation: Find the 5 minute intervals with the lowest marginal emissions during the ( $N + \\text{job duration}$ ) hour window, and select enough intervals to add up to the job duration. Then simulate running the job onlyMeasuring the Carbon Intensity of Al in Cloud Instances\n\nFAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\n![img-2.jpeg](img-2.jpeg)\n(a) Flexible Start optimization for Dense 201.\n\n![img-3.jpeg](img-3.jpeg)\n(b) Flexible Start optimization for 6B parameters Transformer.\nFig. 3. What proportion of emissions can we expect to save if we change the start time by up to 24 hours? For very short experiments like DenseNet 201 (a), which ran for less than half an hour, we can find significant reduction, greater than  $30\\%$  in multiple regions, and up to  $80\\%$  in West US; for very long runs like training a 6 billion parameter lang",
+        "img_path": "extracted_data/document_5/img-2.jpeg",
+        "img_description": "The bar chart displays the percentage decrease in CO2 emissions across various regions, with time intervals of 6h, 12h, 18h, and 24h represented by different shades of green. The West US3 region shows the highest reduction, particularly noticeable at the 24h mark, while other regions like Australia and UK South exhibit moderate decreases. Overall, the graph highlights significant variations in emission reductions across both time and geographical locations."
+    },
+    {
+        "doc_path": "extracted_data/document_5/doc_5.md",
+        "ref_id": "dodge2022",
+        "ref_url": "https://arxiv.org/pdf/2206.05229",
+        "img_id": "img-3.jpeg",
+        "img_uid": "dodge2022img-3.jpeg",
+        "context": " job, possibly multiple times, to avoid consuming energy when carbon intensity is high. Implementation: Find the 5 minute intervals with the lowest marginal emissions during the ( $N + \\text{job duration}$ ) hour window, and select enough intervals to add up to the job duration. Then simulate running the job onlyMeasuring the Carbon Intensity of Al in Cloud Instances\n\nFAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\n![img-2.jpeg](img-2.jpeg)\n(a) Flexible Start optimization for Dense 201.\n\n![img-3.jpeg](img-3.jpeg)\n(b) Flexible Start optimization for 6B parameters Transformer.\nFig. 3. What proportion of emissions can we expect to save if we change the start time by up to 24 hours? For very short experiments like DenseNet 201 (a), which ran for less than half an hour, we can find significant reduction, greater than  $30\\%$  in multiple regions, and up to  $80\\%$  in West US; for very long runs like training a 6 billion parameter language model for 8 days (b), changing the start time by up to 24 hours leads",
+        "img_path": "extracted_data/document_5/img-3.jpeg",
+        "img_description": "The bar graph illustrates the percentage decrease in CO2 emissions across various regions, segmented by time intervals of 6, 12, 18, and 24 hours, with the \"West US2\" showing the highest decrease. Each region exhibits a trend where longer time intervals correlate with greater reductions in emissions. The trend is consistent across multiple regions including parts of the US, Canada, Europe, and Australia."
+    },
+    {
+        "doc_path": "extracted_data/document_5/doc_5.md",
+        "ref_id": "dodge2022",
+        "ref_url": "https://arxiv.org/pdf/2206.05229",
+        "img_id": "img-4.jpeg",
+        "img_uid": "dodge2022img-4.jpeg",
+        "context": "osite of the Flexible Start result: short experiments like DenseNet 201 only see emissions reductions smaller than  $10\\%$ , while the 6 billion transformer training run (our experiment with the largest carbon intensity) actually sees the largest decrease in emissions. See Figure 4 for two examples, with results for all 11 experiments in the appendix. This analysis is designed to highlight a use case where an AI workload can be increased in duration by some proportion of the original run time.\n\n![img-4.jpeg](img-4.jpeg)\n(a) Pause and Resume optimization for Dense 201.\n\n![img-5.jpeg](img-5.jpeg)\n(b) Pause and Resume optimization for 6B parameters Transformer.\nFig. 4. What proportion of emissions can we expect to save if we pause an AI workload when emissions in a region are high and resume when emissions are low, increasing the total duration by up to double the original duration? For short experiments, the doubled duration is still relatively short, and thus leads to minimal emissions reduction (see DenseNet 2",
+        "img_path": "extracted_data/document_5/img-4.jpeg",
+        "img_description": "The bar chart depicts the percentage decrease in CO2 emissions across various regions, comparing four reduction scenarios: 25%, 50%, 75%, and 100%. It shows that the highest decrease is notably in Canada for the 100% scenario, while other regions such as East US and West US3 also have significant reductions across different scenarios. The chart highlights regional variability in emission reductions, with Europe and Australia showing moderate decreases overall."
+    },
+    {
+        "doc_path": "extracted_data/document_5/doc_5.md",
+        "ref_id": "dodge2022",
+        "ref_url": "https://arxiv.org/pdf/2206.05229",
+        "img_id": "img-5.jpeg",
+        "img_uid": "dodge2022img-5.jpeg",
+        "context": " see emissions reductions smaller than  $10\\%$ , while the 6 billion transformer training run (our experiment with the largest carbon intensity) actually sees the largest decrease in emissions. See Figure 4 for two examples, with results for all 11 experiments in the appendix. This analysis is designed to highlight a use case where an AI workload can be increased in duration by some proportion of the original run time.\n\n![img-4.jpeg](img-4.jpeg)\n(a) Pause and Resume optimization for Dense 201.\n\n![img-5.jpeg](img-5.jpeg)\n(b) Pause and Resume optimization for 6B parameters Transformer.\nFig. 4. What proportion of emissions can we expect to save if we pause an AI workload when emissions in a region are high and resume when emissions are low, increasing the total duration by up to double the original duration? For short experiments, the doubled duration is still relatively short, and thus leads to minimal emissions reduction (see DenseNet 201 in (a)); for very long runs like our 6 billion parameter language model t",
+        "img_path": "extracted_data/document_5/img-5.jpeg",
+        "img_description": "The bar graph illustrates the percentage decrease in CO2 emissions across various regions, with categories indicating reductions of 25%, 50%, 75%, and 100%. Notably, \"West US2\" shows the highest decrease at 30%, while other regions like \"Central US\" and \"Canada\" display more moderate reductions. The data provides a comparative overview of emissions reduction efforts in different geographical areas."
+    },
+    {
+        "doc_path": "extracted_data/document_5/doc_5.md",
+        "ref_id": "dodge2022",
+        "ref_url": "https://arxiv.org/pdf/2206.05229",
+        "img_id": "img-6.jpeg",
+        "img_uid": "dodge2022img-6.jpeg",
+        "context": "n. 2017. A broad-coverage challenge corpus for sentence understanding through inference. arXiv preprint arXiv:1704.05426 (2017).\n- [49] Carole-Jean Wu, Ramya Raghavendra, Udit Gupta, Bilge Acun, Newsha Ardalani, Kiwan Maeng, Gloria Chang, Fiona Aga Behram, James Huang, Charles Bai, et al. 2021. Sustainable ai: Environmental implications, challenges and opportunities. arXiv preprint arXiv:2111.00364 (2021).FAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\nDodge et al.\n\n# A ADDITIONAL PLOTS\n\n![img-6.jpeg](img-6.jpeg)\n(a) Flexible Start optimization.\n\n![img-7.jpeg](img-7.jpeg)\n(b) Pause and Resume optimization.\nFig. 5. Optimization results for the training of BERT small on 8 V100s. Without optimization, the job ran for approximately 36 hours and consumed  $37.3\\mathrm{kWh}$ .\n\nIn Figures 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 and 15, we report the decrease in  $\\mathrm{CO}_{2}$  emissions (in percent) obtained when performing the two optimizations introduced in the main text for all 16 regions, all 11 models, ave",
+        "img_path": "extracted_data/document_5/img-6.jpeg",
+        "img_description": "The bar graph illustrates the percentage decrease in CO2 emissions across various regions over time intervals of 6, 12, 18, and 24 hours. The West US2 region shows the most significant reduction, peaking at around 12%, while other regions such as West Europe and North Europe exhibit gradual decreases. The data highlights differing regional impacts on emissions reduction, with variations in the effectiveness over the measured timeframes."
+    },
+    {
+        "doc_path": "extracted_data/document_5/doc_5.md",
+        "ref_id": "dodge2022",
+        "ref_url": "https://arxiv.org/pdf/2206.05229",
+        "img_id": "img-7.jpeg",
+        "img_uid": "dodge2022img-7.jpeg",
+        "context": "rstanding through inference. arXiv preprint arXiv:1704.05426 (2017).\n- [49] Carole-Jean Wu, Ramya Raghavendra, Udit Gupta, Bilge Acun, Newsha Ardalani, Kiwan Maeng, Gloria Chang, Fiona Aga Behram, James Huang, Charles Bai, et al. 2021. Sustainable ai: Environmental implications, challenges and opportunities. arXiv preprint arXiv:2111.00364 (2021).FAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\nDodge et al.\n\n# A ADDITIONAL PLOTS\n\n![img-6.jpeg](img-6.jpeg)\n(a) Flexible Start optimization.\n\n![img-7.jpeg](img-7.jpeg)\n(b) Pause and Resume optimization.\nFig. 5. Optimization results for the training of BERT small on 8 V100s. Without optimization, the job ran for approximately 36 hours and consumed  $37.3\\mathrm{kWh}$ .\n\nIn Figures 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 and 15, we report the decrease in  $\\mathrm{CO}_{2}$  emissions (in percent) obtained when performing the two optimizations introduced in the main text for all 16 regions, all 11 models, averaged over the year and for various values of the  $N$  deno",
+        "img_path": "extracted_data/document_5/img-7.jpeg",
+        "img_description": "The bar graph displays CO2 emissions decreases across various regions, comparing reductions at intervals of 25%, 50%, 75%, and 100%. The West US3 region shows the most significant reduction, reaching close to 30%, while other regions like Eastern US and North Europe exhibit more moderate decreases. The color gradient in the bars represents the percentage categories, providing a comparative view of emissions reductions across different regions."
+    },
+    {
+        "doc_path": "extracted_data/document_5/doc_5.md",
+        "ref_id": "dodge2022",
+        "ref_url": "https://arxiv.org/pdf/2206.05229",
+        "img_id": "img-8.jpeg",
+        "img_uid": "dodge2022img-8.jpeg",
+        "context": "r the training of BERT small on 8 V100s. Without optimization, the job ran for approximately 36 hours and consumed  $37.3\\mathrm{kWh}$ .\n\nIn Figures 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 and 15, we report the decrease in  $\\mathrm{CO}_{2}$  emissions (in percent) obtained when performing the two optimizations introduced in the main text for all 16 regions, all 11 models, averaged over the year and for various values of the  $N$  denoting the increase in job duration stemming from the optimization.\n\n![img-8.jpeg](img-8.jpeg)\n(a) Flexible Start optimization.\nFig. 6. Optimization results for the finetuning of BERT small on the MNLI dataset, using 4 V100s. Without optimization, the job ran for approximately 6 hours and consumed  $3.1\\mathrm{kWh}$ .\n\n![img-9.jpeg](img-9.jpeg)\n(b) Pause and Resume optimization.Measuring the Carbon Intensity of Al in Cloud Instances\n\nFAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\n![img-10.jpeg](img-10.jpeg)\n(a) Flexible Start optimization.\n\n![img-11.jpeg](img-11.jpeg)\n(b) Pause a",
+        "img_path": "extracted_data/document_5/img-8.jpeg",
+        "img_description": "The bar chart displays the percentage decrease in CO2 emissions across various regions, with each bar representing a different time interval (6h, 12h, 18h, 24h). West US shows the most significant reduction, particularly at the 24-hour mark, while other regions like Germany and UK South depict moderate decreases. The chart highlights how emission reductions vary by region and duration, indicating varying regional impacts over time."
+    },
+    {
+        "doc_path": "extracted_data/document_5/doc_5.md",
+        "ref_id": "dodge2022",
+        "ref_url": "https://arxiv.org/pdf/2206.05229",
+        "img_id": "img-9.jpeg",
+        "img_uid": "dodge2022img-9.jpeg",
+        "context": "ercent) obtained when performing the two optimizations introduced in the main text for all 16 regions, all 11 models, averaged over the year and for various values of the  $N$  denoting the increase in job duration stemming from the optimization.\n\n![img-8.jpeg](img-8.jpeg)\n(a) Flexible Start optimization.\nFig. 6. Optimization results for the finetuning of BERT small on the MNLI dataset, using 4 V100s. Without optimization, the job ran for approximately 6 hours and consumed  $3.1\\mathrm{kWh}$ .\n\n![img-9.jpeg](img-9.jpeg)\n(b) Pause and Resume optimization.Measuring the Carbon Intensity of Al in Cloud Instances\n\nFAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\n![img-10.jpeg](img-10.jpeg)\n(a) Flexible Start optimization.\n\n![img-11.jpeg](img-11.jpeg)\n(b) Pause and Resume optimization.\n\n![img-12.jpeg](img-12.jpeg)\nFig. 7. Optimization results for the training of a 6B Parameter Transformer on 256 A100s. Without optimization, the job ran for approximately 8 days and consumed  $13,812\\mathrm{kWh}$ .\n(a) Flexible ",
+        "img_path": "extracted_data/document_5/img-9.jpeg",
+        "img_description": "The bar graph displays the percentage decrease in CO2 emissions across various regions, including parts of the US, Canada, several European countries, and Australia, with categories indicating different levels of reduction targets (25%, 50%, 75%, 100%). West US2 shows the highest reduction, approaching nearly 20%, while other regions demonstrate varied levels of decrease. The graph highlights regional differences in achieving emission reduction targets, with darker shades representing higher reduction percentages."
+    },
+    {
+        "doc_path": "extracted_data/document_5/doc_5.md",
+        "ref_id": "dodge2022",
+        "ref_url": "https://arxiv.org/pdf/2206.05229",
+        "img_id": "img-10.jpeg",
+        "img_uid": "dodge2022img-10.jpeg",
+        "context": "$N$  denoting the increase in job duration stemming from the optimization.\n\n![img-8.jpeg](img-8.jpeg)\n(a) Flexible Start optimization.\nFig. 6. Optimization results for the finetuning of BERT small on the MNLI dataset, using 4 V100s. Without optimization, the job ran for approximately 6 hours and consumed  $3.1\\mathrm{kWh}$ .\n\n![img-9.jpeg](img-9.jpeg)\n(b) Pause and Resume optimization.Measuring the Carbon Intensity of Al in Cloud Instances\n\nFAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\n![img-10.jpeg](img-10.jpeg)\n(a) Flexible Start optimization.\n\n![img-11.jpeg](img-11.jpeg)\n(b) Pause and Resume optimization.\n\n![img-12.jpeg](img-12.jpeg)\nFig. 7. Optimization results for the training of a 6B Parameter Transformer on 256 A100s. Without optimization, the job ran for approximately 8 days and consumed  $13,812\\mathrm{kWh}$ .\n(a) Flexible Start optimization.\nFig. 8. Optimization results for a DenseNet 121 trained on MNIST on 1 P40. Without optimization, the job ran for approximately 20 minutes and consumed 20 ",
+        "img_path": "extracted_data/document_5/img-10.jpeg",
+        "img_description": "The bar chart illustrates the percentage decrease in CO2 emissions for various regions, categorized by time intervals of 6, 12, 18, and 24 hours. The data reveals that the West US3 region exhibits the highest decrease in emissions, particularly at the 24-hour interval. Each region shows a consistent pattern of increasing emission reductions with longer time durations."
+    },
+    {
+        "doc_path": "extracted_data/document_5/doc_5.md",
+        "ref_id": "dodge2022",
+        "ref_url": "https://arxiv.org/pdf/2206.05229",
+        "img_id": "img-11.jpeg",
+        "img_uid": "dodge2022img-11.jpeg",
+        "context": "ptimization.\n\n![img-8.jpeg](img-8.jpeg)\n(a) Flexible Start optimization.\nFig. 6. Optimization results for the finetuning of BERT small on the MNLI dataset, using 4 V100s. Without optimization, the job ran for approximately 6 hours and consumed  $3.1\\mathrm{kWh}$ .\n\n![img-9.jpeg](img-9.jpeg)\n(b) Pause and Resume optimization.Measuring the Carbon Intensity of Al in Cloud Instances\n\nFAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\n![img-10.jpeg](img-10.jpeg)\n(a) Flexible Start optimization.\n\n![img-11.jpeg](img-11.jpeg)\n(b) Pause and Resume optimization.\n\n![img-12.jpeg](img-12.jpeg)\nFig. 7. Optimization results for the training of a 6B Parameter Transformer on 256 A100s. Without optimization, the job ran for approximately 8 days and consumed  $13,812\\mathrm{kWh}$ .\n(a) Flexible Start optimization.\nFig. 8. Optimization results for a DenseNet 121 trained on MNIST on 1 P40. Without optimization, the job ran for approximately 20 minutes and consumed 20 WH.\n\n![img-13.jpeg](img-13.jpeg)\n(b) Pause and Resume optimiza",
+        "img_path": "extracted_data/document_5/img-11.jpeg",
+        "img_description": "The bar graph illustrates the percentage decrease in CO2 emissions across various global regions, with categories representing 25%, 50%, 75%, and 100% reduction goals. The West US2 region exhibits the most significant decrease, nearing 30%, while other areas like West Europe and Norway show moderate reductions. Each region is assessed to highlight variation in emission reductions, emphasizing distinctions in environmental progress among different locations."
+    },
+    {
+        "doc_path": "extracted_data/document_5/doc_5.md",
+        "ref_id": "dodge2022",
+        "ref_url": "https://arxiv.org/pdf/2206.05229",
+        "img_id": "img-12.jpeg",
+        "img_uid": "dodge2022img-12.jpeg",
+        "context": "ization.\nFig. 6. Optimization results for the finetuning of BERT small on the MNLI dataset, using 4 V100s. Without optimization, the job ran for approximately 6 hours and consumed  $3.1\\mathrm{kWh}$ .\n\n![img-9.jpeg](img-9.jpeg)\n(b) Pause and Resume optimization.Measuring the Carbon Intensity of Al in Cloud Instances\n\nFAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\n![img-10.jpeg](img-10.jpeg)\n(a) Flexible Start optimization.\n\n![img-11.jpeg](img-11.jpeg)\n(b) Pause and Resume optimization.\n\n![img-12.jpeg](img-12.jpeg)\nFig. 7. Optimization results for the training of a 6B Parameter Transformer on 256 A100s. Without optimization, the job ran for approximately 8 days and consumed  $13,812\\mathrm{kWh}$ .\n(a) Flexible Start optimization.\nFig. 8. Optimization results for a DenseNet 121 trained on MNIST on 1 P40. Without optimization, the job ran for approximately 20 minutes and consumed 20 WH.\n\n![img-13.jpeg](img-13.jpeg)\n(b) Pause and Resume optimization.FAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\nDodg",
+        "img_path": "extracted_data/document_5/img-12.jpeg",
+        "img_description": "The bar graph compares the percentage decrease in CO2 emissions across various regions, with data divided into four time intervals: 6h, 12h, 18h, and 24h. West US3 shows the highest decrease, particularly over the 24h period, while Central US exhibits the smallest changes overall. The graph highlights significant variation in emission reductions, particularly in US regions compared to Europe and Australia."
+    },
+    {
+        "doc_path": "extracted_data/document_5/doc_5.md",
+        "ref_id": "dodge2022",
+        "ref_url": "https://arxiv.org/pdf/2206.05229",
+        "img_id": "img-13.jpeg",
+        "img_uid": "dodge2022img-13.jpeg",
+        "context": "Flexible Start optimization.\n\n![img-11.jpeg](img-11.jpeg)\n(b) Pause and Resume optimization.\n\n![img-12.jpeg](img-12.jpeg)\nFig. 7. Optimization results for the training of a 6B Parameter Transformer on 256 A100s. Without optimization, the job ran for approximately 8 days and consumed  $13,812\\mathrm{kWh}$ .\n(a) Flexible Start optimization.\nFig. 8. Optimization results for a DenseNet 121 trained on MNIST on 1 P40. Without optimization, the job ran for approximately 20 minutes and consumed 20 WH.\n\n![img-13.jpeg](img-13.jpeg)\n(b) Pause and Resume optimization.FAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\nDodge et al.\n\n![img-14.jpeg](img-14.jpeg)\n(a) Flexible Start optimization.\n\n![img-15.jpeg](img-15.jpeg)\n(b) Pause and Resume optimization.\n\n![img-16.jpeg](img-16.jpeg)\nFig. 9. Optimization results for a DenseNet 169 trained on MNIST on 1 P40. Without optimization, the job ran for approximately 20 minutes and consumed 28 WH.\n(a) Flexible Start optimization.\nFig. 10. Optimization results for a DenseNet 201 tr",
+        "img_path": "extracted_data/document_5/img-13.jpeg",
+        "img_description": "The bar graph illustrates the percentage decrease in CO2 emissions across various regions, using color-coded data representing different reduction targets (25%, 50%, 75%, 100%). European countries such as France and Germany show higher emissions reduction compared to regions in the US. Australia also shows a significant decrease in emissions at the higher target levels."
+    },
+    {
+        "doc_path": "extracted_data/document_5/doc_5.md",
+        "ref_id": "dodge2022",
+        "ref_url": "https://arxiv.org/pdf/2206.05229",
+        "img_id": "img-14.jpeg",
+        "img_uid": "dodge2022img-14.jpeg",
+        "context": "ptimization results for the training of a 6B Parameter Transformer on 256 A100s. Without optimization, the job ran for approximately 8 days and consumed  $13,812\\mathrm{kWh}$ .\n(a) Flexible Start optimization.\nFig. 8. Optimization results for a DenseNet 121 trained on MNIST on 1 P40. Without optimization, the job ran for approximately 20 minutes and consumed 20 WH.\n\n![img-13.jpeg](img-13.jpeg)\n(b) Pause and Resume optimization.FAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\nDodge et al.\n\n![img-14.jpeg](img-14.jpeg)\n(a) Flexible Start optimization.\n\n![img-15.jpeg](img-15.jpeg)\n(b) Pause and Resume optimization.\n\n![img-16.jpeg](img-16.jpeg)\nFig. 9. Optimization results for a DenseNet 169 trained on MNIST on 1 P40. Without optimization, the job ran for approximately 20 minutes and consumed 28 WH.\n(a) Flexible Start optimization.\nFig. 10. Optimization results for a DenseNet 201 trained on MNIST on 1 P40. Without optimization, the job ran for approximately 25 minutes and consumed 37 WH.\n\n![img-17.jpeg](img-17.",
+        "img_path": "extracted_data/document_5/img-14.jpeg",
+        "img_description": "The bar graph illustrates the percentage decrease in CO2 emissions over time intervals of 6, 12, 18, and 24 hours across various regions including the US, Canada, France, Germany, and others. The West US 3 region shows the highest reduction, with nearly 80% at 24 hours, while other regions display varied patterns of emission decrease. The data highlights significant geographical variations in emissions reductions over the specified time periods."
+    },
+    {
+        "doc_path": "extracted_data/document_5/doc_5.md",
+        "ref_id": "dodge2022",
+        "ref_url": "https://arxiv.org/pdf/2206.05229",
+        "img_id": "img-15.jpeg",
+        "img_uid": "dodge2022img-15.jpeg",
+        "context": "rmer on 256 A100s. Without optimization, the job ran for approximately 8 days and consumed  $13,812\\mathrm{kWh}$ .\n(a) Flexible Start optimization.\nFig. 8. Optimization results for a DenseNet 121 trained on MNIST on 1 P40. Without optimization, the job ran for approximately 20 minutes and consumed 20 WH.\n\n![img-13.jpeg](img-13.jpeg)\n(b) Pause and Resume optimization.FAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\nDodge et al.\n\n![img-14.jpeg](img-14.jpeg)\n(a) Flexible Start optimization.\n\n![img-15.jpeg](img-15.jpeg)\n(b) Pause and Resume optimization.\n\n![img-16.jpeg](img-16.jpeg)\nFig. 9. Optimization results for a DenseNet 169 trained on MNIST on 1 P40. Without optimization, the job ran for approximately 20 minutes and consumed 28 WH.\n(a) Flexible Start optimization.\nFig. 10. Optimization results for a DenseNet 201 trained on MNIST on 1 P40. Without optimization, the job ran for approximately 25 minutes and consumed 37 WH.\n\n![img-17.jpeg](img-17.jpeg)\n(b) Pause and Resume optimization.Measuring the Carbon I",
+        "img_path": "extracted_data/document_5/img-15.jpeg",
+        "img_description": "The bar chart displays the percentage decrease in CO2 emissions across various regions, with different shades representing reductions at 25%, 50%, 75%, and 100% scenarios. Canada shows the highest decrease in emissions, while other regions like the West US and West Central US also see significant reductions. The data suggests varied impact levels across regions, with Europe showing more moderate decreases compared to North America."
+    },
+    {
+        "doc_path": "extracted_data/document_5/doc_5.md",
+        "ref_id": "dodge2022",
+        "ref_url": "https://arxiv.org/pdf/2206.05229",
+        "img_id": "img-16.jpeg",
+        "img_uid": "dodge2022img-16.jpeg",
+        "context": "mately 8 days and consumed  $13,812\\mathrm{kWh}$ .\n(a) Flexible Start optimization.\nFig. 8. Optimization results for a DenseNet 121 trained on MNIST on 1 P40. Without optimization, the job ran for approximately 20 minutes and consumed 20 WH.\n\n![img-13.jpeg](img-13.jpeg)\n(b) Pause and Resume optimization.FAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\nDodge et al.\n\n![img-14.jpeg](img-14.jpeg)\n(a) Flexible Start optimization.\n\n![img-15.jpeg](img-15.jpeg)\n(b) Pause and Resume optimization.\n\n![img-16.jpeg](img-16.jpeg)\nFig. 9. Optimization results for a DenseNet 169 trained on MNIST on 1 P40. Without optimization, the job ran for approximately 20 minutes and consumed 28 WH.\n(a) Flexible Start optimization.\nFig. 10. Optimization results for a DenseNet 201 trained on MNIST on 1 P40. Without optimization, the job ran for approximately 25 minutes and consumed 37 WH.\n\n![img-17.jpeg](img-17.jpeg)\n(b) Pause and Resume optimization.Measuring the Carbon Intensity of Al in Cloud Instances\n\nFAccT '22, June 21-24, 2022, ",
+        "img_path": "extracted_data/document_5/img-16.jpeg",
+        "img_description": "The bar chart displays the percentage decrease in CO2 emissions across various regions, with categories indicating the duration of 6, 12, 18, and 24 hours. Regions like \"West US\" exhibit the highest reduction, especially at longer durations (24h), while \"Australia\" shows comparatively lower reductions across all time frames. The chart highlights significant regional variation in emission reductions, with North American regions generally achieving higher decreases than European and Australian regions."
+    },
+    {
+        "doc_path": "extracted_data/document_5/doc_5.md",
+        "ref_id": "dodge2022",
+        "ref_url": "https://arxiv.org/pdf/2206.05229",
+        "img_id": "img-17.jpeg",
+        "img_uid": "dodge2022img-17.jpeg",
+        "context": "-14.jpeg](img-14.jpeg)\n(a) Flexible Start optimization.\n\n![img-15.jpeg](img-15.jpeg)\n(b) Pause and Resume optimization.\n\n![img-16.jpeg](img-16.jpeg)\nFig. 9. Optimization results for a DenseNet 169 trained on MNIST on 1 P40. Without optimization, the job ran for approximately 20 minutes and consumed 28 WH.\n(a) Flexible Start optimization.\nFig. 10. Optimization results for a DenseNet 201 trained on MNIST on 1 P40. Without optimization, the job ran for approximately 25 minutes and consumed 37 WH.\n\n![img-17.jpeg](img-17.jpeg)\n(b) Pause and Resume optimization.Measuring the Carbon Intensity of Al in Cloud Instances\n\nFAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\n![img-18.jpeg](img-18.jpeg)\n(a) Flexible Start optimization.\n\n![img-19.jpeg](img-19.jpeg)\n(b) Pause and Resume optimization.\n\n![img-20.jpeg](img-20.jpeg)\nFig. 11. Optimization results for a Tiny ViT trained on 1 V100. Without optimization, the job ran for approximately 19 hours and consumed  $1.7\\mathrm{kWh}$ .\n(a) Flexible Start optimization.\nFig. 12",
+        "img_path": "extracted_data/document_5/img-17.jpeg",
+        "img_description": "The bar graph depicts the percentage decrease in CO2 emissions across various regions, with distinct bars for reduction levels of 25%, 50%, 75%, and 100%. Canada shows the highest potential decrease, while other regions like East US and Australia display varied reductions among the different levels. The color gradient represents the magnitude of reduction, with darker shades indicating greater reductions."
+    },
+    {
+        "doc_path": "extracted_data/document_5/doc_5.md",
+        "ref_id": "dodge2022",
+        "ref_url": "https://arxiv.org/pdf/2206.05229",
+        "img_id": "img-18.jpeg",
+        "img_uid": "dodge2022img-18.jpeg",
+        "context": "lts for a DenseNet 169 trained on MNIST on 1 P40. Without optimization, the job ran for approximately 20 minutes and consumed 28 WH.\n(a) Flexible Start optimization.\nFig. 10. Optimization results for a DenseNet 201 trained on MNIST on 1 P40. Without optimization, the job ran for approximately 25 minutes and consumed 37 WH.\n\n![img-17.jpeg](img-17.jpeg)\n(b) Pause and Resume optimization.Measuring the Carbon Intensity of Al in Cloud Instances\n\nFAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\n![img-18.jpeg](img-18.jpeg)\n(a) Flexible Start optimization.\n\n![img-19.jpeg](img-19.jpeg)\n(b) Pause and Resume optimization.\n\n![img-20.jpeg](img-20.jpeg)\nFig. 11. Optimization results for a Tiny ViT trained on 1 V100. Without optimization, the job ran for approximately 19 hours and consumed  $1.7\\mathrm{kWh}$ .\n(a) Flexible Start optimization.\nFig. 12. Optimization results for a Small ViT trained on 1 V100. Without optimization, the job ran for approximately 19 hours and consumed  $2.2\\mathrm{kWh}$ .\n\n![img-21.jpeg](img-2",
+        "img_path": "extracted_data/document_5/img-18.jpeg",
+        "img_description": "The bar graph illustrates the percentage decrease in CO2 emissions across various regions, compared over four time intervals: 6h, 12h, 18h, and 24h. West US2 shows the most significant reduction, peaking at nearly 16% after 24 hours, while other regions, like UK South and North Europe, display noticeable but less dramatic changes. Each region exhibits an increasing trend in emission reduction as time progresses from 6 to 24 hours."
+    },
+    {
+        "doc_path": "extracted_data/document_5/doc_5.md",
+        "ref_id": "dodge2022",
+        "ref_url": "https://arxiv.org/pdf/2206.05229",
+        "img_id": "img-19.jpeg",
+        "img_uid": "dodge2022img-19.jpeg",
+        "context": "mization, the job ran for approximately 20 minutes and consumed 28 WH.\n(a) Flexible Start optimization.\nFig. 10. Optimization results for a DenseNet 201 trained on MNIST on 1 P40. Without optimization, the job ran for approximately 25 minutes and consumed 37 WH.\n\n![img-17.jpeg](img-17.jpeg)\n(b) Pause and Resume optimization.Measuring the Carbon Intensity of Al in Cloud Instances\n\nFAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\n![img-18.jpeg](img-18.jpeg)\n(a) Flexible Start optimization.\n\n![img-19.jpeg](img-19.jpeg)\n(b) Pause and Resume optimization.\n\n![img-20.jpeg](img-20.jpeg)\nFig. 11. Optimization results for a Tiny ViT trained on 1 V100. Without optimization, the job ran for approximately 19 hours and consumed  $1.7\\mathrm{kWh}$ .\n(a) Flexible Start optimization.\nFig. 12. Optimization results for a Small ViT trained on 1 V100. Without optimization, the job ran for approximately 19 hours and consumed  $2.2\\mathrm{kWh}$ .\n\n![img-21.jpeg](img-21.jpeg)\n(b) Pause and Resume optimization.FAccT '22, June 21-2",
+        "img_path": "extracted_data/document_5/img-19.jpeg",
+        "img_description": "The bar graph displays the percentage decrease in CO2 emissions across various regions, with the data segmented into four reduction levels: 25%, 50%, 75%, and 100%. The highest reductions are seen in \"West US2\" and \"UK South,\" both surpassing a 30% decrease, while regions like \"Central US\" and \"Australia\" show comparatively lower reductions. The visual differentiates the reduction levels using varying shades of green for clarity."
+    },
+    {
+        "doc_path": "extracted_data/document_5/doc_5.md",
+        "ref_id": "dodge2022",
+        "ref_url": "https://arxiv.org/pdf/2206.05229",
+        "img_id": "img-20.jpeg",
+        "img_uid": "dodge2022img-20.jpeg",
+        "context": "28 WH.\n(a) Flexible Start optimization.\nFig. 10. Optimization results for a DenseNet 201 trained on MNIST on 1 P40. Without optimization, the job ran for approximately 25 minutes and consumed 37 WH.\n\n![img-17.jpeg](img-17.jpeg)\n(b) Pause and Resume optimization.Measuring the Carbon Intensity of Al in Cloud Instances\n\nFAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\n![img-18.jpeg](img-18.jpeg)\n(a) Flexible Start optimization.\n\n![img-19.jpeg](img-19.jpeg)\n(b) Pause and Resume optimization.\n\n![img-20.jpeg](img-20.jpeg)\nFig. 11. Optimization results for a Tiny ViT trained on 1 V100. Without optimization, the job ran for approximately 19 hours and consumed  $1.7\\mathrm{kWh}$ .\n(a) Flexible Start optimization.\nFig. 12. Optimization results for a Small ViT trained on 1 V100. Without optimization, the job ran for approximately 19 hours and consumed  $2.2\\mathrm{kWh}$ .\n\n![img-21.jpeg](img-21.jpeg)\n(b) Pause and Resume optimization.FAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\nDodge et al.\n\n![img-22.jpeg](",
+        "img_path": "extracted_data/document_5/img-20.jpeg",
+        "img_description": "The bar graph displays the percentage decrease in CO2 emissions across various regions, ranging from the East US to Australia, with time intervals of 6, 12, 18, and 24 hours represented in different shades of green. Notably, West US3 shows the highest emission decrease across all time intervals, while other regions demonstrate varying levels of reduction, generally increasing with time. This indicates regional differences in effectiveness for CO2 reduction strategies over time."
+    },
+    {
+        "doc_path": "extracted_data/document_5/doc_5.md",
+        "ref_id": "dodge2022",
+        "ref_url": "https://arxiv.org/pdf/2206.05229",
+        "img_id": "img-21.jpeg",
+        "img_uid": "dodge2022img-21.jpeg",
+        "context": "8.jpeg](img-18.jpeg)\n(a) Flexible Start optimization.\n\n![img-19.jpeg](img-19.jpeg)\n(b) Pause and Resume optimization.\n\n![img-20.jpeg](img-20.jpeg)\nFig. 11. Optimization results for a Tiny ViT trained on 1 V100. Without optimization, the job ran for approximately 19 hours and consumed  $1.7\\mathrm{kWh}$ .\n(a) Flexible Start optimization.\nFig. 12. Optimization results for a Small ViT trained on 1 V100. Without optimization, the job ran for approximately 19 hours and consumed  $2.2\\mathrm{kWh}$ .\n\n![img-21.jpeg](img-21.jpeg)\n(b) Pause and Resume optimization.FAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\nDodge et al.\n\n![img-22.jpeg](img-22.jpeg)\n(a) Flexible Start optimization.\n\n![img-23.jpeg](img-23.jpeg)\n(b) Pause and Resume optimization.\n\n![img-24.jpeg](img-24.jpeg)\nFig. 13. Optimization results for a Base ViT trained on 1 V100. Without optimization, the job ran for approximately 21 hours and consumed  $4.7\\mathrm{kWh}$ .\n(a) Flexible Start optimization.\nFig. 14. Optimization results for a Large ViT trai",
+        "img_path": "extracted_data/document_5/img-21.jpeg",
+        "img_description": "The bar graph illustrates the percentage decrease in CO2 emissions across various regions and countries, with varying degrees of reduction (25%, 50%, 75%, and 100%). The East US and UK South regions exhibit the highest reduction percentages, while other regions like Australia show more modest decreases. The data is represented in clustered bars, each corresponding to a specific level of CO2 emissions reduction."
+    },
+    {
+        "doc_path": "extracted_data/document_5/doc_5.md",
+        "ref_id": "dodge2022",
+        "ref_url": "https://arxiv.org/pdf/2206.05229",
+        "img_id": "img-22.jpeg",
+        "img_uid": "dodge2022img-22.jpeg",
+        "context": "g](img-20.jpeg)\nFig. 11. Optimization results for a Tiny ViT trained on 1 V100. Without optimization, the job ran for approximately 19 hours and consumed  $1.7\\mathrm{kWh}$ .\n(a) Flexible Start optimization.\nFig. 12. Optimization results for a Small ViT trained on 1 V100. Without optimization, the job ran for approximately 19 hours and consumed  $2.2\\mathrm{kWh}$ .\n\n![img-21.jpeg](img-21.jpeg)\n(b) Pause and Resume optimization.FAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\nDodge et al.\n\n![img-22.jpeg](img-22.jpeg)\n(a) Flexible Start optimization.\n\n![img-23.jpeg](img-23.jpeg)\n(b) Pause and Resume optimization.\n\n![img-24.jpeg](img-24.jpeg)\nFig. 13. Optimization results for a Base ViT trained on 1 V100. Without optimization, the job ran for approximately 21 hours and consumed  $4.7\\mathrm{kWh}$ .\n(a) Flexible Start optimization.\nFig. 14. Optimization results for a Large ViT trained on 4 V100. Without optimization, the job ran for approximately 90 hours and consumed  $93.3\\mathrm{kWh}$ .\n\n![img-25.jpeg](img-",
+        "img_path": "extracted_data/document_5/img-22.jpeg",
+        "img_description": "The bar graph displays the percentage decrease in CO2 emissions across various regions, categorized by time durations of 6, 12, 18, and 24 hours. It highlights that the most significant reductions are observed in 'West US 2' and 'West Europe' after 24 hours. The graph uses varying shades of green to represent different time intervals, with emission reductions generally increasing over longer durations."
+    },
+    {
+        "doc_path": "extracted_data/document_5/doc_5.md",
+        "ref_id": "dodge2022",
+        "ref_url": "https://arxiv.org/pdf/2206.05229",
+        "img_id": "img-23.jpeg",
+        "img_uid": "dodge2022img-23.jpeg",
+        "context": "rained on 1 V100. Without optimization, the job ran for approximately 19 hours and consumed  $1.7\\mathrm{kWh}$ .\n(a) Flexible Start optimization.\nFig. 12. Optimization results for a Small ViT trained on 1 V100. Without optimization, the job ran for approximately 19 hours and consumed  $2.2\\mathrm{kWh}$ .\n\n![img-21.jpeg](img-21.jpeg)\n(b) Pause and Resume optimization.FAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\nDodge et al.\n\n![img-22.jpeg](img-22.jpeg)\n(a) Flexible Start optimization.\n\n![img-23.jpeg](img-23.jpeg)\n(b) Pause and Resume optimization.\n\n![img-24.jpeg](img-24.jpeg)\nFig. 13. Optimization results for a Base ViT trained on 1 V100. Without optimization, the job ran for approximately 21 hours and consumed  $4.7\\mathrm{kWh}$ .\n(a) Flexible Start optimization.\nFig. 14. Optimization results for a Large ViT trained on 4 V100. Without optimization, the job ran for approximately 90 hours and consumed  $93.3\\mathrm{kWh}$ .\n\n![img-25.jpeg](img-25.jpeg)\n(b) Pause and Resume optimization.Measuring the Carbo",
+        "img_path": "extracted_data/document_5/img-23.jpeg",
+        "img_description": "The bar chart displays the percentage decrease in CO2 emissions across various regions including different parts of the US, Canada, several European countries, Norway, the UK, and Australia. Each region is represented by four bars showing reductions at intervals of 25%, 50%, 75%, and 100%. Notably, \"West US2\" exhibits the highest reduction, while other regions show varied levels of decreases in emissions."
+    },
+    {
+        "doc_path": "extracted_data/document_5/doc_5.md",
+        "ref_id": "dodge2022",
+        "ref_url": "https://arxiv.org/pdf/2206.05229",
+        "img_id": "img-24.jpeg",
+        "img_uid": "dodge2022img-24.jpeg",
+        "context": "ately 19 hours and consumed  $1.7\\mathrm{kWh}$ .\n(a) Flexible Start optimization.\nFig. 12. Optimization results for a Small ViT trained on 1 V100. Without optimization, the job ran for approximately 19 hours and consumed  $2.2\\mathrm{kWh}$ .\n\n![img-21.jpeg](img-21.jpeg)\n(b) Pause and Resume optimization.FAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\nDodge et al.\n\n![img-22.jpeg](img-22.jpeg)\n(a) Flexible Start optimization.\n\n![img-23.jpeg](img-23.jpeg)\n(b) Pause and Resume optimization.\n\n![img-24.jpeg](img-24.jpeg)\nFig. 13. Optimization results for a Base ViT trained on 1 V100. Without optimization, the job ran for approximately 21 hours and consumed  $4.7\\mathrm{kWh}$ .\n(a) Flexible Start optimization.\nFig. 14. Optimization results for a Large ViT trained on 4 V100. Without optimization, the job ran for approximately 90 hours and consumed  $93.3\\mathrm{kWh}$ .\n\n![img-25.jpeg](img-25.jpeg)\n(b) Pause and Resume optimization.Measuring the Carbon Intensity of Al in Cloud Instances\n\nFAccT '22, June 21-24, 202",
+        "img_path": "extracted_data/document_5/img-24.jpeg",
+        "img_description": "The bar graph illustrates the percentage decrease in CO2 emissions across various regions, comparing multiple time durations: 6h, 12h, 18h, and 24h. Notably, the West US2 region shows the highest decrease across all time frames, peaking prominently at 24 hours. Regions like France and West Europe exhibit moderate reductions, while others like East US display relatively smaller decreases."
+    },
+    {
+        "doc_path": "extracted_data/document_5/doc_5.md",
+        "ref_id": "dodge2022",
+        "ref_url": "https://arxiv.org/pdf/2206.05229",
+        "img_id": "img-25.jpeg",
+        "img_uid": "dodge2022img-25.jpeg",
+        "context": ".jpeg](img-22.jpeg)\n(a) Flexible Start optimization.\n\n![img-23.jpeg](img-23.jpeg)\n(b) Pause and Resume optimization.\n\n![img-24.jpeg](img-24.jpeg)\nFig. 13. Optimization results for a Base ViT trained on 1 V100. Without optimization, the job ran for approximately 21 hours and consumed  $4.7\\mathrm{kWh}$ .\n(a) Flexible Start optimization.\nFig. 14. Optimization results for a Large ViT trained on 4 V100. Without optimization, the job ran for approximately 90 hours and consumed  $93.3\\mathrm{kWh}$ .\n\n![img-25.jpeg](img-25.jpeg)\n(b) Pause and Resume optimization.Measuring the Carbon Intensity of Al in Cloud Instances\n\nFAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\n![img-26.jpeg](img-26.jpeg)\n(a) Flexible Start optimization.\n\n![img-27.jpeg](img-27.jpeg)\n(b) Pause and Resume optimization.\nFig. 15. Optimization results for a Huge ViT trained on 4 V100. Without optimization, the job ran for approximately 9 days and consumed  $237.6\\mathrm{kWh}$ .FAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\nDodge et al.\n\n#",
+        "img_path": "extracted_data/document_5/img-25.jpeg",
+        "img_description": "The bar chart illustrates the percentage decrease in CO2 emissions across various regions, showing data for reductions of 25%, 50%, 75%, and 100%. The largest decrease is observed in \"West US3,\" with substantial variations noted among other regions like \"West Europe\" and \"Germany.\" The color gradient represents the different levels of emissions reduction, with darker shades indicating greater decreases."
+    },
+    {
+        "doc_path": "extracted_data/document_5/doc_5.md",
+        "ref_id": "dodge2022",
+        "ref_url": "https://arxiv.org/pdf/2206.05229",
+        "img_id": "img-26.jpeg",
+        "img_uid": "dodge2022img-26.jpeg",
+        "context": "s for a Base ViT trained on 1 V100. Without optimization, the job ran for approximately 21 hours and consumed  $4.7\\mathrm{kWh}$ .\n(a) Flexible Start optimization.\nFig. 14. Optimization results for a Large ViT trained on 4 V100. Without optimization, the job ran for approximately 90 hours and consumed  $93.3\\mathrm{kWh}$ .\n\n![img-25.jpeg](img-25.jpeg)\n(b) Pause and Resume optimization.Measuring the Carbon Intensity of Al in Cloud Instances\n\nFAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\n![img-26.jpeg](img-26.jpeg)\n(a) Flexible Start optimization.\n\n![img-27.jpeg](img-27.jpeg)\n(b) Pause and Resume optimization.\nFig. 15. Optimization results for a Huge ViT trained on 4 V100. Without optimization, the job ran for approximately 9 days and consumed  $237.6\\mathrm{kWh}$ .FAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\nDodge et al.\n\n# B ADDITIONAL TABLES\n\nIn Tables 6, 7, 8, 9, 10, 11, 12 and 13, we report the decrease in  $\\mathrm{CO}_{2}$  emissions (in percent) obtained when performing the two optimizat",
+        "img_path": "extracted_data/document_5/img-26.jpeg",
+        "img_description": "The bar graph illustrates the percentage decrease in CO2 emissions across various regions, categorized by the duration of time (6h, 12h, 18h, 24h), with the West US2 region showing the most significant reduction at 1.2%. Each region displays a progressive increase in emission reduction as the duration extends, with the light to dark gradient representing increasing time intervals. Notably, the West US2 and Canada have the highest emission reductions, particularly at the 24-hour mark."
+    },
+    {
+        "doc_path": "extracted_data/document_5/doc_5.md",
+        "ref_id": "dodge2022",
+        "ref_url": "https://arxiv.org/pdf/2206.05229",
+        "img_id": "img-27.jpeg",
+        "img_uid": "dodge2022img-27.jpeg",
+        "context": "job ran for approximately 21 hours and consumed  $4.7\\mathrm{kWh}$ .\n(a) Flexible Start optimization.\nFig. 14. Optimization results for a Large ViT trained on 4 V100. Without optimization, the job ran for approximately 90 hours and consumed  $93.3\\mathrm{kWh}$ .\n\n![img-25.jpeg](img-25.jpeg)\n(b) Pause and Resume optimization.Measuring the Carbon Intensity of Al in Cloud Instances\n\nFAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\n![img-26.jpeg](img-26.jpeg)\n(a) Flexible Start optimization.\n\n![img-27.jpeg](img-27.jpeg)\n(b) Pause and Resume optimization.\nFig. 15. Optimization results for a Huge ViT trained on 4 V100. Without optimization, the job ran for approximately 9 days and consumed  $237.6\\mathrm{kWh}$ .FAccT '22, June 21-24, 2022, Seoul, Republic of Korea\n\nDodge et al.\n\n# B ADDITIONAL TABLES\n\nIn Tables 6, 7, 8, 9, 10, 11, 12 and 13, we report the decrease in  $\\mathrm{CO}_{2}$  emissions (in percent) obtained when performing the two optimizations introduced in the main text for all 11 models, averaged a",
+        "img_path": "extracted_data/document_5/img-27.jpeg",
+        "img_description": "The bar graph displays the percentage decrease in CO2 emissions across various regions, categorized by four levels of reduction (25%, 50%, 75%, and 100%). Notable decreases are observed in \"West US3\" and \"Norway,\" with the highest being in \"West US3.\" The color gradient indicates different reduction levels, with darker shades representing higher reductions."
+    }
+]

@@ -1,0 +1,242 @@
+[
+    {
+        "doc_path": "extracted_data/document_8/doc_8.md",
+        "ref_id": "fernandez2025",
+        "ref_url": "https://arxiv.org/pdf/2504.17674",
+        "img_id": "img-0.jpeg",
+        "img_uid": "fernandez2025img-0.jpeg",
+        "context": " energy use by up to  $73\\%$  from unoptimized baselines. These insights provide a foundation for sustainable LLM deployment and inform energy-efficient design strategies for future AI infrastructure.\n\n# 1 Introduction\n\nImprovements in task performance by large language models (LLMs) have prompted large-scale investments in computing hardware and energy infrastructure to support the development and deployment of LLM and related machine learning models (Isaac, 2025; Smith, 2025; Cai and Sophia,\n\n![img-0.jpeg](img-0.jpeg)\nFigure 1: Proper application of efficiency methods with optimized vLLM (orange) approaches the ideal energy consumption (green) as compared with an unoptimized baseline PyTorch (purple) implementation.\n\n2025). However, the growing prevalence of LLMs yields commensurate increases in the energy demand, water use, and carbon emissions associated with their development and deployment (Morrison et al., 2025; Li et al., 2025; Strubell et al., 2020; Luccioni et al., 2024b). Primarily motivated by the ",
+        "img_path": "extracted_data/document_8/img-0.jpeg",
+        "img_description": "The graph compares energy consumption in kilowatt-hours (kWh) across three tasks: BurstGPT, Azure Code, and Azure Conv, using three methods: Theoretical (green diamonds), PyTorch (purple circles), and vLLM (orange stars). Energy usage is plotted on a logarithmic scale ranging from \\(10^1\\) to \\(10^3\\) kWh. Theoretical method consistently shows lower energy consumption across tasks, with Azure Conv task exhibiting the highest energy usage for all methods."
+    },
+    {
+        "doc_path": "extracted_data/document_8/doc_8.md",
+        "ref_id": "fernandez2025",
+        "ref_url": "https://arxiv.org/pdf/2504.17674",
+        "img_id": "img-1.jpeg",
+        "img_uid": "fernandez2025img-1.jpeg",
+        "context": "tion typically assumes balanced input-output lengths. Input length statistics in considered datasets are shown in Table 3.\n\nIn a controlled sweep, we explore scenarios with up to 32k input tokens and 4k output tokens, varying sequence lengths by powers of two. We fix generation to 64 or 8 tokens when varying context lengths, and assume 512 or 64 token input context when varying output lengths. Input context length is enforced via truncation of longer sequences from PG19 *(Rae et al., 2019)*.\n\n##![img-1.jpeg](img-1.jpeg)\nFigure 2: Controlled sweeps of input and output sequence lengths on A6000 GPUs, on vLLM backend, described in \u00a73.1. We decompose inference costs into prefetch and decode energy. At small batch sizes and input sequence lengths, energy intensity of a workload scales sub-linearly with increasing sequence length input sequence lengths. Decoding is more energy intensive per token than prefetch, but energy intensity begins scaling linearly even for short generations and small batch sizes with the vLL",
+        "img_path": "extracted_data/document_8/img-1.jpeg",
+        "img_description": "The graph illustrates the relationship between prefill energy consumption (in kWh) and input sequence length (in tokens) for 1024 examples, comparing different batch sizes (BS=1, 8, 64, 128). It uses a logarithmic scale on both axes, showing that energy consumption increases with input sequence length across all batch sizes, with larger batch sizes generally requiring more energy. The data points are represented by distinct colored shapes for each batch size, highlighting the progressive increase in energy usage as batch size increases."
+    },
+    {
+        "doc_path": "extracted_data/document_8/doc_8.md",
+        "ref_id": "fernandez2025",
+        "ref_url": "https://arxiv.org/pdf/2504.17674",
+        "img_id": "img-2.jpeg",
+        "img_uid": "fernandez2025img-2.jpeg",
+        "context": "trolled sweeps of input and output sequence lengths on A6000 GPUs, on vLLM backend, described in \u00a73.1. We decompose inference costs into prefetch and decode energy. At small batch sizes and input sequence lengths, energy intensity of a workload scales sub-linearly with increasing sequence length input sequence lengths. Decoding is more energy intensive per token than prefetch, but energy intensity begins scaling linearly even for short generations and small batch sizes with the vLLM framework.\n\n![img-2.jpeg](img-2.jpeg)\n\n![img-3.jpeg](img-3.jpeg)\n\nDecoding Strategies. Different decoding strategies used for generation have different computational profiles and can have a substantial impact on the generation efficiency (Kwon et al., 2023). In order to study the impact of sampling methods and auto-regressive decoding strategies, we investigate greedy decoding, beam search decoding, temperature sampling, top- $p$  decoding affect the energy requirements and end-to-end latency (Holtzman et al., 2020).\n\nIn addition t",
+        "img_path": "extracted_data/document_8/img-2.jpeg",
+        "img_description": "The graph shows the relationship between decode energy and input sequence length (tokens) on a logarithmic scale. Data points are represented by colored triangles, indicating different categories or conditions, with energy values generally increasing with longer sequence lengths. The x-axis is labeled as \"Input sequence length (tokens)\" and the y-axis as \"Decode energy vs. input sequence length.\""
+    },
+    {
+        "doc_path": "extracted_data/document_8/doc_8.md",
+        "ref_id": "fernandez2025",
+        "ref_url": "https://arxiv.org/pdf/2504.17674",
+        "img_id": "img-3.jpeg",
+        "img_uid": "fernandez2025img-3.jpeg",
+        "context": " output sequence lengths on A6000 GPUs, on vLLM backend, described in \u00a73.1. We decompose inference costs into prefetch and decode energy. At small batch sizes and input sequence lengths, energy intensity of a workload scales sub-linearly with increasing sequence length input sequence lengths. Decoding is more energy intensive per token than prefetch, but energy intensity begins scaling linearly even for short generations and small batch sizes with the vLLM framework.\n\n![img-2.jpeg](img-2.jpeg)\n\n![img-3.jpeg](img-3.jpeg)\n\nDecoding Strategies. Different decoding strategies used for generation have different computational profiles and can have a substantial impact on the generation efficiency (Kwon et al., 2023). In order to study the impact of sampling methods and auto-regressive decoding strategies, we investigate greedy decoding, beam search decoding, temperature sampling, top- $p$  decoding affect the energy requirements and end-to-end latency (Holtzman et al., 2020).\n\nIn addition to auto-regressive decoding,",
+        "img_path": "extracted_data/document_8/img-3.jpeg",
+        "img_description": "The graph displays a scatter plot comparing decode energy to output sequence length (in tokens) on a logarithmic scale for both axes. Different colored markers represent varying data series, showing a trend of increasing decode energy with longer output sequence lengths. The pattern suggests a positive correlation across the plotted datasets."
+    },
+    {
+        "doc_path": "extracted_data/document_8/doc_8.md",
+        "ref_id": "fernandez2025",
+        "ref_url": "https://arxiv.org/pdf/2504.17674",
+        "img_id": "img-4.jpeg",
+        "img_uid": "fernandez2025img-4.jpeg",
+        "context": "00 80GB PCIe), and Ada Lovelace (A6000 Ada) microarchitecture.\n\nAll experiments run on 8-GPU nodes with standardized node- and job-level CPU and RAM configurations for each GPU type. For multi-GPU experiments, we utilize up to 4 GPUs simultaneously, investigating tensor parallel inference with group sizes of 2 and 4 devices. We examine both standard and speculative decoding approaches using the Llama-3.1-8B and Qwen-32B models. Additional details on computing hardware are provided in Appendix A.![img-4.jpeg](img-4.jpeg)\nFigure 3: At small batch sizes, speculative decoding provides reduced latency and energy savings. At larger batch size speculative decoding increases energy.\n\nPerformance Measures. We evaluate the efficiency of inference by measuring the latency, throughput, GPU energy, and GPU power required for the inference of 1,024 examples  $^{2}$ . Total energy use and GPU power metrics are measured using Nvidia Management Library (NVML) via the CodeCarbon library (Courty et al., 2024). Prior to evaluatio",
+        "img_path": "extracted_data/document_8/img-4.jpeg",
+        "img_description": "The scatter plot illustrates the relationship between batch size and energy consumption (in kWh) for five different decoding methods: Speculative Decoding, Greedy Decoding, Beam Search, Temperature Sampling, and Top-p Sampling. As the batch size increases from \\(2^0\\) to \\(2^7\\), energy consumption generally decreases across all methods. Each method is represented by distinct symbols and colors, indicating varied energy efficiency depending on batch size."
+    },
+    {
+        "doc_path": "extracted_data/document_8/doc_8.md",
+        "ref_id": "fernandez2025",
+        "ref_url": "https://arxiv.org/pdf/2504.17674",
+        "img_id": "img-5.jpeg",
+        "img_uid": "fernandez2025img-5.jpeg",
+        "context": "same rate regardless of batch sizes when scaling sequences larger than 128 tokens. At shorter sequence lengths and smaller batch sizes, the energy costs of prefetch are constant regardless of the computational workload due to significant undersaturation of the accelerator. Although we fix output generation tokens to 64, we verify that at this convergence in rate of energy intensity increase occurs at the same point when instead fixing generation length to 8 tokens; see Figure 11 in Appendix E.\n\n![img-5.jpeg](img-5.jpeg)\nFigure 4: Mixture-of-Experts LLMs require more energy than dense models with comparable active parameters; differences are pronounced at larger batch sizes.\n\nIn Figure 2, the energy intensity of the decode likewise scales with input context length only at larger input sequence lengths.\n\nHowever, the energy intensity of decoding scales linearly with sequence length regardless of sequence length or batch sizes due to the autoregressive, sequential nature of decoding.\n\nGenerally, decoding energy d",
+        "img_path": "extracted_data/document_8/img-5.jpeg",
+        "img_description": "The image is a scatter plot graph comparing energy consumption (in kWh) versus batch size, with energy on a logarithmic scale ranging from \\(2^{-10}\\) to \\(2^{-4}\\). Three datasets, represented by different colored markers (blue, orange, green), correspond to \"OLMo 1B,\" \"OLMo 7B,\" and \"OLMoE 1B-7B.\" The plot shows that as batch size increases, the energy consumption patterns vary among the different models."
+    },
+    {
+        "doc_path": "extracted_data/document_8/doc_8.md",
+        "ref_id": "fernandez2025",
+        "ref_url": "https://arxiv.org/pdf/2504.17674",
+        "img_id": "img-6.jpeg",
+        "img_uid": "fernandez2025img-6.jpeg",
+        "context": "r large batch sizes where GPU is already saturated, draft model speculation and excess verifications introduce additional overhead. In the large batch case, for short to medium contexts, LLM inference is typically compute bound, making speculative decoding slower than autoregressive decoding with the target model (Chen et al., 2025; Liu et al., 2024).\n\nCompared to variations in energy use from alternate decoding strategies and sampling methods, speculative decoding has the greatest effect on the![img-6.jpeg](img-6.jpeg)\n(a) A100 80GB PCIe\n\n![img-7.jpeg](img-7.jpeg)\n(b) A6000 Ada\nFigure 5: Energy consumption comparison across different GPUs for inference with PyTorch and vLLM backends of 1024 samples for 64 output tokens. For each GPU, we compare PyTorch with and without compilation, and vLLM with and without CUDA Graph serialization. The line in black represents the maximum allowable batch size for PyTorch. Relative savings are most apparent in the low batch size regime and that vLLM due to its optimizations c",
+        "img_path": "extracted_data/document_8/img-6.jpeg",
+        "img_description": "The graph compares energy consumption (in kWh) against batch size for different configurations of PyTorch and vLLM. PyTorch with and without compilation and vLLM in eager and non-eager modes are represented using different markers. The energy consumption generally decreases with increasing batch size, with PyTorch (compile=True) consistently consuming the least energy."
+    },
+    {
+        "doc_path": "extracted_data/document_8/doc_8.md",
+        "ref_id": "fernandez2025",
+        "ref_url": "https://arxiv.org/pdf/2504.17674",
+        "img_id": "img-7.jpeg",
+        "img_uid": "fernandez2025img-7.jpeg",
+        "context": "ated, draft model speculation and excess verifications introduce additional overhead. In the large batch case, for short to medium contexts, LLM inference is typically compute bound, making speculative decoding slower than autoregressive decoding with the target model (Chen et al., 2025; Liu et al., 2024).\n\nCompared to variations in energy use from alternate decoding strategies and sampling methods, speculative decoding has the greatest effect on the![img-6.jpeg](img-6.jpeg)\n(a) A100 80GB PCIe\n\n![img-7.jpeg](img-7.jpeg)\n(b) A6000 Ada\nFigure 5: Energy consumption comparison across different GPUs for inference with PyTorch and vLLM backends of 1024 samples for 64 output tokens. For each GPU, we compare PyTorch with and without compilation, and vLLM with and without CUDA Graph serialization. The line in black represents the maximum allowable batch size for PyTorch. Relative savings are most apparent in the low batch size regime and that vLLM due to its optimizations can serve a larger batch size.\n\n![img-8.jpeg](i",
+        "img_path": "extracted_data/document_8/img-7.jpeg",
+        "img_description": "The scatter plot displays energy consumption (kWh) on the y-axis against batch size on the x-axis, using a logarithmic scale for both axes. It compares four configurations: PyTorch with and without compilation, and vLLM with eager execution set to true and false, using different symbols and colors. The plot indicates that energy consumption generally decreases with increasing batch size, with notable differences between the different configurations."
+    },
+    {
+        "doc_path": "extracted_data/document_8/doc_8.md",
+        "ref_id": "fernandez2025",
+        "ref_url": "https://arxiv.org/pdf/2504.17674",
+        "img_id": "img-8.jpeg",
+        "img_uid": "fernandez2025img-8.jpeg",
+        "context": "eg](img-7.jpeg)\n(b) A6000 Ada\nFigure 5: Energy consumption comparison across different GPUs for inference with PyTorch and vLLM backends of 1024 samples for 64 output tokens. For each GPU, we compare PyTorch with and without compilation, and vLLM with and without CUDA Graph serialization. The line in black represents the maximum allowable batch size for PyTorch. Relative savings are most apparent in the low batch size regime and that vLLM due to its optimizations can serve a larger batch size.\n\n![img-8.jpeg](img-8.jpeg)\n(c) A6000\n\nenergy use and latency of language model inference. At smaller batch sizes ( $\\leq 16$ ) speculative decoding is effective in reducing the total energy cost of inference with up to  $+29.14\\%$  compared to single-example inference (Figure 3). However, autoregressive decoding methods are more efficient at larger batch sizes, with speculative decoding requiring  $25.65\\%$  more energy when performing inference at a batch size of 128.\n\nMixture of Experts Incurs Higher Inference Energy C",
+        "img_path": "extracted_data/document_8/img-8.jpeg",
+        "img_description": "The graph displays energy consumption (kWh) versus batch size for PyTorch and vLLM with both \"compile/eager\" settings, using logarithmic scales on both axes. PyTorch with \"compile=True\" and vLLM with \"eager=True\" exhibit lower energy usage, especially as batch size increases, compared to their \"compile=False\" or \"eager=False\" counterparts. A dashed vertical line marks the transition at a batch size of \\(2^6\\) to \\(2^7\\), highlighting significant reductions in energy consumption for larger batch sizes."
+    },
+    {
+        "doc_path": "extracted_data/document_8/doc_8.md",
+        "ref_id": "fernandez2025",
+        "ref_url": "https://arxiv.org/pdf/2504.17674",
+        "img_id": "img-9.jpeg",
+        "img_uid": "fernandez2025img-9.jpeg",
+        "context": "tational workloads.\n\nContinuous Batching Reduces Energy Use. LLM inference is inherently autoregressive, requiring many sequential operations. Static batching maintains a fixed batch size throughout inference, which leads to GPU under-utilization when generation lengths vary and idle compute accumulates after early terminations. Continuous batching mitigates this by dynamically replacing completed requests with new ones, improving GPU utilization and reducing idle time (Yu et al., 2022). This ap![img-9.jpeg](img-9.jpeg)\n\n![img-10.jpeg](img-10.jpeg)\nFigure 6: Energy Use of Llama-3.1 8B and Qwen 32B with varying degrees of Tensor Parallelism.\n\nproach is particularly effective when generation lengths have high variance, yielding significant speedups at larger batch sizes.\n\nWe observe that at smaller batch sizes the overhead of online scheduling outweighs its benefits but at larger batch sizes, online serving with continuous batching requires less energy; details in Appendix D. We note that the numbers under-repre",
+        "img_path": "extracted_data/document_8/img-9.jpeg",
+        "img_description": "The graph demonstrates the energy consumption (in kWh) of the Llama 3.1 8B model across different batch sizes from \\(2^1\\) to \\(2^9\\) while using a Single GPU, Tensor Parallel with 2 GPUs, and Tensor Parallel with 4 GPUs. It shows that as the batch size increases, energy consumption decreases across all configurations, with Tensor Parallel configurations generally consuming less energy than the Single GPU. The graph includes data points for each configuration, marked with different colors: green for Single GPU, orange for Tensor Parallel 2, and blue for Tensor Parallel 4."
+    },
+    {
+        "doc_path": "extracted_data/document_8/doc_8.md",
+        "ref_id": "fernandez2025",
+        "ref_url": "https://arxiv.org/pdf/2504.17674",
+        "img_id": "img-10.jpeg",
+        "img_uid": "fernandez2025img-10.jpeg",
+        "context": "uous Batching Reduces Energy Use. LLM inference is inherently autoregressive, requiring many sequential operations. Static batching maintains a fixed batch size throughout inference, which leads to GPU under-utilization when generation lengths vary and idle compute accumulates after early terminations. Continuous batching mitigates this by dynamically replacing completed requests with new ones, improving GPU utilization and reducing idle time (Yu et al., 2022). This ap![img-9.jpeg](img-9.jpeg)\n\n![img-10.jpeg](img-10.jpeg)\nFigure 6: Energy Use of Llama-3.1 8B and Qwen 32B with varying degrees of Tensor Parallelism.\n\nproach is particularly effective when generation lengths have high variance, yielding significant speedups at larger batch sizes.\n\nWe observe that at smaller batch sizes the overhead of online scheduling outweighs its benefits but at larger batch sizes, online serving with continuous batching requires less energy; details in Appendix D. We note that the numbers under-represent the impact of continuous",
+        "img_path": "extracted_data/document_8/img-10.jpeg",
+        "img_description": "The graph titled \"DeepSeek Distill Qwen 32B\" compares energy consumption (in kWh) across varying batch sizes for two tensor parallel configurations, 2 and 4. The data points show that energy consumption decreases as batch size increases, with tensor parallel 4 generally using less energy than tensor parallel 2. The x-axis represents batch size on a logarithmic scale, while the y-axis represents energy in kWh also on a logarithmic scale."
+    },
+    {
+        "doc_path": "extracted_data/document_8/doc_8.md",
+        "ref_id": "fernandez2025",
+        "ref_url": "https://arxiv.org/pdf/2504.17674",
+        "img_id": "img-11.jpeg",
+        "img_uid": "fernandez2025img-11.jpeg",
+        "context": "ations on a single A6000 GPU.\n\n# 4.1 Modeling Energy Requirements Using Offline Serving\n\nWe consider the energy required to process a dataset  $\\mathcal{D} = \\{R_1, R_2, \\ldots, R_N\\}$  in an offline setting in which all requests can be batch processed freely, and where each request  $R_k$  consists of a tuple  $(i_k, o_k)$ , representing the input token length  $i_k$  and the output generation length  $o_k$ :\n\n$$\nR _ {k} = \\left(i _ {k}, o _ {k}\\right), \\quad \\forall k \\in \\{1, \\dots , N \\}.\n$$![img-11.jpeg](img-11.jpeg)\nFigure 7: Comparison of the real token length distributions (blue) with the binned approximation (orange) for Azure conversation input (left) and output (right) token lengths. The CDF plots illustrate how our binning strategy approximates the empirical distribution while ensuring computational efficiency for energy estimation.\n\n![img-12.jpeg](img-12.jpeg)\n\nSince  $i_k$  and  $o_k$  vary significantly across requests, we utilize dataset statistics\u2014including the median and 99th percentile of inpu",
+        "img_path": "extracted_data/document_8/img-11.jpeg",
+        "img_description": "The image is a cumulative distribution function (CDF) graph titled \"Azure Conversation Input Tokens\" comparing two lines: the \"Real Distribution\" in blue and the \"Binned Approximation\" in orange. The x-axis represents \"Token Count\" on a logarithmic scale ranging from 2^1 to 2^13, while the y-axis shows \"Cumulative Probability\" from 0 to 1. The graph illustrates how the real distribution closely follows a smooth curve, while the binned approximation appears as a stepped line, indicating a discretized approach to modeling the data."
+    },
+    {
+        "doc_path": "extracted_data/document_8/doc_8.md",
+        "ref_id": "fernandez2025",
+        "ref_url": "https://arxiv.org/pdf/2504.17674",
+        "img_id": "img-12.jpeg",
+        "img_uid": "fernandez2025img-12.jpeg",
+        "context": "ength  $i_k$  and the output generation length  $o_k$ :\n\n$$\nR _ {k} = \\left(i _ {k}, o _ {k}\\right), \\quad \\forall k \\in \\{1, \\dots , N \\}.\n$$![img-11.jpeg](img-11.jpeg)\nFigure 7: Comparison of the real token length distributions (blue) with the binned approximation (orange) for Azure conversation input (left) and output (right) token lengths. The CDF plots illustrate how our binning strategy approximates the empirical distribution while ensuring computational efficiency for energy estimation.\n\n![img-12.jpeg](img-12.jpeg)\n\nSince  $i_k$  and  $o_k$  vary significantly across requests, we utilize dataset statistics\u2014including the median and 99th percentile of input and output lengths (discussed in \u00a74.3) to inform our binning strategy.\n\nBinning Strategy. To effectively handle the broad range of  $(i_k, o_k)$  values, we define discrete bin sets for input and output lengths:\n\nWe collect real energy measurements  $\\mathbf{E}_{\\mathrm{batch}}^{\\mathrm{real}}(\\mathbf{I}^{*},\\mathbf{O}^{*})$  , representing the observed ",
+        "img_path": "extracted_data/document_8/img-12.jpeg",
+        "img_description": "The image displays a cumulative distribution function (CDF) graph titled \"Azure Conversation Output Tokens - CDF,\" comparing two distributions: a real distribution depicted by a blue curve and a binned approximation shown in orange. The x-axis represents the token count on a logarithmic scale, while the y-axis indicates cumulative probability ranging from 0 to 1. The real distribution follows a smooth, continuous curve, whereas the binned approximation follows a stepwise pattern, illustrating the approximation of the real distribution."
+    },
+    {
+        "doc_path": "extracted_data/document_8/doc_8.md",
+        "ref_id": "fernandez2025",
+        "ref_url": "https://arxiv.org/pdf/2504.17674",
+        "img_id": "img-13.jpeg",
+        "img_uid": "fernandez2025img-13.jpeg",
+        "context": "h dataset for the input and the output tokens provided in Table 3.\n\nTable 2: Output Sequence Length Statistics Across RealWorld LLM Workloads\n\n|  Task | Mean \u00b1 Std | Max | Output  |\n| --- | --- | --- | --- |\n|  Translation | 49.96 \u00b1 39.39 | 550 | 64  |\n|  Generation | 136.89 \u00b1 93.13 | 547 | 64  |\n|  Classification | 292.48 \u00b1 239.94 | 3112 | 1  |\n|  Summarization | 838.49 \u00b1 400.70 | 2386 | 64  |\n\nTable 3: Tokenized Input and Output Length Statistics Across NLP Tasks used for Energy Benchmarking\n\n![img-13.jpeg](img-13.jpeg)\nFigure 8: Energy Comparison in doing inference over 1024 samples between PyTorch with Compilation off and vLLM with eager model off.\n\nWe note that the input sequences were padded to the maximum sequence length. The energy profiles for the best run, characterized by the least energy are summarized in Figure 8, with consistent reductions in energy use provided by inference efficiency optimizations.\n\nReal-World LLM Workloads Additionally, we estimate the energy intensity and effectiveness of effic",
+        "img_path": "extracted_data/document_8/img-13.jpeg",
+        "img_description": "The graph displays energy consumption (kWh) for different tasks comparing PyTorch (indicated by blue circles) and vLLM (indicated by orange triangles). The x-axis lists tasks including \"wiki,\" \"imdb,\" \"CNN,\" and \"wmt,\" while the y-axis measures energy in kilowatt-hours. PyTorch tends to consume more energy than vLLM across tasks, with visible error bars indicating variability."
+    },
+    {
+        "doc_path": "extracted_data/document_8/doc_8.md",
+        "ref_id": "fernandez2025",
+        "ref_url": "https://arxiv.org/pdf/2504.17674",
+        "img_id": "img-14.jpeg",
+        "img_uid": "fernandez2025img-14.jpeg",
+        "context": "ngth Results\n\nIn Figure 10, we present additional results on the effects of scaling input and output sequence lengths with the PyTorch framework.|  CPU | RAM | GPU | GPU TDP | FP32 TFLOPS | Bfloat16 TFLOPS  |\n| --- | --- | --- | --- | --- | --- |\n|  256xAMD EPYC 7763 | 1TB | Nvidia RTX A6000 | 300W | 38.7 | -  |\n|  128xAMD EPYC 7513 | 500GB | Nvidia RTX A6000 Ada | 300W | 91.1 | -  |\n|  128xAMD EPYC 7763 | 1TB | Nvidia RTX A100-80 GB | 300W | 156 | 312  |\n\nTable 5: Node Hardware Specifications\n\n![img-14.jpeg](img-14.jpeg)\n(a) A100 80GB PCIe\n\n![img-15.jpeg](img-15.jpeg)\n(b) A6000 Ada\nFigure 10: Controlled sweeps of input and output sequence lengths on A6000 GPUs, with vanilla PyTorch backend.\n\n![img-16.jpeg](img-16.jpeg)\n(c) A6000\nFigure 9: Energy reduction comparison between online and offline serving modes across different GPUs  $(E_{\\text{offline}} - E_{\\text{online}}) * 100 / E_{\\text{offline}})$ . The optimizations employed for online serving save up to  $5\\%$  energy at larger batch sizes![img-17.jpeg](img-",
+        "img_path": "extracted_data/document_8/img-14.jpeg",
+        "img_description": "The scatter plot displays energy reduction percentages versus batch sizes on a logarithmic scale, with batch sizes ranging from 2^1 to 2^9. The data points indicate varied energy reductions, with some positive and negative values, highlighting a notably negative reduction around batch size 2^1 and approximate zero reduction near batch size 2^6. A horizontal yellow dashed line at 0% signifies the threshold for positive and negative reductions."
+    },
+    {
+        "doc_path": "extracted_data/document_8/doc_8.md",
+        "ref_id": "fernandez2025",
+        "ref_url": "https://arxiv.org/pdf/2504.17674",
+        "img_id": "img-15.jpeg",
+        "img_uid": "fernandez2025img-15.jpeg",
+        "context": "l results on the effects of scaling input and output sequence lengths with the PyTorch framework.|  CPU | RAM | GPU | GPU TDP | FP32 TFLOPS | Bfloat16 TFLOPS  |\n| --- | --- | --- | --- | --- | --- |\n|  256xAMD EPYC 7763 | 1TB | Nvidia RTX A6000 | 300W | 38.7 | -  |\n|  128xAMD EPYC 7513 | 500GB | Nvidia RTX A6000 Ada | 300W | 91.1 | -  |\n|  128xAMD EPYC 7763 | 1TB | Nvidia RTX A100-80 GB | 300W | 156 | 312  |\n\nTable 5: Node Hardware Specifications\n\n![img-14.jpeg](img-14.jpeg)\n(a) A100 80GB PCIe\n\n![img-15.jpeg](img-15.jpeg)\n(b) A6000 Ada\nFigure 10: Controlled sweeps of input and output sequence lengths on A6000 GPUs, with vanilla PyTorch backend.\n\n![img-16.jpeg](img-16.jpeg)\n(c) A6000\nFigure 9: Energy reduction comparison between online and offline serving modes across different GPUs  $(E_{\\text{offline}} - E_{\\text{online}}) * 100 / E_{\\text{offline}})$ . The optimizations employed for online serving save up to  $5\\%$  energy at larger batch sizes![img-17.jpeg](img-17.jpeg)\n\n![img-18.jpeg](img-18.jpeg)\n\n![img-19.",
+        "img_path": "extracted_data/document_8/img-15.jpeg",
+        "img_description": "The scatter plot illustrates the relationship between batch size and energy reduction percentage, displaying data points for batch sizes ranging from 20 to 28. It shows a trend where smaller batch sizes, particularly at 20, correspond to a significant negative energy reduction influence of around -12.5%, while larger batch sizes from 25 onwards show positive energy reduction values up to 5%. The horizontal line at 0% indicates the threshold between energy reduction and increase."
+    },
+    {
+        "doc_path": "extracted_data/document_8/doc_8.md",
+        "ref_id": "fernandez2025",
+        "ref_url": "https://arxiv.org/pdf/2504.17674",
+        "img_id": "img-16.jpeg",
+        "img_uid": "fernandez2025img-16.jpeg",
+        "context": "OPS  |\n| --- | --- | --- | --- | --- | --- |\n|  256xAMD EPYC 7763 | 1TB | Nvidia RTX A6000 | 300W | 38.7 | -  |\n|  128xAMD EPYC 7513 | 500GB | Nvidia RTX A6000 Ada | 300W | 91.1 | -  |\n|  128xAMD EPYC 7763 | 1TB | Nvidia RTX A100-80 GB | 300W | 156 | 312  |\n\nTable 5: Node Hardware Specifications\n\n![img-14.jpeg](img-14.jpeg)\n(a) A100 80GB PCIe\n\n![img-15.jpeg](img-15.jpeg)\n(b) A6000 Ada\nFigure 10: Controlled sweeps of input and output sequence lengths on A6000 GPUs, with vanilla PyTorch backend.\n\n![img-16.jpeg](img-16.jpeg)\n(c) A6000\nFigure 9: Energy reduction comparison between online and offline serving modes across different GPUs  $(E_{\\text{offline}} - E_{\\text{online}}) * 100 / E_{\\text{offline}})$ . The optimizations employed for online serving save up to  $5\\%$  energy at larger batch sizes![img-17.jpeg](img-17.jpeg)\n\n![img-18.jpeg](img-18.jpeg)\n\n![img-19.jpeg](img-19.jpeg)\nFigure 11: Controlled sweeps of input and output sequence lengths on A6000 GPUs, with vLLM offline inference. Here, we display multiple",
+        "img_path": "extracted_data/document_8/img-16.jpeg",
+        "img_description": "The scatter plot illustrates the relationship between batch size and energy reduction percentage, showing data points at various batch sizes (20 to 28) with energy reduction values ranging from -10% to 5%. Notably, most data points above batch size 23 demonstrate positive energy reduction, while one point at batch size 20 exhibits a significant negative reduction of about -10%. The horizontal yellow line at 0% serves as a reference for distinguishing between energy increases and reductions."
+    },
+    {
+        "doc_path": "extracted_data/document_8/doc_8.md",
+        "ref_id": "fernandez2025",
+        "ref_url": "https://arxiv.org/pdf/2504.17674",
+        "img_id": "img-17.jpeg",
+        "img_uid": "fernandez2025img-17.jpeg",
+        "context": ".jpeg](img-14.jpeg)\n(a) A100 80GB PCIe\n\n![img-15.jpeg](img-15.jpeg)\n(b) A6000 Ada\nFigure 10: Controlled sweeps of input and output sequence lengths on A6000 GPUs, with vanilla PyTorch backend.\n\n![img-16.jpeg](img-16.jpeg)\n(c) A6000\nFigure 9: Energy reduction comparison between online and offline serving modes across different GPUs  $(E_{\\text{offline}} - E_{\\text{online}}) * 100 / E_{\\text{offline}})$ . The optimizations employed for online serving save up to  $5\\%$  energy at larger batch sizes![img-17.jpeg](img-17.jpeg)\n\n![img-18.jpeg](img-18.jpeg)\n\n![img-19.jpeg](img-19.jpeg)\nFigure 11: Controlled sweeps of input and output sequence lengths on A6000 GPUs, with vLLM offline inference. Here, we display multiple fixed sequence length sizes for comparison as we sweep across batch size and the other dimension of sequence length.\n\n![img-20.jpeg](img-20.jpeg)![img-21.jpeg](img-21.jpeg)\n\n![img-22.jpeg](img-22.jpeg)\n\n![img-23.jpeg](img-23.jpeg)\nFigure 12: Classical NLP tasks and their energy intensities with vLLM back",
+        "img_path": "extracted_data/document_8/img-17.jpeg",
+        "img_description": "The graph depicts the relationship between prefill energy consumption (kWh) and input sequence length (tokens) for different batch sizes (BS=1, 8, 64) and two output token configurations (8 and 64 tokens). Energy usage increases with longer input sequences, with each batch size showing a distinct curve pattern; BS=1 (blue) displays lower energy than BS=8 (orange) and BS=64 (green). The markers indicate the number of output tokens, where triangles represent 64 tokens and asterisks represent 8 tokens."
+    },
+    {
+        "doc_path": "extracted_data/document_8/doc_8.md",
+        "ref_id": "fernandez2025",
+        "ref_url": "https://arxiv.org/pdf/2504.17674",
+        "img_id": "img-18.jpeg",
+        "img_uid": "fernandez2025img-18.jpeg",
+        "context": "80GB PCIe\n\n![img-15.jpeg](img-15.jpeg)\n(b) A6000 Ada\nFigure 10: Controlled sweeps of input and output sequence lengths on A6000 GPUs, with vanilla PyTorch backend.\n\n![img-16.jpeg](img-16.jpeg)\n(c) A6000\nFigure 9: Energy reduction comparison between online and offline serving modes across different GPUs  $(E_{\\text{offline}} - E_{\\text{online}}) * 100 / E_{\\text{offline}})$ . The optimizations employed for online serving save up to  $5\\%$  energy at larger batch sizes![img-17.jpeg](img-17.jpeg)\n\n![img-18.jpeg](img-18.jpeg)\n\n![img-19.jpeg](img-19.jpeg)\nFigure 11: Controlled sweeps of input and output sequence lengths on A6000 GPUs, with vLLM offline inference. Here, we display multiple fixed sequence length sizes for comparison as we sweep across batch size and the other dimension of sequence length.\n\n![img-20.jpeg](img-20.jpeg)![img-21.jpeg](img-21.jpeg)\n\n![img-22.jpeg](img-22.jpeg)\n\n![img-23.jpeg](img-23.jpeg)\nFigure 12: Classical NLP tasks and their energy intensities with vLLM backends. From top to bottom, the",
+        "img_path": "extracted_data/document_8/img-18.jpeg",
+        "img_description": "The graph titled \"Decode energy vs. input sequence length\" displays the energy consumption for 1024 examples (in kWh) on a logarithmic scale against varying input sequence lengths (in tokens) also on a logarithmic scale. It compares three batch sizes (BS=1, BS=8, BS=64) using different markers, while distinguishing between 8 output tokens and 64 output tokens. The data points show a general trend of increasing energy consumption with longer input sequences, with separate trends based on the batch size and number of output tokens."
+    },
+    {
+        "doc_path": "extracted_data/document_8/doc_8.md",
+        "ref_id": "fernandez2025",
+        "ref_url": "https://arxiv.org/pdf/2504.17674",
+        "img_id": "img-19.jpeg",
+        "img_uid": "fernandez2025img-19.jpeg",
+        "context": "-15.jpeg)\n(b) A6000 Ada\nFigure 10: Controlled sweeps of input and output sequence lengths on A6000 GPUs, with vanilla PyTorch backend.\n\n![img-16.jpeg](img-16.jpeg)\n(c) A6000\nFigure 9: Energy reduction comparison between online and offline serving modes across different GPUs  $(E_{\\text{offline}} - E_{\\text{online}}) * 100 / E_{\\text{offline}})$ . The optimizations employed for online serving save up to  $5\\%$  energy at larger batch sizes![img-17.jpeg](img-17.jpeg)\n\n![img-18.jpeg](img-18.jpeg)\n\n![img-19.jpeg](img-19.jpeg)\nFigure 11: Controlled sweeps of input and output sequence lengths on A6000 GPUs, with vLLM offline inference. Here, we display multiple fixed sequence length sizes for comparison as we sweep across batch size and the other dimension of sequence length.\n\n![img-20.jpeg](img-20.jpeg)![img-21.jpeg](img-21.jpeg)\n\n![img-22.jpeg](img-22.jpeg)\n\n![img-23.jpeg](img-23.jpeg)\nFigure 12: Classical NLP tasks and their energy intensities with vLLM backends. From top to bottom, the batch size varies from 1, 8,",
+        "img_path": "extracted_data/document_8/img-19.jpeg",
+        "img_description": "The graph shows the relationship between decode energy (kWh) and output sequence length (tokens) with varying batch sizes (BS) of 1, 8, and 64. It exhibits a positive correlation, where energy consumption increases with longer sequence lengths for all batch sizes. The data is represented with different colored markers: blue for BS=1, orange for BS=8, and green for BS=64, illustrating that larger batch sizes tend to have lower energy consumption for the same sequence length."
+    },
+    {
+        "doc_path": "extracted_data/document_8/doc_8.md",
+        "ref_id": "fernandez2025",
+        "ref_url": "https://arxiv.org/pdf/2504.17674",
+        "img_id": "img-20.jpeg",
+        "img_uid": "fernandez2025img-20.jpeg",
+        "context": "text{offline}} - E_{\\text{online}}) * 100 / E_{\\text{offline}})$ . The optimizations employed for online serving save up to  $5\\%$  energy at larger batch sizes![img-17.jpeg](img-17.jpeg)\n\n![img-18.jpeg](img-18.jpeg)\n\n![img-19.jpeg](img-19.jpeg)\nFigure 11: Controlled sweeps of input and output sequence lengths on A6000 GPUs, with vLLM offline inference. Here, we display multiple fixed sequence length sizes for comparison as we sweep across batch size and the other dimension of sequence length.\n\n![img-20.jpeg](img-20.jpeg)![img-21.jpeg](img-21.jpeg)\n\n![img-22.jpeg](img-22.jpeg)\n\n![img-23.jpeg](img-23.jpeg)\nFigure 12: Classical NLP tasks and their energy intensities with vLLM backends. From top to bottom, the batch size varies from 1, 8, to 128",
+        "img_path": "extracted_data/document_8/img-20.jpeg",
+        "img_description": "The graph depicts the relationship between output sequence length (in tokens) and generation duration (in seconds) for processing 1024 examples, with different batch sizes (BS) and prompt token counts. Three color-coded lines represent batch sizes of 1, 8, and 64, while star markers indicate scenarios with 64 and 512 prompt tokens. There's a noticeable increase in energy consumption as output sequence length increases, with variations based on batch size and prompt token count."
+    },
+    {
+        "doc_path": "extracted_data/document_8/doc_8.md",
+        "ref_id": "fernandez2025",
+        "ref_url": "https://arxiv.org/pdf/2504.17674",
+        "img_id": "img-21.jpeg",
+        "img_uid": "fernandez2025img-21.jpeg",
+        "context": "nline}}) * 100 / E_{\\text{offline}})$ . The optimizations employed for online serving save up to  $5\\%$  energy at larger batch sizes![img-17.jpeg](img-17.jpeg)\n\n![img-18.jpeg](img-18.jpeg)\n\n![img-19.jpeg](img-19.jpeg)\nFigure 11: Controlled sweeps of input and output sequence lengths on A6000 GPUs, with vLLM offline inference. Here, we display multiple fixed sequence length sizes for comparison as we sweep across batch size and the other dimension of sequence length.\n\n![img-20.jpeg](img-20.jpeg)![img-21.jpeg](img-21.jpeg)\n\n![img-22.jpeg](img-22.jpeg)\n\n![img-23.jpeg](img-23.jpeg)\nFigure 12: Classical NLP tasks and their energy intensities with vLLM backends. From top to bottom, the batch size varies from 1, 8, to 128",
+        "img_path": "extracted_data/document_8/img-21.jpeg",
+        "img_description": "The image is a box plot comparing the energy consumption (in kWh) of four different tasks: classification, summarization, textgen, and translation, for processing 1024 examples. Classification has the lowest energy usage close to 0.02 kWh, while summarization, textgen, and translation have higher energy demands around 0.10 kWh. The plots for summarization, textgen, and translation show similar ranges, whereas classification shows a much more contained energy range."
+    },
+    {
+        "doc_path": "extracted_data/document_8/doc_8.md",
+        "ref_id": "fernandez2025",
+        "ref_url": "https://arxiv.org/pdf/2504.17674",
+        "img_id": "img-22.jpeg",
+        "img_uid": "fernandez2025img-22.jpeg",
+        "context": "line}})$ . The optimizations employed for online serving save up to  $5\\%$  energy at larger batch sizes![img-17.jpeg](img-17.jpeg)\n\n![img-18.jpeg](img-18.jpeg)\n\n![img-19.jpeg](img-19.jpeg)\nFigure 11: Controlled sweeps of input and output sequence lengths on A6000 GPUs, with vLLM offline inference. Here, we display multiple fixed sequence length sizes for comparison as we sweep across batch size and the other dimension of sequence length.\n\n![img-20.jpeg](img-20.jpeg)![img-21.jpeg](img-21.jpeg)\n\n![img-22.jpeg](img-22.jpeg)\n\n![img-23.jpeg](img-23.jpeg)\nFigure 12: Classical NLP tasks and their energy intensities with vLLM backends. From top to bottom, the batch size varies from 1, 8, to 128",
+        "img_path": "extracted_data/document_8/img-22.jpeg",
+        "img_description": "The box plot graph compares energy consumption (in kWh) for processing 1024 examples across four tasks: classification, summarization, text generation (textgen), and translation. Classification has the lowest energy usage, while summarization shows the highest, followed by textgen and translation with moderate consumption. Each task's energy distribution is depicted with variability and median values."
+    },
+    {
+        "doc_path": "extracted_data/document_8/doc_8.md",
+        "ref_id": "fernandez2025",
+        "ref_url": "https://arxiv.org/pdf/2504.17674",
+        "img_id": "img-23.jpeg",
+        "img_uid": "fernandez2025img-23.jpeg",
+        "context": "employed for online serving save up to  $5\\%$  energy at larger batch sizes![img-17.jpeg](img-17.jpeg)\n\n![img-18.jpeg](img-18.jpeg)\n\n![img-19.jpeg](img-19.jpeg)\nFigure 11: Controlled sweeps of input and output sequence lengths on A6000 GPUs, with vLLM offline inference. Here, we display multiple fixed sequence length sizes for comparison as we sweep across batch size and the other dimension of sequence length.\n\n![img-20.jpeg](img-20.jpeg)![img-21.jpeg](img-21.jpeg)\n\n![img-22.jpeg](img-22.jpeg)\n\n![img-23.jpeg](img-23.jpeg)\nFigure 12: Classical NLP tasks and their energy intensities with vLLM backends. From top to bottom, the batch size varies from 1, 8, to 128",
+        "img_path": "extracted_data/document_8/img-23.jpeg",
+        "img_description": "The image displays a box plot comparing the energy consumption for processing 1024 examples (measured in kWh) across four tasks: classification, summarization, text generation (textgen), and translation. Classification and summarization have higher median energy consumption, with summarization showing the highest variability. Text generation and translation both consume less energy, with translation having the lowest consumption."
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "doc_path": "extracted_data/document_20/doc_20.md",
+        "ref_id": "luccioni2025c",
+        "ref_url": "https://arxiv.org/pdf/2506.15572",
+        "img_id": "img-0.jpeg",
+        "img_uid": "luccioni2025cimg-0.jpeg",
+        "context": "e: Environmental impact data was not publicly released and estimation approaches (as noted in Indirect Disclosure) were not possible.\n\nFrom 2010 to 2018, only 17% of the models shared data that could be used to indirectly estimate environmental impact of model training (ranging from 0 to 33% each year); no direct environmental impact data was released during this period. This is expected, given that AI models of that era required significantly less compute and resource usage transparency was not![img-0.jpeg](img-0.jpeg)\nFigure 1. Environmental Impact Transparency of Notable AI Models by Release Year $^{27}$\n\nyet common practice, although many articles accompanying papers did provide related information about, e.g. the amount of training data used or number of epochs trained. From 2019 to 2022, transparency improved as awareness of impacts grew and open-weights model releases became more common. This period includes the work of Strubell et al. $^{12}$ , Luccioni $^{11}$  and others. The direct release of enviro",
+        "img_path": "extracted_data/document_20/img-0.jpeg",
+        "img_description": "The stacked bar chart displays the count of environmental transparency from 2010 to 2025, categorized into three types: None in red, Indirect in blue, and Direct in green. There is a noticeable increase in the overall counts from 2010 to 2023, peaking in 2023, with a decline in 2024 and a sharp drop in 2025. The proportion of 'Direct' transparency, shown in green, is most significant from 2021 to 2023."
+    },
+    {
+        "doc_path": "extracted_data/document_20/doc_20.md",
+        "ref_id": "luccioni2025c",
+        "ref_url": "https://arxiv.org/pdf/2506.15572",
+        "img_id": "img-1.jpeg",
+        "img_uid": "luccioni2025cimg-1.jpeg",
+        "context": "ietary models after 2022, potentially catalyzed by the popular launch of ChatGPT, which provided very limited information about the training approach used and even the final size of the underlying model, triggered a notable reversal in this trend, dramatically reducing direct environmental disclosures. By the first quarter of 2025, the majority of notable AI models again fell under the \"no disclosure\" category, as the line between research and commercial deployment became increasingly blurred.\n\n![img-1.jpeg](img-1.jpeg)\nFigure 2. Environmental Impact Transparency of LLM Usage - OpenRouter $^{28}$  (May 2025)\n\nBeyond the long term trend, zooming in to examine recent AI model usage data helps illustrate today's environmental impact transparency conditions. OpenRouter $^{28}$ , a widely-used API platform for LLMs, publicly shares data on model traffic including top 20 models by month, and the number of tokens running through every model. May 2025 data (Figure 2) indicates that of the top 20 used models, only one ",
+        "img_path": "extracted_data/document_20/img-1.jpeg",
+        "img_description": "The image is a donut chart depicting four categories of data: \"Direct\" at 2.0%, \"Indirect\" at 13.9%, \"None\" at 84.1%, and a small unspecified green section. The \"None\" category dominates the chart, represented by the largest red section. The other smaller blue and green segments correspond to the \"Indirect\" and \"Direct\" categories, respectively."
+    },
+    {
+        "doc_path": "extracted_data/document_20/doc_20.md",
+        "ref_id": "luccioni2025c",
+        "ref_url": "https://arxiv.org/pdf/2506.15572",
+        "img_id": "img-2.jpeg",
+        "img_uid": "luccioni2025cimg-2.jpeg",
+        "context": "on the energy impact of data centers[44],  $8\\%$  discuss other topics, particularly DeepSeek[45] and optimizations with ternary neural network architectures to improve energy efficiency[46] and only  $5\\%$  explicitly call for transparency or necessary caution when addressing this subject[47], stating that the true figures remain unknown. It is also noteworthy that among these articles,  $9\\%$  also relay the claim that training a LLM produces emissions equivalent to 5 cars in their lifetime.\n\n![img-2.jpeg](img-2.jpeg)\nFigure 3. Analysis of media articles discussing ChatGPT energy consumption.\n\n# AI can reduce  $10\\%$  of global emissions\n\nWhile the numbers around AI's negative environmental impacts can be misinterpreted and taken out of context, so, too, can the potential of AI to reduce emissions, especially by corporate actors that develop and deploy AI systems on a global scale. One recurring number states that AI can help reduce global GHG emissions (up to)  $10\\%$ . This number can be traced back to a 2",
+        "img_path": "extracted_data/document_20/img-2.jpeg",
+        "img_description": "The donut chart displays the distribution of topics in a dataset, with \"Include '3 WH' or '10x Google Search'\" comprising the largest segment at 53.2%. Other notable segments include \"Include other numbers\" at 22.2%, \"Include global figures\" at 11.3%, \"Other topics (e.g., optimization)\" at 8.2%, and \"Call for transparency/caution\" at 5.1%. The chart visually emphasizes the predominance of the primary topic, shown in red, relative to other categories."
+    }
+]

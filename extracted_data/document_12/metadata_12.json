@@ -1,0 +1,12 @@
+[
+    {
+        "doc_path": "extracted_data/document_12/doc_12.md",
+        "ref_id": "khan2025",
+        "ref_url": "https://arxiv.org/pdf/2504.06307",
+        "img_id": "img-0.jpeg",
+        "img_uid": "khan2025img-0.jpeg",
+        "context": "uracy, where accuracy can be quantified using standard metrics such as precision, recall, and F1-score.\n\n### III-B Framework Overview\n\nThe proposed framework (Figure. 1) tackles energy efficiency in LLM deployment through three interconnected components: local inference optimization, the selection of energy-efficient LLMs, and a comprehensive evaluation methodology. These components function synergistically to reduce energy consumption without sacrificing predictive accuracy or responsiveness.\n\n![img-0.jpeg](img-0.jpeg)\nFigure 1: Detailed Overview of the Proposed Optimization Framework\n\n#### III-B1 Local Inference Optimization\n\nUnlike traditional cloud-based methods that rely on centralized data centers, local inference allows models to run directly on user devices while maintaining data privacy. By minimizing data transmission between clients and remote servers, this method significantly reduces both network overhead and carbon footprint *[10]*. To achieve efficient local inference, the framework employs a *q",
+        "img_path": "extracted_data/document_12/img-0.jpeg",
+        "img_description": "The image is a flowchart illustrating a process divided into three sections: Local Inference Optimization, Pre-trained LLMs Model Selection, and Evaluation Methodology. The first section shows \"Quantization\" with an arrow leading to model selections like LLAMA and Microsoft Phi-3. The Evaluation Methodology involves monitoring energy consumption, estimating carbon emissions, measuring latency, and model evaluation, using tools like Powerstat or Powermetrics, and focusing on responsiveness and sentiment analysis performance."
+    }
+]

@@ -1,0 +1,72 @@
+[
+    {
+        "doc_path": "extracted_data/document_32/doc_32.md",
+        "ref_id": "zschache2025",
+        "ref_url": "https://arxiv.org/pdf/2508.14170 ",
+        "img_id": "img-0.jpeg",
+        "img_uid": "zschache2025img-0.jpeg",
+        "context": "l energy usage in all experiments. The only exceptions are traditional models without embeddings, which do not use the GPU during inference.\n\n#### 4.1.1 Varying the Number of GPUs\n\nWe examined the effect of varying the number of GPUs on energy consumption and inference duration. Most LLMs were tested on 1, 2, or 4 GPUs on a single Capella system node. Larger models (Qwen 72B, Phi MoE, Llama 70B, Jamba Mini, and DS Llama 70B) required either 2 or 4 GPUs. Increasing the number of GPUs consistently![img-0.jpeg](img-0.jpeg)\nFig. 1 Accuracy-energy-trade-off of all models for the inference task on the Capella system (single node). The energy consumption for the same task spans over six orders of magnitude with traditional models being the most energy-efficient models and reasoning models are most energy-consuming. The best model for this specific task is a traditional model (Linear Embedding) with moderate energy consumption.\n\nreduced inference duration but did not reduce energy consumption. In some cases, energy co",
+        "img_path": "extracted_data/document_32/img-0.jpeg",
+        "img_description": "The scatter plot compares models based on their energy consumption (Wh) and accuracy, categorized into \"Deepeek,\" \"Other LLM,\" and \"Traditional\" methods. Models like \"DS Qwen 14B\" and \"DS Llama 8B\" are highlighted for high energy use and moderate accuracy, whereas \"Linear Tf-idf\" and \"XGBoost BoW\" show low energy and accuracy. Overall, the image contrasts the trade-off between energy efficiency and accuracy across different methodologies."
+    },
+    {
+        "doc_path": "extracted_data/document_32/doc_32.md",
+        "ref_id": "zschache2025",
+        "ref_url": "https://arxiv.org/pdf/2508.14170 ",
+        "img_id": "img-1.jpeg",
+        "img_uid": "zschache2025img-1.jpeg",
+        "context": "tem by comparing a 'single-node' configuration (2 GPUs on one node) with a 'double-node' configuration (1 GPU on each of two nodes). For the double-node configuration, energy consumption was summed across both nodes and averaged over 10 runs, while the reported duration reflects the average of the maximum value between the two nodes.\n\nAs shown in Figure 4, using two nodes increased energy consumption by a factor that depends on the model (see also Table B2). This increase stems from the overhead![img-1.jpeg](img-1.jpeg)\nFig. 2 Energy consumption of all models for the inference task on the Capella system (single node)\n\n![img-2.jpeg](img-2.jpeg)\nFig. 3 Effects of the number of GPUs on the runtime and consumed energy (Capella, single node). Deepseek models are not shown.\n\nof coordinating across nodes. Inference duration also increased by the same factor due to the sequential execution of model components and the required inter-node communication.\n\n# 4.1.3 Comparing GPU Architectures\n\nFinally, we compared the ener",
+        "img_path": "extracted_data/document_32/img-1.jpeg",
+        "img_description": "The image is a segmented bar chart comparing the energy consumption (in Wh) of various models across three categories: Deepseek, Other LLM, and Traditional. Each bar is divided into segments representing the energy usage by CPU (red), GPU (green), and RAM (blue). The Deepseek category exhibits the highest energy consumption, particularly the DS Llama 70B model, while the Traditional models show the lowest energy usage overall."
+    },
+    {
+        "doc_path": "extracted_data/document_32/doc_32.md",
+        "ref_id": "zschache2025",
+        "ref_url": "https://arxiv.org/pdf/2508.14170 ",
+        "img_id": "img-2.jpeg",
+        "img_uid": "zschache2025img-2.jpeg",
+        "context": "odes). For the double-node configuration, energy consumption was summed across both nodes and averaged over 10 runs, while the reported duration reflects the average of the maximum value between the two nodes.\n\nAs shown in Figure 4, using two nodes increased energy consumption by a factor that depends on the model (see also Table B2). This increase stems from the overhead![img-1.jpeg](img-1.jpeg)\nFig. 2 Energy consumption of all models for the inference task on the Capella system (single node)\n\n![img-2.jpeg](img-2.jpeg)\nFig. 3 Effects of the number of GPUs on the runtime and consumed energy (Capella, single node). Deepseek models are not shown.\n\nof coordinating across nodes. Inference duration also increased by the same factor due to the sequential execution of model components and the required inter-node communication.\n\n# 4.1.3 Comparing GPU Architectures\n\nFinally, we compared the energy efficiency of different GPU architectures (see Figure 5 and Table B3). Interestingly, the expected efficiency gains from us",
+        "img_path": "extracted_data/document_32/img-2.jpeg",
+        "img_description": "The image consists of two bar graphs comparing the duration in seconds and energy consumption in watt-hours of various AI models, namely Llama 3.1B, Llama 3.170B, Qwen 2.57B, Qwen 2.572B, Phi 3.5 Mini, Phi 3.5 MoE, and Jamba Mini 1.5, across different numbers of GPUs (1, 2, and 4). The left graph shows that as the number of GPUs increases, the duration generally decreases, with notable peaks for Qwen 2.572B and Llama 3.170B. The right graph reveals that energy consumption tends to increase with more GPUs, with Llama 3.170B and Qwen 2.572B consuming the most energy at 4 GPUs."
+    },
+    {
+        "doc_path": "extracted_data/document_32/doc_32.md",
+        "ref_id": "zschache2025",
+        "ref_url": "https://arxiv.org/pdf/2508.14170 ",
+        "img_id": "img-3.jpeg",
+        "img_uid": "zschache2025img-3.jpeg",
+        "context": "nally, we compared the energy efficiency of different GPU architectures (see Figure 5 and Table B3). Interestingly, the expected efficiency gains from using the more powerful H100 instead of V100 or A30 GPUs were only observed for the Deepseek models. This discrepancy is likely to arise because Deepseek models engage in extended reasoning by generating a larger output of words before making a classification decision. Consequently, the efficiency of H100 GPUs becomes evident only when substantial![img-3.jpeg](img-3.jpeg)\nFig. 4 Comparison single node vs. double node deployment (Capella).\n\ntext is generated. For models generating a single token per inference, a V100 or even a A30 GPU is more efficient in inference.\n\n![img-4.jpeg](img-4.jpeg)\nFig. 5 Comparison of different GPU cards: four exemplary LLMs. Single node deployment.\n\n# 4.2 Linear relationship between duration and energy\n\nIn most of the tables in appendix B, we report both the duration of each inference run and its corresponding energy consumption. Sin",
+        "img_path": "extracted_data/document_32/img-3.jpeg",
+        "img_description": "The image shows two bar graphs comparing three models: Llama 3.1 70B, Owen 2.5 72B, and Jamba Mini 1.5, measured in terms of duration (seconds) and energy consumed (Wh) for two configurations: single and double. In both graphs, the double configuration has higher values than the single, with Llama 3.1 70B and Owen 2.5 72B displaying the largest figures for both metrics. Jamba Mini 1.5 consistently shows the lowest values for both duration and energy consumption."
+    },
+    {
+        "doc_path": "extracted_data/document_32/doc_32.md",
+        "ref_id": "zschache2025",
+        "ref_url": "https://arxiv.org/pdf/2508.14170 ",
+        "img_id": "img-4.jpeg",
+        "img_uid": "zschache2025img-4.jpeg",
+        "context": "ed for the Deepseek models. This discrepancy is likely to arise because Deepseek models engage in extended reasoning by generating a larger output of words before making a classification decision. Consequently, the efficiency of H100 GPUs becomes evident only when substantial![img-3.jpeg](img-3.jpeg)\nFig. 4 Comparison single node vs. double node deployment (Capella).\n\ntext is generated. For models generating a single token per inference, a V100 or even a A30 GPU is more efficient in inference.\n\n![img-4.jpeg](img-4.jpeg)\nFig. 5 Comparison of different GPU cards: four exemplary LLMs. Single node deployment.\n\n# 4.2 Linear relationship between duration and energy\n\nIn most of the tables in appendix B, we report both the duration of each inference run and its corresponding energy consumption. Since energy is the integral of power over time, these two measures exhibit a strong correlation. If the power is constant over time, this correlation should be linear. Figure 6 illustrates this relationship forall experiments ",
+        "img_path": "extracted_data/document_32/img-4.jpeg",
+        "img_description": "The image displays eight bar charts comparing the duration and energy consumption for two different models, Llama and Qwen, across three hardware configurations: A30, V100, and H100. The top row shows duration in seconds, with H100 generally having longer durations, except for DS Llama 8B and DS Qwen 14B where A30 has the longest. The bottom row shows energy consumption in watt-hours, with H100 typically consuming the most energy, except for DS Llama 8B and DS Qwen 14B where A30 is highest."
+    },
+    {
+        "doc_path": "extracted_data/document_32/doc_32.md",
+        "ref_id": "zschache2025",
+        "ref_url": "https://arxiv.org/pdf/2508.14170 ",
+        "img_id": "img-5.jpeg",
+        "img_uid": "zschache2025img-5.jpeg",
+        "context": "tion. Since energy is the integral of power over time, these two measures exhibit a strong correlation. If the power is constant over time, this correlation should be linear. Figure 6 illustrates this relationship forall experiments conducted on a single node of the Capella cluster. When controlling for the number of GPUs used for model deployment, the relation between duration and energy is approximately linear. Therefore, the duration appears to serve as a good proxy for the energy consumed.\n\n![img-5.jpeg](img-5.jpeg)\nFig. 6 Plotting the relationship between duration and energy consumption (single node on Capella). The lines are added by running a linear regression model.\n\nTo further quantify the relationship between duration and energy consumption, we performed a linear regression analysis for each hardware configuration (see Table 3). This analysis includes all experiments, regardless of the number of nodes used for model deployment. The consistently high  $\\mathbb{R}^2$  values across all configurations i",
+        "img_path": "extracted_data/document_32/img-5.jpeg",
+        "img_description": "The line graph illustrates the relationship between the duration in seconds on the x-axis and energy consumption in watt-hours on the y-axis for configurations of 1, 2, and 4 GPUs, represented by red, green, and blue lines respectively. Each line shows a linear increase in energy consumption with respect to time, with the energy usage escalating more steeply with more GPUs. The trend suggests that doubling the number of GPUs significantly increases both energy consumption and the rate at which energy is consumed over time."
+    },
+    {
+        "doc_path": "extracted_data/document_32/doc_32.md",
+        "ref_id": "zschache2025",
+        "ref_url": "https://arxiv.org/pdf/2508.14170 ",
+        "img_id": "img-6.jpeg",
+        "img_uid": "zschache2025img-6.jpeg",
+        "context": " Jamba Mini 1.5 requires only a quarter of the energy for the same task.\n\nFinally, for emotion classification, the linear model with sentence embeddings is among the top-performing models. In this case, a traditional model provides the most efficient solution. Hence, accuracy-energy trade-offs must be assessed on a case-by-case basis. In some scenarios, traditional models are sufficient, while in others, LLMs offer justifiable benefits despite higher energy consumption. However, a reason for the![img-6.jpeg](img-6.jpeg)\nFig. 7 Accuracy-energy-trade-off of the best models for the inference task on different datasets (the Linear Embedding model was added for comparison), Capella system, single node. See Tables B4 and B5 for results of all models.\n\nsuperior performance of LLMs on some datasets might be that the data were included in the model's training data. Our study uses data that are probably not part of any LLM training set. Nevertheless, test-time compute, as featured by the Deepseek models, has no benefits",
+        "img_path": "extracted_data/document_32/img-6.jpeg",
+        "img_description": "The image is a multi-panel plot comparing the accuracy and energy consumption (Wh) of different language models across four datasets: news, yelp, tomatoes, and emotion. Each panel plots several models labeled as \"Deepsk,\" \"Other LLM,\" or \"Traditional,\" with specific models like \"DS Qwen 32B,\" \"DS Llama 70B,\" and \"Linear Embedding\" noted for their placement. The graphs show a trend where higher accuracy generally correlates with higher energy use, with \"Linear Embedding\" consistently showing low energy consumption and lower accuracy."
+    }
+]

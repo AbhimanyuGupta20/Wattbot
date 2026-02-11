@@ -1,0 +1,132 @@
+[
+    {
+        "doc_path": "extracted_data/document_16/doc_16.md",
+        "ref_id": "luccioni2023",
+        "ref_url": "https://arxiv.org/pdf/2302.08476",
+        "img_id": "img-0.jpeg",
+        "img_uid": "luccioni2023img-0.jpeg",
+        "context": " with the lowest carbon intensity in our sample are Canada (which ranges between 1.30 and  $52.89\\mathrm{gCO_2eq / kWh}$ , depending on the province) and Spain (which has a single national energy grid with a median carbon intensity of  $220.26\\mathrm{gCO_2eq / kWh}$ ), but they only represents a total of 7 models from our sample. This is similar to patterns in emissions worldwide, where a small number of highly industrialized countries produce the majority of the world's greenhouse gases [17].\n\n![img-0.jpeg](img-0.jpeg)\nFig. 1. Map with the countries where the models in the data were trained, as reported by the authors. The colors code the median carbon intensity of the energy used by the models trained in each country. The legend indicates the number of models trained in each country, as well as a colored patch marking the main energy source - see bottom of the legend for the values.\n\nAnother observation that can be made based on our data is that none of the models from our sample were trained in either Afric",
+        "img_path": "extracted_data/document_16/img-0.jpeg",
+        "img_description": "The image is a world map highlighting countries by median carbon intensity in g CO\u2082-eq/kWh, using a color gradient from yellow (low intensity) to black (high intensity). Countries like the United States, China, and Australia are prominently colored, indicating their energy source and carbon intensity, with the United States having the most models (48), primarily using gas. The map legend categorizes energy sources by color: coal (dark red), oil (red), gas (red-orange), nuclear (blue), and hydro (yellow)."
+    },
+    {
+        "doc_path": "extracted_data/document_16/doc_16.md",
+        "ref_id": "luccioni2023",
+        "ref_url": "https://arxiv.org/pdf/2302.08476",
+        "img_id": "img-1.jpeg",
+        "img_uid": "luccioni2023img-1.jpeg",
+        "context": "on emitted is largely linear. However, Figure 2 Manuscript pending reviewCounting Carbon: A Survey of Factors Influencing the Emissions of Machine Learning\n\nalso shows that models trained with cleaner energy sources, such hydroelectricity, largely deviate from the main trend, with orders of magnitude less carbon emissions compared to models trained using coal and gas. In other words, models trained with low carbon-intensive energy sources, result in much less carbon emissions, ceteris paribus.\n\n![img-1.jpeg](img-1.jpeg)\nFig. 2. Estimated energy consumed (kWh) and  $\\mathrm{CO}_{2}$  (kg) by each model in the data set, plotted in a log-log scale. Colors indicate the principal energy source, and the size of the dot carbon intensity. While the relationship between energy and carbon emissions is mostly linear, the data show that models trained with less carbon-intensive energy (e.g. hydroelectric) emit orders of magnitude less carbon than those trained using more carbon-intensive energy (e.g. coal).\n\nFor instance,",
+        "img_path": "extracted_data/document_16/img-1.jpeg",
+        "img_description": "The scatter plot displays the relationship between energy consumed (kWh) and CO2 equivalent emitted (kg) for different main energy sources, including coal, oil, gas, nuclear, and hydro. Each point is color-coded based on the energy source and sized according to carbon intensity (g CO2eq/kWh), with larger points indicating higher intensity. The data generally shows a positive correlation, where higher energy consumption leads to increased CO2 emissions, particularly prominent in coal and oil sources."
+    },
+    {
+        "doc_path": "extracted_data/document_16/doc_16.md",
+        "ref_id": "luccioni2023",
+        "ref_url": "https://arxiv.org/pdf/2302.08476",
+        "img_id": "img-2.jpeg",
+        "img_uid": "luccioni2023img-2.jpeg",
+        "context": "hereas others have predicted a plateau in future emissions due to increased hardware efficiency and carbon offsetting [37]. Therefore, one of the goals of our study was to observe the evolution of carbon emissions over time and study whether there are clear trends. Given that the papers from our study span from 2012 to the present time, we aimed to specifically compare whether new generations of ML models from our sample consistently used more energy and emitted more carbon than previous ones.\n\n![img-2.jpeg](img-2.jpeg)\nFig. 3.  $\\mathrm{CO}_{2}$  emitted (in kg) by the all models included in the data set, on a logarithmic scale. Each small marker corresponds to a model and the large markers indicate the  $99\\%$  trimmed mean within each task and year(s) of publication. The error lines cover the bootstrapped  $99\\%$  confidence intervals. The gray line corresponds to the average over all tasks.\n\nIn Figure 3, we show the carbon emissions emitted by every model from our sample, disaggregated by task and by year.",
+        "img_path": "extracted_data/document_16/img-2.jpeg",
+        "img_description": "The graph displays CO2 emissions in kilograms across various AI tasks\u2014Image Classification, Object Detection, Machine Translation, Question Answering, and Named Entity Recognition\u2014from 2012 to 2021. Each task is represented by distinct symbols and colors, showing variability in emissions over the years, with Machine Translation peaking in 2019. The Y-axis is logarithmic, indicating significant differences in emissions quantities."
+    },
+    {
+        "doc_path": "extracted_data/document_16/doc_16.md",
+        "ref_id": "luccioni2023",
+        "ref_url": "https://arxiv.org/pdf/2302.08476",
+        "img_id": "img-3.jpeg",
+        "img_uid": "luccioni2023img-3.jpeg",
+        "context": "y consumption. For the final two NLP tasks, question answering and named entity recognition, we have less data points (10 for the former and 11 for the latter), and the connection between carbon emissions and accuracy is very unclear. For both tasks, many models from both the high and low ends of the range of CO_{2} emissions achieve comparable performance on the SQuAD dataset (bottom-left plot) as well as the CoNLL dataset (bottom-right plot).Alexandra Sasha Luccioni and Alex Hernandez-Garcia\n\n![img-3.jpeg](img-3.jpeg)\n\n![img-4.jpeg](img-4.jpeg)\n\n![img-5.jpeg](img-5.jpeg)\nFig. 4. Comparison of the accuracy achieved by each model trained on Machine Translation (top left, evaluated using BLEU score on the English-French and English-German WMT datasets), Image Classification (top right, measured using Top-1 accuracy on ImageNet), Question Answering (bottom left, evaluated using F1 score on SQuAD v.1) and Named Entity Recognition (bottom right, evaluated using F1 score on the CoNLL dataset) and the  $\\mathrm{CO}_",
+        "img_path": "extracted_data/document_16/img-3.jpeg",
+        "img_description": "The scatter plot shows the relationship between CO2 emissions (kg) and BLEU scores for machine translation across datasets categorized by main energy sources: coal, oil, gas, nuclear, and hydro. The plot includes data for translations in English-French and English-German, with connecting lines highlighting trends for English-German and English-French datasets. There is a general trend of increasing BLEU scores with higher CO2 emissions, particularly noticeable in the nuclear and oil categories."
+    },
+    {
+        "doc_path": "extracted_data/document_16/doc_16.md",
+        "ref_id": "luccioni2023",
+        "ref_url": "https://arxiv.org/pdf/2302.08476",
+        "img_id": "img-4.jpeg",
+        "img_uid": "luccioni2023img-4.jpeg",
+        "context": "l two NLP tasks, question answering and named entity recognition, we have less data points (10 for the former and 11 for the latter), and the connection between carbon emissions and accuracy is very unclear. For both tasks, many models from both the high and low ends of the range of CO_{2} emissions achieve comparable performance on the SQuAD dataset (bottom-left plot) as well as the CoNLL dataset (bottom-right plot).Alexandra Sasha Luccioni and Alex Hernandez-Garcia\n\n![img-3.jpeg](img-3.jpeg)\n\n![img-4.jpeg](img-4.jpeg)\n\n![img-5.jpeg](img-5.jpeg)\nFig. 4. Comparison of the accuracy achieved by each model trained on Machine Translation (top left, evaluated using BLEU score on the English-French and English-German WMT datasets), Image Classification (top right, measured using Top-1 accuracy on ImageNet), Question Answering (bottom left, evaluated using F1 score on SQuAD v.1) and Named Entity Recognition (bottom right, evaluated using F1 score on the CoNLL dataset) and the  $\\mathrm{CO}_{2}$  emitted for training ",
+        "img_path": "extracted_data/document_16/img-4.jpeg",
+        "img_description": "The graph displays the relationship between CO2 emissions (in kilograms) and top-1 accuracy for image classification, with data points categorized by energy sources: Coal, Oil, Gas, Nuclear, and Hydro. As CO2 emissions increase, there is a general upward trend in accuracy, particularly notable in Coal and Oil data points. The line graph highlights the aggregate trend, showing a progressive improvement in accuracy with higher CO2 emissions."
+    },
+    {
+        "doc_path": "extracted_data/document_16/doc_16.md",
+        "ref_id": "luccioni2023",
+        "ref_url": "https://arxiv.org/pdf/2302.08476",
+        "img_id": "img-5.jpeg",
+        "img_uid": "luccioni2023img-5.jpeg",
+        "context": "nswering and named entity recognition, we have less data points (10 for the former and 11 for the latter), and the connection between carbon emissions and accuracy is very unclear. For both tasks, many models from both the high and low ends of the range of CO_{2} emissions achieve comparable performance on the SQuAD dataset (bottom-left plot) as well as the CoNLL dataset (bottom-right plot).Alexandra Sasha Luccioni and Alex Hernandez-Garcia\n\n![img-3.jpeg](img-3.jpeg)\n\n![img-4.jpeg](img-4.jpeg)\n\n![img-5.jpeg](img-5.jpeg)\nFig. 4. Comparison of the accuracy achieved by each model trained on Machine Translation (top left, evaluated using BLEU score on the English-French and English-German WMT datasets), Image Classification (top right, measured using Top-1 accuracy on ImageNet), Question Answering (bottom left, evaluated using F1 score on SQuAD v.1) and Named Entity Recognition (bottom right, evaluated using F1 score on the CoNLL dataset) and the  $\\mathrm{CO}_{2}$  emitted for training models. The black curves co",
+        "img_path": "extracted_data/document_16/img-5.jpeg",
+        "img_description": "The graph illustrates the relationship between CO2 equivalent emissions (in kg) and F1 scores for question answering across different energy sources, with data points for coal, oil, gas, nuclear, and hydro. The F1 score increases with higher CO2 emissions, indicated by a positive linear trend. Each energy source is distinguished by a different colored dot on the plot."
+    },
+    {
+        "doc_path": "extracted_data/document_16/doc_16.md",
+        "ref_id": "luccioni2023",
+        "ref_url": "https://arxiv.org/pdf/2302.08476",
+        "img_id": "img-6.jpeg",
+        "img_uid": "luccioni2023img-6.jpeg",
+        "context": "tion (top right, measured using Top-1 accuracy on ImageNet), Question Answering (bottom left, evaluated using F1 score on SQuAD v.1) and Named Entity Recognition (bottom right, evaluated using F1 score on the CoNLL dataset) and the  $\\mathrm{CO}_{2}$  emitted for training models. The black curves correspond to the Pareto fronts given the data, that is data points under the line are sub-optimal in terms of performance and  $\\mathrm{CO}_{2}$  emitted.Note that the x axis is in logarithmic scale.\n\n![img-6.jpeg](img-6.jpeg)\n\nDespite the lack of clear correlation between carbon intensity and model performance, there are some interesting observations to be made based on Figure 4. While we did not expect to see a strong link between these two factors, we find it worth noting that neither consuming more energy nor emitting more carbon seems to necessarily correlate with a higher accuracy, even in tasks such as Machine Translation, where Transformer models are largely seen to do better compared to other models  $^{5}$ ",
+        "img_path": "extracted_data/document_16/img-6.jpeg",
+        "img_description": "The graph represents the relationship between CO2 equivalent emissions (in kg) and F1 scores for different energy sources in Named Entity Recognition tasks. Coal shows the highest F1 scores with increasing CO2 emissions, while Nuclear maintains moderate F1 scores with relatively low emissions. Data points for each energy source are distinctively colored: Coal (brown), Oil (red), Gas (orange), Nuclear (purple), and Hydro (blue)."
+    },
+    {
+        "doc_path": "extracted_data/document_16/doc_16.md",
+        "ref_id": "luccioni2023",
+        "ref_url": "https://arxiv.org/pdf/2302.08476",
+        "img_id": "img-7.jpeg",
+        "img_uid": "luccioni2023img-7.jpeg",
+        "context": "rmance in different ML tasks.\n\nManuscript pending reviewAlexandra Sasha Luccioni and Alex Hernandez-Garcia\n\n# A.3 Energy Consumption by Task\n\nIn Figure 5 below, we plot the same four tasks as in Figure 3, representing the energy consumed instead of the  $\\mathrm{CO}_{2}$  emitted. We find largely similar trends as the ones we describe in Section 4.4, with better performance on tasks like machine translation and image classification not necessarily being contingent on higher energy consumption.\n\n![img-7.jpeg](img-7.jpeg)\n\n![img-8.jpeg](img-8.jpeg)\n\n![img-9.jpeg](img-9.jpeg)\nFig. 5. Comparison of the performance achieved by each model trained on Machine Translation tasks (BLEU score) and Image Classification (top-1 accuracy), and the energy consumed.\n\n![img-10.jpeg](img-10.jpeg)\n\nManuscript pending reviewCounting Carbon: A Survey of Factors Influencing the Emissions of Machine Learning\n\n# A.4 Carbon intensity over time\n\nIn Figure 6, we plot the evolution over the years of the carbon intensity of the energy grid ",
+        "img_path": "extracted_data/document_16/img-7.jpeg",
+        "img_description": "The graph displays a comparison of BLEU scores against energy consumption (kWh) for machine translation tasks across different energy sources, including Coal, Oil, Gas, Nuclear, and Hydro. Each point represents a dataset\u2014English-French and English-German translations\u2014with BLEU scores ranging from 25.0 to 42.5 and energy consumption ranging from 10^1 to over 10^4 kWh. The English-French dataset is highlighted with a solid line, showing a positive correlation between BLEU scores and energy consumption."
+    },
+    {
+        "doc_path": "extracted_data/document_16/doc_16.md",
+        "ref_id": "luccioni2023",
+        "ref_url": "https://arxiv.org/pdf/2302.08476",
+        "img_id": "img-8.jpeg",
+        "img_uid": "luccioni2023img-8.jpeg",
+        "context": "s.\n\nManuscript pending reviewAlexandra Sasha Luccioni and Alex Hernandez-Garcia\n\n# A.3 Energy Consumption by Task\n\nIn Figure 5 below, we plot the same four tasks as in Figure 3, representing the energy consumed instead of the  $\\mathrm{CO}_{2}$  emitted. We find largely similar trends as the ones we describe in Section 4.4, with better performance on tasks like machine translation and image classification not necessarily being contingent on higher energy consumption.\n\n![img-7.jpeg](img-7.jpeg)\n\n![img-8.jpeg](img-8.jpeg)\n\n![img-9.jpeg](img-9.jpeg)\nFig. 5. Comparison of the performance achieved by each model trained on Machine Translation tasks (BLEU score) and Image Classification (top-1 accuracy), and the energy consumed.\n\n![img-10.jpeg](img-10.jpeg)\n\nManuscript pending reviewCounting Carbon: A Survey of Factors Influencing the Emissions of Machine Learning\n\n# A.4 Carbon intensity over time\n\nIn Figure 6, we plot the evolution over the years of the carbon intensity of the energy grid for each model, as well as ",
+        "img_path": "extracted_data/document_16/img-8.jpeg",
+        "img_description": "The graph plots the relationship between energy consumed (in kWh) and top-1 accuracy for image classification, with data points representing different energy sources: Coal, Oil, Gas, Nuclear, and Hydro. The x-axis represents energy consumption on a logarithmic scale from \\(10^1\\) to \\(10^5\\), while the y-axis shows top-1 accuracy ranging from 65 to 90 percent. Overall, the trend line shows an increase in accuracy with higher energy consumption; however, the dispersion of data points indicates variability in accuracy depending on the energy source."
+    },
+    {
+        "doc_path": "extracted_data/document_16/doc_16.md",
+        "ref_id": "luccioni2023",
+        "ref_url": "https://arxiv.org/pdf/2302.08476",
+        "img_id": "img-9.jpeg",
+        "img_uid": "luccioni2023img-9.jpeg",
+        "context": "ewAlexandra Sasha Luccioni and Alex Hernandez-Garcia\n\n# A.3 Energy Consumption by Task\n\nIn Figure 5 below, we plot the same four tasks as in Figure 3, representing the energy consumed instead of the  $\\mathrm{CO}_{2}$  emitted. We find largely similar trends as the ones we describe in Section 4.4, with better performance on tasks like machine translation and image classification not necessarily being contingent on higher energy consumption.\n\n![img-7.jpeg](img-7.jpeg)\n\n![img-8.jpeg](img-8.jpeg)\n\n![img-9.jpeg](img-9.jpeg)\nFig. 5. Comparison of the performance achieved by each model trained on Machine Translation tasks (BLEU score) and Image Classification (top-1 accuracy), and the energy consumed.\n\n![img-10.jpeg](img-10.jpeg)\n\nManuscript pending reviewCounting Carbon: A Survey of Factors Influencing the Emissions of Machine Learning\n\n# A.4 Carbon intensity over time\n\nIn Figure 6, we plot the evolution over the years of the carbon intensity of the energy grid for each model, as well as the number of models traine",
+        "img_path": "extracted_data/document_16/img-9.jpeg",
+        "img_description": "The scatter plot visualizes the relationship between energy consumed (kWh) and F1 score in a question answering context, with individual points representing different energy sources: Coal, Oil, Gas, Nuclear, and Hydro. The x-axis shows energy consumption on a logarithmic scale, while the y-axis shows the F1 score, with Coal showing the highest F1 performance and Oil displaying the highest energy efficiency. A line highlights the trend between Coal and Oil, indicating a positive correlation between energy consumption and F1 performance for these sources."
+    },
+    {
+        "doc_path": "extracted_data/document_16/doc_16.md",
+        "ref_id": "luccioni2023",
+        "ref_url": "https://arxiv.org/pdf/2302.08476",
+        "img_id": "img-10.jpeg",
+        "img_uid": "luccioni2023img-10.jpeg",
+        "context": "rm{CO}_{2}$  emitted. We find largely similar trends as the ones we describe in Section 4.4, with better performance on tasks like machine translation and image classification not necessarily being contingent on higher energy consumption.\n\n![img-7.jpeg](img-7.jpeg)\n\n![img-8.jpeg](img-8.jpeg)\n\n![img-9.jpeg](img-9.jpeg)\nFig. 5. Comparison of the performance achieved by each model trained on Machine Translation tasks (BLEU score) and Image Classification (top-1 accuracy), and the energy consumed.\n\n![img-10.jpeg](img-10.jpeg)\n\nManuscript pending reviewCounting Carbon: A Survey of Factors Influencing the Emissions of Machine Learning\n\n# A.4 Carbon intensity over time\n\nIn Figure 6, we plot the evolution over the years of the carbon intensity of the energy grid for each model, as well as the number of models trained with each energy source. We observe that, despite the need to address the climate crisis by using cleaner energy sources, there has not been a decrease in neither the average carbon intensity nor the number",
+        "img_path": "extracted_data/document_16/img-10.jpeg",
+        "img_description": "The scatter plot compares the F1 scores of different energy sources (Coal, Oil, Gas, Nuclear, Hydro) in relation to the energy consumed (kWh) for a Named Entity Recognition task. Coal, Oil, and Gas are clustered at lower energy consumption levels with higher F1 scores, while Hydro shows higher consumption with slightly lower scores. A line connects Coal, Oil, and Gas, indicating an increasing trend in F1 scores as energy consumption increases from Coal to Oil to Gas."
+    },
+    {
+        "doc_path": "extracted_data/document_16/doc_16.md",
+        "ref_id": "luccioni2023",
+        "ref_url": "https://arxiv.org/pdf/2302.08476",
+        "img_id": "img-11.jpeg",
+        "img_uid": "luccioni2023img-11.jpeg",
+        "context": "arbon intensity over time\n\nIn Figure 6, we plot the evolution over the years of the carbon intensity of the energy grid for each model, as well as the number of models trained with each energy source. We observe that, despite the need to address the climate crisis by using cleaner energy sources, there has not been a decrease in neither the average carbon intensity nor the number of models trained with cleaner energy. On the contrary, we do observe a stark increase of models trained with coal.\n\n![img-11.jpeg](img-11.jpeg)\n(a) Carbon intensity of the models per year and energy source.\n\n![img-12.jpeg](img-12.jpeg)\n(b) Number of models trained with each energy source per year.\nFig. 6. Carbon intensity and energy sources over the years.\n\nManuscript pending review",
+        "img_path": "extracted_data/document_16/img-11.jpeg",
+        "img_description": "The image is a graph displaying the carbon intensity measured in grams of CO2eq per kWh over several years from 2012 to 2021, with data points for different energy sources: coal, oil, gas, nuclear, and hydro. Each energy type is represented with distinct symbols\u2014circles for coal, squares for oil, diamonds for gas, triangles for nuclear, and inverted triangles for hydro\u2014with error bars indicating variability. Overall, coal and gas consistently show higher carbon intensities, while nuclear and hydro exhibit significantly lower values."
+    },
+    {
+        "doc_path": "extracted_data/document_16/doc_16.md",
+        "ref_id": "luccioni2023",
+        "ref_url": "https://arxiv.org/pdf/2302.08476",
+        "img_id": "img-12.jpeg",
+        "img_uid": "luccioni2023img-12.jpeg",
+        "context": "ntensity of the energy grid for each model, as well as the number of models trained with each energy source. We observe that, despite the need to address the climate crisis by using cleaner energy sources, there has not been a decrease in neither the average carbon intensity nor the number of models trained with cleaner energy. On the contrary, we do observe a stark increase of models trained with coal.\n\n![img-11.jpeg](img-11.jpeg)\n(a) Carbon intensity of the models per year and energy source.\n\n![img-12.jpeg](img-12.jpeg)\n(b) Number of models trained with each energy source per year.\nFig. 6. Carbon intensity and energy sources over the years.\n\nManuscript pending review",
+        "img_path": "extracted_data/document_16/img-12.jpeg",
+        "img_description": "The bar chart displays the number of models related to different energy sources (Coal, Oil, Gas, Nuclear, and Hydro) across the years 2012 to 2021. Notably, 2020 and 2021 saw significant increases in Coal and Oil models, with Coal reaching its peak in 2021. Hydro models appear consistently low except for a slight peak in 2018."
+    }
+]

@@ -1,0 +1,22 @@
+[
+    {
+        "doc_path": "extracted_data/document_27/doc_27.md",
+        "ref_id": "stone2022",
+        "ref_url": "https://arxiv.org/pdf/2211.06318",
+        "img_id": "img-0.jpeg",
+        "img_uid": "stone2022img-0.jpeg",
+        "context": "ive meeting discussions, amplified by the participants' subsequent discussions with other colleagues, generated widespread interest and debate in the field and beyond.\n\nThe impact of the Asilomar meeting, and important advances in AI that included AI algorithms and technologies starting to enter daily life around the globe, spurred the idea of a long-term recurring study of AI and its influence on people and society. The One Hundred Year Study was subsequently endowed at a university to enable\n\n![img-0.jpeg](img-0.jpeg)\n\nThe overarching purpose of the One Hundred Year Study's periodic expert review is to provide a collected and connected set of reflections about AI and its influences as the field advances.\n\n\u00b9 \"One Hundred Year Study on Artificial Intelligence (AI100),\" Stanford University, accessed August 1, 2016, https://ai100.stanford.edu.extended deep thought and cross-disciplinary scholarly investigations that could inspire innovation and provide intelligent advice to government agencies and industry.\n\nThi",
+        "img_path": "extracted_data/document_27/img-0.jpeg",
+        "img_description": "The image features a cityscape with a prominent skyscraper in the background, overlaid with various white line-art illustrations symbolizing technology and innovation, such as circuit patterns, binary codes, robotic elements, and digital interfaces. These illustrations suggest themes of digital transformation and connectivity, weaving seamlessly with the urban landscape. The juxtaposition of real-world imagery with abstract technology symbols highlights the integration of modern technology into everyday environments."
+    },
+    {
+        "doc_path": "extracted_data/document_27/doc_27.md",
+        "ref_id": "stone2022",
+        "ref_url": "https://arxiv.org/pdf/2211.06318",
+        "img_id": "img-1.jpeg",
+        "img_uid": "stone2022img-1.jpeg",
+        "context": "Astro Teller, X\n\nAcknowledgments: The members of the Study Panel gratefully acknowledge the support of and valuable input from the Standing Committee, especially the chair, Barbara Grosz, who handled with supreme grace the unenviable role of mediating between two large, very passionate committees. We also thank Kerry Tremain for his tireless and insightful input on the written product during the extensive editing and polishing process, which unquestionably strengthened the report considerably.\n\n![img-1.jpeg](img-1.jpeg)\n\n\u00a9 2016 by Stanford University. Artificial Intelligence and Life in 2030 is made available under a Creative Commons Attribution-NoDerivatives 4.0 License (International): https://creativecommons.org/licenses/by-nd/4.0/4\n\nSubstantial increases in the future uses of AI applications, including more self-driving cars, healthcare diagnostics and targeted treatment, and physical assistance for elder care can be expected.\n\n# EXECUTIVE SUMMARY\n\nArtificial Intelligence (AI) is a science and a set of com",
+        "img_path": "extracted_data/document_27/img-1.jpeg",
+        "img_description": "The image displays the Creative Commons license symbols: \"CC BY-ND,\" indicating that the work is copyrighted, requiring attribution (BY), and can only be shared in its original form without derivatives (ND). The icon set includes a circular \"CC\" symbol, a person icon for attribution, and an equal sign in a circle to denote no derivatives. The background is a two-toned gray and black design."
+    }
+]

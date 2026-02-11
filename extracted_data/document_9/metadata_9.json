@@ -1,0 +1,172 @@
+[
+    {
+        "doc_path": "extracted_data/document_9/doc_9.md",
+        "ref_id": "griggs2024",
+        "ref_url": "https://arxiv.org/pdf/2404.14527",
+        "img_id": "img-0.jpeg",
+        "img_uid": "griggs2024img-0.jpeg",
+        "context": "tivity, the service right-sizes to the even-cheaper L4 GPU to maintain service availability at lowest cost (2). Consequently, we find that GPU heterogeneity presents opportunities for increasing GPU cost efficiency, but such opportunities are highly dependent on LLM service characteristics. The key challenge, then, is creating a GPU allocation framework that can navigate the diversity of LLM services (request sizes, request rates, latency SLOs) and GPU types to find the optimal GPU allocation.\n\n![img-0.jpeg](img-0.jpeg)\nFigure 1: M\u00e9lange framework.\n\nWe present M\u00e9lange $^3$  (Fig. 1), a GPU allocation framework that derives the minimal-cost GPU allocation for a given LLM service. In M\u00e9lange, each GPU type (1a) passes through a one-time offline profiling step (2) to measure GPU performance across request sizes and rates. Then, given the profiling results and an LLM service definition (1b), M\u00e9lange's objective is to choose a GPU allocation for the service workload that minimizes cost. This task is a natural appli",
+        "img_path": "extracted_data/document_9/img-0.jpeg",
+        "img_description": "The image is a flowchart depicting a process for allocating GPUs for LLM services. It starts with identifying GPU types (A10G, A100, H100) and conducting offline profiling, which then proceeds to define service parameters like request distribution and SLOs. An ILP solver uses these inputs to minimize costs while meeting constraints, resulting in a minimal-cost GPU allocation."
+    },
+    {
+        "doc_path": "extracted_data/document_9/doc_9.md",
+        "ref_id": "griggs2024",
+        "ref_url": "https://arxiv.org/pdf/2404.14527",
+        "img_id": "img-1.jpeg",
+        "img_uid": "griggs2024img-1.jpeg",
+        "context": "esources. They do not identify key LLM service characteristics that impact cost efficiency and consider them in GPU deployment, which our work highlights. Another line of work [58, 36] explores splitting LLM inference into its two phases (prefill and decode) and performing the two phases on separate nodes, perhaps with different GPU types. Our work shows that, even within a phase, the best GPU type can change based on LLM service specifications.\n\n# 3 Background\n\n# 3.1 LLM Request Size Variance\n\n![img-1.jpeg](img-1.jpeg)\n(a) LLaMA-7B\n\n![img-2.jpeg](img-2.jpeg)\n(b) LLaMA-70B\nFigure 2: Request latency of different input/output lengths on A100-80G.\n\nUnlike traditional machine learning workloads, LLM tasks exhibit significant variance in request sizes, defined by input and output lengths. For example, ResNet [13] requires a fixed-dimension input (image size) and generates a fixed-dimension output (classification size). Conversely, transformer-based language models are flexible to support variable-length prompts and",
+        "img_path": "extracted_data/document_9/img-1.jpeg",
+        "img_description": "The bar chart displays \"Request Latency (s)\" on the y-axis, comparing two sets of tokens: (25, 25) and (2000, 2000) on the x-axis, with the latter having significantly higher latency. The latency for (2000, 2000) tokens reaches 40 seconds, while the (25, 25) tokens bar is much smaller and labeled as 110X, indicating a proportional increase. This suggests a significant increase in request latency correlated with higher token counts."
+    },
+    {
+        "doc_path": "extracted_data/document_9/doc_9.md",
+        "ref_id": "griggs2024",
+        "ref_url": "https://arxiv.org/pdf/2404.14527",
+        "img_id": "img-2.jpeg",
+        "img_uid": "griggs2024img-2.jpeg",
+        "context": "ervice characteristics that impact cost efficiency and consider them in GPU deployment, which our work highlights. Another line of work [58, 36] explores splitting LLM inference into its two phases (prefill and decode) and performing the two phases on separate nodes, perhaps with different GPU types. Our work shows that, even within a phase, the best GPU type can change based on LLM service specifications.\n\n# 3 Background\n\n# 3.1 LLM Request Size Variance\n\n![img-1.jpeg](img-1.jpeg)\n(a) LLaMA-7B\n\n![img-2.jpeg](img-2.jpeg)\n(b) LLaMA-70B\nFigure 2: Request latency of different input/output lengths on A100-80G.\n\nUnlike traditional machine learning workloads, LLM tasks exhibit significant variance in request sizes, defined by input and output lengths. For example, ResNet [13] requires a fixed-dimension input (image size) and generates a fixed-dimension output (classification size). Conversely, transformer-based language models are flexible to support variable-length prompts and produce variable-length generation sequ",
+        "img_path": "extracted_data/document_9/img-2.jpeg",
+        "img_description": "The bar graph compares request latency in seconds for two configurations of input and output tokens, (25, 25) and (2000, 2000). The latency increases dramatically by 85 times from the smaller configuration to the larger one. The graph highlights significant performance differences related to token size."
+    },
+    {
+        "doc_path": "extracted_data/document_9/doc_9.md",
+        "ref_id": "griggs2024",
+        "ref_url": "https://arxiv.org/pdf/2404.14527",
+        "img_id": "img-3.jpeg",
+        "img_uid": "griggs2024img-3.jpeg",
+        "context": "zes, defined by input and output lengths. For example, ResNet [13] requires a fixed-dimension input (image size) and generates a fixed-dimension output (classification size). Conversely, transformer-based language models are flexible to support variable-length prompts and produce variable-length generation sequences. For instance, Figure 10 illustrates the request size distributions of Chatbot Arena, demonstrating the extensive diversity of request sizes in practical scenarios. As a result, high![img-3.jpeg](img-3.jpeg)\n(a) Equivalent input and output lengths\n\n![img-4.jpeg](img-4.jpeg)\n(b) Input and output lengths vary independently\nFigure 3: Figure (a) depicts A10G and A100's relative T/$ across request sizes. Figure (b) expands (a) into separate input and output length dimensions. Tile colors indicate which GPU achieves higher T/$ and values represent the percent increase of T/$ relative to the less cost efficient GPU.\n\nvariance in request sizes introduces significant variation in request latency. As illustr",
+        "img_path": "extracted_data/document_9/img-3.jpeg",
+        "img_description": "The bar graph compares the performance efficiency (measured as A100 T/$) of the A100 and A10G graphics processors across various request sizes ranging from [25, 25] to [2k, 2k] tokens. The A100 processor demonstrates higher efficiency compared to the A10G, steadily increasing from sub-unity ratio to over 1.2 at larger request sizes. The legend indicates that solid bars represent the A100 while a dashed line represents the A10G."
+    },
+    {
+        "doc_path": "extracted_data/document_9/doc_9.md",
+        "ref_id": "griggs2024",
+        "ref_url": "https://arxiv.org/pdf/2404.14527",
+        "img_id": "img-4.jpeg",
+        "img_uid": "griggs2024img-4.jpeg",
+        "context": "requires a fixed-dimension input (image size) and generates a fixed-dimension output (classification size). Conversely, transformer-based language models are flexible to support variable-length prompts and produce variable-length generation sequences. For instance, Figure 10 illustrates the request size distributions of Chatbot Arena, demonstrating the extensive diversity of request sizes in practical scenarios. As a result, high![img-3.jpeg](img-3.jpeg)\n(a) Equivalent input and output lengths\n\n![img-4.jpeg](img-4.jpeg)\n(b) Input and output lengths vary independently\nFigure 3: Figure (a) depicts A10G and A100's relative T/$ across request sizes. Figure (b) expands (a) into separate input and output length dimensions. Tile colors indicate which GPU achieves higher T/$ and values represent the percent increase of T/$ relative to the less cost efficient GPU.\n\nvariance in request sizes introduces significant variation in request latency. As illustrated in Figure 2, request latency can increase by  $110 \\times$  wh",
+        "img_path": "extracted_data/document_9/img-4.jpeg",
+        "img_description": "The image is a heatmap comparing relative throughput increase (A100 T/S vs. A10G T/S) for varying input and output lengths, measured in tokens. It shows percentage increases, with cooler blues indicating lower increases and warmer reds indicating higher increases. As both input and output lengths increase, a distinct shift from red (low increase) to blue (high increase) becomes apparent."
+    },
+    {
+        "doc_path": "extracted_data/document_9/doc_9.md",
+        "ref_id": "griggs2024",
+        "ref_url": "https://arxiv.org/pdf/2404.14527",
+        "img_id": "img-5.jpeg",
+        "img_uid": "griggs2024img-5.jpeg",
+        "context": "t efficiency and can even determine which GPU is most cost efficient.\n\nExperiment: We serve Llama2-7b on A10G and A100 GPUs, and derive each GPU's  $\\mathsf{T} / \\mathsf{S}$  at maximum GPU saturation across a range of request sizes (Fig. 3a). Interestingly, no single GPU consistently delivers the highest tokens per dollar  $(\\mathsf{T} / \\mathsf{S})$  across all request sizes. Instead, both GPUs are most cost efficient in separate regions of the request size spectrum. For smaller request sizes,![img-5.jpeg](img-5.jpeg)\n(a) Absolute batch sizes\n\n![img-6.jpeg](img-6.jpeg)\n(b) Dollar-normalized batch sizes\n\n![img-7.jpeg](img-7.jpeg)\nFigure 4: (a) depicts the absolute batch sizes of A10G and A100 serving Llama2-7b at maximum saturation, (b) reports the same batch sizes divided by GPU cost, plotting with respect to A10G.\n(a) Best GPU relative to second best GPU\nFigure 5: Comparison of L4, A10G, A100, and H100. Tile colors indicate the GPU with greatest T/$. (a) tile values are the T/$ %-increase of the best GPU co",
+        "img_path": "extracted_data/document_9/img-5.jpeg",
+        "img_description": "The bar chart compares the batch sizes in requests for two models, A10G and A100, across varying request sizes in tokens. For request sizes [25, 25], A100 significantly outperforms A10G with 542 requests compared to 380. For larger request sizes, A100 consistently handles a greater number of requests than A10G, with the difference being most pronounced at [100, 100] and least at [2k, 2k]."
+    },
+    {
+        "doc_path": "extracted_data/document_9/doc_9.md",
+        "ref_id": "griggs2024",
+        "ref_url": "https://arxiv.org/pdf/2404.14527",
+        "img_id": "img-6.jpeg",
+        "img_uid": "griggs2024img-6.jpeg",
+        "context": "t cost efficient.\n\nExperiment: We serve Llama2-7b on A10G and A100 GPUs, and derive each GPU's  $\\mathsf{T} / \\mathsf{S}$  at maximum GPU saturation across a range of request sizes (Fig. 3a). Interestingly, no single GPU consistently delivers the highest tokens per dollar  $(\\mathsf{T} / \\mathsf{S})$  across all request sizes. Instead, both GPUs are most cost efficient in separate regions of the request size spectrum. For smaller request sizes,![img-5.jpeg](img-5.jpeg)\n(a) Absolute batch sizes\n\n![img-6.jpeg](img-6.jpeg)\n(b) Dollar-normalized batch sizes\n\n![img-7.jpeg](img-7.jpeg)\nFigure 4: (a) depicts the absolute batch sizes of A10G and A100 serving Llama2-7b at maximum saturation, (b) reports the same batch sizes divided by GPU cost, plotting with respect to A10G.\n(a) Best GPU relative to second best GPU\nFigure 5: Comparison of L4, A10G, A100, and H100. Tile colors indicate the GPU with greatest T/$. (a) tile values are the T/$ %-increase of the best GPU compared to the second best for that tile. (b) compare",
+        "img_path": "extracted_data/document_9/img-6.jpeg",
+        "img_description": "The bar chart compares dollar-normalized batch sizes relative to A10G across different request sizes in tokens for A100 and A10G. The y-axis represents the normalized batch size, with values ranging from 0.4 to 1.6, showing A100 generally outperforming A10G in larger request sizes (e.g., [2k, 2k]). A horizontal reference line indicates A10G's baseline, with A100 bars exceeding this baseline at larger token requests."
+    },
+    {
+        "doc_path": "extracted_data/document_9/doc_9.md",
+        "ref_id": "griggs2024",
+        "ref_url": "https://arxiv.org/pdf/2404.14527",
+        "img_id": "img-7.jpeg",
+        "img_uid": "griggs2024img-7.jpeg",
+        "context": " A100 GPUs, and derive each GPU's  $\\mathsf{T} / \\mathsf{S}$  at maximum GPU saturation across a range of request sizes (Fig. 3a). Interestingly, no single GPU consistently delivers the highest tokens per dollar  $(\\mathsf{T} / \\mathsf{S})$  across all request sizes. Instead, both GPUs are most cost efficient in separate regions of the request size spectrum. For smaller request sizes,![img-5.jpeg](img-5.jpeg)\n(a) Absolute batch sizes\n\n![img-6.jpeg](img-6.jpeg)\n(b) Dollar-normalized batch sizes\n\n![img-7.jpeg](img-7.jpeg)\nFigure 4: (a) depicts the absolute batch sizes of A10G and A100 serving Llama2-7b at maximum saturation, (b) reports the same batch sizes divided by GPU cost, plotting with respect to A10G.\n(a) Best GPU relative to second best GPU\nFigure 5: Comparison of L4, A10G, A100, and H100. Tile colors indicate the GPU with greatest T/$. (a) tile values are the T/$ %-increase of the best GPU compared to the second best for that tile. (b) compares the best GPU to the worst GPU. In black boxes, only A100 an",
+        "img_path": "extracted_data/document_9/img-7.jpeg",
+        "img_description": "The image is a heatmap displaying the percentage values of some performance metric across varying input and output lengths in tokens, with color coding indicating performance levels (blue to green being higher). Input lengths range from 25 to 16000 tokens, and output lengths range from 25 to 2000 tokens, with notable increases in performance from the L4 (orange) to H100 (green) categories. Higher percentages (up to 99%) are concentrated in the H100 category with longer input and output lengths."
+    },
+    {
+        "doc_path": "extracted_data/document_9/doc_9.md",
+        "ref_id": "griggs2024",
+        "ref_url": "https://arxiv.org/pdf/2404.14527",
+        "img_id": "img-8.jpeg",
+        "img_uid": "griggs2024img-8.jpeg",
+        "context": " the absolute batch sizes of A10G and A100 serving Llama2-7b at maximum saturation, (b) reports the same batch sizes divided by GPU cost, plotting with respect to A10G.\n(a) Best GPU relative to second best GPU\nFigure 5: Comparison of L4, A10G, A100, and H100. Tile colors indicate the GPU with greatest T/$. (a) tile values are the T/$ %-increase of the best GPU compared to the second best for that tile. (b) compares the best GPU to the worst GPU. In black boxes, only A100 and H100 are compared.\n\n![img-8.jpeg](img-8.jpeg)\n(b) Best GPU relative to worst GPU\n\nA10G exhibits up to  $2.6 \\times$  greater T/$ than A100. Conversely, for larger request sizes, A100 achieves up to  $1.5 \\times$  the cost efficiency of A10G.\n\nWe extend this exploration to show the separate impacts of input and output lengths on  $\\mathsf{T} / \\mathsf{S}$  (Fig. 3b). Each dimension influences cost efficiency similarly: smaller sizes are best served on A10G, and larger sizes are best served on A100. Note that the difference can be significan",
+        "img_path": "extracted_data/document_9/img-8.jpeg",
+        "img_description": "The image is a heatmap visualizing the percentage of performance or efficiency across different Input Lengths (tokens) and Output Lengths (tokens) for computing units L4, A10G, A100, and H100. Each colored section represents a specific computing unit, with varying percentages indicating performance efficiency, where higher percentages are depicted in darker shades of their respective color. The graph shows a clear trend of increasing performance efficiency as both input and output lengths increase, particularly notable in the H100 section."
+    },
+    {
+        "doc_path": "extracted_data/document_9/doc_9.md",
+        "ref_id": "griggs2024",
+        "ref_url": "https://arxiv.org/pdf/2404.14527",
+        "img_id": "img-9.jpeg",
+        "img_uid": "griggs2024img-9.jpeg",
+        "context": " Similar trends are observed in the larger Llama2-70B model when comparing H100 and A100 GPUs, as detailed in Fig. 8.\n\nKey Takeaways: There is no universally most cost-efficient GPU for a given LLM. Instead, GPU cost efficiency is highly dependent on request sizes. Lower-end GPUs are more cost-effective for smallrequest sizes whereas higher-end GPUs are best for large request sizes. These findings generalize to settings with more GPU types and larger model sizes.\n\n# 4.3 SLO and Cost Efficiency\n\n![img-9.jpeg](img-9.jpeg)\nFigure 6: T/$ comparison between A10G and A100 across a range of TPOT SLO parameters.\n\n![img-10.jpeg](img-10.jpeg)\nFigure 7: Relative increase in T/$ when combining SLO and request size.\n\nIn this section, we examine the impact of TPOT SLOs on GPU cost efficiency and highlight the joint effects of SLO and request size.\n\nExperiment: We serve Llama2-7b on A10G and A100 and measure T/$ by maximally saturating each GPU while keeping TPOT below SLO, repeating this across several TPOT deadlines (Fig. ",
+        "img_path": "extracted_data/document_9/img-9.jpeg",
+        "img_description": "The bar graph compares the performance efficiency of A100 versus A10G, measured in A100 throughput per dollar relative to A10G, across different SLO (Service Level Objective) times per output token in milliseconds. The performance of A100 is generally higher at shorter SLO times, as indicated by bars exceeding the baseline, with a significant drop as the SLO time increases. The graph legend indicates the comparison involves a constant size of [64, 64], with a varying SLO rate under saturation conditions."
+    },
+    {
+        "doc_path": "extracted_data/document_9/doc_9.md",
+        "ref_id": "griggs2024",
+        "ref_url": "https://arxiv.org/pdf/2404.14527",
+        "img_id": "img-10.jpeg",
+        "img_uid": "griggs2024img-10.jpeg",
+        "context": ". 8.\n\nKey Takeaways: There is no universally most cost-efficient GPU for a given LLM. Instead, GPU cost efficiency is highly dependent on request sizes. Lower-end GPUs are more cost-effective for smallrequest sizes whereas higher-end GPUs are best for large request sizes. These findings generalize to settings with more GPU types and larger model sizes.\n\n# 4.3 SLO and Cost Efficiency\n\n![img-9.jpeg](img-9.jpeg)\nFigure 6: T/$ comparison between A10G and A100 across a range of TPOT SLO parameters.\n\n![img-10.jpeg](img-10.jpeg)\nFigure 7: Relative increase in T/$ when combining SLO and request size.\n\nIn this section, we examine the impact of TPOT SLOs on GPU cost efficiency and highlight the joint effects of SLO and request size.\n\nExperiment: We serve Llama2-7b on A10G and A100 and measure T/$ by maximally saturating each GPU while keeping TPOT below SLO, repeating this across several TPOT deadlines (Fig. 6). Under tight SLO constraints (&lt;60ms), A100 demonstrates significantly greater T/$ than A10G  $(2\\times)$ . A1",
+        "img_path": "extracted_data/document_9/img-10.jpeg",
+        "img_description": "The image is a heatmap displaying the relative increase in performance (measured in T/S per dollar) between two systems, A10G and A100, across different request sizes and Service Level Objectives (SLOs) by token processing time. The columns represent SLOs ranging from 40 to 160 ms, while the rows are categorized by request sizes ranging from [500, 500] to [25, 25] tokens. Color gradients from blue to red indicate the performance shift, with blue showing a relative increase for A100, and red indicating a relative increase for A10G."
+    },
+    {
+        "doc_path": "extracted_data/document_9/doc_9.md",
+        "ref_id": "griggs2024",
+        "ref_url": "https://arxiv.org/pdf/2404.14527",
+        "img_id": "img-11.jpeg",
+        "img_uid": "griggs2024img-11.jpeg",
+        "context": "o TPOT SLO shifts the boundary within the request size space between which different GPU types are most cost effective and significantly influences the magnitude of cost efficiency differences between GPUs. As a result, both request size and SLO must be considered in tandem when determining cost efficiency.\n\nKey Takeaways: To meet strict SLOs, expensive GPUs are necessary due to the higher latency of cheaper GPUs. However, as SLO is loosened, lower-end GPUs can be used to cut deployment costs.\n\n![img-11.jpeg](img-11.jpeg)\nFigure 8: T/$ comparison between H100x2 and A100x2 serving Llama2-70b.\n\n![img-12.jpeg](img-12.jpeg)\nFigure 9: GPU on-demand cost for three GPU provisioning strategies.4.4 Request Rate and Cost Efficiency\n\nIn this section, we investigate the relationship between request rate and GPU cost efficiency.\n\nExperiment: Fig. 9 illustrates the cost of serving Llama2-7b at a range of request rates using three strategies: A10G-only, A100-only, or a mix of both. The y-axis is absolute cost instead of T/$ be",
+        "img_path": "extracted_data/document_9/img-11.jpeg",
+        "img_description": "The image displays a heatmap illustrating the relative increase in performance of A100 tensor cores compared to H100 across various input and output token lengths. The color gradient ranges from blue to green, representing increases from 4% to over 55%, with higher percentages seen at larger token lengths. Each cell indicates the percentage of performance increase for a specific combination of input and output lengths, highlighting higher gains as these lengths increase."
+    },
+    {
+        "doc_path": "extracted_data/document_9/doc_9.md",
+        "ref_id": "griggs2024",
+        "ref_url": "https://arxiv.org/pdf/2404.14527",
+        "img_id": "img-12.jpeg",
+        "img_uid": "griggs2024img-12.jpeg",
+        "context": "ost cost effective and significantly influences the magnitude of cost efficiency differences between GPUs. As a result, both request size and SLO must be considered in tandem when determining cost efficiency.\n\nKey Takeaways: To meet strict SLOs, expensive GPUs are necessary due to the higher latency of cheaper GPUs. However, as SLO is loosened, lower-end GPUs can be used to cut deployment costs.\n\n![img-11.jpeg](img-11.jpeg)\nFigure 8: T/$ comparison between H100x2 and A100x2 serving Llama2-70b.\n\n![img-12.jpeg](img-12.jpeg)\nFigure 9: GPU on-demand cost for three GPU provisioning strategies.4.4 Request Rate and Cost Efficiency\n\nIn this section, we investigate the relationship between request rate and GPU cost efficiency.\n\nExperiment: Fig. 9 illustrates the cost of serving Llama2-7b at a range of request rates using three strategies: A10G-only, A100-only, or a mix of both. The y-axis is absolute cost instead of T/$ because each provisioning strategy serves the same request rates and thus the same number of tokens; o",
+        "img_path": "extracted_data/document_9/img-12.jpeg",
+        "img_description": "The graph displays rental cost in dollars per hour against request rate, comparing three configurations: A10G, A100, and a mixed setup. The A10G configuration consistently has the highest cost, while the mixed setup offers a 24% cost savings at approximately 4 requests per second with a combination of 2xA100 and 1xA10G. The mixed setup's cost efficiency increases as request rate rises, maintaining a lower cost than A10G but higher than A100 alone."
+    },
+    {
+        "doc_path": "extracted_data/document_9/doc_9.md",
+        "ref_id": "griggs2024",
+        "ref_url": "https://arxiv.org/pdf/2404.14527",
+        "img_id": "img-13.jpeg",
+        "img_uid": "griggs2024img-13.jpeg",
+        "context": "-context-length setting we create a synthetic dataset by sampling  $80\\%$  from Chatbot Arena and  $20\\%$  from PubMed. The input and output length distributions are shown in Fig. 10. We follow standard LLM inference benchmarks [3] to set reasonable TPOT SLOs, and use 40ms to simulate services where swift responses are essential, and 120ms where longer response times are acceptable. Both selected SLOs surpass the average human reading speed, ensuring the SLOs satisfy practical user experience.\n\n![img-13.jpeg](img-13.jpeg)\n(a) Input length distributions.\n\n![img-14.jpeg](img-14.jpeg)\n(b) Output length distributions.\nFigure 10: Dataset input and output length distributions.\n\nM\u00e9lange Configuration. Bucket size ranges correspond to Figure 5, comprising of 10 input length ranges and 6 output length ranges (60 total buckets). The slice factor is set to 8 for a total of  $60 \\cdot 8 = 480$  slices.\n\nBaselines. We compare M\u00e9lange to allocations that use a single GPU type. To derive baseline allocations, we use M\u00e9lange's ",
+        "img_path": "extracted_data/document_9/img-13.jpeg",
+        "img_description": "The image is a histogram displaying the distribution of input lengths in tokens across three datasets: Mixed, Arena, and Pubmed. The x-axis represents input length, ranging from 0 to 12,500 tokens, while the y-axis shows the fraction of data. The Mixed dataset (blue) has a mean of 1278.04, Arena (orange) has a mean of 329.43, and Pubmed (green) has a mean of 4174.13, with most data concentrated in lower input lengths."
+    },
+    {
+        "doc_path": "extracted_data/document_9/doc_9.md",
+        "ref_id": "griggs2024",
+        "ref_url": "https://arxiv.org/pdf/2404.14527",
+        "img_id": "img-14.jpeg",
+        "img_uid": "griggs2024img-14.jpeg",
+        "context": "ling  $80\\%$  from Chatbot Arena and  $20\\%$  from PubMed. The input and output length distributions are shown in Fig. 10. We follow standard LLM inference benchmarks [3] to set reasonable TPOT SLOs, and use 40ms to simulate services where swift responses are essential, and 120ms where longer response times are acceptable. Both selected SLOs surpass the average human reading speed, ensuring the SLOs satisfy practical user experience.\n\n![img-13.jpeg](img-13.jpeg)\n(a) Input length distributions.\n\n![img-14.jpeg](img-14.jpeg)\n(b) Output length distributions.\nFigure 10: Dataset input and output length distributions.\n\nM\u00e9lange Configuration. Bucket size ranges correspond to Figure 5, comprising of 10 input length ranges and 6 output length ranges (60 total buckets). The slice factor is set to 8 for a total of  $60 \\cdot 8 = 480$  slices.\n\nBaselines. We compare M\u00e9lange to allocations that use a single GPU type. To derive baseline allocations, we use M\u00e9lange's ILP formulation (\u00a7 5.4.3) but restrict the solver to a single",
+        "img_path": "extracted_data/document_9/img-14.jpeg",
+        "img_description": "The image is a histogram showing the distribution of output lengths (in tokens) for three datasets: Mixed, Arena, and Pubmed. The x-axis represents output length ranging from 0 to over 1000 tokens, while the y-axis indicates the fraction of occurrences. The datasets, represented by different colors, have mean token lengths of 219.87 (Mixed), 195.66 (Arena), and 314.1 (Pubmed), with most values concentrated below 500 tokens."
+    },
+    {
+        "doc_path": "extracted_data/document_9/doc_9.md",
+        "ref_id": "griggs2024",
+        "ref_url": "https://arxiv.org/pdf/2404.14527",
+        "img_id": "img-15.jpeg",
+        "img_uid": "griggs2024img-15.jpeg",
+        "context": "Os. Fig. 11 displays costs normalized against the cost of M\u00e9lange (purple dotted lines), and the detailed GPU allocations and cost savings are included in App. C. The A10G-only and L4-only baselines are only included for the Arena dataset because the PubMed and Mixed datasets contain large requests that exceed A10G and L4's GPU memory capacity. L4 and A10G are included in M\u00e9lange's allocation but are limited to serving requests smaller than 12,000 tokens. We now discuss each dataset in detail:\n\n![img-15.jpeg](img-15.jpeg)\nFigure 11: Deployment cost across different datasets and SLOs.\n\n- Short-context Dataset (Arena). In Figs. 11a and 11d, M\u00e9lange achieves  $15 - 77\\%$  cost reduction (120ms SLO) and  $9 - 68\\%$  reduction (40ms SLO). For both SLOs, L4/A10G are more cost efficient than A100/H100 at low request rates because they achieve greater utilization. For example, at 1-2 req/s, H100 is significantly underutilized and incurs exorbitant costs. However, as the rate increases, L4/A10G's cost advantage reduces a",
+        "img_path": "extracted_data/document_9/img-15.jpeg",
+        "img_description": "The image consists of six bar graphs comparing the cost relative to M\u00e9lange for various hardware configurations (H100, A100, A10G, L4, and M\u00e9lange) across different request rates (1, 2, 4, 8, 16, 32 requests per second) under specific Service Level Objectives (SLOs) of 120ms and 40ms. Each graph corresponds to different scenarios or datasets: Arena, PubMed, and Mixed, with the respective SLOs indicated for each graph. The cost bars vary in height, showing performance differences among hardware setups and highlighting relative efficiency changes as request rates increase."
+    },
+    {
+        "doc_path": "extracted_data/document_9/doc_9.md",
+        "ref_id": "griggs2024",
+        "ref_url": "https://arxiv.org/pdf/2404.14527",
+        "img_id": "img-16.jpeg",
+        "img_uid": "griggs2024img-16.jpeg",
+        "context": "ample requests randomly from the chosen dataset to serve 2K total requests. We record the average TPOT for each request.\n\nLoad Balancer. A load balancer (LB) is required to balance requests across GPUs. Our LB design is detailed in Appendix A.2. In short, the LB uses previously-served requests to estimate the output length of a new request, which is then routed to a GPU based on a weighted random selection.\n\nWeights are computed based on each GPU's performance for the request's estimated size.\n\n![img-16.jpeg](img-16.jpeg)\nFigure 12: M\u00e9lange TPOT CDFs.\n\nResults. Fig. 12 presents CDFs of the observed per-request average TPOTs across experiments. With an SLO of  $120\\mathrm{ms}$ , over  $99.95\\%$  of requests met SLO. When the SLO was tightened to  $40\\mathrm{ms}$ ,  $99.5\\%$  of requests met SLO. These results validate M\u00e9lange's ability to choose GPU allocations that meet workload demand, however, we recognize that services may require even higher SLO adherence, so we investigated the source of SLO violations in o",
+        "img_path": "extracted_data/document_9/img-16.jpeg",
+        "img_description": "The graph displays the cumulative distribution functions (CDF) of average TPOT (ms) for three datasets (Arena, Mixed, Pubmed) measured at two intervals (120ms, 40ms). The curves illustrate that Arena has the fastest response times at both intervals, with curves sharply rising at lower TPOT values compared to Mixed and Pubmed. The 120ms curves show broader distributions and slower responses compared to the tightly grouped 40ms curves."
+    }
+]

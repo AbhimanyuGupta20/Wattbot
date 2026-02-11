@@ -1,0 +1,42 @@
+[
+    {
+        "doc_path": "extracted_data/document_26/doc_26.md",
+        "ref_id": "shen2024",
+        "ref_url": "https://arxiv.org/pdf/2404.07413",
+        "img_id": "img-0.jpeg",
+        "img_uid": "shen2024img-0.jpeg",
+        "context": "ever, even though these models achieve excellent performance, they are not truly open-sourced as the training recipes are not published and may contain proprietary datasets inaccessible outside of large corporations. The open-source community has also attempted to train MoE models, such as OpenMoE *(Xue et al., 2024)*, but its performance is only on par with weak dense models with similar activation parameters, such as OpenLLaMA *(Geng & Liu, 2023)* and TinyLLaMA *(Zhang et al., 2024a)*.JetMoE\n\n![img-0.jpeg](img-0.jpeg)\nFigure 1: JetMoE architecture\n\nTo facilitate future efforts on open foundation models, particularly MoE models, we introduce JetMoE-8B, an innovative MoE architecture inspired by ModuleFormer (Shen et al., 2023) that extends the concept of sparse activation to both the attention and feed-forward layers. Unlike prior works that only apply sparse activation to the feed-forward layer, JetMoE-8B leverages sparse activation in both components to further reduce computational costs while maintaining p",
+        "img_path": "extracted_data/document_26/img-0.jpeg",
+        "img_description": "The image depicts a layered neural network module with two principal sections: the top section contains four MLP (Multi-Layer Perceptron) units, interconnected through a router, followed by a layer normalization stage. The bottom section includes four attention (Att) units, also linked via a router, and concludes with another layer normalization. Both sections appear designed to process data in parallel streams with centralized routing and normalization steps."
+    },
+    {
+        "doc_path": "extracted_data/document_26/doc_26.md",
+        "ref_id": "shen2024",
+        "ref_url": "https://arxiv.org/pdf/2404.07413",
+        "img_id": "img-1.jpeg",
+        "img_uid": "shen2024img-1.jpeg",
+        "context": "et includes RefinedWeb, Starcoder, The Pile, peS2o from Dolma, and OpenWebMath.JetMoE\n\n- Phase 2 (decay learning rate): We include additional high-quality data to further improve the model's performance.\n\nThe detailed data mixture can be found in Figure 2 and Table 2. It is important to note that given the limited computing budget available, our data mixture might not be ideal. However, it serves as a good starting point for training JetMoE-8B and can be further optimized in future iterations.\n\n![img-1.jpeg](img-1.jpeg)\nFigure 2: Pretraining data mixture\n\n![img-2.jpeg](img-2.jpeg)\n\n|  Category | Dataset | Percentage  |\n| --- | --- | --- |\n|  NL pretraining data | Refinedweb | 39.8%  |\n|   |  Pile_Wikipedia | 6.7%  |\n|   |  Pile_StackExchange | 4.8%  |\n|   |  Pile_arXiv | 1.0%  |\n|   |  Pile_remaining | 5.1%  |\n|   |  Dolma_peS2o | 1.0%  |\n|  NL SFT data | xP3x, OpenAssistant, OpenHermes | 7.3%  |\n|   |  UltraChat, Oasst-octopack  |   |\n|  Textbook | UltraTextbooks | 4.8%  |\n|  Code pretraining data | Starcoder",
+        "img_path": "extracted_data/document_26/img-1.jpeg",
+        "img_description": "The image is a pie chart titled \"Phase 1 Data Mixture,\" showing the distribution of various data sources. The largest portion is \"peS2o\" at 64%, followed by \"Pile\" at 25%, \"RefinedWeb\" at 8%, and smaller segments for \"Arxiv,\" \"Open Web Math,\" and \"Starcoder Github\" each at 1%. Each section is color-coded to represent different data sources."
+    },
+    {
+        "doc_path": "extracted_data/document_26/doc_26.md",
+        "ref_id": "shen2024",
+        "ref_url": "https://arxiv.org/pdf/2404.07413",
+        "img_id": "img-2.jpeg",
+        "img_uid": "shen2024img-2.jpeg",
+        "context": " and OpenWebMath.JetMoE\n\n- Phase 2 (decay learning rate): We include additional high-quality data to further improve the model's performance.\n\nThe detailed data mixture can be found in Figure 2 and Table 2. It is important to note that given the limited computing budget available, our data mixture might not be ideal. However, it serves as a good starting point for training JetMoE-8B and can be further optimized in future iterations.\n\n![img-1.jpeg](img-1.jpeg)\nFigure 2: Pretraining data mixture\n\n![img-2.jpeg](img-2.jpeg)\n\n|  Category | Dataset | Percentage  |\n| --- | --- | --- |\n|  NL pretraining data | Refinedweb | 39.8%  |\n|   |  Pile_Wikipedia | 6.7%  |\n|   |  Pile_StackExchange | 4.8%  |\n|   |  Pile_arXiv | 1.0%  |\n|   |  Pile_remaining | 5.1%  |\n|   |  Dolma_peS2o | 1.0%  |\n|  NL SFT data | xP3x, OpenAssistant, OpenHermes | 7.3%  |\n|   |  UltraChat, Oasst-octopack  |   |\n|  Textbook | UltraTextbooks | 4.8%  |\n|  Code pretraining data | Starcoder Github | 19.6%  |\n|  Code SFT data | Magicoder-OSS, Magicoder",
+        "img_path": "extracted_data/document_26/img-2.jpeg",
+        "img_description": "The pie chart titled \"Phase 2 Data Mixture\" displays the distribution percentages of various data sources. The largest segment, labeled \"Code SFT,\" constitutes 40% of the mixture, followed by \"Github\" at 19%, and \"StackExchange\" and \"Arxiv\" each at 7%. Smaller contributions are made by \"Math,\" \"Wikipedia,\" \"Textbook,\" \"Pile,\" \"Refinedweb,\" \"peS2o,\" and \"NL SFT,\" each varying between 1% to 6%."
+    },
+    {
+        "doc_path": "extracted_data/document_26/doc_26.md",
+        "ref_id": "shen2024",
+        "ref_url": "https://arxiv.org/pdf/2404.07413",
+        "img_id": "img-3.jpeg",
+        "img_uid": "shen2024img-3.jpeg",
+        "context": "mentation, is defined as follows: \"Writing\" and \"Roleplay\" tasks have a temperature of 0.7, indicating higher creativity; \"Extraction\", \"Math\", \"Coding\", and \"Reasoning\" tasksJetMoE\n\n|  Model | MT-Bench Score  |\n| --- | --- |\n|  GPT-4 | 9.014  |\n|  GPT-3.5-turbo | 7.995  |\n|  Claude-v1 | 7.923  |\n|  JetMoE-8B-chat | 6.681  |\n|  Llama-2-13b-chat | 6.650  |\n|  Vicuna-13b-v1.3 | 6.413  |\n|  Wizardlm-13b | 6.353  |\n|  Llama-2-7b-chat | 6.269  |\n\nTable 4: MT-Bench score comparison of various models\n\n![img-3.jpeg](img-3.jpeg)\nFigure 3: MT-Bench radar figure\n\nhave a temperature of 0.0, suggesting preciseness; and \"STEM\" and \"Humanities\" have a temperature of 0.1, implying slightly more variability than 0.0 tasks.\n\nJetMoE-8B-Chat achieves a higher MT-Bench score than Llama-2-13b-Chat after alignment, demonstrating its superior performance. However, as shown in Figure 3, JetMoE-8B-chat is relatively weak in coding and extraction compared to GPT-3.5-turbo. This might be due to the smaller model size leading to suboptima",
+        "img_path": "extracted_data/document_26/img-3.jpeg",
+        "img_description": "The radar chart compares the performance of five language models (GPT-3.5-turbo, Vicuna-13B, Llama-2-13b-chat, Llama-2-7b-chat, JetMoE-8B-chat) across eight skills: writing, roleplay, reasoning, math, coding, extraction, STEM, and humanities. Each model has a distinct color line on the chart, with scores ranging from 0 to 9 for each skill. GPT-3.5-turbo consistently scores higher in most areas, while JetMoE-8B-chat shows lower scores, particularly in the extraction category."
+    }
+]

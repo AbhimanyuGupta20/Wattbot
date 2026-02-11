@@ -1,0 +1,172 @@
+[
+    {
+        "doc_path": "extracted_data/document_10/doc_10.md",
+        "ref_id": "han2024",
+        "ref_url": "https://arxiv.org/pdf/2412.06288",
+        "img_id": "img-0.jpeg",
+        "img_uid": "han2024img-0.jpeg",
+        "context": " lung cancer, and even cognitive decline *[21, 22]*. These health effects result in various losses, such as hospitalizations, medication usage, emergency room visits, school loss days, and lost workdays, which can be further quantified in economic costs based on public health research for various health endpoints *[46]*. In addition, short-term (hours to days) PM_{2.5} exposure is also dangerous, contributing to approximately 1 million premature deaths per year globally from 2000 to 2019 *[23]*.![img-0.jpeg](img-0.jpeg)\nFigure 1: The overview of data centers' contribution to air pollutants and public health impacts. Scope-1 and scope-2 impacts occur during the operation of data centers (\"operational\"), whereas scope-3 impacts arise from activities across the supply chain (\"embodied\").\n\nUnder the Clean Air Act, the U.S. EPA is authorized to regulate the emission levels of criteria air pollutants, reducing concentrations to comply with the National Ambient Air Quality Standards (NAAQS) [47]. For example, the NAA",
+        "img_path": "extracted_data/document_10/img-0.jpeg",
+        "img_description": "The image presents a flowchart illustrating the environmental and health impact of data center operations, showing \"Operational\" emissions from onsite generators and power plants, and \"Embodied\" emissions from the supply chain. The emissions, including NO2, SO2, and PM2.5, are dispersed as pollutants, affecting various receptors like homes and schools, which lead to health outcomes such as lung cancer and asthma. The final section connects these outcomes to a \"Health Impact\" assessment using icons of documents and a calculator."
+    },
+    {
+        "doc_path": "extracted_data/document_10/doc_10.md",
+        "ref_id": "han2024",
+        "ref_url": "https://arxiv.org/pdf/2412.06288",
+        "img_id": "img-1.jpeg",
+        "img_uid": "han2024img-1.jpeg",
+        "context": "esel generators are known to emit significant amounts of air pollutants and even hazardous emissions during operation [57]. For example, they emit 200-600 times more  $\\mathrm{NO}_x$  than new or controlled existing natural gas-fired power plants for each unit of electricity produced [58]. Moreover, capacity redundancy is typically followed for diesel generator installations to ensure high availability [59]. Nonetheless, there is limited practical experience with cleaner backup alternatives that![img-1.jpeg](img-1.jpeg)\n(a) Health cost map\n\n![img-2.jpeg](img-2.jpeg)\n(b) CDF of county-wide health cost\nFigure 2: The county-level total scope-1 health cost of data center backup generators operated in Virginia (mostly in Loudoun County, Fairfax County, and Prince William County) [62]. The backup generators are assumed to emit air pollutants at  $10\\%$  of the permitted levels per year. The total annual public health cost is  $\\$220-300$  million, including  $\\$190-260$  million incurred in Virginia, West Virginia, ",
+        "img_path": "extracted_data/document_10/img-1.jpeg",
+        "img_description": "The image is a choropleth map of the northeastern United States, depicting various regions shaded in shades of blue to represent percentiles ranging from 0 to 100. Darker shades indicate higher percentiles, clustered around urban areas, with a focus on the Baltimore-Washington metropolitan region. Superimposed are orange circles indicating specific points of interest or significant data concentrations."
+    },
+    {
+        "doc_path": "extracted_data/document_10/doc_10.md",
+        "ref_id": "han2024",
+        "ref_url": "https://arxiv.org/pdf/2412.06288",
+        "img_id": "img-2.jpeg",
+        "img_uid": "han2024img-2.jpeg",
+        "context": "mounts of air pollutants and even hazardous emissions during operation [57]. For example, they emit 200-600 times more  $\\mathrm{NO}_x$  than new or controlled existing natural gas-fired power plants for each unit of electricity produced [58]. Moreover, capacity redundancy is typically followed for diesel generator installations to ensure high availability [59]. Nonetheless, there is limited practical experience with cleaner backup alternatives that![img-1.jpeg](img-1.jpeg)\n(a) Health cost map\n\n![img-2.jpeg](img-2.jpeg)\n(b) CDF of county-wide health cost\nFigure 2: The county-level total scope-1 health cost of data center backup generators operated in Virginia (mostly in Loudoun County, Fairfax County, and Prince William County) [62]. The backup generators are assumed to emit air pollutants at  $10\\%$  of the permitted levels per year. The total annual public health cost is  $\\$220-300$  million, including  $\\$190-260$  million incurred in Virginia, West Virginia, Maryland, Pennsylvania, New York, New Jersey, D",
+        "img_path": "extracted_data/document_10/img-2.jpeg",
+        "img_description": "The image depicts a cumulative distribution function (CDF) curve representing health costs in US dollars on a logarithmic scale ranging from \\(10^1\\) to \\(10^7\\). The curve illustrates a steep increase starting from low costs, which gradually plateaus as it approaches higher costs, indicating how the majority of health costs are clustered at the lower end of the scale. The x-axis represents health costs, while the y-axis shows the cumulative probability from 0 to 1."
+    },
+    {
+        "doc_path": "extracted_data/document_10/doc_10.md",
+        "ref_id": "han2024",
+        "ref_url": "https://arxiv.org/pdf/2412.06288",
+        "img_id": "img-3.jpeg",
+        "img_uid": "han2024img-3.jpeg",
+        "context": "e approximately  $30\\%$  of the 2024 level if power plants continue operating under rules existing prior to April 2024 [67]. At the global scale, the reliance on coal and other fossil fuels for electricity production has seen little change over the past four decades, highlighting the enduring challenges to fully adopt clean energy for powering data centers [68]. As a result, data centers' scope-2 air pollution is expected to remain at a high level for a substantially long time into the future.\n\n![img-3.jpeg](img-3.jpeg)\nFigure 3: Public health costs of electricity generation and on-road emissions in the contiguous U.S. in 2023 and 2028 [39]. The error bars represent high and low estimates returned by COBRA using two different exposure-response functions.\n\nAlthough technology companies have started implementing various initiatives\u2014such as purchasing renewable energy credits and nuclear power from small modular reactors [5,10,69]\u2014to lower their (market-based) carbon emissions, the vast majority of U.S. data cent",
+        "img_path": "extracted_data/document_10/img-3.jpeg",
+        "img_description": "The bar graph compares health costs in billions of dollars associated with electricity and on-road sources for the years 2023 and 2028. In both years, on-road costs are higher than electricity, with a slight increase observed in 2028 for both categories. Error bars indicate the variability or uncertainty in the cost estimates for each category and year."
+    },
+    {
+        "doc_path": "extracted_data/document_10/doc_10.md",
+        "ref_id": "han2024",
+        "ref_url": "https://arxiv.org/pdf/2412.06288",
+        "img_id": "img-4.jpeg",
+        "img_uid": "han2024img-4.jpeg",
+        "context": "ealth costs, reflecting the transport of air pollutants across regions. The cumulative distribution function (CDF) in Fig. 5b highlights that while many counties incur relatively low health costs, a small fraction of counties bear substantially higher impacts. Table 5c further identifies the top-10 counties with the highest total health costs, illustrating how local population density and proximity to power generation infrastructure combine to amplify public health risks in specific communities.![img-4.jpeg](img-4.jpeg)\nFigure 4: The public health costs of U.S. data centers and top-3 state on-road emissions from 2019 to 2023 and the 2028 projection based on the Lawrence Berkeley National Lab's report [4]. The cost for U.S. data centers includes scope-1 and scope-2 impacts. The \"High\" and \"Low\" represent the high and low growth rates considered in [4].\n\nTable 1: The public health cost of U.S. data centers from 2019 to 2023 and projection in 2028\n\n|  Year | Electricity (TWh) | Electricity Cost (billion $) | Scop",
+        "img_path": "extracted_data/document_10/img-4.jpeg",
+        "img_description": "The image depicts a bar and line graph comparing health costs in billions of dollars from 2019 to 2028, with bars representing on-road costs for California, Florida, and Texas, and lines showing costs for data centers at low and high levels. On-road costs are highest in California (red), followed by Florida (blue), and Texas (green), while data center costs show a significant increase in 2028. The graph suggests a notable rise in health costs over the years, particularly in data centers in 2028."
+    },
+    {
+        "doc_path": "extracted_data/document_10/doc_10.md",
+        "ref_id": "han2024",
+        "ref_url": "https://arxiv.org/pdf/2412.06288",
+        "img_id": "img-5.jpeg",
+        "img_uid": "han2024img-5.jpeg",
+        "context": " 5%  |\n|   |   |   |  Scope-2 | 650 (483, 818) | 10.78 (8.14, 13.41) | 73.29 (55.37, 91.21) | 61%  |\n|   |   |   |  Total | 705 (529, 880) | 11.67 (8.91, 14.44) | 79.40 (60.59, 98.21) | 67%  |\n|  2028 (High) | 580.00 | 49.68 | Scope-1 | 97 (82, 112) | 1.61 (1.37, 1.84) | 10.94 (9.35, 12.33) | 9%  |\n|   |   |   |  Scope-2 | 1165 (865, 1464) | 19.29 (14.58, 24.01) | 131.23 (99.14, 163.31) | 110%  |\n|   |   |   |  Total | 1262 (947, 1576) | 20.90 (15.95, 25.85) | 142.34 (108.49, 175.84) | 119%  |\n\n![img-5.jpeg](img-5.jpeg)\n(a)\n\n![img-6.jpeg](img-6.jpeg)\n(b)\nFigure 5: The county-level total health cost of U.S. data centers from 2019 to 2023. (a) Health cost map; (b) CDF of county-level health cost; (c) Top-10 counties by total health cost.\n\n|  State | County | Health Cost (million $)  |\n| --- | --- | --- |\n|  IL | Cook | 358.5 (245.7, 471.3)  |\n|  PA | Allegheny | 322.4 (246.3, 398.6)  |\n|  TX | Harris | 306.7 (208.5, 404.8)  |\n|  OH | Hamilton | 195.5 (147.8, 243.1)  |\n|  PA | Philadelphia | 193.7 (137.5, 250.0) ",
+        "img_path": "extracted_data/document_10/img-5.jpeg",
+        "img_description": "The image is a heatmap of the United States, depicting percentile data across different regions, with darker shades of blue indicating higher percentiles and lighter shades indicating lower ones. The distribution is denser in the eastern part of the country, showing higher percentiles, while the western regions are characterized by lighter shades, representing lower percentiles. A color gradient on the side ranges from 0 to 100, enhancing the visual representation of the percentile variations."
+    },
+    {
+        "doc_path": "extracted_data/document_10/doc_10.md",
+        "ref_id": "han2024",
+        "ref_url": "https://arxiv.org/pdf/2412.06288",
+        "img_id": "img-6.jpeg",
+        "img_uid": "han2024img-6.jpeg",
+        "context": " 650 (483, 818) | 10.78 (8.14, 13.41) | 73.29 (55.37, 91.21) | 61%  |\n|   |   |   |  Total | 705 (529, 880) | 11.67 (8.91, 14.44) | 79.40 (60.59, 98.21) | 67%  |\n|  2028 (High) | 580.00 | 49.68 | Scope-1 | 97 (82, 112) | 1.61 (1.37, 1.84) | 10.94 (9.35, 12.33) | 9%  |\n|   |   |   |  Scope-2 | 1165 (865, 1464) | 19.29 (14.58, 24.01) | 131.23 (99.14, 163.31) | 110%  |\n|   |   |   |  Total | 1262 (947, 1576) | 20.90 (15.95, 25.85) | 142.34 (108.49, 175.84) | 119%  |\n\n![img-5.jpeg](img-5.jpeg)\n(a)\n\n![img-6.jpeg](img-6.jpeg)\n(b)\nFigure 5: The county-level total health cost of U.S. data centers from 2019 to 2023. (a) Health cost map; (b) CDF of county-level health cost; (c) Top-10 counties by total health cost.\n\n|  State | County | Health Cost (million $)  |\n| --- | --- | --- |\n|  IL | Cook | 358.5 (245.7, 471.3)  |\n|  PA | Allegheny | 322.4 (246.3, 398.6)  |\n|  TX | Harris | 306.7 (208.5, 404.8)  |\n|  OH | Hamilton | 195.5 (147.8, 243.1)  |\n|  PA | Philadelphia | 193.7 (137.5, 250.0)  |\n|  MI | Wayne | 188.6 (133.2",
+        "img_path": "extracted_data/document_10/img-6.jpeg",
+        "img_description": "The image displays a cumulative distribution function (CDF) graph of health costs in US dollars, spanning from \\(10^4\\) to \\(10^8\\) on the x-axis. The CDF increases smoothly from 0 to 1, showing the proportion of the population incurring costs up to each value. The curve indicates a rapid increase in coverage between \\(10^5\\) and \\(10^7\\) dollars, suggesting that most individuals accumulate health costs within this range."
+    },
+    {
+        "doc_path": "extracted_data/document_10/doc_10.md",
+        "ref_id": "han2024",
+        "ref_url": "https://arxiv.org/pdf/2412.06288",
+        "img_id": "img-7.jpeg",
+        "img_uid": "han2024img-7.jpeg",
+        "context": "vel per-household total health costs attributable to U.S. data centers from 2019 to 2023. The results reveal a highly disproportionate distribution of health impacts across counties, with low-income communities particularly affected. The ratio of the highest to lowest county-level per-household health cost reaches approximately 200. Notably, all of the top 10 counties with the highest per-household costs have median household incomes below the national median. The high degree of disparity across![img-7.jpeg](img-7.jpeg)\n(a)\n\n![img-8.jpeg](img-8.jpeg)\n(b)\nFigure 6: The county-level per-household health cost of U.S. data centers from 2019 to 2023. (a) Per-household health cost map; (b) CDF of county-level per-household health cost; (c) Top-10 counties by per-household health cost. IR represents \"County-to-Nation Per-Household Median Income Ratio.\"\n\n|  State | County | Per-household Health Cost ($) | IR  |\n| --- | --- | --- | --- |\n|  WV | Marion | 1218.3 (978.0, 1458.5) | 0.80  |\n|  WV | Mason | 1139.0 (897.6, 1",
+        "img_path": "extracted_data/document_10/img-7.jpeg",
+        "img_description": "The image is a heatmap of the United States displaying data in percentiles, with darker shades of blue representing higher values. The concentration of high-value areas is predominantly in the eastern regions, with a gradual decrease towards the west. A color gradient bar on the right indicates the percentile range from 0 to 100."
+    },
+    {
+        "doc_path": "extracted_data/document_10/doc_10.md",
+        "ref_id": "han2024",
+        "ref_url": "https://arxiv.org/pdf/2412.06288",
+        "img_id": "img-8.jpeg",
+        "img_uid": "han2024img-8.jpeg",
+        "context": "costs attributable to U.S. data centers from 2019 to 2023. The results reveal a highly disproportionate distribution of health impacts across counties, with low-income communities particularly affected. The ratio of the highest to lowest county-level per-household health cost reaches approximately 200. Notably, all of the top 10 counties with the highest per-household costs have median household incomes below the national median. The high degree of disparity across![img-7.jpeg](img-7.jpeg)\n(a)\n\n![img-8.jpeg](img-8.jpeg)\n(b)\nFigure 6: The county-level per-household health cost of U.S. data centers from 2019 to 2023. (a) Per-household health cost map; (b) CDF of county-level per-household health cost; (c) Top-10 counties by per-household health cost. IR represents \"County-to-Nation Per-Household Median Income Ratio.\"\n\n|  State | County | Per-household Health Cost ($) | IR  |\n| --- | --- | --- | --- |\n|  WV | Marion | 1218.3 (978.0, 1458.5) | 0.80  |\n|  WV | Mason | 1139.0 (897.6, 1380.4) | 0.71  |\n|  OH | Meigs ",
+        "img_path": "extracted_data/document_10/img-8.jpeg",
+        "img_description": "The image displays a cumulative distribution function (CDF) graph depicting the probability distribution of health costs in US dollars on a logarithmic scale. The x-axis represents health costs ranging from 10 to 1000 dollars, while the y-axis shows the cumulative probability from 0 to 1. The curve illustrates a rapid increase in cumulative probability between the cost range of approximately 50 to 500 dollars, indicating that most health costs fall within this range."
+    },
+    {
+        "doc_path": "extracted_data/document_10/doc_10.md",
+        "ref_id": "han2024",
+        "ref_url": "https://arxiv.org/pdf/2412.06288",
+        "img_id": "img-9.jpeg",
+        "img_uid": "han2024img-9.jpeg",
+        "context": " 5.15 (4600) | 4.44  |\n|  Prineville, OR | 7.52 | 2.2 | 0.23 (0.19, 0.28) | 10% | 0.59 (13300) | 4.67 (4200) | 2.40  |\n|  Gallatin, TN | 6.23 | 1.9 | 0.32 (0.24, 0.40) | 17% | 0.41 (9200) | 1.21 (1100) | 0.93  |\n|  Fort Worth, TX | 6.60 | 2.0 | 0.51 (0.38, 0.65) | 26% | 0.47 (10500) | 3.02 (2700) | 3.81  |\n|  Eagle Mountain, UT | 6.99 | 2.1 | 0.24 (0.19, 0.29) | 12% | 0.60 (13300) | 4.82 (4300) | 2.52  |\n|  Henrico, VA | 8.92 | 2.7 | 1.61 (1.20, 2.03) | 61% | 1.13 (25200) | 5.15 (4600) | 4.44  |![img-9.jpeg](img-9.jpeg)\n(a) Per-household health cost (Company A)\n\n![img-10.jpeg](img-10.jpeg)\n(b) Per-household health cost (Company B)\nFigure 7: The county-level per-household health cost of two U.S. technology companies in 2023.\n\n# 5.2 Public Health Impact of Generative AI Training\n\nWe now study the health impact of a specific computing task. Specifically, we consider the training of an LLM and assume that the electricity consumption is the same as training Llama-3.1 recently released by Meta [92]. As the scope-2 i",
+        "img_path": "extracted_data/document_10/img-9.jpeg",
+        "img_description": "The image is a heat map of the United States displaying the average daily expenditure per capita on an unspecified metric, with darker shades of blue indicating higher spending, particularly concentrated in the eastern and central regions. The color scale on the right ranges from values less than or equal to $1 in light blue to greater than or equal to $15 in dark blue. The map reveals regional variations in spending patterns across the country."
+    },
+    {
+        "doc_path": "extracted_data/document_10/doc_10.md",
+        "ref_id": "han2024",
+        "ref_url": "https://arxiv.org/pdf/2412.06288",
+        "img_id": "img-10.jpeg",
+        "img_uid": "han2024img-10.jpeg",
+        "context": ".28) | 10% | 0.59 (13300) | 4.67 (4200) | 2.40  |\n|  Gallatin, TN | 6.23 | 1.9 | 0.32 (0.24, 0.40) | 17% | 0.41 (9200) | 1.21 (1100) | 0.93  |\n|  Fort Worth, TX | 6.60 | 2.0 | 0.51 (0.38, 0.65) | 26% | 0.47 (10500) | 3.02 (2700) | 3.81  |\n|  Eagle Mountain, UT | 6.99 | 2.1 | 0.24 (0.19, 0.29) | 12% | 0.60 (13300) | 4.82 (4300) | 2.52  |\n|  Henrico, VA | 8.92 | 2.7 | 1.61 (1.20, 2.03) | 61% | 1.13 (25200) | 5.15 (4600) | 4.44  |![img-9.jpeg](img-9.jpeg)\n(a) Per-household health cost (Company A)\n\n![img-10.jpeg](img-10.jpeg)\n(b) Per-household health cost (Company B)\nFigure 7: The county-level per-household health cost of two U.S. technology companies in 2023.\n\n# 5.2 Public Health Impact of Generative AI Training\n\nWe now study the health impact of a specific computing task. Specifically, we consider the training of an LLM and assume that the electricity consumption is the same as training Llama-3.1 recently released by Meta [92]. As the scope-2 impact is dominant and the power allocated to train Llama-3.1 is unknown",
+        "img_path": "extracted_data/document_10/img-10.jpeg",
+        "img_description": "The image is a choropleth map of the United States displaying average tip amounts in USD, with data aggregated by county. The color gradient ranges from light to dark purple, with lighter shades indicating lower tips (as low as $1) and darker shades indicating higher tips (up to $15 or more). Higher tip values are concentrated in the central and eastern regions of the country."
+    },
+    {
+        "doc_path": "extracted_data/document_10/doc_10.md",
+        "ref_id": "han2024",
+        "ref_url": "https://arxiv.org/pdf/2412.06288",
+        "img_id": "img-11.jpeg",
+        "img_uid": "han2024img-11.jpeg",
+        "context": " carbon emissions in 110 out of the 114 U.S. regions. Likewise, in Fig. 8b, the greater temporal variation of health costs is also supported by its greater normalized standard deviation (STD divided by the yearly average) in 90 out of the 114 U.S. regions (79%). Next, we show in Fig. 8c the weak spatial correlation (Pearson correlation coefficient: 0.292) between the yearly average health cost and carbon intensity across the 114 regions. Furthermore, the normalized IQR of the health cost spatial![img-11.jpeg](img-11.jpeg)\n(a) Normalized IQR (110)\n\n![img-12.jpeg](img-12.jpeg)\n(b) Normalized STD (90)\nFigure 8: Analysis of marginal scope-2 carbon emission rates and public health costs over 114 U.S. regions between October 1, 2023 and September 30, 2024 [77]. (a) In 110 out of the 114 U.S. regions  $(96\\%)$ , the normalized IQR of marginal health cost is higher than that of marginal carbon intensity. (b) In 90 out of the 114 U.S. regions  $(79\\%)$ , the normalized standard deviation of marginal health cost is higher",
+        "img_path": "extracted_data/document_10/img-11.jpeg",
+        "img_description": "The scatter plot visualizes the relationship between Carbon IQR and Health Cost IQR, with red hexagonal markers representing data points. Most points cluster near the lower left, suggesting a correlation where both variables are relatively low, while a few points extend upwards and to the right, indicating higher variability in both measures. The chart includes shaded areas, with axes ranging from 0.0 to 1.5 for both Carbon IQR and Health Cost IQR."
+    },
+    {
+        "doc_path": "extracted_data/document_10/doc_10.md",
+        "ref_id": "han2024",
+        "ref_url": "https://arxiv.org/pdf/2412.06288",
+        "img_id": "img-12.jpeg",
+        "img_uid": "han2024img-12.jpeg",
+        "context": "Likewise, in Fig. 8b, the greater temporal variation of health costs is also supported by its greater normalized standard deviation (STD divided by the yearly average) in 90 out of the 114 U.S. regions (79%). Next, we show in Fig. 8c the weak spatial correlation (Pearson correlation coefficient: 0.292) between the yearly average health cost and carbon intensity across the 114 regions. Furthermore, the normalized IQR of the health cost spatial![img-11.jpeg](img-11.jpeg)\n(a) Normalized IQR (110)\n\n![img-12.jpeg](img-12.jpeg)\n(b) Normalized STD (90)\nFigure 8: Analysis of marginal scope-2 carbon emission rates and public health costs over 114 U.S. regions between October 1, 2023 and September 30, 2024 [77]. (a) In 110 out of the 114 U.S. regions  $(96\\%)$ , the normalized IQR of marginal health cost is higher than that of marginal carbon intensity. (b) In 90 out of the 114 U.S. regions  $(79\\%)$ , the normalized standard deviation of marginal health cost is higher than that of marginal carbon intensity. (c) The Pears",
+        "img_path": "extracted_data/document_10/img-12.jpeg",
+        "img_description": "The scatter plot visualizes the relationship between Carbon STD and Health Cost STD, using orange hexagonal markers to represent data points. The plot shows a positive correlation, with data clustering mostly below the line y=x, indicating higher variability in health costs compared to carbon across the dataset. Axes range from 0.0 to 0.8 for both variables, with a noticeable density of points around the lower regions of the graph."
+    },
+    {
+        "doc_path": "extracted_data/document_10/doc_10.md",
+        "ref_id": "han2024",
+        "ref_url": "https://arxiv.org/pdf/2412.06288",
+        "img_id": "img-13.jpeg",
+        "img_uid": "han2024img-13.jpeg",
+        "context": "sts over 114 U.S. regions between October 1, 2023 and September 30, 2024 [77]. (a) In 110 out of the 114 U.S. regions  $(96\\%)$ , the normalized IQR of marginal health cost is higher than that of marginal carbon intensity. (b) In 90 out of the 114 U.S. regions  $(79\\%)$ , the normalized standard deviation of marginal health cost is higher than that of marginal carbon intensity. (c) The Pearson correlation between the per-region yearly average marginal health cost and carbon intensity is 0.292.\n\n![img-13.jpeg](img-13.jpeg)\n(c) Average\n\n|  Location | Pearson Correlation | Normalized IQR |   |   | Normalized STD  |   |   |\n| --- | --- | --- | --- | --- | --- | --- | --- |\n|   |   |  Health | Carbon | Health Costs Ratio | Health | Carbon | Health Costs Ratio  |\n|  Loudoun County, VA | 0.427 | 0.158 | 0.065 | 2.409 | 0.131 | 0.059 | 2.222  |\n|  Central Ohio, OH | 0.479 | 0.160 | 0.065 | 2.441 | 0.137 | 0.066 | 2.064  |\n|  The Dalles, OR | 0.326 | 0.957 | 0.099 | 9.614 | 0.546 | 0.103 | 5.296  |\n|  Douglas County, GA ",
+        "img_path": "extracted_data/document_10/img-13.jpeg",
+        "img_description": "The scatter plot displays the relationship between carbon emissions in kilograms per megawatt-hour (kg/MWh) on the x-axis and health costs in dollars per megawatt-hour ($/MWh) on the y-axis. Data points show a concentration between 300 to 600 kg/MWh for carbon and 10 to 60 $/MWh for health costs, with a few outliers extending higher in both dimensions. The overall trend suggests that as carbon emissions increase, health costs generally rise, indicating a positive correlation."
+    },
+    {
+        "doc_path": "extracted_data/document_10/doc_10.md",
+        "ref_id": "han2024",
+        "ref_url": "https://arxiv.org/pdf/2412.06288",
+        "img_id": "img-14.jpeg",
+        "img_uid": "han2024img-14.jpeg",
+        "context": "/ton | p^c = $5/ton | p^c = $200/ton | p^c = $\u221e/ton | HI-GLB (p^c_{1.4} = 0) | HI-GLB  |\n|  Health (Million $) | 393.23 | 416.29 (5.86%) | 416.29 (5.86%) | 383.32 (-2.52%) | 404.26 (2.80%) | 289.67 (-26.34%) | 291.94 (-15.76%)  |\n|  Energy (Million $) | 756.50 | 714.99 (-5.49%) | 714.99 (-5.49%) | 734.77 (-2.87%) | 765.68 (1.21%) | 741.49 (-1.98%) | 733.66 (-3.02%)  |\n|  Carbon (Million Ton) | 6.60 | 6.67 (1.02%) | 6.67 (1.02%) | 6.20 (-6.01%) | 6.12 (-7.23%) | 6.54 (-0.89%) | 6.51 (-1.38%)  |\n\n![img-14.jpeg](img-14.jpeg)\n(a)\n\n![img-15.jpeg](img-15.jpeg)\n(b)\nFigure 9: Correlation analysis. (a) CDF of correlation coefficients between hourly health prices and marginal carbon emission rates for all the U.S. regions; (b) Scatter plot of health price and marginal carbon emission rate (annual average in 2023) across Meta's U.S. data center locations.\n\njoint consideration of carbon-aware and health-informed GLB is interesting, we exclude such an analysis to better contrast the differences between existing carbon-aware ",
+        "img_path": "extracted_data/document_10/img-14.jpeg",
+        "img_description": "The image displays a cumulative probability plot of Pearson correlation coefficients ranging from 0 to 1 on both axes. The x-axis represents the Pearson Correlation Coefficient, while the y-axis represents the cumulative probability, showing an increasing trend. The graph illustrates the distribution of correlation coefficients with a generally linear progression, indicating higher cumulative probability with increasing correlation values."
+    },
+    {
+        "doc_path": "extracted_data/document_10/doc_10.md",
+        "ref_id": "han2024",
+        "ref_url": "https://arxiv.org/pdf/2412.06288",
+        "img_id": "img-15.jpeg",
+        "img_uid": "han2024img-15.jpeg",
+        "context": "ton | p^c = $\u221e/ton | HI-GLB (p^c_{1.4} = 0) | HI-GLB  |\n|  Health (Million $) | 393.23 | 416.29 (5.86%) | 416.29 (5.86%) | 383.32 (-2.52%) | 404.26 (2.80%) | 289.67 (-26.34%) | 291.94 (-15.76%)  |\n|  Energy (Million $) | 756.50 | 714.99 (-5.49%) | 714.99 (-5.49%) | 734.77 (-2.87%) | 765.68 (1.21%) | 741.49 (-1.98%) | 733.66 (-3.02%)  |\n|  Carbon (Million Ton) | 6.60 | 6.67 (1.02%) | 6.67 (1.02%) | 6.20 (-6.01%) | 6.12 (-7.23%) | 6.54 (-0.89%) | 6.51 (-1.38%)  |\n\n![img-14.jpeg](img-14.jpeg)\n(a)\n\n![img-15.jpeg](img-15.jpeg)\n(b)\nFigure 9: Correlation analysis. (a) CDF of correlation coefficients between hourly health prices and marginal carbon emission rates for all the U.S. regions; (b) Scatter plot of health price and marginal carbon emission rate (annual average in 2023) across Meta's U.S. data center locations.\n\njoint consideration of carbon-aware and health-informed GLB is interesting, we exclude such an analysis to better contrast the differences between existing carbon-aware GLB approaches and our proposed h",
+        "img_path": "extracted_data/document_10/img-15.jpeg",
+        "img_description": "The scatter plot displays health price in dollars per megawatt-hour (MWh) on the y-axis against the carbon emission rate in tons per MWh on the x-axis for various states represented by distinct markers. Most states cluster around higher emission rates (0.4 to 0.7 ton/MWh) and health prices (above $40/MWh), while a few states like Oregon and Utah show lower emission rates and health prices. The legend identifies each state with a unique shape and color."
+    },
+    {
+        "doc_path": "extracted_data/document_10/doc_10.md",
+        "ref_id": "han2024",
+        "ref_url": "https://arxiv.org/pdf/2412.06288",
+        "img_id": "img-16.jpeg",
+        "img_uid": "han2024img-16.jpeg",
+        "context": "}$  and 1110.42 grams of  $\\mathrm{NO}_{\\mathrm{x}}$ .\n\n# A.6 State-wide Electricity Consumption by U.S. Data Centers in 2023\n\nWe show in Fig. 10 the state-wide data center electricity consumption in 2023 [5]. It can be seen that Virginia, Texas and California have the highest data center electricity consumption in 2023. The total national electricity consumption reported by EPRI is slightly lower than the values in [4], and we scale it up accordingly in our calculations to ensure consistency.\n\n![img-16.jpeg](img-16.jpeg)\n(a) Electricity consumption map\nFigure 10: State-level electricity consumption of U.S. data centers in 2023 [5].\n\n|  State | Electricity Consumption (TWh) | State | Electricity Consumption (TWh) | State | Electricity Consumption (TWh)  |\n| --- | --- | --- | --- | --- | --- |\n|  VA | 23.85 | OH | 2.36 | ID | 0.15  |\n|  TX | 21.81 | SC | 2.02 | WI | 0.15  |\n|  CA | 9.33 | WY | 1.86 | MD | 0.10  |\n|  IL | 7.45 | KY | 1.62 | LA | 0.08  |\n|  OR | 6.41 | CO | 1.51 | SD | 0.07  |\n|  AZ | 6.25 | AL | 1",
+        "img_path": "extracted_data/document_10/img-16.jpeg",
+        "img_description": "The image is a color-coded map of the United States displaying data distributed by state percentiles, with a gradient scale from light to dark blue representing a range from 0 to 100. Darker shades indicate higher percentiles, showing states like Texas and a few others with the deepest blue, suggesting they are in the highest range. The map includes a legend on the right side to indicate the percentile distribution corresponding to the color gradient."
+    }
+]

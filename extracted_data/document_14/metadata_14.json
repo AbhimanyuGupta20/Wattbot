@@ -1,0 +1,32 @@
+[
+    {
+        "doc_path": "extracted_data/document_14/doc_14.md",
+        "ref_id": "li2025a",
+        "ref_url": "https://arxiv.org/pdf/2309.03852",
+        "img_id": "img-0.jpeg",
+        "img_uid": "li2025aimg-0.jpeg",
+        "context": "s the development of innovative methodologies that effectively mitigate training expenses, aligning with the broader objectives of Green AI (Schwartz et al. 2020).\n\nIn this paper, we present our exploration to train an LLM at the 100B-parameter scale using a growth strategy inspired by previous research on progressive learning (Gong et al. 2019; Gu et al. 2021; Yao et al. 2024) and neurogenesis\n\n# Non-Growth vs. three Growth Strategies\n\nThe shaded area in the graph represents the training cost\n\n![img-0.jpeg](img-0.jpeg)\n(a) Without growth\n\n![img-1.jpeg](img-1.jpeg)\n(b) Linear growth strategy cost saving  $= 50$\n(c) Superlinear growth strategy cost saving  $= 50\\%$\n(d) Sublinear growth strategy cost saving  $= 50\\%$\nFigure 1: An overview of different growth strategies. (a): a baseline with constant number of parameters. (b): a straightforward linear growth strategy, cost-saving being exactly  $50\\%$ ; (c): a superlinear strategy with  $&gt;50\\%$  cost saving; (d): sublinear strategy saving the cost by less than",
+        "img_path": "extracted_data/document_14/img-0.jpeg",
+        "img_description": "The image displays a two-dimensional plot with \"tokens (Trillion)\" on the x-axis ranging from 0.00 to 1.00 and \"parameters (Billion)\" on the y-axis ranging from 0 to 100. The plot area is filled with a light blue color, suggesting a region of interest or possible data range. The axes indicate a relationship between large-scale datasets and model sizes in the context of machine learning or AI."
+    },
+    {
+        "doc_path": "extracted_data/document_14/doc_14.md",
+        "ref_id": "li2025a",
+        "ref_url": "https://arxiv.org/pdf/2309.03852",
+        "img_id": "img-1.jpeg",
+        "img_uid": "li2025aimg-1.jpeg",
+        "context": "that effectively mitigate training expenses, aligning with the broader objectives of Green AI (Schwartz et al. 2020).\n\nIn this paper, we present our exploration to train an LLM at the 100B-parameter scale using a growth strategy inspired by previous research on progressive learning (Gong et al. 2019; Gu et al. 2021; Yao et al. 2024) and neurogenesis\n\n# Non-Growth vs. three Growth Strategies\n\nThe shaded area in the graph represents the training cost\n\n![img-0.jpeg](img-0.jpeg)\n(a) Without growth\n\n![img-1.jpeg](img-1.jpeg)\n(b) Linear growth strategy cost saving  $= 50$\n(c) Superlinear growth strategy cost saving  $= 50\\%$\n(d) Sublinear growth strategy cost saving  $= 50\\%$\nFigure 1: An overview of different growth strategies. (a): a baseline with constant number of parameters. (b): a straightforward linear growth strategy, cost-saving being exactly  $50\\%$ ; (c): a superlinear strategy with  $&gt;50\\%$  cost saving; (d): sublinear strategy saving the cost by less than  $50\\%$ .\n\n(Eriksson et al. 1998). \"Growth\" m",
+        "img_path": "extracted_data/document_14/img-1.jpeg",
+        "img_description": "The image depicts a graph with \"tokens (Trillion)\" on the x-axis and \"parameters (Billion)\" on the y-axis, illustrating three regions: sublinear, linear, and superlinear. The linear region forms a green triangular area bounded by the axes and a green diagonal line. The sublinear region, denoted by a grey dashed line, is above the linear region, while the superlinear region, indicated by an orange dashed line, is below the linear line."
+    },
+    {
+        "doc_path": "extracted_data/document_14/doc_14.md",
+        "ref_id": "li2025a",
+        "ref_url": "https://arxiv.org/pdf/2309.03852",
+        "img_id": "img-2.jpeg",
+        "img_uid": "li2025aimg-2.jpeg",
+        "context": "h dimension, leading to additional savings in GPU computational resources and memory utilization. We also utilize the Megetron-LM  $^4$  implementation of the distributed optimizer (Rajbhandari et al. 2019) to further reduce GPU memory consumption, which evenly distributes the optimizer states across data parallel ranks.\n\nTable 2 shows the parallelism configurations and training throughput in each stage of FLM-101B training. In different stages, we configure different Tensor Parallel  $\\times$\n\n![img-2.jpeg](img-2.jpeg)\nFigure 2: Training loss for FLM-101B models.\n\nPipeline Parallel sizes to achieve higher efficiency. The single-GPU throughput for all three training stages consistently exceeds 160 teraFLOPs/sec with a utilization rate of at least  $51.3\\%$ . For comparison, GLM-130B achieves 135 teraFLOPs/sec (Zeng et al. 2023) with a  $42.27\\%$  utilization rate. We can also find that FLM-101B has a higher FLOP utilization rate than Megatron-LM (Korthikanti et al. 2022) under a similar model size.\n\nFLM-101B C",
+        "img_path": "extracted_data/document_14/img-2.jpeg",
+        "img_description": "The graph displays the training loss of a model plotted against processed tokens in billions, showcasing a decreasing trend as processed tokens increase. It is divided into three stages: 16B, 51B, and 101B, indicating different phases of training progress. Each stage shows a color-coded line where training loss decreases with occasional fluctuations within each segment."
+    }
+]

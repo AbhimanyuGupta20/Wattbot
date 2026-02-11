@@ -1,0 +1,162 @@
+[
+    {
+        "doc_path": "extracted_data/document_31/doc_31.md",
+        "ref_id": "xia2024",
+        "ref_url": "https://arxiv.org/pdf/2408.04693",
+        "img_id": "img-0.jpeg",
+        "img_uid": "xia2024img-0.jpeg",
+        "context": "sed on model size, dataset size, and GPU architecture. First, we estimate the maximum batch size for a given GPU memory, then compute fine-tuning throughput. We validate this throughput with experimental results, showing an RMSE of less than 0.55. Using the estimated throughput, our model calculates the fine-tuning cost for different cloud providers.\n\nThe contributions of this paper are as follows.\n\n- Make a case for LLM fine-tuning for specializing pre-trained models in a cost-effective manner.![img-0.jpeg](img-0.jpeg)\nFig. 1. LLM model overview. We evaluate accuracy, throughput, runtime, and GPU characterization for different models, input datasets, and fine-tuning sparsity. The different colored expert boxes in MoE layer means different sets of experts are activated according to the input token.\n\n- A detailed accuracy and runtime performance analysis to understand the LLM fine-tuning workload behavior.\n- Design and validation of an analytical model to estimate the cost of LLM fine-tuning in the cloud.\n\n# II",
+        "img_path": "extracted_data/document_31/img-0.jpeg",
+        "img_description": "The scatter plot compares various AI models and techniques in terms of Energy (Wh) and Accuracy, with three categories indicated: Deepsk, Other LLM, and Traditional. Models like \"DS Llama 8B\" and \"DS Qwen 32B\" appear in the Deepsk category, demonstrating relatively higher energy usage and accuracy, while traditional methods like \"Linear Embedding\" and \"XGBoost Tf-idf\" are positioned with lower energy consumption and varying accuracy levels. The plot shows a clear distinction between the energy-accuracy trade-offs across the modeled categories."
+    },
+    {
+        "doc_path": "extracted_data/document_31/doc_31.md",
+        "ref_id": "xia2024",
+        "ref_url": "https://arxiv.org/pdf/2408.04693",
+        "img_id": "img-1.jpeg",
+        "img_uid": "xia2024img-1.jpeg",
+        "context": "length is 79 for CS and 174 for MATH. Therefore, we select a sequence length of 128 for the hardware evaluation section to achieve an approximate profiling effect. We also show a sensitivity study by varying sequence length to demonstrate its effect on performance.\n\nGPU platform. Our study is focused on characterizing the LLM fine-tuning process on a resource-constrained environment. Therefore, we focus on fine-tuning these models on a single GPU. Specifically, we conduct our experiments using\n\n![img-1.jpeg](img-1.jpeg)\nFig. 2. Sequence length distribution for evaluated datasets.\n\n![img-2.jpeg](img-2.jpeg)\nFig. 3. Testing accuracy of Mixtral and BlackMamba. Both models are evaluated on two datasets Hellaswag (HE) and GSM8K (GS), using dense and sparse fine-tuning.\n\nNVIDIA A40 GPU with Ampere architecture. The GPU has 48GB memory. While our profiling study is based on this particular GPU, we show the versatility of our analytical model by validating our model against three other GPU with different sizes of comp",
+        "img_path": "extracted_data/document_31/img-1.jpeg",
+        "img_description": "The image displays a comparative bar chart of energy consumption (in Wh) across three categories of machine learning models: Deepspeak, Other LLM, and Traditional. Each category shows varying energy usage distributed among CPU, GPU, and RAM, with Deepspeak models consuming significantly higher energy, especially the DS Llama 70B. In contrast, Traditional models show minimal energy usage, with Linear models having the lowest consumption among all categories."
+    },
+    {
+        "doc_path": "extracted_data/document_31/doc_31.md",
+        "ref_id": "xia2024",
+        "ref_url": "https://arxiv.org/pdf/2408.04693",
+        "img_id": "img-2.jpeg",
+        "img_uid": "xia2024img-2.jpeg",
+        "context": "the hardware evaluation section to achieve an approximate profiling effect. We also show a sensitivity study by varying sequence length to demonstrate its effect on performance.\n\nGPU platform. Our study is focused on characterizing the LLM fine-tuning process on a resource-constrained environment. Therefore, we focus on fine-tuning these models on a single GPU. Specifically, we conduct our experiments using\n\n![img-1.jpeg](img-1.jpeg)\nFig. 2. Sequence length distribution for evaluated datasets.\n\n![img-2.jpeg](img-2.jpeg)\nFig. 3. Testing accuracy of Mixtral and BlackMamba. Both models are evaluated on two datasets Hellaswag (HE) and GSM8K (GS), using dense and sparse fine-tuning.\n\nNVIDIA A40 GPU with Ampere architecture. The GPU has 48GB memory. While our profiling study is based on this particular GPU, we show the versatility of our analytical model by validating our model against three other GPU with different sizes of compute and memory resources: (1) A100 GPU with 40GB memory, (2) A100 GPU with 80GB memory, ",
+        "img_path": "extracted_data/document_31/img-2.jpeg",
+        "img_description": "The image consists of two bar graphs comparing the duration and energy consumption across various AI models using different numbers of GPUs (1, 2, and 4). The left graph shows that \"Llama 3.170B\" requires significantly more time compared to others, with variations in duration increasing with more GPUs. The right graph indicates that energy consumption is highest for models \"Llama 3.170B\" and \"Qwen 2.572B\" when using 4 GPUs, highlighting the computational intensity of these models."
+    },
+    {
+        "doc_path": "extracted_data/document_31/doc_31.md",
+        "ref_id": "xia2024",
+        "ref_url": "https://arxiv.org/pdf/2408.04693",
+        "img_id": "img-3.jpeg",
+        "img_uid": "xia2024img-3.jpeg",
+        "context": "odels. Insights from this study will help develop a robust analytical model for estimating fine-tuning costs.\n\n1) Maximum Batch Size Support: The maximum batch size in fine-tuning is determined by GPU memory size, model size, sequence length, and MoE sparsity. The LLM\n\nTABLE III MAXIMUM BATCH SIZE SUPPORTED BY LLM FINE-TUNING; D: DENSE AND S:SPARSE.\n\n|   | Mixtral-D | Mixtral-S | BlackMamba-D | BlackMamba-S  |\n| --- | --- | --- | --- | --- |\n|  CS | 2 | 8 | 6 | 20  |\n|  MATH | 1 | 3 | 2 | 8  |\n\n![img-3.jpeg](img-3.jpeg)\nFig. 4. Execution time breakdown.\n\noccupies a certain amount of GPU memory, with the remainder available for intermediate data during fine-tuning. Longer sequence lengths consume more memory, and denser MoE configurations require additional memory space. We discuss the heuristic for determining the maximum batch size in  $\\S V$ . Based on our experimental study on NVIDIA A40 GPU with 48GB memory, we empirically find and report the maximum batch size supported by different model and dataset comb",
+        "img_path": "extracted_data/document_31/img-3.jpeg",
+        "img_description": "The image contains two bar graphs comparing three models: Llama 3.1 70B, Owen 2.5 72B, and Jamba Mini 1.5, in terms of \"Duration (s)\" and \"Energy consumed (Wh)\" for single and double configurations. In both graphs, the double configuration significantly exceeds the single configuration in terms of duration and energy consumption for Llama 3.1 70B and Owen 2.5 72B, while Jamba Mini 1.5 shows similar values for both configurations. The graphs are color-coded, with red representing single and blue representing double."
+    },
+    {
+        "doc_path": "extracted_data/document_31/doc_31.md",
+        "ref_id": "xia2024",
+        "ref_url": "https://arxiv.org/pdf/2408.04693",
+        "img_id": "img-4.jpeg",
+        "img_uid": "xia2024img-4.jpeg",
+        "context": "ing. This difference is primarily due to the different fine-tuning strategies applied to these two models: only the parameters in the LoRA module are updated for Mixtral fine-tuning, whereas BlackMamba undergoes full fine-tuning. (2) The runtime of the forward and backward stages increases with sparsity and batch size due to the increased amount of computation. (3) The backward stage typically takes more time than the forward stage. In BlackMamba, the backward stage demands more computation than![img-4.jpeg](img-4.jpeg)\nFig. 5. Execution time breakdown in terms of different model layers.\n\n![img-5.jpeg](img-5.jpeg)\nFig. 6. Execution breakdown of the MoE layer for different kernels.\n\nthe forward stage due to the need for gradient calculation and propagation, resulting in two matrix multiplication operations. In Mixtral fine-tuning, gradient calculation adds minimal computation as only a small portion of parameters need it. However, gradient checkpointing in Mixtral saves memory but increases the backward stage r",
+        "img_path": "extracted_data/document_31/img-4.jpeg",
+        "img_description": "The image contains eight bar graphs displaying both the duration (s) and energy consumed (Wh) for different AI models: Llama 3.1 8B, Qwen 2.5 7B, DS Llama 8B, and DS Qwen 14B, compared across hardware configurations A30, V100, and H100. For both duration and energy consumption, each model shows varied performance with the bar heights indicating that H100 generally uses less duration and energy compared to others in top rows, while V100 consumes more energy in the bottom rows. This suggests that H100 is more efficient in both time and energy for these AI models."
+    },
+    {
+        "doc_path": "extracted_data/document_31/doc_31.md",
+        "ref_id": "xia2024",
+        "ref_url": "https://arxiv.org/pdf/2408.04693",
+        "img_id": "img-5.jpeg",
+        "img_uid": "xia2024img-5.jpeg",
+        "context": "wo models: only the parameters in the LoRA module are updated for Mixtral fine-tuning, whereas BlackMamba undergoes full fine-tuning. (2) The runtime of the forward and backward stages increases with sparsity and batch size due to the increased amount of computation. (3) The backward stage typically takes more time than the forward stage. In BlackMamba, the backward stage demands more computation than![img-4.jpeg](img-4.jpeg)\nFig. 5. Execution time breakdown in terms of different model layers.\n\n![img-5.jpeg](img-5.jpeg)\nFig. 6. Execution breakdown of the MoE layer for different kernels.\n\nthe forward stage due to the need for gradient calculation and propagation, resulting in two matrix multiplication operations. In Mixtral fine-tuning, gradient calculation adds minimal computation as only a small portion of parameters need it. However, gradient checkpointing in Mixtral saves memory but increases the backward stage runtime due to the re-computation of intermediate values.\n\nWe further investigate the execution b",
+        "img_path": "extracted_data/document_31/img-5.jpeg",
+        "img_description": "The graph depicts energy consumption (Wh) over time (seconds) for systems utilizing 1, 2, and 4 GPUs, represented by red, green, and blue lines respectively. Energy usage increases linearly with time, with each additional GPU leading to a steeper slope, signifying higher energy consumption rates. The blue line (4 GPUs) shows the steepest increase, indicating the highest energy consumption."
+    },
+    {
+        "doc_path": "extracted_data/document_31/doc_31.md",
+        "ref_id": "xia2024",
+        "ref_url": "https://arxiv.org/pdf/2408.04693",
+        "img_id": "img-6.jpeg",
+        "img_uid": "xia2024img-6.jpeg",
+        "context": "erstand the opportunity for improving MoE layer performance, we also perform a kernel-level analysis within the MoE layer. Fig. 7 illustrates the architecture of the MoE layer in both Mixtral and BlackMamba models. Each expert in BlackMamba consists of a standard Feed-Forward Network (FFN) layer with two serially connected weight matrices (W1 and W2) and a Gelu activation layer between. In contrast, experts in Mixtral are FFN layers with Swish-Gated Linear Units, involving an additional weight\n\n![img-6.jpeg](img-6.jpeg)\n\n![img-7.jpeg](img-7.jpeg)\nFig. 7. Expert architectures for Mixtral (top) and BlackMamba (bottom).\n\nmatrix (W3) in parallel with W1.\n\nFig. 6 shows the kernel-level MoE time breakdown. The figure clearly shows that matrix multiplication (W1, W2, and W3) is the largest component of the MoE layer for both BlackMamba and Mixtral. As batch size and sparsity increase, so does computational demand, prolonging matrix multiplication latency. The de-quantization operation in Mixtral fine-tuning also beco",
+        "img_path": "extracted_data/document_31/img-6.jpeg",
+        "img_description": "The image is a four-panel scatter plot comparing different models on their accuracy and energy (Wh) efficiency across four datasets: news, yelp, tomatoes, and emotion. Each panel displays data points representing various models, categorized into Deepsk, Other LLM, and Traditional, with labels for models like \"DS Llama 70B\" and \"Qwen 2.5 72B.\" The y-axis represents energy consumption, spanning from 0.001 to 1000.000 Wh, while the x-axis represents accuracy, ranging from 0.4 to 1.0, indicating trade-offs between computational efficiency and performance."
+    },
+    {
+        "doc_path": "extracted_data/document_31/doc_31.md",
+        "ref_id": "xia2024",
+        "ref_url": "https://arxiv.org/pdf/2408.04693",
+        "img_id": "img-7.jpeg",
+        "img_uid": "xia2024img-7.jpeg",
+        "context": " improving MoE layer performance, we also perform a kernel-level analysis within the MoE layer. Fig. 7 illustrates the architecture of the MoE layer in both Mixtral and BlackMamba models. Each expert in BlackMamba consists of a standard Feed-Forward Network (FFN) layer with two serially connected weight matrices (W1 and W2) and a Gelu activation layer between. In contrast, experts in Mixtral are FFN layers with Swish-Gated Linear Units, involving an additional weight\n\n![img-6.jpeg](img-6.jpeg)\n\n![img-7.jpeg](img-7.jpeg)\nFig. 7. Expert architectures for Mixtral (top) and BlackMamba (bottom).\n\nmatrix (W3) in parallel with W1.\n\nFig. 6 shows the kernel-level MoE time breakdown. The figure clearly shows that matrix multiplication (W1, W2, and W3) is the largest component of the MoE layer for both BlackMamba and Mixtral. As batch size and sparsity increase, so does computational demand, prolonging matrix multiplication latency. The de-quantization operation in Mixtral fine-tuning also becomes significant, especially",
+        "img_path": "extracted_data/document_31/img-7.jpeg",
+        "img_description": "The image depicts a neural network architecture labeled as \"Expert in BlackMamba\" consisting of three main components: an initial linear layer (W1), followed by a GeLU activation function, and concluding with another linear layer (W2). The flow of information proceeds from an \"Input\" on the left through these components to an \"Output\" on the right. Each layer is contained within a light gray rectangular boundary, representing the overall model."
+    },
+    {
+        "doc_path": "extracted_data/document_31/doc_31.md",
+        "ref_id": "xia2024",
+        "ref_url": "https://arxiv.org/pdf/2408.04693",
+        "img_id": "img-8.jpeg",
+        "img_uid": "xia2024img-8.jpeg",
+        "context": "ed Mixtral and BlackMamba on them using the smallest batch size (batch size = 1) and the largest batch size that would fill the GPU memory.\n\nAs illustrated in Fig. 8, sparse fine-tuning achieves higher throughput than dense fine-tuning. This is because the sparse fine-tuning baseline consumes less memory to store intermediate values, which allows for higher batch sizes compared to its dense counterpart. Additionally, with the same batch size, sparse fine-tuning achieves higher throughput because![img-8.jpeg](img-8.jpeg)\nFig. 8. Query throughput of Mixtral and BlackMamba.\n\n![img-9.jpeg](img-9.jpeg)\nFig. 9. GPU SM utilization of different kernels in the MoE layer for different batch sizes.\n\nit involves fewer computational demands, resulting in lower latency. This is evident when comparing the throughput of batch size of 2 in Mixtral-CS for dense (0.5 qps) vs. sparse (0.7 qps) models.\n\nFig. 8 also shows that throughput does not increase linearly with batch size. For instance, sparse fine-tuning of Mixtral-CS impr",
+        "img_path": "extracted_data/document_31/img-8.jpeg",
+        "img_description": "The image displays bar graphs comparing throughput (queries/second) of different models (Mixtral-CS, Mixtral-MATH, Blackmamba-CS, Blackmamba-MATH) using various batch sizes (bsz) and configurations (Dense and Sparse). In Mixtral-CS, \"Sparse(bsz=8)\" has the highest throughput at 1.7 queries/second, while in Blackmamba-CS, it reaches 14.9 queries/second. Similarly, for Blackmamba-MATH, \"Sparse(bsz=8)\" exhibits the highest throughput at 11.6 queries/second."
+    },
+    {
+        "doc_path": "extracted_data/document_31/doc_31.md",
+        "ref_id": "xia2024",
+        "ref_url": "https://arxiv.org/pdf/2408.04693",
+        "img_id": "img-9.jpeg",
+        "img_uid": "xia2024img-9.jpeg",
+        "context": ") and the largest batch size that would fill the GPU memory.\n\nAs illustrated in Fig. 8, sparse fine-tuning achieves higher throughput than dense fine-tuning. This is because the sparse fine-tuning baseline consumes less memory to store intermediate values, which allows for higher batch sizes compared to its dense counterpart. Additionally, with the same batch size, sparse fine-tuning achieves higher throughput because![img-8.jpeg](img-8.jpeg)\nFig. 8. Query throughput of Mixtral and BlackMamba.\n\n![img-9.jpeg](img-9.jpeg)\nFig. 9. GPU SM utilization of different kernels in the MoE layer for different batch sizes.\n\nit involves fewer computational demands, resulting in lower latency. This is evident when comparing the throughput of batch size of 2 in Mixtral-CS for dense (0.5 qps) vs. sparse (0.7 qps) models.\n\nFig. 8 also shows that throughput does not increase linearly with batch size. For instance, sparse fine-tuning of Mixtral-CS improves throughput by  $1.9 \\times$  when increasing the batch size from 1 to 2, b",
+        "img_path": "extracted_data/document_31/img-9.jpeg",
+        "img_description": "The image displays two bar graphs labeled \"Mixtral\" and \"Mamba,\" illustrating Stream Multiprocessor (SM) utilization percentages for various computational operations. The bars are color-coded to represent different batch sizes and data densities, with both dense and sparse configurations shown. Key operations compared include matrix multiplications, dequantization processes, and activation functions, highlighting varying levels of SM utilization across different configurations."
+    },
+    {
+        "doc_path": "extracted_data/document_31/doc_31.md",
+        "ref_id": "xia2024",
+        "ref_url": "https://arxiv.org/pdf/2408.04693",
+        "img_id": "img-10.jpeg",
+        "img_uid": "xia2024img-10.jpeg",
+        "context": "er. To offer further insights, we use detailed microarchitecture hardware metrics on the GPU to further understand execution bottlenecks in the MoE layer. The goal of this study is to identify whether various kernels in the MoE layers are bound by compute or memory resources, and how future GPU designs can further scale performance.\n\nCompute resource utilization study. Fig. 9 shows the kernel-level breakdown of GPU Streaming Multi-processor (SM) utilization for the MoE layer. This utilization is![img-10.jpeg](img-10.jpeg)\nFig. 10. GPU DRAM bandwidth utilization of different kernels in the MoE layer for different batch sizes.\n\nweighted by the amount of time each kernel takes. We use a sequence length of 128 (\u00a7III). Sequence length will influence the choice of batch size, and we discuss the effects of sequence length on runtime, throughput, SM utilization, and memory utilization in \u00a7IV-B6. For dense fine-tuning, we show the SM utilization of batch size 1 and the maximum batch size that fits into memory; for sparse",
+        "img_path": "extracted_data/document_31/img-10.jpeg",
+        "img_description": "The image displays two bar charts titled \"Mixtral\" and \"Mamba,\" illustrating DRAM bandwidth utilization (%) across various operations. Each chart compares performance for different configurations, labeled as Dense and Sparse with varying batch sizes. The data indicates distinct utilization patterns, with certain operations like \"matmul(w2)\" and \"matmul(router)\" showing significant variation between dense and sparse configurations."
+    },
+    {
+        "doc_path": "extracted_data/document_31/doc_31.md",
+        "ref_id": "xia2024",
+        "ref_url": "https://arxiv.org/pdf/2408.04693",
+        "img_id": "img-11.jpeg",
+        "img_uid": "xia2024img-11.jpeg",
+        "context": "reakdown of GPU memory bandwidth utilization. We use the same experimental setup as in the evaluation of SM utilization, and find the following insights. (1) For both sparse and dense fine-tuning, the time-weighted memory utilization decreases with increasing batch size. This is because the model parameters are loaded once and shared by all queries in a batch. However, a larger batch increases the execution time (as discussed in \u00a7IV-B6), leading to a lower average memory bandwidth utilization.\n\n![img-11.jpeg](img-11.jpeg)\nFig. 11. Token distribution to different experts.\n\n(2) For the same batch size, sparse fine-tuning achieves higher memory bandwidth utilization than dense fine-tuning due to shorter execution times. (3) Dequant layers' memory utilization is batch-size-independent, while matmul layers' utilization decreases with larger batch sizes. To maximize GPU memory usage, a sufficiently large batch size should be used. With large batch sizes, fine-tuning becomes compute-bound, indicating a need for improve",
+        "img_path": "extracted_data/document_31/img-11.jpeg",
+        "img_description": "The image displays bar charts comparing the average number of tokens per query for eight experts across four configurations: HE, HE_tuned, GS, and GS_tuned, for two models, Mixtral and Mamba. Each expert is represented by a distinct color, and variance is indicated above each configuration. Variance ranges from 21.2 to 112.3 for Mixtral and from 93.3 to 187.9 for Mamba, highlighting differences in token distribution and variability between configurations and models."
+    },
+    {
+        "doc_path": "extracted_data/document_31/doc_31.md",
+        "ref_id": "xia2024",
+        "ref_url": "https://arxiv.org/pdf/2408.04693",
+        "img_id": "img-12.jpeg",
+        "img_uid": "xia2024img-12.jpeg",
+        "context": "h large batch sizes, fine-tuning becomes compute-bound, indicating a need for improved compute resources in future hardware to better utilize memory bandwidth.\n\nTakeaway 5. As the batch size increases, LLM fine-tuning transitions from being memory-bound to compute-bound.\n\n5) Effect of Load Imbalance Due to Fine-Tuning: Recent trends in deploying expert parallelism in MoE models have highlighted load-imbalanced computation among experts as a significant issue impacting inference and training effi![img-12.jpeg](img-12.jpeg)\nFig. 12. Pseudo code for MoE layers.\n\nciency [27]. During the training process of MoE models, each token is dynamically assigned to the top-k experts based on routing scores. This strategy often leads to most tokens being assigned to a small number of experts, resulting in load imbalance and slower training. Additionally, some experts receive insufficient training, which degrades overall model performance [28]. A naive approach to address this imbalance is to use token dropping and padding to e",
+        "img_path": "extracted_data/document_31/img-12.jpeg",
+        "img_description": "The image shows a Python code snippet for a model routing mechanism involving hidden states and expert selection. It includes calculation of router logits and weights using a gate and softmax function, selection of top experts with `topk`, and iteration over experts to process hidden states, which are weighted and aggregated into final hidden states. A comment highlights the expected size of hidden states for each expert."
+    },
+    {
+        "doc_path": "extracted_data/document_31/doc_31.md",
+        "ref_id": "xia2024",
+        "ref_url": "https://arxiv.org/pdf/2408.04693",
+        "img_id": "img-13.jpeg",
+        "img_uid": "xia2024img-13.jpeg",
+        "context": " o d e l _ {\\text {m e m}}}{\\text {s e q} _ {\\text {l e n}} * \\left(\\left(1 - C _ {1}\\right) + C _ {1} * \\text {s p a r s i t y}\\right)} \\right\\rfloor \\tag {1}\n$$\n\nIntuitively, larger GPU memory allows for higher batch sizes. In the meantime, the LLM model will take up a certainamount of GPU memory, and need to be subtracted in the analytical model. Fig. 8 supports this by showing that on the same dataset, BlackMamba can support larger batch size than Mixtral because of its smaller model size.\n\n![img-13.jpeg](img-13.jpeg)\nFigure 13: Projected maximum batch size of Mixtral for different GPUs.\n\nMoreover, the sequence length and sparsity also affect the maximum batch size. Because the sparsity only affects the MoE part of the LLM, we multiply its influence by $C_{1}$, which we call *MoE coefficient*. We apply the sequence length and the sparsity in the denominator as they are inversely related to batch size. Then, we multiply the result by $C_{0}$, the *scaling coefficient*, which scales the batch size by a constan",
+        "img_path": "extracted_data/document_31/img-13.jpeg",
+        "img_description": "The graph displays the relationship between GPU DRAM capacity (x-axis) and maximum batch size (y-axis), with data points representing ground truth values for different GPUs, such as A40 and A100-80GB, marked as triangles. A red line indicates a projection, showing an increase in max batch size with higher DRAM capacity, extending into a shaded area for future projected GPU capacities. The line labels bsz=28 and bsz=35 suggest specific batch sizes at projected capacities of around 100 and 128 on the x-axis."
+    },
+    {
+        "doc_path": "extracted_data/document_31/doc_31.md",
+        "ref_id": "xia2024",
+        "ref_url": "https://arxiv.org/pdf/2408.04693",
+        "img_id": "img-14.jpeg",
+        "img_uid": "xia2024img-14.jpeg",
+        "context": "oth datasets used in our study. The figure clearly shows that our model accurately predicts LLM fine-tuning throughput with a Root Mean Squared Error (RMSE) of less than 0.8. Fig. 15 shows the correlation study of the analytical model of three other GPUs, A100 (40GB), A100 (80GB), and H100. The RMSE is less than 0.6, close to that of A40.\n\n### IV-C Estimating the Total Fine-Tuning Cost\n\nUsing the throughput estimation, we calculate the cost of fine-tuning LLMs for different GPUs. The cost of GPU![img-14.jpeg](img-14.jpeg)\nFig. 14. Estimation and validation of LLM fine-tuning throughput for different models, datasets for A40 GPU. Dots represent ground truth and lines present the estimation.\n\n![img-15.jpeg](img-15.jpeg)\nFig. 15. Estimation and validation of fine-tuning throughput for Mixtral GS for different GPUs: A100 and H100.\n\nresource renting per hour is calculated based on CUDO compute [33], as other popular cloud providers do not offer cost/hour rates for the NVIDIA A40 GPU. However, one can easily adjust th",
+        "img_path": "extracted_data/document_31/img-14.jpeg",
+        "img_description": "The image depicts four graphs comparing throughput (queries/sec) against batch size for two models, Mixtral and Mamba, across CS and MATH datasets. Each graph presents two lines representing Dense (red) and Sparse (blue) matrices, with accompanying RMSE values indicating model accuracy. The Sparse matrix consistently shows higher throughput across all datasets, with notably lower RMSE values in the Mixtral graphs."
+    },
+    {
+        "doc_path": "extracted_data/document_31/doc_31.md",
+        "ref_id": "xia2024",
+        "ref_url": "https://arxiv.org/pdf/2408.04693",
+        "img_id": "img-15.jpeg",
+        "img_uid": "xia2024img-15.jpeg",
+        "context": "tion study of the analytical model of three other GPUs, A100 (40GB), A100 (80GB), and H100. The RMSE is less than 0.6, close to that of A40.\n\n### IV-C Estimating the Total Fine-Tuning Cost\n\nUsing the throughput estimation, we calculate the cost of fine-tuning LLMs for different GPUs. The cost of GPU![img-14.jpeg](img-14.jpeg)\nFig. 14. Estimation and validation of LLM fine-tuning throughput for different models, datasets for A40 GPU. Dots represent ground truth and lines present the estimation.\n\n![img-15.jpeg](img-15.jpeg)\nFig. 15. Estimation and validation of fine-tuning throughput for Mixtral GS for different GPUs: A100 and H100.\n\nresource renting per hour is calculated based on CUDO compute [33], as other popular cloud providers do not offer cost/hour rates for the NVIDIA A40 GPU. However, one can easily adjust the GPU renting cost per hour to estimate the cost on other clouds such as Amazon AWS [34] or Lambda [35]. Table IV estimates the cost for fine-tuning Mixtral on the MATH dataset with a sparse setup, us",
+        "img_path": "extracted_data/document_31/img-15.jpeg",
+        "img_description": "The image displays three line graphs comparing the throughput (queries/sec) of Dense and Sparse models (red and blue lines, respectively) across varying batch sizes. Each graph represents different configurations: Mixtral-CS-A100-40GB, Mixtral-CS-A100-80GB, and Mixtral-CS-H100, with corresponding RMSE values of 0.03, 0.09, and 0.55. The Sparse model consistently shows higher throughput than the Dense model across all configurations and batch sizes."
+    }
+]

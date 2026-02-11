@@ -1,0 +1,12 @@
+[
+    {
+        "doc_path": "extracted_data/document_6/doc_6.md",
+        "ref_id": "ebert2024",
+        "ref_url": "https://arxiv.org/pdf/2410.06681",
+        "img_id": "img-0.jpeg",
+        "img_uid": "ebert2024img-0.jpeg",
+        "context": "natural language processing. arXiv preprint arXiv:2002.05829 (2020).\n[83] Guido Zuccon, Harrisen Scells, and Shengyao Zhuang. 2023. Beyond CO2 emissions: The overlooked impact of water consumption of information retrieval models. In Proceedings of the 2023 ACM SIGIR International Conference on Theory of Information Retrieval. 283-289.Al, Climate, and Regulation: From Data Centers to the AI Act\n\nConference'17, July 2017, Washington, DC, USA\n\n# A Measuring Points for IT Equipment in Data Centers\n\n![img-0.jpeg](img-0.jpeg)\nFigure 1: Measuring points for IT equipment energy consumption, from Annex II of the Delegated Regulation EU/2024/1364 of March 14, 2024Conference'17, July 2017, Washington, DC, USA\n\nKai Ebert, Nicolas Alder, Ralf Herbrich, and Philipp Hacker\n\n# B Policy Proposals Overview\n\nTable 1: Summary of Policy Proposals for AI and Environmental Impact\n\n|  Area | Policy Proposal and Description  |\n| --- | --- |\n|  Energy and Environmental Reporting | Energy consumption from inferences: Include energy cons",
+        "img_path": "extracted_data/document_6/img-0.jpeg",
+        "img_description": "The diagram illustrates a power distribution system for IT equipment, beginning with a primary and secondary supply feeding into a supply transfer switchgear and continuing through dual uninterruptible power supplies (UPS), before reaching a primary PDU. The system further divides into local PDUs and connects to IT equipment, represented by different symbols indicating energy consumption categories (E_IT) and total energy consumption (E_00). Non-IT loads branch off before the primary PDU, emphasizing separate power paths for non-IT and IT equipment."
+    }
+]

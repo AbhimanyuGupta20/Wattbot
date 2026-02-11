@@ -1,0 +1,82 @@
+[
+    {
+        "doc_path": "extracted_data/document_17/doc_17.md",
+        "ref_id": "luccioni2024",
+        "ref_url": "https://arxiv.org/pdf/2311.16863",
+        "img_id": "img-0.jpeg",
+        "img_uid": "luccioni2024img-0.jpeg",
+        "context": "# Power Hungry Processing:  $\\neq$  Watts  $\\neq$  Driving the Cost of AI Deployment?\n\nALEXANDRA SASHA LUCCIONI and YACINE JERNITE, Hugging Face, Canada/USA EMMA STRUBELL, Carnegie Mellon University, Allen Institute for AI, USA\n\n![img-0.jpeg](img-0.jpeg)\nFig. 1. The tasks examined in our study and the average quantity of carbon emissions they produced (in g of  $CO_2eq$ ) for 1,000 queries. N.B. The y axis is in logarithmic scale.\n\nRecent years have seen a surge in the popularity of commercial AI products based on generative, multi-purpose AI systems promising a unified approach to building machine learning (ML) models into technology. However, this ambition of \"generality\" comes at a steep cost to the environment, given the amount of energy th",
+        "img_path": "extracted_data/document_17/img-0.jpeg",
+        "img_description": "The box plot graph displays model CO2 emissions in grams for various AI tasks, ranging from text classification to image generation. The emissions increase from tasks like text classification and extractive QA, with relatively lower median values, to more complex tasks like image generation and multitask summarization, which exhibit the highest median emissions and greater variability. Each task category is represented by a distinct color, illustrating the environmental impact across different AI functionalities."
+    },
+    {
+        "doc_path": "extracted_data/document_17/doc_17.md",
+        "ref_id": "luccioni2024",
+        "ref_url": "https://arxiv.org/pdf/2311.16863",
+        "img_id": "img-1.jpeg",
+        "img_uid": "luccioni2024img-1.jpeg",
+        "context": "traction is lower and the decision space is larger given that they generate raw pixels as opposed to tokens for text, making image-based tasks more energy intensive than text based ones, e.g. image classification uses over 3 times more energy than text classification (0.007 vs.  $0.002\\mathrm{kWh}$ ) and image generation uses, on average, over 60 times more energy than text generation (0.047 vs.  $2.9\\mathrm{kWh}$ ).Power Hungry Processing\n\nACM FAccT '24, June 3-6, 2024, Rio de Janeiro, Brazil\n\n![img-1.jpeg](img-1.jpeg)\nFig. 2. The 5 modalities examined in our study, with the number of parameters of each model on the x axis and the average amount of carbon emitted for 1000 inferences on the y axis. NB: Both axes are in logarithmic scale.\n\nNext, we examine the respective influences of model size and task structure on model emissions. Figure 2 shows the relationship between model emissions (in grams of  $CO_2eq$  per 1,000 inferences) and sizes (in terms of the number of parameters) across the task categories li",
+        "img_path": "extracted_data/document_17/img-1.jpeg",
+        "img_description": "The scatter plot displays model emissions in grams of CO2 versus model size (number of parameters) on a logarithmic scale, categorized by modality (Text to category, Text to image, Text to text, Image to text, and Image to category). Each modality is represented by a distinct color: blue for \"Text to category,\" red for \"Text to image,\" green for \"Text to text,\" purple for \"Image to text,\" and orange for \"Image to category.\" The data points illustrate a general trend of increasing emissions with larger model sizes across different modalities."
+    },
+    {
+        "doc_path": "extracted_data/document_17/doc_17.md",
+        "ref_id": "luccioni2024",
+        "ref_url": "https://arxiv.org/pdf/2311.16863",
+        "img_id": "img-2.jpeg",
+        "img_uid": "luccioni2024img-2.jpeg",
+        "context": "ariety of settings, and compare the 8 zero-shot models of different sizes, based on the same 3 datasets per task as described in Table 1.\n\n# 4.2.1 Emissions of task-specific and multi-task architectures.\n\nTo start our analysis, we examined how the choice of model and architecture type impacts emissions given a specific task and dataset. For this analysis, we took the same 8 task-specific models described in Section 3.2 and compared their emissions to the 8 multi-purpose models described above.\n\n![img-2.jpeg](img-2.jpeg)\nFig. 3. Model emissions (measured in  $\\mathrm{g}CO_2eq$ ) and architecture type for each of the datasets from our analysis. The y axis is in logarithmic scale, dot size is proportional to model size.\n\nIn Figure 3, we plot the mean query emissions for each model on a dataset-by-dataset basis. We can see that for the two discriminative tasks, sentiment analysis (which includes SST 2, Rotten Tomatoes and IMDB datasets) and question answering (which encompasses SciQ, SQuAD and SQuAD v2) there is a",
+        "img_path": "extracted_data/document_17/img-2.jpeg",
+        "img_description": "The image displays a bubble chart illustrating model emissions in grams of CO2 across different datasets (imdb, sst2, rotten_tomatoes, sciq, squad, squadv2, cnn, samsum, xsum) categorized by architecture type, which includes Task-specific Seq2Seq, Task-specific Encoder, Multi-purpose Decoder, and Multi-purpose Seq2Seq. The size of the bubbles represents the relative emissions, and different colors represent different architecture types, as shown in the legend on the right. The chart highlights that Multi-purpose Seq2Seq architecture generally produces the highest emissions across most datasets."
+    },
+    {
+        "doc_path": "extracted_data/document_17/doc_17.md",
+        "ref_id": "luccioni2024",
+        "ref_url": "https://arxiv.org/pdf/2311.16863",
+        "img_id": "img-3.jpeg",
+        "img_uid": "luccioni2024img-3.jpeg",
+        "context": "t task-specific models have a much more constrained decision space (e.g. two classes in the case of binary text classification), whereas multi-purpose models have a large output vocabulary to choose from, and are dependent upon the prompt schema and prompting strategy used. However, by utilizing two standardized packages (evaluate and lm-evaluation-harness) and keeping the prompting approach stable across zero-shot models, we endeavor to standardize our evaluation approach as much as possible.\n\n![img-3.jpeg](img-3.jpeg)\nFig. 4. Model size, measured in number of parameters (x axis, logarithmic scale) and text classification accuracy (y axis), with dot size indicating the quantity of emissions (logarithmic scale).\n\nWe hone in on one specific task, text classification, in Figure 4, which illustrates the relationship between model size (x axis, in logarithmic scale), accuracy (y axis) and emissions (dot size, in logarithmic scale). Among task-specific encoder models, we observe that accuracy varies more widely, i.",
+        "img_path": "extracted_data/document_17/img-3.jpeg",
+        "img_description": "The scatter plot visualizes text classification accuracy against the number of parameters (ranging from 100 million to 10 billion) across three model types: Multi-purpose Decoder (green), Task-specific Encoder (blue), and Multi-purpose Seq2Seq (yellow). The data points show varying accuracies, with most models achieving over 0.8 accuracy and some reaching near perfect accuracy as parameter count increases. Larger models, particularly in the Multi-purpose Decoder and Seq2Seq categories, tend to have higher accuracy."
+    },
+    {
+        "doc_path": "extracted_data/document_17/doc_17.md",
+        "ref_id": "luccioni2024",
+        "ref_url": "https://arxiv.org/pdf/2311.16863",
+        "img_id": "img-4.jpeg",
+        "img_uid": "luccioni2024img-4.jpeg",
+        "context": "gth and measured emissions, with a higher slope for the decoder-only architectures (the BLOOMz family of models) than for the sequence-to-sequence architectures (the Flan-T5 family).\n\nAs we have observed in the current section, there is no 'one-size-fits-all' pattern for multi-purpose models either \u2013 they too exhibit variation in terms of their emissions and energy usage, which can be attributed to different factors,Power Hungry Processing\n\nACM FAccT '24, June 3-6, 2024, Rio de Janeiro, Brazil\n\n![img-4.jpeg](img-4.jpeg)\nFig. 5. A plot of the total emissions (in grams of  $CO_2eq$ ) for 1,000 inferences for all multi-purpose models.\n\n|   |  | BLOOMz 560M | BLOOMz 1B | BLOOMz 3B | BLOOMz 7B | Flan-T5 base | Flan-T5 large | Flan-T5 xl | Flan-T5 xxl  |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n|  dataset | input | output | output | output | output | output | output | output | output  |\n|  IMDB | 58.73 | 1.64 | 2.61 | 1.72 | 1.53 | 1.00 | 1.00 | 1.00 | 1.00  |\n|  Rotten Tomatoes | 30.08 | 1.00 |",
+        "img_path": "extracted_data/document_17/img-4.jpeg",
+        "img_description": "The scatter plot depicts the relationship between model size, measured by the number of parameters, and model emissions in grams of CO2 for various task and architecture types. The x-axis represents model size ranging from millions to tens of billions of parameters, while the y-axis displays model emissions, with higher values indicating more emissions. Different symbols and colors represent specific task and architecture combinations, such as Extractive QA and Text Classification, showing variation in emissions across model sizes."
+    },
+    {
+        "doc_path": "extracted_data/document_17/doc_17.md",
+        "ref_id": "luccioni2024",
+        "ref_url": "https://arxiv.org/pdf/2311.16863",
+        "img_id": "img-5.jpeg",
+        "img_uid": "luccioni2024img-5.jpeg",
+        "context": "| 2.58 | 2.41 | 2.28 | 2.74 | 2.71 | 2.58  |\n|  CNN | 54.00 | 12.05 | 11.91 | 11.73 | 10.34 | 8.52 | 11.34 | 11.34 | 10.68  |\n|  SamSUM | 47.82 | 9.54 | 9.41 | 9.75 | 9.85 | 10.56 | 11.05 | 10.18 | 10.57  |\n|  XSum | 53.85 | 11.53 | 12.22 | 11.94 | 11.92 | 12.95 | 13.62 | 13.49 | 13.09  |\n\nTable 4. Average input and output length (in number of tokens) for the 8 zero-shot models and 9 tasks examined as part of our study. The darker the cell, the more carbon was output by the model for the task.\n\n![img-5.jpeg](img-5.jpeg)\nFig. 6. A plot of the output length (X axis) and carbon emissions (Y axis) for the summarization task. The symbol refers to the type of architecture (BLOOMz vs Flan-T5), symbol size references the relative model size (in terms of the number of parameters), and color the input length.\n\nincluding model size and output length. This would indicate that more careful consideration is needed when makingACM FAccT '24, June 3-6, 2024, Rio de Janeiro, Brazil\n\nLuccioni et al\n\nchoices to deploy these model",
+        "img_path": "extracted_data/document_17/img-5.jpeg",
+        "img_description": "The scatter plot illustrates the relationship between output length (in number of tokens) and model emissions (in grams of CO2) for two model types, BLOOMz and Flan-T5, represented by circles and diamonds respectively. The size of the markers correlates with the input length (depicted by a color gradient from blue to red), and fitted lines demonstrate general emission trends for each model type. BLOOMz shows a steeper increase in emissions with output length compared to Flan-T5."
+    },
+    {
+        "doc_path": "extracted_data/document_17/doc_17.md",
+        "ref_id": "luccioni2024",
+        "ref_url": "https://arxiv.org/pdf/2311.16863",
+        "img_id": "img-6.jpeg",
+        "img_uid": "luccioni2024img-6.jpeg",
+        "context": "token classification | QCRI/bert-base-multilingual-cased-pos-english dslim/bert-base-NER dslim/bert-large-NER Jean-Baptiste/roberta-large-ner-english oliverguhr/fullstop-punctuation-multilang-large Babelscape/wikineural-multilingual-ner ml6team/keyphrase-extraction-distilbert-inspec obi/deid_roberta_i2b2  |\n\nTable 6. The full list of the 80 finetuned models that were tested for the ten tasks we analyzed.ACM FAccT '24, June 3-6, 2024, Rio de Janeiro, Brazil\n\nLuccioni et al\n\n# B MODEL EVALUATION\n\n![img-6.jpeg](img-6.jpeg)\nFig. 7. A plot of model size, measured in number of parameters (x axis, in logarithmic scale) and summarization accuracy (y axis), with dot size indicating the quantity of emissions.\n\n![img-7.jpeg](img-7.jpeg)\nFig. 8. A plot of model size, measured in number of parameters (x axis, in logarithmic scale) and question answering accuracy (y axis), with dot size indicating the quantity of emissions.Power Hungry Processing\n\nACM FAccT '24, June 3-6, 2024, Rio de Janeiro, Brazil\n\n|  model | SST 2 (acc)",
+        "img_path": "extracted_data/document_17/img-6.jpeg",
+        "img_description": "The scatter plot visualizes the relationship between the number of parameters (ranging from 100M to 10B) and the summarization Rouge scores for three model types: Task-specific Seq2Seq (red), Multi-purpose Decoder (green), and Multi-purpose Seq2Seq (yellow). As the number of parameters increases, the distribution of Rouge scores varies, with Task-specific Seq2Seq models generally clustering at lower scores. The Multi-purpose models display higher variance in scores, particularly noticeable as parameters exceed 1B."
+    },
+    {
+        "doc_path": "extracted_data/document_17/doc_17.md",
+        "ref_id": "luccioni2024",
+        "ref_url": "https://arxiv.org/pdf/2311.16863",
+        "img_id": "img-7.jpeg",
+        "img_uid": "luccioni2024img-7.jpeg",
+        "context": "ikineural-multilingual-ner ml6team/keyphrase-extraction-distilbert-inspec obi/deid_roberta_i2b2  |\n\nTable 6. The full list of the 80 finetuned models that were tested for the ten tasks we analyzed.ACM FAccT '24, June 3-6, 2024, Rio de Janeiro, Brazil\n\nLuccioni et al\n\n# B MODEL EVALUATION\n\n![img-6.jpeg](img-6.jpeg)\nFig. 7. A plot of model size, measured in number of parameters (x axis, in logarithmic scale) and summarization accuracy (y axis), with dot size indicating the quantity of emissions.\n\n![img-7.jpeg](img-7.jpeg)\nFig. 8. A plot of model size, measured in number of parameters (x axis, in logarithmic scale) and question answering accuracy (y axis), with dot size indicating the quantity of emissions.Power Hungry Processing\n\nACM FAccT '24, June 3-6, 2024, Rio de Janeiro, Brazil\n\n|  model | SST 2 (acc) | IMDB (acc) | Rotten Tomatoes (acc) | SciQ (acc) | SQuAD (F1) | SQuAD v2 (F1, has answer) | SamSUM (ROUGE) | XSum (ROUGE) | CNN (ROUGE)  |\n| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |\n|  bloo",
+        "img_path": "extracted_data/document_17/img-7.jpeg",
+        "img_description": "The scatter plot displays QA accuracy/F1 scores against the number of parameters for three types of models: Task-specific Encoder (blue), Multi-purpose Decoder (green), and Multi-purpose Seq2Seq (yellow). The x-axis represents the number of parameters (ranging from 100M to 10B), while the y-axis represents QA accuracy/F1, ranging from 0 to 1. The plot illustrates different clustering of scores for each model type, indicating variations in performance across different parameter scales."
+    }
+]

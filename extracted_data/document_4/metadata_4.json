@@ -1,0 +1,182 @@
+[
+    {
+        "doc_path": "extracted_data/document_4/doc_4.md",
+        "ref_id": "cottier2024",
+        "ref_url": "https://arxiv.org/pdf/2405.21015",
+        "img_id": "img-0.jpeg",
+        "img_uid": "cottier2024img-0.jpeg",
+        "context": "come $2.4\\times$ more expensive per year since 2016 (90% CI: $2.0\\times$ to $2.9\\times$).\n\nWe then compare this approach to the cloud-price approach that was first presented in the AI Index *[6]*. Instead of estimating hourly compute costs in detail, the cloud-price approach simply uses historical rental rates from cloud platforms. The cloud-price approach shows a similar growth rate ($2.5\\times$ per year with a 90% CI of $2.1\\times$ to $3.1\\times$), but\n\n^{1}\nEpoch AI.\n^{2}\nStanford University.![img-0.jpeg](img-0.jpeg)\nAmortized hardware and energy cost to train frontier AI models over time\nFigure 1: Amortized hardware cost plus energy cost for the final training run of frontier models. The selected models are among the top 10 most compute-intensive for their time. Amortized hardware costs are the product of training chip-hours and a depreciated hardware cost, with  $23\\%$  overhead added for cluster-level networking. Open circles indicate costs which used an estimated production cost of Google TPU hardware. ",
+        "img_path": "extracted_data/document_4/img-0.jpeg",
+        "img_description": "The graph displays the trend of AI model training costs in 2023 USD (log scale) from 2016 to 2024, illustrating a 2.4x increase per year. Key AI models like AlphaGo, GPT-3, DALL-E, PaLM, GPT-4, and others are plotted, showing the cost progression over time. A regression line is included with a 90% confidence interval, highlighting the cost escalation trend."
+    },
+    {
+        "doc_path": "extracted_data/document_4/doc_4.md",
+        "ref_id": "cottier2024",
+        "ref_url": "https://arxiv.org/pdf/2405.21015",
+        "img_id": "img-1.jpeg",
+        "img_uid": "cottier2024img-1.jpeg",
+        "context": "$  refers to the number of relevant observations. Based on a two-sided  $t$ -test adjusted for correlation of residuals, the growth rates for amortized hardware capex + energy and cloud are not significantly different ( $p = 0.13$ ). However, when the costs of models trained with estimated TPU production costs are excluded, the growth rate rises significantly to  $2.9\\mathrm{x}$  per year ( $p &lt; 0.01$ ). OOMs/year: orders of magnitude per year. Square brackets:  $90\\%$  confidence interval.\n\n![img-1.jpeg](img-1.jpeg)\nAmortized hardware and energy cost to train frontier AI models over time\nFigure 2: (Reproduction of Figure 1 for convenience.) Amortized hardware cost plus energy cost for the final training run of frontier models. The selected models are among the top 10 most compute-intensive for their time. Amortized hardware costs are the product of training chip-hours and a depreciated hardware cost, with  $23\\%$  overhead added for cluster-level networking. Open circles indicate costs which used an estima",
+        "img_path": "extracted_data/document_4/img-1.jpeg",
+        "img_description": "The graph displays the exponential increase in the cost of AI systems from 2016 to 2024, with the costs measured in 2023 USD on a logarithmic scale. Key AI developments like AlphaGo, GPT-3, and GPT-4 are marked, showing a trend of costs doubling approximately 2.4 times per year. The regression line with a 90% confidence interval suggests a consistent upward trajectory in AI system expenses over time."
+    },
+    {
+        "doc_path": "extracted_data/document_4/doc_4.md",
+        "ref_id": "cottier2024",
+        "ref_url": "https://arxiv.org/pdf/2405.21015",
+        "img_id": "img-2.jpeg",
+        "img_uid": "cottier2024img-2.jpeg",
+        "context": "ity. The cloud cost approach also helps to check the robustness of the amortized hardware CapEx + energy approach. Figure 3 shows the trend of cloud compute cost to train models among the top 10 most compute-intensive as of their release. Note that some of these estimates previously appeared in the 2024 AI Index report [6]. We find that the cost of training models based on cloud rental prices has grown by  $2.5 \\times$  per year since 2016, with a  $90\\%$  CI of  $2.1 \\times$  to  $3.1 \\times$ .![img-2.jpeg](img-2.jpeg)\nCloud compute cost to train frontier AI models over time\nFigure 3: Estimated cloud compute costs for the final training run of frontier models. The selected models are among the top 10 most compute-intensive for their time. The costs are the product of the number of training chip-hours and a historical cloud rental price.\n\nThis is consistent with the amortized hardware CapEx + energy approach, as shown in Table 1. This shows that our trend estimates are robust to two different ways of estimatin",
+        "img_path": "extracted_data/document_4/img-2.jpeg",
+        "img_description": "The graph displays the rising trend in publication costs (in 2023 USD, log scale) for AI models from 2016 to 2024, increasing at a rate of 2.5 times per year. Key AI models such as GNMT, AlphaZero, DALL-E, GPT-3, PaLM, GPT-4, and Gemini 1.0 Ultra are marked, showing a clear upward trajectory. The regression line with a 90% confidence interval illustrates the overall trend of escalating costs over time."
+    },
+    {
+        "doc_path": "extracted_data/document_4/doc_4.md",
+        "ref_id": "cottier2024",
+        "ref_url": "https://arxiv.org/pdf/2405.21015",
+        "img_id": "img-3.jpeg",
+        "img_uid": "cottier2024img-3.jpeg",
+        "context": "he two depends on when and for how long the model is trained.\n\nBased on 40 estimates of acquisition cost, we find a growth rate of  $2.5 \\times$  per year (90% CI:  $2.1 \\times$ ,  $3.0 \\times$ ). This is slightly faster than the rate of  $2 \\times$  per year suggested by amortized costs ( $2.4 \\times$  per year) divided by training times ( $1.2 \\times$  peryear) [13]. The discrepancy is due to different AI models appearing in each analysis, highlighting a source of sensitivity in our results.\n\n![img-3.jpeg](img-3.jpeg)\nHardware acquisition cost to train frontier AI models over time\nFigure 4: Estimated hardware acquisition costs to train frontier models. The selected models are among the top 10 most compute-intensive for their time. The costs are the product of the number of servers and the earliest available server price, with about  $23\\%$  overhead added for cluster-level networking hardware.\n\n# 3.4 Half of amortized hardware CapEx + energy cost is for AI accelerator chips\n\nBreaking down the components of a",
+        "img_path": "extracted_data/document_4/img-3.jpeg",
+        "img_description": "The graph displays the estimated cost of AI model training from 2016 to 2024 on a logarithmic scale, showing a trend of increasing costs over time. A regression line with a 90% confidence interval illustrates a cost increase rate of approximately 2.5 times per year. Notable AI models such as AlphaZero, GPT-3, DALL-E, and Gemini 1.0 Ultra are marked along the timeline, indicating their respective costs at the time of publication."
+    },
+    {
+        "doc_path": "extracted_data/document_4/doc_4.md",
+        "ref_id": "cottier2024",
+        "ref_url": "https://arxiv.org/pdf/2405.21015",
+        "img_id": "img-4.jpeg",
+        "img_uid": "cottier2024img-4.jpeg",
+        "context": "costs to future frontier models.\n\nGemini Ultra has the highest fraction of R&amp;D staff cost at  $49\\%$ , but we expect this is unusually high among frontier models. Firstly, Gemini Ultra was trained on Google TPUs, which are cheaper for Google than buying other accelerators, and this makes the hardware cost relatively low. Secondly, our methodology is limited by deriving the number of full-time equivalent staff from the reported number of contributors, for which Gemini had 941\u2014much higher than![img-4.jpeg](img-4.jpeg)\nBreakdown of amortized hardware and energy costs for frontier AI models\nFigure 5: The percentage of the amortized hardware CapEx + energy estimates made up by different hardware and energy costs. Note that the breakdown across models is approximate. Cluster-level interconnect is assumed to be a constant  $19\\%$  fraction of the cluster CapEx, and the proportion of server components is based on only three comparisons between NVIDIA DGX server prices and single GPU prices (see Appendix A.1 for de",
+        "img_path": "extracted_data/document_4/img-4.jpeg",
+        "img_description": "The image is a horizontal stacked bar chart comparing various AI models based on the distribution of their computational resource usage, broken down into AI accelerator chips (blue), other server components (orange), cluster-level interconnect (purple), and energy (red). Each model's bar is color-coded to show the proportion of resources utilized in the respective categories, with models like \"Gemini 1.0 Ultra\" showing a higher percentage of energy use compared to others. The chart provides a visual comparison of how different models allocate resources, highlighting the variations in computational and energy demands across diverse AI technologies."
+    },
+    {
+        "doc_path": "extracted_data/document_4/doc_4.md",
+        "ref_id": "cottier2024",
+        "ref_url": "https://arxiv.org/pdf/2405.21015",
+        "img_id": "img-5.jpeg",
+        "img_uid": "cottier2024img-5.jpeg",
+        "context": "Ex + energy estimates made up by different hardware and energy costs. Note that the breakdown across models is approximate. Cluster-level interconnect is assumed to be a constant  $19\\%$  fraction of the cluster CapEx, and the proportion of server components is based on only three comparisons between NVIDIA DGX server prices and single GPU prices (see Appendix A.1 for details). The energy costs are more specific, varying with the number of training chip-hours and the hardware (see Appendix A.4).![img-5.jpeg](img-5.jpeg)\nAmortized hardware, energy, and R&amp;D staff costs for training and experiments\n(a)\n\n![img-6.jpeg](img-6.jpeg)\nPercentage of costs for training and experiments of ML models\n(b)\nFigure 6: (a) Breakdown of total amortized model development costs for selected models. Hardware costs are amortized to the total number of chip-hours spent on experiments and training, while R&amp;D staff costs cover the duration of development from initial experiments to publication. Error bars indicate  $90\\%$  credi",
+        "img_path": "extracted_data/document_4/img-5.jpeg",
+        "img_description": "The bar chart compares the estimated costs in 2023 USD (on a log scale) for four AI models\u2014GPT-3 175B, OPT-175B, GPT-4, and Gemini 1.0 Ultra\u2014across five categories: R&D staff (including equity), AI accelerator chips, other server components, cluster-level interconnect, and energy. Each model displays varied distribution in cost across these categories, with GPT-4 and Gemini 1.0 Ultra showing higher total costs compared to GPT-3 175B and OPT-175B. Error bars indicate uncertainty in cost estimates across different categories."
+    },
+    {
+        "doc_path": "extracted_data/document_4/doc_4.md",
+        "ref_id": "cottier2024",
+        "ref_url": "https://arxiv.org/pdf/2405.21015",
+        "img_id": "img-6.jpeg",
+        "img_uid": "cottier2024img-6.jpeg",
+        "context": "pproximate. Cluster-level interconnect is assumed to be a constant  $19\\%$  fraction of the cluster CapEx, and the proportion of server components is based on only three comparisons between NVIDIA DGX server prices and single GPU prices (see Appendix A.1 for details). The energy costs are more specific, varying with the number of training chip-hours and the hardware (see Appendix A.4).![img-5.jpeg](img-5.jpeg)\nAmortized hardware, energy, and R&amp;D staff costs for training and experiments\n(a)\n\n![img-6.jpeg](img-6.jpeg)\nPercentage of costs for training and experiments of ML models\n(b)\nFigure 6: (a) Breakdown of total amortized model development costs for selected models. Hardware costs are amortized to the total number of chip-hours spent on experiments and training, while R&amp;D staff costs cover the duration of development from initial experiments to publication. Error bars indicate  $90\\%$  credible intervals, while the main bar values are medians. (b) Costs components as a percentage of the total, based o",
+        "img_path": "extracted_data/document_4/img-6.jpeg",
+        "img_description": "The bar chart compares the proportionate costs of different components involved in the operations of four AI models: GPT-3 175B, OPT-175B, GPT-4, and Gemini 1.0 Ultra. Each model's cost distribution is divided into categories including R&D staff, AI accelerator chips, other server components, cluster-level interconnect, and energy. Notably, R&D staff consumes the largest portion in all models, particularly in Gemini 1.0 Ultra at 49%, while energy expenses remain the smallest across the models."
+    },
+    {
+        "doc_path": "extracted_data/document_4/doc_4.md",
+        "ref_id": "cottier2024",
+        "ref_url": "https://arxiv.org/pdf/2405.21015",
+        "img_id": "img-7.jpeg",
+        "img_uid": "cottier2024img-7.jpeg",
+        "context": "eligible models. Due to this, it leaves out many earlier models, and produces a flatter cost trend than the other methods.\n\nOur preferred approach has an advantage over alternatives: the selection is more robust to the sampling of our dataset. Approaches based on quantiles, or distance from the historic trend, are influenced by data collected on models outside the frontier. Selecting the top-ranked models, in comparison, is merely influenced by whether the dataset contains those frontier models.![img-7.jpeg](img-7.jpeg)\n\n![img-8.jpeg](img-8.jpeg)\n\n![img-9.jpeg](img-9.jpeg)\nFigure 7: Comparison of hardware capex + energy cost regression using different frontier model selection methods. Results are fairly similar across methods, although taking the top  $20\\%$  of residuals leads to a flatter trend.\n\n![img-10.jpeg](img-10.jpeg)\n\n# B.2 Varying N in top-N model selection\n\nWhen selecting frontier models by the top- $N$  method, there is a question of how to choose  $N$ . We chose  $N = 10$  to produce a large enoug",
+        "img_path": "extracted_data/document_4/img-7.jpeg",
+        "img_description": "The image is a scatter plot with a log scale on the y-axis representing costs in USD from 2016 to 2024, with a line of best fit indicating a trend. The data points are distributed around a line showing a 2.4x annual increase, with the data points and trend line suggesting an upward cost trajectory. The plot is titled \"Top-N=10,\" implying a focus on the top ten entities or items in this context."
+    },
+    {
+        "doc_path": "extracted_data/document_4/doc_4.md",
+        "ref_id": "cottier2024",
+        "ref_url": "https://arxiv.org/pdf/2405.21015",
+        "img_id": "img-8.jpeg",
+        "img_uid": "cottier2024img-8.jpeg",
+        "context": "s, it leaves out many earlier models, and produces a flatter cost trend than the other methods.\n\nOur preferred approach has an advantage over alternatives: the selection is more robust to the sampling of our dataset. Approaches based on quantiles, or distance from the historic trend, are influenced by data collected on models outside the frontier. Selecting the top-ranked models, in comparison, is merely influenced by whether the dataset contains those frontier models.![img-7.jpeg](img-7.jpeg)\n\n![img-8.jpeg](img-8.jpeg)\n\n![img-9.jpeg](img-9.jpeg)\nFigure 7: Comparison of hardware capex + energy cost regression using different frontier model selection methods. Results are fairly similar across methods, although taking the top  $20\\%$  of residuals leads to a flatter trend.\n\n![img-10.jpeg](img-10.jpeg)\n\n# B.2 Varying N in top-N model selection\n\nWhen selecting frontier models by the top- $N$  method, there is a question of how to choose  $N$ . We chose  $N = 10$  to produce a large enough sample size while still f",
+        "img_path": "extracted_data/document_4/img-8.jpeg",
+        "img_description": "The scatter plot displays data on the top 20% of models from 2016 to 2024, with a vertical logarithmic scale ranging from 100 to 100M and a noticeable upward trend. The best-fit line suggests an increase of 2.3 times per year. The time series illustrates a consistent growth pattern, indicating an overall rise in model values over the period."
+    },
+    {
+        "doc_path": "extracted_data/document_4/doc_4.md",
+        "ref_id": "cottier2024",
+        "ref_url": "https://arxiv.org/pdf/2405.21015",
+        "img_id": "img-9.jpeg",
+        "img_uid": "cottier2024img-9.jpeg",
+        "context": "er models, and produces a flatter cost trend than the other methods.\n\nOur preferred approach has an advantage over alternatives: the selection is more robust to the sampling of our dataset. Approaches based on quantiles, or distance from the historic trend, are influenced by data collected on models outside the frontier. Selecting the top-ranked models, in comparison, is merely influenced by whether the dataset contains those frontier models.![img-7.jpeg](img-7.jpeg)\n\n![img-8.jpeg](img-8.jpeg)\n\n![img-9.jpeg](img-9.jpeg)\nFigure 7: Comparison of hardware capex + energy cost regression using different frontier model selection methods. Results are fairly similar across methods, although taking the top  $20\\%$  of residuals leads to a flatter trend.\n\n![img-10.jpeg](img-10.jpeg)\n\n# B.2 Varying N in top-N model selection\n\nWhen selecting frontier models by the top- $N$  method, there is a question of how to choose  $N$ . We chose  $N = 10$  to produce a large enough sample size while still focusing on models near the ",
+        "img_path": "extracted_data/document_4/img-9.jpeg",
+        "img_description": "The scatter plot displays the increasing cost of the top 15% of models over time, using a log scale for costs ranging from 100 to 100M USD, between 2016 and 2024. Each point represents a model's cost at the publication date, with a trend line indicating a 2.2x annual increase. The data suggests an upward trend in model costs over the years."
+    },
+    {
+        "doc_path": "extracted_data/document_4/doc_4.md",
+        "ref_id": "cottier2024",
+        "ref_url": "https://arxiv.org/pdf/2405.21015",
+        "img_id": "img-10.jpeg",
+        "img_uid": "cottier2024img-10.jpeg",
+        "context": ", are influenced by data collected on models outside the frontier. Selecting the top-ranked models, in comparison, is merely influenced by whether the dataset contains those frontier models.![img-7.jpeg](img-7.jpeg)\n\n![img-8.jpeg](img-8.jpeg)\n\n![img-9.jpeg](img-9.jpeg)\nFigure 7: Comparison of hardware capex + energy cost regression using different frontier model selection methods. Results are fairly similar across methods, although taking the top  $20\\%$  of residuals leads to a flatter trend.\n\n![img-10.jpeg](img-10.jpeg)\n\n# B.2 Varying N in top-N model selection\n\nWhen selecting frontier models by the top- $N$  method, there is a question of how to choose  $N$ . We chose  $N = 10$  to produce a large enough sample size while still focusing on models near the frontier. The estimated growth rate is moderately robust to the choice of  $N$ , as it is similar for  $N = 3$ ,  $N = 5$  and  $N = 20$  (see Figure 8).\n\n# B.3 Varying the depreciation of hardware value\n\nThe growth in price-performance for ML GPUs running a",
+        "img_path": "extracted_data/document_4/img-10.jpeg",
+        "img_description": "The scatter plot displays the top 20% of residuals from a trend line, showing a positive linear increase of approximately 1.6 times per year between 2016 and 2024. The y-axis represents a logarithmic scale ranging from 100 to 100M, while the x-axis shows the publication date. Data points are scattered around the line, with a denser concentration in the later years."
+    },
+    {
+        "doc_path": "extracted_data/document_4/doc_4.md",
+        "ref_id": "cottier2024",
+        "ref_url": "https://arxiv.org/pdf/2405.21015",
+        "img_id": "img-11.jpeg",
+        "img_uid": "cottier2024img-11.jpeg",
+        "context": " 90 days between hardware release and hardware acquisition, and pushed the default training start date back by 15 days relative to the publication date. This decreased the estimated costs by  $4\\%$  on average, and did not change the growth rate. Similarly, we tested a short depreciation time by extending the hardware acquisition buffer time to 180 days and bringing the default training start date forward by 60 days. This increased costs by  $10\\%$  on average and did not change the growth rate.![img-11.jpeg](img-11.jpeg)\n\n![img-12.jpeg](img-12.jpeg)\n\n![img-13.jpeg](img-13.jpeg)\nFigure 8: Comparison of amortized hardware capex + energy regression for varying top-  $N$  selection.\n\n![img-14.jpeg](img-14.jpeg)\n\n# B.5 Excluding equity from R&amp;D staff costs\n\nTo measure the impact of equity on the total amortized model development cost, Figure 9a shows the cost breakdown with equity excluded from the R&amp;D staff cost. The proportion of cost on R&amp;D staff decreases from  $29 - 49\\%$  with equity included, to  ",
+        "img_path": "extracted_data/document_4/img-11.jpeg",
+        "img_description": "The graph depicts a scatter plot with a trend line showing the costs in USD on a logarithmic scale from 2016 to 2024, labeled \"Top 3.\" The data points indicate an overall upward trend in costs, with the trend line suggesting an approximate increase of 2.3 times per year. Each axis is marked, with costs ranging from 100 to 100 million USD."
+    },
+    {
+        "doc_path": "extracted_data/document_4/doc_4.md",
+        "ref_id": "cottier2024",
+        "ref_url": "https://arxiv.org/pdf/2405.21015",
+        "img_id": "img-12.jpeg",
+        "img_uid": "cottier2024img-12.jpeg",
+        "context": "ease and hardware acquisition, and pushed the default training start date back by 15 days relative to the publication date. This decreased the estimated costs by  $4\\%$  on average, and did not change the growth rate. Similarly, we tested a short depreciation time by extending the hardware acquisition buffer time to 180 days and bringing the default training start date forward by 60 days. This increased costs by  $10\\%$  on average and did not change the growth rate.![img-11.jpeg](img-11.jpeg)\n\n![img-12.jpeg](img-12.jpeg)\n\n![img-13.jpeg](img-13.jpeg)\nFigure 8: Comparison of amortized hardware capex + energy regression for varying top-  $N$  selection.\n\n![img-14.jpeg](img-14.jpeg)\n\n# B.5 Excluding equity from R&amp;D staff costs\n\nTo measure the impact of equity on the total amortized model development cost, Figure 9a shows the cost breakdown with equity excluded from the R&amp;D staff cost. The proportion of cost on R&amp;D staff decreases from  $29 - 49\\%$  with equity included, to  $19 - 33\\%$  with equity excl",
+        "img_path": "extracted_data/document_4/img-12.jpeg",
+        "img_description": "The image is a scatter plot displaying data points from 2016 to 2024, with a trend line showing a growth rate of 2.3x per year. The vertical axis appears to be on a logarithmic scale ranging from 100 to 100M. The trend line indicates an overall increase, with the majority of data points clustered between 2020 and 2024."
+    },
+    {
+        "doc_path": "extracted_data/document_4/doc_4.md",
+        "ref_id": "cottier2024",
+        "ref_url": "https://arxiv.org/pdf/2405.21015",
+        "img_id": "img-13.jpeg",
+        "img_uid": "cottier2024img-13.jpeg",
+        "context": ", and pushed the default training start date back by 15 days relative to the publication date. This decreased the estimated costs by  $4\\%$  on average, and did not change the growth rate. Similarly, we tested a short depreciation time by extending the hardware acquisition buffer time to 180 days and bringing the default training start date forward by 60 days. This increased costs by  $10\\%$  on average and did not change the growth rate.![img-11.jpeg](img-11.jpeg)\n\n![img-12.jpeg](img-12.jpeg)\n\n![img-13.jpeg](img-13.jpeg)\nFigure 8: Comparison of amortized hardware capex + energy regression for varying top-  $N$  selection.\n\n![img-14.jpeg](img-14.jpeg)\n\n# B.5 Excluding equity from R&amp;D staff costs\n\nTo measure the impact of equity on the total amortized model development cost, Figure 9a shows the cost breakdown with equity excluded from the R&amp;D staff cost. The proportion of cost on R&amp;D staff decreases from  $29 - 49\\%$  with equity included, to  $19 - 33\\%$  with equity excluded.\n\n# C Power capacity for",
+        "img_path": "extracted_data/document_4/img-13.jpeg",
+        "img_description": "The scatter plot displays the cost of the top 10 items, measured in 2023 USD on a logarithmic scale, against their publication dates from 2016 to 2024. A trend line indicates an annual increase of 2.4 times in cost. The data points show a general upward trend over the years, highlighting increasing costs over time."
+    },
+    {
+        "doc_path": "extracted_data/document_4/doc_4.md",
+        "ref_id": "cottier2024",
+        "ref_url": "https://arxiv.org/pdf/2405.21015",
+        "img_id": "img-14.jpeg",
+        "img_uid": "cottier2024img-14.jpeg",
+        "context": "  $4\\%$  on average, and did not change the growth rate. Similarly, we tested a short depreciation time by extending the hardware acquisition buffer time to 180 days and bringing the default training start date forward by 60 days. This increased costs by  $10\\%$  on average and did not change the growth rate.![img-11.jpeg](img-11.jpeg)\n\n![img-12.jpeg](img-12.jpeg)\n\n![img-13.jpeg](img-13.jpeg)\nFigure 8: Comparison of amortized hardware capex + energy regression for varying top-  $N$  selection.\n\n![img-14.jpeg](img-14.jpeg)\n\n# B.5 Excluding equity from R&amp;D staff costs\n\nTo measure the impact of equity on the total amortized model development cost, Figure 9a shows the cost breakdown with equity excluded from the R&amp;D staff cost. The proportion of cost on R&amp;D staff decreases from  $29 - 49\\%$  with equity included, to  $19 - 33\\%$  with equity excluded.\n\n# C Power capacity for model training\n\nFigure 10 shows the trend in the power capacity of the compute cluster needed for training frontier models. This wa",
+        "img_path": "extracted_data/document_4/img-14.jpeg",
+        "img_description": "The scatter plot displays data points representing values over a range of publication dates from 2016 to 2024, plotted on a logarithmic scale ranging between 100 and 100M. A trend line indicates that these values increase at a rate of 2.8 times per year. The graph is labeled \"Top 20\" and shows a clear positive correlation between publication date and value magnitude."
+    },
+    {
+        "doc_path": "extracted_data/document_4/doc_4.md",
+        "ref_id": "cottier2024",
+        "ref_url": "https://arxiv.org/pdf/2405.21015",
+        "img_id": "img-15.jpeg",
+        "img_uid": "cottier2024img-15.jpeg",
+        "context": "re quantity \u00d7 Hardware TDP (kW) \u00d7 Data center PUE\n\nwhere \"Hardware TDP\" includes all server hardware. We find a growth rate of  $2.2\\mathrm{x}$  per year (90% CI: 1.9x to 2.6x). Gemini Ultra has the largest estimated power capacity, at around 35 MW. Projecting the trend forward from Gemini Ultra, the most power-intensive training run would draw 1 GW at some point in 2028. To put this in context, the top ten largest power plants in the United States have a capacity ranging from 3 GW to 7 GW [38].![img-15.jpeg](img-15.jpeg)\nAmortized hardware, energy, and R&amp;D staff costs for training and experiments\n(a)\n\n![img-16.jpeg](img-16.jpeg)\nPercentage of costs for training and experiments of ML models\n(b)\nFigure 9: (a) Breakdown of total amortized model development costs for selected models, with equity excluded from the R&amp;D staff cost. Hardware costs are amortized to the total number of chip-hours spent on experiments and training, while R&amp;D staff costs cover the duration of development from initial experiment",
+        "img_path": "extracted_data/document_4/img-15.jpeg",
+        "img_description": "The bar chart compares the cost composition of different AI models (GPT-3 175B davinci, OPT-175B, GPT-4, and Gemini 1.0 Ultra) using cost categories like R&D staff, AI accelerator chips, and more, represented in 2023 USD on a logarithmic scale. Each model's total cost reaches progressively higher on the scale, with R&D staff consistently being the largest expense, followed by AI accelerator chips. Error bars indicate cost variability, with newer models showing higher overall expenditures."
+    },
+    {
+        "doc_path": "extracted_data/document_4/doc_4.md",
+        "ref_id": "cottier2024",
+        "ref_url": "https://arxiv.org/pdf/2405.21015",
+        "img_id": "img-16.jpeg",
+        "img_uid": "cottier2024img-16.jpeg",
+        "context": "owth rate of  $2.2\\mathrm{x}$  per year (90% CI: 1.9x to 2.6x). Gemini Ultra has the largest estimated power capacity, at around 35 MW. Projecting the trend forward from Gemini Ultra, the most power-intensive training run would draw 1 GW at some point in 2028. To put this in context, the top ten largest power plants in the United States have a capacity ranging from 3 GW to 7 GW [38].![img-15.jpeg](img-15.jpeg)\nAmortized hardware, energy, and R&amp;D staff costs for training and experiments\n(a)\n\n![img-16.jpeg](img-16.jpeg)\nPercentage of costs for training and experiments of ML models\n(b)\nFigure 9: (a) Breakdown of total amortized model development costs for selected models, with equity excluded from the R&amp;D staff cost. Hardware costs are amortized to the total number of chip-hours spent on experiments and training, while R&amp;D staff costs cover the duration of development from initial experiments to publication. Error bars indicate  $90\\%$  credible intervals, while the main bar values are medians. (b) Cost",
+        "img_path": "extracted_data/document_4/img-16.jpeg",
+        "img_description": "The image is a stacked bar chart comparing component cost proportions of different AI models: GPT-3 175B, OPT-175B, GPT-4, and Gemini 1.0 Ultra. Each model's costs are divided into six categories: R&D staff (excluding equity), AI accelerator chips, other server components, cluster-level interconnect, and energy, with AI accelerator chips taking the largest share in each model. Variations are seen in the proportion of other categories, such as R&D staff and energy, particularly prominent in GPT-3 175B and GPT-4, respectively."
+    },
+    {
+        "doc_path": "extracted_data/document_4/doc_4.md",
+        "ref_id": "cottier2024",
+        "ref_url": "https://arxiv.org/pdf/2405.21015",
+        "img_id": "img-17.jpeg",
+        "img_uid": "cottier2024img-17.jpeg",
+        "context": "re 9: (a) Breakdown of total amortized model development costs for selected models, with equity excluded from the R&amp;D staff cost. Hardware costs are amortized to the total number of chip-hours spent on experiments and training, while R&amp;D staff costs cover the duration of development from initial experiments to publication. Error bars indicate  $90\\%$  credible intervals, while the main bar values are medians. (b) Costs components as a percentage of the total, based on median estimates.\n\n![img-17.jpeg](img-17.jpeg)\nCluster power required for final training run\nFigure 10: The trend in AI compute cluster power (in kilowatts) required to train frontier models over time. Power is calculated as the product of the number of servers, server TDP, and power usage effectiveness.",
+        "img_path": "extracted_data/document_4/img-17.jpeg",
+        "img_description": "The graph displays a logarithmic scale of power (kW) against publication dates from 2016 to 2024, highlighting the increasing power consumption trends of various AI models like AlphaZero, GPT-3, and GPT-4. A regression mean line with a 95% confidence interval shows a trend of approximately doubling power usage per year. Notable points such as DALL-E and Gemini 1.0 Ultra are marked, illustrating the advancement in AI technology over time."
+    }
+]

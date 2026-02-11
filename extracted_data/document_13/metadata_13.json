@@ -1,0 +1,132 @@
+[
+    {
+        "doc_path": "extracted_data/document_13/doc_13.md",
+        "ref_id": "kim2025",
+        "ref_url": "https://arxiv.org/pdf/2504.11816",
+        "img_id": "img-0.jpeg",
+        "img_uid": "kim2025img-0.jpeg",
+        "context": "ck of Automated Optimization Systems: Currently, there is a lack of guidelines for automating the selection of VMs and KV Cache Offloading in cloud environments. Users must manually test various VMs (e.g., g5 vs. g6 series) and offloading settings, which increases time and cost burdens.\n\nThis study proposes the necessity of a framework that automatically recommends optimal VM and KV Cache Offloading strategies based on SLO, and introduces a model (Solver) that can balance cost and performance.\n\n![img-0.jpeg](img-0.jpeg)\n(a) g4dn.xlarge with OPT1.3B model\nFig. 1. Analysis of KV Cache size growth across different models in response to increasing batch sizes.\n\n![img-1.jpeg](img-1.jpeg)\n(b) g4dn.xlarge with OPT2.7B model\n\n# D. Existing Approaches and Their Limitations\n\nExisting research aiming to optimize LLM inference in cloud environments [16, 17, 18, 19] reveals limitations in achieving cost-efficient LLM serving as they do not consider an integrated approach to KV Cache Offloading and VM selection.\n\nMelange [1",
+        "img_path": "extracted_data/document_13/img-0.jpeg",
+        "img_description": "The bar graph illustrates the relationship between batch size and KV cache size in gigabytes (GB), showing an increase in cache size as the batch size grows from 2 to 32. The KV cache size ranges from approximately 0.5 GB at a batch size of 2, up to 5.5 GB at a batch size of 32. Each bar on the chart represents a specific batch size, indicating a clear trend of increasing cache requirements with larger batch sizes."
+    },
+    {
+        "doc_path": "extracted_data/document_13/doc_13.md",
+        "ref_id": "kim2025",
+        "ref_url": "https://arxiv.org/pdf/2504.11816",
+        "img_id": "img-1.jpeg",
+        "img_uid": "kim2025img-1.jpeg",
+        "context": "s must manually test various VMs (e.g., g5 vs. g6 series) and offloading settings, which increases time and cost burdens.\n\nThis study proposes the necessity of a framework that automatically recommends optimal VM and KV Cache Offloading strategies based on SLO, and introduces a model (Solver) that can balance cost and performance.\n\n![img-0.jpeg](img-0.jpeg)\n(a) g4dn.xlarge with OPT1.3B model\nFig. 1. Analysis of KV Cache size growth across different models in response to increasing batch sizes.\n\n![img-1.jpeg](img-1.jpeg)\n(b) g4dn.xlarge with OPT2.7B model\n\n# D. Existing Approaches and Their Limitations\n\nExisting research aiming to optimize LLM inference in cloud environments [16, 17, 18, 19] reveals limitations in achieving cost-efficient LLM serving as they do not consider an integrated approach to KV Cache Offloading and VM selection.\n\nMelange [16] proposes an allocation strategy that minimizes cost by mixing different GPU types (e.g., high-performance GPUs and low-cost GPUs) based on LLM service characterist",
+        "img_path": "extracted_data/document_13/img-1.jpeg",
+        "img_description": "The bar graph illustrates the relationship between batch size and KV cache size, showing an increasing trend as batch size increases from 2 to 32. The KV cache size values range from slightly above 0 to 8, with a marked rise corresponding to larger batch sizes. Each bar represents a distinct batch size and indicates the KV cache size associated with it."
+    },
+    {
+        "doc_path": "extracted_data/document_13/doc_13.md",
+        "ref_id": "kim2025",
+        "ref_url": "https://arxiv.org/pdf/2504.11816",
+        "img_id": "img-2.jpeg",
+        "img_uid": "kim2025img-2.jpeg",
+        "context": "he offloading techniques can enable cost-efficient inference even on lower-cost GPUs. These findings highlight that the optimal GPU instance selection depends on the user\u2019s SLO requirements and the characteristics of the inference task.\n\n## IV Design of InferSave\n\n### IV-A InferSave: A Cost-Efficient VM Selection Framework\n\nSelecting a cost-efficient VM instance in a cloud environment is a challenging task for users. To address this issue, we propose InferSave, a software tool designed to assist![img-2.jpeg](img-2.jpeg)\nFig. 2. Comparison of cost efficiency per GPU instance based on SLO constraints and batch size, based on experimental results using the OPT-2.7B model on an AWS g4dn.xlarge instance with an input length of 512 tokens and an output length of 128 tokens.\n\n![img-3.jpeg](img-3.jpeg)\n\nTABLE II NOTATION AND FORMULAS FOR MODEL AND MEMORY COMPUTATION\n\n|  User Input Parameters  |   |\n| --- | --- |\n|  Variable | Description and Formula  |\n|  BS | Batch size  |\n|  Lin | Input token length  |\n|  Lout | Out",
+        "img_path": "extracted_data/document_13/img-2.jpeg",
+        "img_description": "The bar chart illustrates the normalized cost efficiency, measured in tokens per second, for two computing instances, \"g4dn.xlarge\" and \"g5.xlarge,\" across different batch sizes (1, 2, 4, 8, 16) with KV Cache Offloading. The \"g5.xlarge\" generally shows higher cost efficiency compared to \"g4dn.xlarge\" across all batch sizes. Notably, efficiency peaks for \"g5.xlarge\" at batch size 16, while \"g4dn.xlarge\" has a less pronounced increase."
+    },
+    {
+        "doc_path": "extracted_data/document_13/doc_13.md",
+        "ref_id": "kim2025",
+        "ref_url": "https://arxiv.org/pdf/2504.11816",
+        "img_id": "img-3.jpeg",
+        "img_uid": "kim2025img-3.jpeg",
+        "context": "ave: A Cost-Efficient VM Selection Framework\n\nSelecting a cost-efficient VM instance in a cloud environment is a challenging task for users. To address this issue, we propose InferSave, a software tool designed to assist![img-2.jpeg](img-2.jpeg)\nFig. 2. Comparison of cost efficiency per GPU instance based on SLO constraints and batch size, based on experimental results using the OPT-2.7B model on an AWS g4dn.xlarge instance with an input length of 512 tokens and an output length of 128 tokens.\n\n![img-3.jpeg](img-3.jpeg)\n\nTABLE II NOTATION AND FORMULAS FOR MODEL AND MEMORY COMPUTATION\n\n|  User Input Parameters  |   |\n| --- | --- |\n|  Variable | Description and Formula  |\n|  BS | Batch size  |\n|  Lin | Input token length  |\n|  Lout | Output token length  |\n|  Pmax | User max price willingness  |\n|  TPS_SLO | User SLO Requirement  |\n|  Model Parameters  |   |\n|  Variable | Description and Formula  |\n|  h1 | Hidden Size (model dimension)  |\n|  h2 | Intermediate Size (projection)  |\n|  nh | Number of Attention Head",
+        "img_path": "extracted_data/document_13/img-3.jpeg",
+        "img_description": "The bar graph displays normalized cost efficiency (Tokens/$) for two types of instances, g4dn.xlarge (blue) and g5.xlarge (red), across various batch sizes ranging from 1 to 16 with KV Cache Offloading. The g4dn.xlarge consistently shows higher cost efficiency than g5.xlarge across all batch sizes. Efficiency generally increases with larger batch sizes for both instances, with notable peaks at batch sizes 4 and 16."
+    },
+    {
+        "doc_path": "extracted_data/document_13/doc_13.md",
+        "ref_id": "kim2025",
+        "ref_url": "https://arxiv.org/pdf/2504.11816",
+        "img_id": "img-4.jpeg",
+        "img_uid": "kim2025img-4.jpeg",
+        "context": "frac{4\\cdot BS\\cdot(L_{\\text{in}}+\\frac{L_{\\text{out}}}{2})\\cdot h_{1}}{FLOPS_{\\text{GPU}}}}_{\\text{Self-Attention compute time}}$\n\nThe KV Cache transfer time $T_{\\text{trans}}^{d}$ in the Decode stage refers to the time required to load KV Cache stored in CPU memory back into GPU memory and is computed as:\n\n$T_{\\text{trans}}^{d}=\\frac{(C_{\\text{off}}\\cdot 2\\cdot(L_{\\text{in}}+1)+L_{\\text{out}})\\cdot h_{1}\\cdot\\text{Precision}_{\\text{bytes}}\\cdot BS}{\\text{BW}_{\\text{cpu}\\rightarrow\\text{gpu}}}$![img-4.jpeg](img-4.jpeg)\nFig. 3. Comparison of FLOPS provided by the GPU manufacturer (NVIDIA) and the actual FLOPS utilized when calculating Prefill time on AWS GPU VMs. The results present TFLOPS measurements for three different GPU VMs using the OPT-2.7B model with an input size of 512 tokens and an output size of 128 tokens as batch size grows.\n\nThis modeling approach accounts for both cases where offloading is necessary and unnecessary, effectively considering GPU memory constraints and computational performance. ",
+        "img_path": "extracted_data/document_13/img-4.jpeg",
+        "img_description": "The graph displays TFLOPS performance across different batch sizes for three configurations: g4dn.xlarge (red), g5.2xlarge (green), and g6.xlarge (blue), with both given and measured values. Each line remains relatively stable, indicating consistent performance with varying batch sizes, where g6.xlarge achieves the highest TFLOPS, followed by g5.2xlarge, and g4dn.xlarge. The measured values align closely with the given values, suggesting accuracy in performance claims."
+    },
+    {
+        "doc_path": "extracted_data/document_13/doc_13.md",
+        "ref_id": "kim2025",
+        "ref_url": "https://arxiv.org/pdf/2504.11816",
+        "img_id": "img-5.jpeg",
+        "img_uid": "kim2025img-5.jpeg",
+        "context": " NVIDIA T4 (8.24 TFLOPS) and g6.xlarge with NVIDIA L4 (30.29 TFLOPS).\n\nAfter applying CTCF, the corrected prediction times were computed and compared with actual measurements to analyze the error rate. As shown in Figure 4, the CTCF-adjusted values closely matched the actual measurements. Specifically, in the Decode stage of g4dn.xlarge, the corrected values exhibited an average error rate of  $1\\%$  compared to actual measurements, while in the Prefill stage of g6.xlarge, the average error rate![img-5.jpeg](img-5.jpeg)\n\n![img-6.jpeg](img-6.jpeg)\nFig. 5. Comparison of average TPS and cost for different InferSave configurations and the baseline configuration under varying SLO constraints for online inference workloads (Left: Average TPS, Right: Cost).\n\n![img-7.jpeg](img-7.jpeg)\n(a) g4dn.xlarge Prefill Stage\n(c) g6.xlarge Prefill Stage\nFig. 4. CTCF accuracy analysis. The results illustrate the predicted time (blue), actual time (red), and CTCF-adjusted values (green) for Prefill and Decode times as batch size in",
+        "img_path": "extracted_data/document_13/img-5.jpeg",
+        "img_description": "The graph displays two plots comparing \"CTCF Adjusted Time\" (green line) and \"Predicted Time\" (blue line) against varying batch sizes on the x-axis. The CTCF Adjusted Time generally increases with batch size but at a slower rate than the Predicted Time, which follows an almost linear path. The y-axis includes two scales: the left for T_Prefil values and the right for an unspecified metric reaching up to 100."
+    },
+    {
+        "doc_path": "extracted_data/document_13/doc_13.md",
+        "ref_id": "kim2025",
+        "ref_url": "https://arxiv.org/pdf/2504.11816",
+        "img_id": "img-6.jpeg",
+        "img_uid": "kim2025img-6.jpeg",
+        "context": "d g6.xlarge with NVIDIA L4 (30.29 TFLOPS).\n\nAfter applying CTCF, the corrected prediction times were computed and compared with actual measurements to analyze the error rate. As shown in Figure 4, the CTCF-adjusted values closely matched the actual measurements. Specifically, in the Decode stage of g4dn.xlarge, the corrected values exhibited an average error rate of  $1\\%$  compared to actual measurements, while in the Prefill stage of g6.xlarge, the average error rate![img-5.jpeg](img-5.jpeg)\n\n![img-6.jpeg](img-6.jpeg)\nFig. 5. Comparison of average TPS and cost for different InferSave configurations and the baseline configuration under varying SLO constraints for online inference workloads (Left: Average TPS, Right: Cost).\n\n![img-7.jpeg](img-7.jpeg)\n(a) g4dn.xlarge Prefill Stage\n(c) g6.xlarge Prefill Stage\nFig. 4. CTCF accuracy analysis. The results illustrate the predicted time (blue), actual time (red), and CTCF-adjusted values (green) for Prefill and Decode times as batch size increases on two different GP",
+        "img_path": "extracted_data/document_13/img-6.jpeg",
+        "img_description": "The image is a graph showing the relationship between batch size and two metrics: actual time and error rate (CTCF vs Actual). The actual time, depicted in red, increases linearly with batch size, while the error rate, shown in pink, remains relatively constant and low across all batch sizes. The secondary vertical axis on the right quantifies the error rate as a percentage."
+    },
+    {
+        "doc_path": "extracted_data/document_13/doc_13.md",
+        "ref_id": "kim2025",
+        "ref_url": "https://arxiv.org/pdf/2504.11816",
+        "img_id": "img-7.jpeg",
+        "img_uid": "kim2025img-7.jpeg",
+        "context": "ed the actual measurements. Specifically, in the Decode stage of g4dn.xlarge, the corrected values exhibited an average error rate of  $1\\%$  compared to actual measurements, while in the Prefill stage of g6.xlarge, the average error rate![img-5.jpeg](img-5.jpeg)\n\n![img-6.jpeg](img-6.jpeg)\nFig. 5. Comparison of average TPS and cost for different InferSave configurations and the baseline configuration under varying SLO constraints for online inference workloads (Left: Average TPS, Right: Cost).\n\n![img-7.jpeg](img-7.jpeg)\n(a) g4dn.xlarge Prefill Stage\n(c) g6.xlarge Prefill Stage\nFig. 4. CTCF accuracy analysis. The results illustrate the predicted time (blue), actual time (red), and CTCF-adjusted values (green) for Prefill and Decode times as batch size increases on two different GPU VMs. Additionally, the Error Rate between the CTCF-adjusted time and actual time is presented.\n\n![img-8.jpeg](img-8.jpeg)\n(b) g4dn.xlarge Decode Stage\n(d) g6.xlarge Decode Stage\n\nwas  $2\\%$ . These results demonstrate that the CTCF-a",
+        "img_path": "extracted_data/document_13/img-7.jpeg",
+        "img_description": "The graph illustrates the relationship between batch size and decoding time (\\(T_{Decode}\\)), showing multiple curves with varying slopes and patterns. The primary lines, represented in blue and green, display a positive linear correlation, indicating that decoding time increases with larger batch sizes. A magenta line near the x-axis remains consistently low, suggesting minimal variation in decoding time despite changes in batch size for a specific scenario."
+    },
+    {
+        "doc_path": "extracted_data/document_13/doc_13.md",
+        "ref_id": "kim2025",
+        "ref_url": "https://arxiv.org/pdf/2504.11816",
+        "img_id": "img-8.jpeg",
+        "img_uid": "kim2025img-8.jpeg",
+        "context": "e configuration under varying SLO constraints for online inference workloads (Left: Average TPS, Right: Cost).\n\n![img-7.jpeg](img-7.jpeg)\n(a) g4dn.xlarge Prefill Stage\n(c) g6.xlarge Prefill Stage\nFig. 4. CTCF accuracy analysis. The results illustrate the predicted time (blue), actual time (red), and CTCF-adjusted values (green) for Prefill and Decode times as batch size increases on two different GPU VMs. Additionally, the Error Rate between the CTCF-adjusted time and actual time is presented.\n\n![img-8.jpeg](img-8.jpeg)\n(b) g4dn.xlarge Decode Stage\n(d) g6.xlarge Decode Stage\n\nwas  $2\\%$ . These results demonstrate that the CTCF-adjusted computation time aligns well with real-world measurements, thereby verifying that InferSave can accurately recommend the most suitable GPU instance for users.\n\n# C. Evaluation results\n\nTo evaluate the effectiveness of InferSave and our proposed methodologies, we conducted experiments on both online and offline workloads. While we have performed comprehensive experiments across ",
+        "img_path": "extracted_data/document_13/img-8.jpeg",
+        "img_description": "The graph displays the relationship between batch size and error rate (%) using four differently colored lines (red, green, blue, and pink). The lines show that as the batch size increases, the error rates generally trend upwards for the red and green lines but remain constant or decrease for the blue and pink lines. Additionally, the pink line exhibits the most variability, indicating fluctuations in error rate at smaller batch sizes."
+    },
+    {
+        "doc_path": "extracted_data/document_13/doc_13.md",
+        "ref_id": "kim2025",
+        "ref_url": "https://arxiv.org/pdf/2504.11816",
+        "img_id": "img-9.jpeg",
+        "img_uid": "kim2025img-9.jpeg",
+        "context": "ULTS BY SLO CONSTRAINTS (400 TPS AND 600 TPS)\n\n|  SLO | Evaluated Policies | Selected Instances | TPS(avg.) | Total Cost($)  |\n| --- | --- | --- | --- | --- |\n|  400 TPS | InferSave-1st | g4dn.xlarge | 620.17 | 0.71  |\n|   |  InferSave-2nd | g6.xlarge | 802.19 | 1.167  |\n|   |  Max-Performance | g6e.xlarge | 1506.54 | 2.699  |\n|  600 TPS | InferSave-1st | g6.xlarge | 800.15 | 1.167  |\n|   |  InferSave-2nd | g5.xlarge | 1206.12 | 1.466  |\n|   |  Max-Performance | g6e.xlarge | 1505.37 | 2.699  |\n\n![img-9.jpeg](img-9.jpeg)\n\n![img-10.jpeg](img-10.jpeg)\n\nTABLE VI COMPARISON OF INSTANCE SELECTION RESULTS BY SLO CONSTRAINTS (100 TPS AND 200 TPS)\n\n|  SLO | Evaluated Policies | Selected Instances | \\( C_{off} \\)(%) | TPS(avg.) | Total Price($)  |\n| --- | --- | --- | --- | --- | --- |\n|  100 TPS | InferSave-1st | g4dn.xlarge | 100 | 169.17 | 2.15  |\n|   |  InferSave-2nd | g6.xlarge | 60 | 413.04 | 2.344  |\n|   |  Max-Perf., InferSave(w/o KV) | g6e.xlarge | 0 | 1506.54 | 2.699  |\n|  200 TPS | InferSave-1st | g6.xlarge | ",
+        "img_path": "extracted_data/document_13/img-9.jpeg",
+        "img_description": "The bar graph compares average tokens per second (TPS) across three scenarios: InferSave-1st, InferSave-2nd, and Max-Performance, with two different SLOs: SLO 400 and SLO 600. In all scenarios, SLO 600 consistently achieves higher TPS than SLO 400. The graph highlights that the Max-Performance scenario reaches the highest TPS with both SLOs surpassing the minimum SLO threshold marked on the graph."
+    },
+    {
+        "doc_path": "extracted_data/document_13/doc_13.md",
+        "ref_id": "kim2025",
+        "ref_url": "https://arxiv.org/pdf/2504.11816",
+        "img_id": "img-10.jpeg",
+        "img_uid": "kim2025img-10.jpeg",
+        "context": "0 TPS AND 600 TPS)\n\n|  SLO | Evaluated Policies | Selected Instances | TPS(avg.) | Total Cost($)  |\n| --- | --- | --- | --- | --- |\n|  400 TPS | InferSave-1st | g4dn.xlarge | 620.17 | 0.71  |\n|   |  InferSave-2nd | g6.xlarge | 802.19 | 1.167  |\n|   |  Max-Performance | g6e.xlarge | 1506.54 | 2.699  |\n|  600 TPS | InferSave-1st | g6.xlarge | 800.15 | 1.167  |\n|   |  InferSave-2nd | g5.xlarge | 1206.12 | 1.466  |\n|   |  Max-Performance | g6e.xlarge | 1505.37 | 2.699  |\n\n![img-9.jpeg](img-9.jpeg)\n\n![img-10.jpeg](img-10.jpeg)\n\nTABLE VI COMPARISON OF INSTANCE SELECTION RESULTS BY SLO CONSTRAINTS (100 TPS AND 200 TPS)\n\n|  SLO | Evaluated Policies | Selected Instances | \\( C_{off} \\)(%) | TPS(avg.) | Total Price($)  |\n| --- | --- | --- | --- | --- | --- |\n|  100 TPS | InferSave-1st | g4dn.xlarge | 100 | 169.17 | 2.15  |\n|   |  InferSave-2nd | g6.xlarge | 60 | 413.04 | 2.344  |\n|   |  Max-Perf., InferSave(w/o KV) | g6e.xlarge | 0 | 1506.54 | 2.699  |\n|  200 TPS | InferSave-1st | g6.xlarge | 60 | 414.28 | 2.334  |\n|   | ",
+        "img_path": "extracted_data/document_13/img-10.jpeg",
+        "img_description": "The bar graph compares total and hourly costs in USD for SLO 400 and SLO 600 across three scenarios: InferSave-1st, InferSave-2nd, and Max-Performance. Each scenario shows that SLO 600 (represented in red) consistently incurs higher costs than SLO 400 (in blue), with Max-Performance having the highest values in both total and hourly costs. The graph highlights the cost implications of varying SLOs and performance settings."
+    },
+    {
+        "doc_path": "extracted_data/document_13/doc_13.md",
+        "ref_id": "kim2025",
+        "ref_url": "https://arxiv.org/pdf/2504.11816",
+        "img_id": "img-11.jpeg",
+        "img_uid": "kim2025img-11.jpeg",
+        "context": "ots the given SLO requirement greatly, leading to wasted GPU utilization and higher running costs. Meanwhile, InferSave demonstrates optimal instance selection by using accurate performance prediction to select the most favorable instance for the given requirements.\n\n2) Offline inference workload results: Table VI and Figure 6 shows the instance selection of each policy based on the SLO requirements given for an offline inference workload, and performance and price comparisons from the selection![img-11.jpeg](img-11.jpeg)\nFig. 6. Comparison of average TPS and cost for different InferSave configurations and the baseline configuration under varying SLO constraints for offline inference workloads (Left: Average TPS, Right: Cost).\n\n![img-12.jpeg](img-12.jpeg)\n\nmade by each policy. As this workload uses a large input token size, all instances excluding g6e.xlarge make use of KV Cache offloading. Without considering offloading, only one instance can be considered a top choice, and therefore, InferSave without offloadi",
+        "img_path": "extracted_data/document_13/img-11.jpeg",
+        "img_description": "The bar graph compares average tokens per second (TPS) across three scenarios: \"InferSave-1st,\" \"InferSave-2nd,\" and \"Max-Performance & InferSave (w/o offloading)\" for two service level objectives (SLOs), 100 and 200. The \"Max-Performance & InferSave\" scenario significantly outperforms the others, with both SLO 100 and SLO 200 exceeding 7000 TPS, while the \"InferSave-1st\" and \"InferSave-2nd\" scenarios achieve lower TPS values around 200-500. The horizontal line at 7300 TPS indicates the minimum SLO requirement, highlighting that only the \"Max-Performance & InferSave\" meets or exceeds this threshold."
+    },
+    {
+        "doc_path": "extracted_data/document_13/doc_13.md",
+        "ref_id": "kim2025",
+        "ref_url": "https://arxiv.org/pdf/2504.11816",
+        "img_id": "img-12.jpeg",
+        "img_uid": "kim2025img-12.jpeg",
+        "context": " for the given requirements.\n\n2) Offline inference workload results: Table VI and Figure 6 shows the instance selection of each policy based on the SLO requirements given for an offline inference workload, and performance and price comparisons from the selection![img-11.jpeg](img-11.jpeg)\nFig. 6. Comparison of average TPS and cost for different InferSave configurations and the baseline configuration under varying SLO constraints for offline inference workloads (Left: Average TPS, Right: Cost).\n\n![img-12.jpeg](img-12.jpeg)\n\nmade by each policy. As this workload uses a large input token size, all instances excluding g6e.xlarge make use of KV Cache offloading. Without considering offloading, only one instance can be considered a top choice, and therefore, InferSave without offloading chose the same instance as the Max-Performance policy.\n\nGiven a SLO requirement of 100 TPS, InferSave selected g4dn.xlarge as its top choice, providing a throughput of about 160 TPS with the lowest total processing cost of $2.13. On th",
+        "img_path": "extracted_data/document_13/img-12.jpeg",
+        "img_description": "The bar graph compares total and hourly costs in USD for different inference save strategies across two service level objectives (SLO 100 and SLO 200). It shows that the \"InferSave-2nd\" option has the highest total cost, while the combined \"Max-Performance & InferSave (w/o offloading)\" option has the highest hourly cost. The graph highlights how different SLO conditions impact cost efficiency for specific strategies."
+    }
+]

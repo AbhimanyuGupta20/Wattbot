@@ -1,0 +1,172 @@
+[
+    {
+        "doc_path": "extracted_data/document_24/doc_24.md",
+        "ref_id": "samsi2024",
+        "ref_url": "https://arxiv.org/pdf/2310.03003",
+        "img_id": "img-0.jpeg",
+        "img_uid": "samsi2024img-0.jpeg",
+        "context": "ment as well as complexity of ever larger models. Over the past several years, competition has been fierce and the pace un-relenting as AI research groups across private companies and academic institutions have developed new models whose performance continues to improve on a wide suite of natural language benchmarks but still requires significant amounts of compute and energy. We provide a brief overview of LLMs and LFMs below along with details around the specific LLM we use for our analysis.\n\n![img-0.jpeg](img-0.jpeg)\nFig. 1: Development paths of LLMs: A tree diagram illustrating the development of language models and foundation models from 2017 to early 2023. Pink branches indicate encoder-type language models, green indicates encoder-decoder hybrid models, and the dark grey indicates decoder-style models. The bar-plot on the bottom right tallies the number of open/closed source models developed by different companies/institutions. We study LLaMA (outlined by the red arrow and red circle in the diagram abov",
+        "img_path": "extracted_data/document_24/img-0.jpeg",
+        "img_description": "The image is an evolutionary tree diagram illustrating the development of various AI models from 2018 to 2023, categorizing them into open-source and closed-source variations. It shows the progression and branching of models like GPT, BERT, and their derivatives, highlighting key models such as GPT-4, BERT, and LLaMA. The timeline indicates how these models have evolved, with certain branches focusing on decoder-only or encoder-decoder architectures."
+    },
+    {
+        "doc_path": "extracted_data/document_24/doc_24.md",
+        "ref_id": "samsi2024",
+        "ref_url": "https://arxiv.org/pdf/2310.03003",
+        "img_id": "img-1.jpeg",
+        "img_uid": "samsi2024img-1.jpeg",
+        "context": " where the most considerable increase is for the smallest 7B model. Although Figure 2 shows a considerable increase in inference throughput from using the A100, Figure 3 shows us that this improvement does not come for free: it comes at an increased energy cost per second. Moreover, for the largest LLaMA 65B, it is less clear whether the increased inference energy per second (Figure 3) is worth the small improvement in inference throughput in terms of words/token/responses per second (Figure 2).![img-1.jpeg](img-1.jpeg)\n(a) Results from the Alpaca dataset.\n\n![img-2.jpeg](img-2.jpeg)\n(b) Results from GSM8K dataset\n\n![img-3.jpeg](img-3.jpeg)\nFig. 2: Baseline comparison of inference performance/latency between LLaMA 7B, 13B and 65B: inference performance comparisons on the minimum set of hardware required to run inference (see Table II) across model sizes and between V100s and A100s.\n\n![img-4.jpeg](img-4.jpeg)\nFig. 3: Baseline energy per second (Watts) estimates of performing inference with LLaMA 7B, 13B, and 65B",
+        "img_path": "extracted_data/document_24/img-1.jpeg",
+        "img_description": "The image consists of three bar graphs comparing performance metrics for two systems, A100 (orange) and V100 (blue), across three model sizes: 7B, 13B, and 65B. The leftmost graph measures Words/Sec, the middle graph measures Tokens/Sec, and the rightmost graph measures Responses/Sec, with each graph showing that performance tends to decrease as the model size increases, particularly for V100. A100 consistently outperforms V100 across all metrics and model sizes."
+    },
+    {
+        "doc_path": "extracted_data/document_24/doc_24.md",
+        "ref_id": "samsi2024",
+        "ref_url": "https://arxiv.org/pdf/2310.03003",
+        "img_id": "img-2.jpeg",
+        "img_uid": "samsi2024img-2.jpeg",
+        "context": "el. Although Figure 2 shows a considerable increase in inference throughput from using the A100, Figure 3 shows us that this improvement does not come for free: it comes at an increased energy cost per second. Moreover, for the largest LLaMA 65B, it is less clear whether the increased inference energy per second (Figure 3) is worth the small improvement in inference throughput in terms of words/token/responses per second (Figure 2).![img-1.jpeg](img-1.jpeg)\n(a) Results from the Alpaca dataset.\n\n![img-2.jpeg](img-2.jpeg)\n(b) Results from GSM8K dataset\n\n![img-3.jpeg](img-3.jpeg)\nFig. 2: Baseline comparison of inference performance/latency between LLaMA 7B, 13B and 65B: inference performance comparisons on the minimum set of hardware required to run inference (see Table II) across model sizes and between V100s and A100s.\n\n![img-4.jpeg](img-4.jpeg)\nFig. 3: Baseline energy per second (Watts) estimates of performing inference with LLaMA 7B, 13B, and 65B: inference energy comparisons on the minimum set of hardware/se",
+        "img_path": "extracted_data/document_24/img-2.jpeg",
+        "img_description": "The image displays three bar charts comparing the performance of A100 and V100 hardware across three model sizes (7B, 13B, 65B) in terms of words per second, tokens per second, and responses per second. For each metric, the A100 (orange) consistently outperforms the V100 (blue), with the gap widening as model size increases. Both words per second and tokens per second have higher values than responses per second across all configurations."
+    },
+    {
+        "doc_path": "extracted_data/document_24/doc_24.md",
+        "ref_id": "samsi2024",
+        "ref_url": "https://arxiv.org/pdf/2310.03003",
+        "img_id": "img-3.jpeg",
+        "img_uid": "samsi2024img-3.jpeg",
+        "context": "erence throughput from using the A100, Figure 3 shows us that this improvement does not come for free: it comes at an increased energy cost per second. Moreover, for the largest LLaMA 65B, it is less clear whether the increased inference energy per second (Figure 3) is worth the small improvement in inference throughput in terms of words/token/responses per second (Figure 2).![img-1.jpeg](img-1.jpeg)\n(a) Results from the Alpaca dataset.\n\n![img-2.jpeg](img-2.jpeg)\n(b) Results from GSM8K dataset\n\n![img-3.jpeg](img-3.jpeg)\nFig. 2: Baseline comparison of inference performance/latency between LLaMA 7B, 13B and 65B: inference performance comparisons on the minimum set of hardware required to run inference (see Table II) across model sizes and between V100s and A100s.\n\n![img-4.jpeg](img-4.jpeg)\nFig. 3: Baseline energy per second (Watts) estimates of performing inference with LLaMA 7B, 13B, and 65B: inference energy comparisons on the minimum set of hardware/settings required (see Table II) with Alpaca and GSM8K on a ",
+        "img_path": "extracted_data/document_24/img-3.jpeg",
+        "img_description": "The bar graph illustrates the inference energy consumption per second in watts for different LLAMA model sizes (7B, 13B, 65B) using two types of GPUs: V100 and A100. Energy consumption increases with model size, with the A100 GPU consistently consuming more energy than the V100 across all model sizes. Error bars indicate variability in measurements, with the 65B model exhibiting the highest energy usage and variability."
+    },
+    {
+        "doc_path": "extracted_data/document_24/doc_24.md",
+        "ref_id": "samsi2024",
+        "ref_url": "https://arxiv.org/pdf/2310.03003",
+        "img_id": "img-4.jpeg",
+        "img_uid": "samsi2024img-4.jpeg",
+        "context": "th the small improvement in inference throughput in terms of words/token/responses per second (Figure 2).![img-1.jpeg](img-1.jpeg)\n(a) Results from the Alpaca dataset.\n\n![img-2.jpeg](img-2.jpeg)\n(b) Results from GSM8K dataset\n\n![img-3.jpeg](img-3.jpeg)\nFig. 2: Baseline comparison of inference performance/latency between LLaMA 7B, 13B and 65B: inference performance comparisons on the minimum set of hardware required to run inference (see Table II) across model sizes and between V100s and A100s.\n\n![img-4.jpeg](img-4.jpeg)\nFig. 3: Baseline energy per second (Watts) estimates of performing inference with LLaMA 7B, 13B, and 65B: inference energy comparisons on the minimum set of hardware/settings required (see Table II) with Alpaca and GSM8K on a log-scale. Color indicates device (V100/A100), bars indicate average quantities and lines indicate error bars. Energy is averaged over maximum generation lengths of 256, 512, and 1024 due to near-identical energy/size trends for each generation length.\n\n![img-5.jpeg](img-5",
+        "img_path": "extracted_data/document_24/img-4.jpeg",
+        "img_description": "The bar chart compares the inference energy consumption per second in watts for different sizes of LLaMA models (7B, 13B, and 65B) run on two types of GPUs: V100 and A100. The energy usage appears to increase with model size for both GPUs, with the A100 generally consuming more energy than the V100 at 13B and 65B, although slightly less or comparable at 7B. Error bars indicate variability in measurements."
+    },
+    {
+        "doc_path": "extracted_data/document_24/doc_24.md",
+        "ref_id": "samsi2024",
+        "ref_url": "https://arxiv.org/pdf/2310.03003",
+        "img_id": "img-5.jpeg",
+        "img_uid": "samsi2024img-5.jpeg",
+        "context": "4.jpeg](img-4.jpeg)\nFig. 3: Baseline energy per second (Watts) estimates of performing inference with LLaMA 7B, 13B, and 65B: inference energy comparisons on the minimum set of hardware/settings required (see Table II) with Alpaca and GSM8K on a log-scale. Color indicates device (V100/A100), bars indicate average quantities and lines indicate error bars. Energy is averaged over maximum generation lengths of 256, 512, and 1024 due to near-identical energy/size trends for each generation length.\n\n![img-5.jpeg](img-5.jpeg)\n\n![img-6.jpeg](img-6.jpeg)\nFig. 4: Energy per second (Watts) estimates of LLaMA 65B across batch sizes of 64/128/256/256 and 8/16/32 shards for max generation length 512: inference energy estimates on Alpaca and GSM8K on log-scale. Color indicates batch size.\n\n# B. Energy per Second: LLaMA 65B\n\nWe first take a look at the amount of energy inference costs per unit time in seconds. Figures 4 and 5 show a more in-depth look of the energy inference costs of LLaMA 65B across different batch sizes an",
+        "img_path": "extracted_data/document_24/img-5.jpeg",
+        "img_description": "The bar graph depicts the inference energy per second in watts for LLaMA 65B with varying batch sizes (64, 128, 256, 512) and number of shards/GPUs (8, 16, 32). Energy consumption increases with both the number of shards and batch size, with the highest energy usage at 32 shards and a batch size of 512. The data is presented on a logarithmic scale for the y-axis."
+    },
+    {
+        "doc_path": "extracted_data/document_24/doc_24.md",
+        "ref_id": "samsi2024",
+        "ref_url": "https://arxiv.org/pdf/2310.03003",
+        "img_id": "img-6.jpeg",
+        "img_uid": "samsi2024img-6.jpeg",
+        "context": " Baseline energy per second (Watts) estimates of performing inference with LLaMA 7B, 13B, and 65B: inference energy comparisons on the minimum set of hardware/settings required (see Table II) with Alpaca and GSM8K on a log-scale. Color indicates device (V100/A100), bars indicate average quantities and lines indicate error bars. Energy is averaged over maximum generation lengths of 256, 512, and 1024 due to near-identical energy/size trends for each generation length.\n\n![img-5.jpeg](img-5.jpeg)\n\n![img-6.jpeg](img-6.jpeg)\nFig. 4: Energy per second (Watts) estimates of LLaMA 65B across batch sizes of 64/128/256/256 and 8/16/32 shards for max generation length 512: inference energy estimates on Alpaca and GSM8K on log-scale. Color indicates batch size.\n\n# B. Energy per Second: LLaMA 65B\n\nWe first take a look at the amount of energy inference costs per unit time in seconds. Figures 4 and 5 show a more in-depth look of the energy inference costs of LLaMA 65B across different batch sizes and degrees of sharding. Spec",
+        "img_path": "extracted_data/document_24/img-6.jpeg",
+        "img_description": "The bar graph illustrates the inference energy per second in watts for the LLaMA 65B model across different numbers of shards/GPUs (V100) and batch sizes (64, 128, 256, and 512). Energy consumption increases with the number of shards, peaking at 32 shards where batch size 256 shows the highest energy usage, followed closely by batch size 512. Each batch size consistently shows higher energy consumption as shards increase from 8 to 32."
+    },
+    {
+        "doc_path": "extracted_data/document_24/doc_24.md",
+        "ref_id": "samsi2024",
+        "ref_url": "https://arxiv.org/pdf/2310.03003",
+        "img_id": "img-7.jpeg",
+        "img_uid": "samsi2024img-7.jpeg",
+        "context": "ess clear or consistent. Overall, we see that the energy per second for inference with LLaMA 65B is on the order of 300 Watts to 1 Kilowatt from the lower shard configuration of 8 GPUs to the higher end of 32 GPUs.\n\n# C. Energy per Decoded Token: LLaMA 65B\n\nMoving on to energy per each decoded output token, we see that in Figures 6 and 7 that energy per token tends to follow a similar pattern in relation to the number of shards: as the number of shards increases, the energy per output token also![img-7.jpeg](img-7.jpeg)\n\n![img-8.jpeg](img-8.jpeg)\nFig. 5: Energy per second (Watts) estimates of LLaMA 65B across batch sizes of 64/128/256/512 and 8/16/32 shards for max generation length 1024: inference energy estimates on Alpaca and GSM8K on log-scale. Color indicates batch size.\n\nincreases. However, we see little change in the average energy per token between max generation length 512 and 1024. For instance, with length 512, we see that it takes about 3-4 Joules for a output token, which is approximately the same",
+        "img_path": "extracted_data/document_24/img-7.jpeg",
+        "img_description": "The bar chart illustrates the inference energy per second in watts for the LLaMA 65B model using different batch sizes (64, 128, 256, 512) across varying numbers of shards/GPUs (8, 16, 32) with maximal generation length of 1024. As the number of shards increases, the energy consumption also rises for each batch size, with batch size 512 consistently using the most energy. The data shows a significant energy increase when moving from 16 to 32 shards, particularly for larger batch sizes."
+    },
+    {
+        "doc_path": "extracted_data/document_24/doc_24.md",
+        "ref_id": "samsi2024",
+        "ref_url": "https://arxiv.org/pdf/2310.03003",
+        "img_id": "img-8.jpeg",
+        "img_uid": "samsi2024img-8.jpeg",
+        "context": "erall, we see that the energy per second for inference with LLaMA 65B is on the order of 300 Watts to 1 Kilowatt from the lower shard configuration of 8 GPUs to the higher end of 32 GPUs.\n\n# C. Energy per Decoded Token: LLaMA 65B\n\nMoving on to energy per each decoded output token, we see that in Figures 6 and 7 that energy per token tends to follow a similar pattern in relation to the number of shards: as the number of shards increases, the energy per output token also![img-7.jpeg](img-7.jpeg)\n\n![img-8.jpeg](img-8.jpeg)\nFig. 5: Energy per second (Watts) estimates of LLaMA 65B across batch sizes of 64/128/256/512 and 8/16/32 shards for max generation length 1024: inference energy estimates on Alpaca and GSM8K on log-scale. Color indicates batch size.\n\nincreases. However, we see little change in the average energy per token between max generation length 512 and 1024. For instance, with length 512, we see that it takes about 3-4 Joules for a output token, which is approximately the same amount for length 512. As ",
+        "img_path": "extracted_data/document_24/img-8.jpeg",
+        "img_description": "The bar graph illustrates the inference energy per second in watts for the LLama 65B model at max generation length of 1024, with varying batch sizes (64, 128, 256, 512) across different numbers of shards/GPUs (8, 16, 32). As the number of shards/GPUs increases, the energy consumption also increases, with higher batch sizes requiring more energy. The graph shows that the energy increases significantly, especially at 32 shards/GPUs, with the highest batch size consuming the most power."
+    },
+    {
+        "doc_path": "extracted_data/document_24/doc_24.md",
+        "ref_id": "samsi2024",
+        "ref_url": "https://arxiv.org/pdf/2310.03003",
+        "img_id": "img-9.jpeg",
+        "img_uid": "samsi2024img-9.jpeg",
+        "context": "e see that increasing the number of shards still tends to increase the energy costs of inference per response most overall while increasing the maximum generation length from 512 (Figure 8) to 1024 (Figure 9) does not induce a clear or significant effect in inference energy costs. Also like before, while we see slight increases in energy costs per response generated within a shard configuration as batch size increases, but not consistently or significantly. Again, we see that for GSM8K, at max\n\n![img-9.jpeg](img-9.jpeg)\n\n![img-10.jpeg](img-10.jpeg)\nFig. 6: Energy per output token estimates of LLaMA 65B across batch sizes of 64/128/256/512 and 8/16/32 shards for max generation length 512: inference energy estimates on Alpaca and GSM8K on log-scale. Color indicates batch size.\n\n![img-11.jpeg](img-11.jpeg)\n\n![img-12.jpeg](img-12.jpeg)\nFig. 7: Energy per output token estimates of LLaMA 65B across batch sizes of 64/128/256/512 and 8/16/32 shards for max generation length 1024: inference energy estimates on Alpaca a",
+        "img_path": "extracted_data/document_24/img-9.jpeg",
+        "img_description": "The bar graph illustrates the inference energy per decoded token for LLaMA 65B with a maximum generation length of 512, measuring performance across different batch sizes (64, 128, 256, and 512) and shard/GPU configurations (8, 16, and 32) using V100 GPUs. As the number of shards increases, energy consumption also rises, with the highest energy usage observed at 32 shards across all batch sizes. The data is color-coded for batch sizes, with clear differences in energy efficiency noticeable as batch size increases."
+    },
+    {
+        "doc_path": "extracted_data/document_24/doc_24.md",
+        "ref_id": "samsi2024",
+        "ref_url": "https://arxiv.org/pdf/2310.03003",
+        "img_id": "img-10.jpeg",
+        "img_uid": "samsi2024img-10.jpeg",
+        "context": "umber of shards still tends to increase the energy costs of inference per response most overall while increasing the maximum generation length from 512 (Figure 8) to 1024 (Figure 9) does not induce a clear or significant effect in inference energy costs. Also like before, while we see slight increases in energy costs per response generated within a shard configuration as batch size increases, but not consistently or significantly. Again, we see that for GSM8K, at max\n\n![img-9.jpeg](img-9.jpeg)\n\n![img-10.jpeg](img-10.jpeg)\nFig. 6: Energy per output token estimates of LLaMA 65B across batch sizes of 64/128/256/512 and 8/16/32 shards for max generation length 512: inference energy estimates on Alpaca and GSM8K on log-scale. Color indicates batch size.\n\n![img-11.jpeg](img-11.jpeg)\n\n![img-12.jpeg](img-12.jpeg)\nFig. 7: Energy per output token estimates of LLaMA 65B across batch sizes of 64/128/256/512 and 8/16/32 shards for max generation length 1024: inference energy estimates on Alpaca and GSM8K on log-scale. Color ",
+        "img_path": "extracted_data/document_24/img-10.jpeg",
+        "img_description": "The bar chart illustrates the inference energy per decoded token for LLaMA 65B, comparing different batch sizes (64, 128, 256, 512) across varying numbers of GPU shards (8, 16, 32). The energy consumption, measured in Joules, increases as both the number of shards and batch size increase, with the highest energy consumption occurring at 32 shards and a batch size of 512. The graph highlights the significant impact of both shard count and batch size on energy use during inference."
+    },
+    {
+        "doc_path": "extracted_data/document_24/doc_24.md",
+        "ref_id": "samsi2024",
+        "ref_url": "https://arxiv.org/pdf/2310.03003",
+        "img_id": "img-11.jpeg",
+        "img_uid": "samsi2024img-11.jpeg",
+        "context": "like before, while we see slight increases in energy costs per response generated within a shard configuration as batch size increases, but not consistently or significantly. Again, we see that for GSM8K, at max\n\n![img-9.jpeg](img-9.jpeg)\n\n![img-10.jpeg](img-10.jpeg)\nFig. 6: Energy per output token estimates of LLaMA 65B across batch sizes of 64/128/256/512 and 8/16/32 shards for max generation length 512: inference energy estimates on Alpaca and GSM8K on log-scale. Color indicates batch size.\n\n![img-11.jpeg](img-11.jpeg)\n\n![img-12.jpeg](img-12.jpeg)\nFig. 7: Energy per output token estimates of LLaMA 65B across batch sizes of 64/128/256/512 and 8/16/32 shards for max generation length 1024: inference energy estimates on Alpaca and GSM8K on log-scale. Color indicates batch size.![img-13.jpeg](img-13.jpeg)\n\n![img-14.jpeg](img-14.jpeg)\nFig. 8: Energy per response estimates of LLaMA 65B across batch sizes of 64/128/256/512 and 8/16/32 shards for max generation length 512: inference energy estimates on Alpaca and GSM",
+        "img_path": "extracted_data/document_24/img-11.jpeg",
+        "img_description": "The bar chart depicts the inference energy per decoded token for the LLaMA 65B model across different batch sizes (64, 128, 256, 512) and a maximum generation length of 1024. The energy consumption, measured in joules, increases with the number of shards/GPUs (V100), with the lowest energy usage at 8 shards and highest at 32 shards for all batch sizes. The chart illustrates how larger batch sizes tend to consume more energy, particularly noticeable at the maximum shard setting."
+    },
+    {
+        "doc_path": "extracted_data/document_24/doc_24.md",
+        "ref_id": "samsi2024",
+        "ref_url": "https://arxiv.org/pdf/2310.03003",
+        "img_id": "img-12.jpeg",
+        "img_uid": "samsi2024img-12.jpeg",
+        "context": "ght increases in energy costs per response generated within a shard configuration as batch size increases, but not consistently or significantly. Again, we see that for GSM8K, at max\n\n![img-9.jpeg](img-9.jpeg)\n\n![img-10.jpeg](img-10.jpeg)\nFig. 6: Energy per output token estimates of LLaMA 65B across batch sizes of 64/128/256/512 and 8/16/32 shards for max generation length 512: inference energy estimates on Alpaca and GSM8K on log-scale. Color indicates batch size.\n\n![img-11.jpeg](img-11.jpeg)\n\n![img-12.jpeg](img-12.jpeg)\nFig. 7: Energy per output token estimates of LLaMA 65B across batch sizes of 64/128/256/512 and 8/16/32 shards for max generation length 1024: inference energy estimates on Alpaca and GSM8K on log-scale. Color indicates batch size.![img-13.jpeg](img-13.jpeg)\n\n![img-14.jpeg](img-14.jpeg)\nFig. 8: Energy per response estimates of LLaMA 65B across batch sizes of 64/128/256/512 and 8/16/32 shards for max generation length 512: inference energy estimates on Alpaca and GSM8K on log-scale. Color indica",
+        "img_path": "extracted_data/document_24/img-12.jpeg",
+        "img_description": "The bar graph shows the inference energy per decoded token for different batch sizes (64, 128, 256, 512) using LLaMA 65B at a maximum generation length of 1024, measured in joules. As the number of shards/GPUs (V100) increases from 8 to 32, the energy consumption rises for all batch sizes, with larger batch sizes consuming more energy. Notably, batch size 512 consistently exhibits the highest energy usage across the different GPU configurations."
+    },
+    {
+        "doc_path": "extracted_data/document_24/doc_24.md",
+        "ref_id": "samsi2024",
+        "ref_url": "https://arxiv.org/pdf/2310.03003",
+        "img_id": "img-13.jpeg",
+        "img_uid": "samsi2024img-13.jpeg",
+        "context": "utput token estimates of LLaMA 65B across batch sizes of 64/128/256/512 and 8/16/32 shards for max generation length 512: inference energy estimates on Alpaca and GSM8K on log-scale. Color indicates batch size.\n\n![img-11.jpeg](img-11.jpeg)\n\n![img-12.jpeg](img-12.jpeg)\nFig. 7: Energy per output token estimates of LLaMA 65B across batch sizes of 64/128/256/512 and 8/16/32 shards for max generation length 1024: inference energy estimates on Alpaca and GSM8K on log-scale. Color indicates batch size.![img-13.jpeg](img-13.jpeg)\n\n![img-14.jpeg](img-14.jpeg)\nFig. 8: Energy per response estimates of LLaMA 65B across batch sizes of 64/128/256/512 and 8/16/32 shards for max generation length 512: inference energy estimates on Alpaca and GSM8K on log-scale. Color indicates batch size.\n\ngeneration length 512, increasing the batch size while keeping the number of shards fixed at 16 is associated with a decrease in energy per response, which is consistent with what we observed in energy per tokens in the same setting.\n\n# E. Ef",
+        "img_path": "extracted_data/document_24/img-13.jpeg",
+        "img_description": "The bar graph displays the inference energy per response for the LLAMA 65B model with a maximum generation length of 512, plotted against the number of shards/GPUs (V100). Energy consumption in joules increases with higher batch sizes (64 to 512) and shards (8 to 32), with the highest energy usage observed at 32 shards across all batch sizes. The color-coded legend indicates energy increases for batch sizes 64 (blue), 128 (orange), 256 (green), and 512 (red)."
+    },
+    {
+        "doc_path": "extracted_data/document_24/doc_24.md",
+        "ref_id": "samsi2024",
+        "ref_url": "https://arxiv.org/pdf/2310.03003",
+        "img_id": "img-14.jpeg",
+        "img_uid": "samsi2024img-14.jpeg",
+        "context": "A 65B across batch sizes of 64/128/256/512 and 8/16/32 shards for max generation length 512: inference energy estimates on Alpaca and GSM8K on log-scale. Color indicates batch size.\n\n![img-11.jpeg](img-11.jpeg)\n\n![img-12.jpeg](img-12.jpeg)\nFig. 7: Energy per output token estimates of LLaMA 65B across batch sizes of 64/128/256/512 and 8/16/32 shards for max generation length 1024: inference energy estimates on Alpaca and GSM8K on log-scale. Color indicates batch size.![img-13.jpeg](img-13.jpeg)\n\n![img-14.jpeg](img-14.jpeg)\nFig. 8: Energy per response estimates of LLaMA 65B across batch sizes of 64/128/256/512 and 8/16/32 shards for max generation length 512: inference energy estimates on Alpaca and GSM8K on log-scale. Color indicates batch size.\n\ngeneration length 512, increasing the batch size while keeping the number of shards fixed at 16 is associated with a decrease in energy per response, which is consistent with what we observed in energy per tokens in the same setting.\n\n# E. Effects of GPU Power Capping on",
+        "img_path": "extracted_data/document_24/img-14.jpeg",
+        "img_description": "The bar graph illustrates the inference energy consumption in joules for the LaMA 65B model across different batch sizes (64, 128, 256, 512) and varying numbers of shards/GPUs (8, 16, 32) using V100 graphics processors. As the number of shards increases, the energy consumption rises significantly, with larger batch sizes consistently requiring more energy. The energy is displayed on a logarithmic scale, highlighting substantial differences in energy use between smaller and larger batch sizes."
+    },
+    {
+        "doc_path": "extracted_data/document_24/doc_24.md",
+        "ref_id": "samsi2024",
+        "ref_url": "https://arxiv.org/pdf/2310.03003",
+        "img_id": "img-15.jpeg",
+        "img_uid": "samsi2024img-15.jpeg",
+        "context": "s shown here are calculated relative to a power cap of 250W. For a  $30\\%$  reduction in power from 250W to 175W, the inference time increases by an average of  $6.7\\%$  for a corresponding average reduction in total energy by  $23.21\\%$ . However, a reduction in power cap to 150W results in a much more significant  $(19.49\\%)$  increase in average inference time. These results show that power capping as an energy savings intervention can be effective when applied appropriately. A static power\n\n![img-15.jpeg](img-15.jpeg)\n\n![img-16.jpeg](img-16.jpeg)\nFig. 9: Energy per response estimates of LLaMA 65B across batch sizes of 64/128/256/512 and 8/16/32 shards for max generation length 512: inference energy estimates on Alpaca and GSM8K on log-scale. Color indicates batch size.\n\ncap for all GPU workloads may not show the same effectiveness depending on the task and additional experimentation is required to make broader recommendations.\n\n|  Output length | Time % change |   | Energy % change |   | Token Rate % change ",
+        "img_path": "extracted_data/document_24/img-15.jpeg",
+        "img_description": "The bar chart displays the inference energy per response, measured in joules, for the LLaMA 65B model with a maximum generation length of 1024, across different batch sizes (64, 128, 256, 512) and GPU configurations (8, 16, 32 shards). As the number of shards increases, the energy consumption also increases, with noticeable differences between batch sizes. The data indicate that higher batch sizes generally consume more energy at all GPU configurations."
+    },
+    {
+        "doc_path": "extracted_data/document_24/doc_24.md",
+        "ref_id": "samsi2024",
+        "ref_url": "https://arxiv.org/pdf/2310.03003",
+        "img_id": "img-16.jpeg",
+        "img_uid": "samsi2024img-16.jpeg",
+        "context": "elative to a power cap of 250W. For a  $30\\%$  reduction in power from 250W to 175W, the inference time increases by an average of  $6.7\\%$  for a corresponding average reduction in total energy by  $23.21\\%$ . However, a reduction in power cap to 150W results in a much more significant  $(19.49\\%)$  increase in average inference time. These results show that power capping as an energy savings intervention can be effective when applied appropriately. A static power\n\n![img-15.jpeg](img-15.jpeg)\n\n![img-16.jpeg](img-16.jpeg)\nFig. 9: Energy per response estimates of LLaMA 65B across batch sizes of 64/128/256/512 and 8/16/32 shards for max generation length 512: inference energy estimates on Alpaca and GSM8K on log-scale. Color indicates batch size.\n\ncap for all GPU workloads may not show the same effectiveness depending on the task and additional experimentation is required to make broader recommendations.\n\n|  Output length | Time % change |   | Energy % change |   | Token Rate % change  |   |\n| --- | --- | --- | --",
+        "img_path": "extracted_data/document_24/img-16.jpeg",
+        "img_description": "The bar graph illustrates the inference energy consumption per response for the LLAMA 65B model, with varying batch sizes (64, 128, 256, 512) across different numbers of shards/GPUs (8, 16, 32), measured in joules. As the number of shards/GPUs increases, so does the energy consumption, with batch size 512 consistently showing the highest energy use at each shard/GPU level. The graph indicates a significant increase in energy consumption from 8 to 32 shards/GPUs, particularly evident for larger batch sizes."
+    }
+]

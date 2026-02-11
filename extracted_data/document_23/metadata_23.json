@@ -1,0 +1,62 @@
+[
+    {
+        "doc_path": "extracted_data/document_23/doc_23.md",
+        "ref_id": "rubei2025",
+        "ref_url": "https://arxiv.org/pdf/2501.05899",
+        "img_id": "img-0.jpeg",
+        "img_uid": "rubei2025img-0.jpeg",
+        "context": "The main contributions of this work are as follows:\n\n- We investigate the effects of several prompt engineering techniques and custom tags on the energy consumption of LLMs while performing code completion tasks;\n- Our research examines the trade-offs between energy consumption in terms of carbon emission, execution time, and generated code accuracy to investigate the balance between energy efficiency and model accuracy;\n- We provide a replication package to foster further research on the topic.![img-0.jpeg](img-0.jpeg)\nFig. 1: Carbon emissions of GPT-3 models as reported in [18].\n\n# II. BACKGROUND\n\nWhile measuring traditional software impact in terms of emissions is well-established [1], [7], assessing LLMs consumption is still challenging, as High-Performance Computing (HPC) clusters are often required to run the training process, which can last for weeks or even months. Therefore, measuring the energy consumption in terms of carbon emissions is particularly challenging in those environments due to several f",
+        "img_path": "extracted_data/document_23/img-0.jpeg",
+        "img_description": "The bar chart displays the carbon dioxide emissions in kilograms across various cloud service locations, with each bar representing a distinct data center region by name. The emissions range from approximately 0 to over 200,000 kg CO2, with the lowest emissions seen in \"GCP europe-west6\" and the highest in \"AWS EU (Frankfurt)\". The data highlights significant variability in CO2 output across different global data center locations."
+    },
+    {
+        "doc_path": "extracted_data/document_23/doc_23.md",
+        "ref_id": "rubei2025",
+        "ref_url": "https://arxiv.org/pdf/2501.05899",
+        "img_id": "img-1.jpeg",
+        "img_uid": "rubei2025img-1.jpeg",
+        "context": "pact on accuracy. In this paper, we leverage quantization alongside PETs to minimize the computational cost while maintaining performance in code-related tasks.\n\nWhile developing a comprehensive methodology for measuring LLM energy consumption is beyond this paper's scope, we focus on reducing these emissions through efficient PETs. By utilizing custom tags, we aim to lower energy consumption in LLMs used for code-related tasks, offering an approach that balances sustainability with performance.![img-1.jpeg](img-1.jpeg)\nFig. 2: Workflow of the performed experiments.\n\n# III. PERFORMED EXPERIMENTS\n\nFigure 2 depicts the workflow of the experiments we performed to answer the two research questions. Starting from the CodeXGLUE dataset [14]  $\\boxed{1}$ , prompt creator  $\\boxed{2}$  translates input prompts into a format that Llama 3 can understand, before augmenting them with tags that we specifically introduced  $\\boxed{3}$ . Afterward, the crafted prompts are used to query the LLM locally deployed  $\\boxed{4}$ .",
+        "img_path": "extracted_data/document_23/img-1.jpeg",
+        "img_description": "The diagram illustrates a process flow where the CodeXGlue dataset provides snippets to the PET Selector, which along with the Prompt Augmenter forms a Prompt Creator that sends a query to Llama 3. Llama 3 generates LLM answers while being monitored by Code Carbon Energy Measurer, which produces energy measurements. This setup highlights the integration of dataset processing, language model querying, and energy monitoring."
+    },
+    {
+        "doc_path": "extracted_data/document_23/doc_23.md",
+        "ref_id": "rubei2025",
+        "ref_url": "https://arxiv.org/pdf/2501.05899",
+        "img_id": "img-2.jpeg",
+        "img_uid": "rubei2025img-2.jpeg",
+        "context": "e-shot are omitted for  $C4$  because, with this configuration, the LLM produced uncontrolled responses. As a result, it was impossible to calculate edit distance accurately, as the outputs included both code and explanatory text. Despite lacking explicit role definitions, few-shots continued to yield satisfactory results.\n\nAnswer to  $\\mathbf{RQ}_2$ : Prompt customizations enhanced the accuracy of the tested PETs, showing a positive trend with increased exact matches and reduced edit distances.![img-2.jpeg](img-2.jpeg)\n(a) Energy Consumption in (kWh).\n\n![img-3.jpeg](img-3.jpeg)\n(b) Execution Time.\n\n![img-4.jpeg](img-4.jpeg)\n(a) Exact Match.\nFig. 4: LLMs accuracy with different prompt configurations.\n\n![img-5.jpeg](img-5.jpeg)\nFig. 3: Energy consumption with different prompt configurations.\n(b) Edit Distance.\n\n# V. RELATED WORK\n\nAssessing LLMs energy consumption: Jagannadharao et al. [36] investigate the usage of time-shifting technique to reduce the energy consumption of LLMs during long-running training sess",
+        "img_path": "extracted_data/document_23/img-2.jpeg",
+        "img_description": "The bar graph compares the energy consumption (KWh) across different methods\u2014ZeroShot, OneShot, and FewShot\u2014represented by blue, orange, and green bars respectively, for various categories labeled C0 to C4. The data shows that C4 has the highest energy consumption across all methods, with ZeroShot and OneShot having similar high values, while FewShot is consistently lower across other categories, except C4 where it remains significantly lesser. Each category demonstrates varying energy levels, with a noticeable increase from C0 to C4."
+    },
+    {
+        "doc_path": "extracted_data/document_23/doc_23.md",
+        "ref_id": "rubei2025",
+        "ref_url": "https://arxiv.org/pdf/2501.05899",
+        "img_id": "img-3.jpeg",
+        "img_uid": "rubei2025img-3.jpeg",
+        "context": "on, the LLM produced uncontrolled responses. As a result, it was impossible to calculate edit distance accurately, as the outputs included both code and explanatory text. Despite lacking explicit role definitions, few-shots continued to yield satisfactory results.\n\nAnswer to  $\\mathbf{RQ}_2$ : Prompt customizations enhanced the accuracy of the tested PETs, showing a positive trend with increased exact matches and reduced edit distances.![img-2.jpeg](img-2.jpeg)\n(a) Energy Consumption in (kWh).\n\n![img-3.jpeg](img-3.jpeg)\n(b) Execution Time.\n\n![img-4.jpeg](img-4.jpeg)\n(a) Exact Match.\nFig. 4: LLMs accuracy with different prompt configurations.\n\n![img-5.jpeg](img-5.jpeg)\nFig. 3: Energy consumption with different prompt configurations.\n(b) Edit Distance.\n\n# V. RELATED WORK\n\nAssessing LLMs energy consumption: Jagannadharao et al. [36] investigate the usage of time-shifting technique to reduce the energy consumption of LLMs during long-running training sessions. Concretely, the authors estimates the consumption of L",
+        "img_path": "extracted_data/document_23/img-3.jpeg",
+        "img_description": "The bar graph compares execution times in seconds across five different categories (C0 to C4) for three methods: ZeroShot, OneShot, and FewShot. ZeroShot consistently shows the highest execution time, particularly in category C4 where it peaks significantly. FewShot generally displays the lowest execution time across the categories, except in C0, where it is higher than OneShot."
+    },
+    {
+        "doc_path": "extracted_data/document_23/doc_23.md",
+        "ref_id": "rubei2025",
+        "ref_url": "https://arxiv.org/pdf/2501.05899",
+        "img_id": "img-4.jpeg",
+        "img_uid": "rubei2025img-4.jpeg",
+        "context": " a result, it was impossible to calculate edit distance accurately, as the outputs included both code and explanatory text. Despite lacking explicit role definitions, few-shots continued to yield satisfactory results.\n\nAnswer to  $\\mathbf{RQ}_2$ : Prompt customizations enhanced the accuracy of the tested PETs, showing a positive trend with increased exact matches and reduced edit distances.![img-2.jpeg](img-2.jpeg)\n(a) Energy Consumption in (kWh).\n\n![img-3.jpeg](img-3.jpeg)\n(b) Execution Time.\n\n![img-4.jpeg](img-4.jpeg)\n(a) Exact Match.\nFig. 4: LLMs accuracy with different prompt configurations.\n\n![img-5.jpeg](img-5.jpeg)\nFig. 3: Energy consumption with different prompt configurations.\n(b) Edit Distance.\n\n# V. RELATED WORK\n\nAssessing LLMs energy consumption: Jagannadharao et al. [36] investigate the usage of time-shifting technique to reduce the energy consumption of LLMs during long-running training sessions. Concretely, the authors estimates the consumption of Llama model by pausing and resuming the training",
+        "img_path": "extracted_data/document_23/img-4.jpeg",
+        "img_description": "The bar graph compares the exact match absolute numbers of three models: ZeroShot, OneShot, and FewShot, across five categories (C0 to C4). FewShot consistently shows the highest performance across all categories, with ZeroShot showing the lowest in most cases. Categories C1 to C3 display the highest values for FewShot, peaking at around 140."
+    },
+    {
+        "doc_path": "extracted_data/document_23/doc_23.md",
+        "ref_id": "rubei2025",
+        "ref_url": "https://arxiv.org/pdf/2501.05899",
+        "img_id": "img-5.jpeg",
+        "img_uid": "rubei2025img-5.jpeg",
+        "context": "d explanatory text. Despite lacking explicit role definitions, few-shots continued to yield satisfactory results.\n\nAnswer to  $\\mathbf{RQ}_2$ : Prompt customizations enhanced the accuracy of the tested PETs, showing a positive trend with increased exact matches and reduced edit distances.![img-2.jpeg](img-2.jpeg)\n(a) Energy Consumption in (kWh).\n\n![img-3.jpeg](img-3.jpeg)\n(b) Execution Time.\n\n![img-4.jpeg](img-4.jpeg)\n(a) Exact Match.\nFig. 4: LLMs accuracy with different prompt configurations.\n\n![img-5.jpeg](img-5.jpeg)\nFig. 3: Energy consumption with different prompt configurations.\n(b) Edit Distance.\n\n# V. RELATED WORK\n\nAssessing LLMs energy consumption: Jagannadharao et al. [36] investigate the usage of time-shifting technique to reduce the energy consumption of LLMs during long-running training sessions. Concretely, the authors estimates the consumption of Llama model by pausing and resuming the training when the carbon emission is below a certain threshold. The results show that the proposed approach succ",
+        "img_path": "extracted_data/document_23/img-5.jpeg",
+        "img_description": "The bar graph displays the edit distance for concepts C0 to C4 using three methodologies: ZeroShot (blue), OneShot (orange), and FewShot (green). Notably, C0 and C4 exhibit the highest edit distances across all methodologies, with FewShot generally showing greater edit distance in these cases. ZeroShot, in contrast, consistently presents the lowest edit distances across most concepts."
+    }
+]

@@ -1,0 +1,32 @@
+[
+    {
+        "doc_path": "extracted_data/document_30/doc_30.md",
+        "ref_id": "wu2021b",
+        "ref_url": "https://arxiv.org/pdf/2108.06738",
+        "img_id": "img-0.jpeg",
+        "img_uid": "wu2021bimg-0.jpeg",
+        "context": "pressive ILP scaling: most notably, in-order vs. out-of-order execution [Tomasulo, 1967, Smith, 1982a, Hwu and Patt, 1986], branch predictors [Smith, 1981, Lee and Smith, 1984, Pnevmatikatos et al., 1993, Yeh et al., 1993, Jimenez and Lin, 2001], caches [Smith, 1982b, Hill, 1988, Przybylski et al., 1989, Jouppi, 1990], prefetchers [Baer and Chen, 1991, Fu et al., 1992, Falsafi and Wenisch, 2014], single vs. simultaneous multithreading [Tullsen et al., 1995, 1996, Nemirovsky and Tullsen, 2013].\n\n![img-0.jpeg](img-0.jpeg)\nFigure 1: PUE of hyperscalar datacenters, such as Google's, has improved from 1.21 (2008) to 1.10 (2021) [Google, a] whereas the PUE of Facebook datacenters is 1.10 (2020) [Facebook] and the average PUE for a typical data center in 2020 is 1.58 [Lawrence, 2019, 2020].\n\nIn the 2000s, microprocessors faced two significant challenges: the memory wall [Wulf and McKee, 1996] and the power wall [Dennard et al., 1974, Bohr, 2007]. While processor frequencies improved with Moore's law scaling, memory l",
+        "img_path": "extracted_data/document_30/img-0.jpeg",
+        "img_description": "The graph shows the Power Usage Effectiveness (PUE) of hyperscalar datacenters for Google, Facebook, and the industry average from 2007 to 2021, with lower values indicating better efficiency. Google consistently achieved the lowest PUE, stabilizing slightly above 1.0 by 2014, while Facebook's PUE closely follows, flattening around 1.1 by 2015. The industry average started at 1.6 in 2007 and decreased to about 1.4 by 2013 before slightly increasing again, indicating overall efficiency improvements across the years."
+    },
+    {
+        "doc_path": "extracted_data/document_30/doc_30.md",
+        "ref_id": "wu2021b",
+        "ref_url": "https://arxiv.org/pdf/2108.06738",
+        "img_id": "img-1.jpeg",
+        "img_uid": "wu2021bimg-1.jpeg",
+        "context": " global electricity, water, and natural resources, leading to paramount carbon and environmental footprint [Jain and Wullert, 2002, Strubell et al., 2019, Manne, 2020, Wu and Gupta, 2021, Gupta et al., 2021, Crawford et al.,\n\n2021]. Digital technology is an integral part of human challenges from climate change to societal and political upheavals, a deliberate approach is required to technological innovation that centers on a positive societal impact while serving the needs of a market economy.\n\n![img-1.jpeg](img-1.jpeg)\nFigure 2: As a result of Moore's law scaling and architectural optimization, GPU theoretical performance (GFLOPs) per watt doubles every 3-4 years [Sun et al., 2019].\n\n# Looking to the Future\n\nPredicting the future is always difficult. How many of us could have predicted that the technology depicted in futuristic TV shows from five decades ago such as Star Trek would be commonplace today (cell phones, AI, voice recognition to name a few)? However, what is possible to foretell are the following:",
+        "img_path": "extracted_data/document_30/img-1.jpeg",
+        "img_description": "The scatter plot displays the performance of AMD (red) and NVIDIA (green) GPUs from 2008 to 2020 in terms of GFLOPS per Watt, with the bubble size indicating die size. Over time, there's a clear upward trend in performance, as indicated by the black arrow, showing improved energy efficiency for both vendors. NVIDIA GPUs generally exhibit a higher GFLOPS per Watt compared to AMD, especially after 2016."
+    },
+    {
+        "doc_path": "extracted_data/document_30/doc_30.md",
+        "ref_id": "wu2021b",
+        "ref_url": "https://arxiv.org/pdf/2108.06738",
+        "img_id": "img-2.jpeg",
+        "img_uid": "wu2021bimg-2.jpeg",
+        "context": " Siri or Alexa, enable people with limited sight or physical mobility to communicate via verbal commands. Individuals with hearing issues can use their Apple AirPods as basic hearing aids [Haselton, 2019], and people with average hearing can use AI-enabled voice assistants to eliminate background noise and focus on the conversation at hand [Nachmani et al., 2020]. For the sight impaired, virtual reality glasses are improving the eyesight of patients with degenerative eye disease [Fearn, 2020].\n\n![img-2.jpeg](img-2.jpeg)\nFigure 3: Population growth estimation based on United Nations medium growth projections [Roser, 2019].\n\nThe virtual office technology and work culture developed during the Covid pandemic will continue to benefit individuals with physical limitations who may be unable to travel to work. Similarly, with the largest population of young workers residing in Africa over the next decades, innovative virtual office technology that can create seamless cohesion across geographies and cultures will be cr",
+        "img_path": "extracted_data/document_30/img-2.jpeg",
+        "img_description": "The graph depicts the projected world population by region from 1950 to 2100, with Asia and Africa experiencing the most significant growth, Asia leading up to around 2060 and Africa surpassing Asia post-2070. Europe, North America, Latin America, and Oceania show relatively stable or modest increases in population. The total world population is expected to exceed 10 billion by 2100, with notable contributions from Africa and Asia."
+    }
+]

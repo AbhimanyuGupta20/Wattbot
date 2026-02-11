@@ -1,0 +1,242 @@
+[
+    {
+        "doc_path": "extracted_data/document_3/doc_3.md",
+        "ref_id": "chung2025",
+        "ref_url": "https://arxiv.org/pdf/2505.06371",
+        "img_id": "img-0.jpeg",
+        "img_uid": "chung2025img-0.jpeg",
+        "context": "eration compared to traditional optimization objectives like time and accuracy. How much energy does a model consume during inference? What is the right way for energy measurement and accounting during execution, let alone optimization? To bridge this gap, we launched the ML.ENERGY Leaderboard, the first inference energy leaderboard for modern generative AI models to the best of our knowledge. We have been gradually expanding the Leaderboard in multiple dimensions to now include (1) 40 different![img-0.jpeg](img-0.jpeg)\nFigure 1: Overview of the benchmarking and optimization flow of the ML_ENERGY Benchmark.\n\ngenerative AI model architectures across a wide range of tasks \u2013 including Large Language Model (LLM) chat and coding, Vision\u2013Language Model (VLM) visual chat, and text-to-image, text-to-video, and image-to-video generation using Diffusion models \u2013 and (2) more up-to-date hardware and software stacks following rapid advancements in each area.\n\nIn this paper, we share the design principles we have establish",
+        "img_path": "extracted_data/document_3/img-0.jpeg",
+        "img_description": "The image illustrates a process for optimizing configurations in a benchmarking system, involving models, datasets, configuration space, and latency targets. It details how different configurations of GPUs (H100 and A100) are evaluated for energy and latency, with the results feeding into an optimization step that identifies energy-optimal configurations based on a plotted energy-time graph. The process aims to create reusable measurement results and achieve an energy-optimal configuration."
+    },
+    {
+        "doc_path": "extracted_data/document_3/doc_3.md",
+        "ref_id": "chung2025",
+        "ref_url": "https://arxiv.org/pdf/2505.06371",
+        "img_id": "img-1.jpeg",
+        "img_uid": "chung2025img-1.jpeg",
+        "context": "ntial energy savings?\n\n#### Our approach.\n\nThe ML.ENERGY Benchmark allows users to provide computation latency constraints specific to their application scenario (e.g., LLM average Time Per Output Token), and will automatically recommend (1) the *energy-optimal* configuration that meets the latency constraints, and (2) the expected amount of energy savings. Due to the generalizability of our measurements (Section 2.1), these recommendations inform the optimization of a wide range of systems.\n\n##![img-1.jpeg](img-1.jpeg)\nFigure 2: LLM inference server and per-request energy accounting. The steady state is defined as the period when batch size is saturated at the server\u2019s maximum configured batch size, and measurements during the steady state represent that of a serving system during long-term deployment.\n\n## 3 The ML.ENERGY Benchmark\n\nThe ML.ENERGY Benchmark is a comprehensive tool for measuring and optimizing the inference energy consumption of generative AI models, built upon our core design principles (Secti",
+        "img_path": "extracted_data/document_3/img-1.jpeg",
+        "img_description": "The image illustrates the operation of an LLM Inference Server processing batches of up to 3,000 requests over time. It features two lines: one blue, representing waiting requests that initially peak then decline, and a red line depicting running requests that stabilize at 4. The graph demonstrates how the server maintains stable utilization during a steady state by managing incoming requests efficiently."
+    },
+    {
+        "doc_path": "extracted_data/document_3/doc_3.md",
+        "ref_id": "chung2025",
+        "ref_url": "https://arxiv.org/pdf/2505.06371",
+        "img_id": "img-2.jpeg",
+        "img_uid": "chung2025img-2.jpeg",
+        "context": "ies from our automated optimization recommendations (Section 4.3).\n\n### 4.1 Energy Measurements\n\n#### Significant variation in energy consumption.\n\nThe solid bars in Figure 3 (A100 GPUs in Figure 3(a) and H100 in Figure 3(b)) show the per-request energy consumption of various generative AI models across different tasks. First, energy consumption varies widely across models. In particular, Diffusion models generally consume energy that is on par with larger LLMs (e.g., Mistral Large (123B)). This![img-2.jpeg](img-2.jpeg)\n\n![img-3.jpeg](img-3.jpeg)\n(a) NVIDIA A100\n(b) NVIDIA H100\nFigure 3: Per-request energy consumption across various generative AI models. Black and orange represents text and vision modalities, respectively. Solid bars are energy measurements, whereas dimmed bars behind each solid bar are estimations based on the GPU's TDP, with numbers showing the ratio of overestimation. Note the log scale Y-axis.\n\n|  Model | TP | Max batch size  |   |   |   |   |\n| --- | --- | --- | --- | --- | --- | --- |\n| ",
+        "img_path": "extracted_data/document_3/img-2.jpeg",
+        "img_description": "The bar graph displays the energy consumption (U) of various models, with black bars showing traditional models that primarily consume more energy, and orange bars indicating newer models that consume less energy. Each bar has a numerical label above it indicating the model's energy usage compared to a baseline, with a logarithmic scale ranging from 10^2 to 10^5 on the y-axis. The models are labeled on the x-axis, showing a clear contrast in energy efficiency between older and more recent technologies."
+    },
+    {
+        "doc_path": "extracted_data/document_3/doc_3.md",
+        "ref_id": "chung2025",
+        "ref_url": "https://arxiv.org/pdf/2505.06371",
+        "img_id": "img-3.jpeg",
+        "img_uid": "chung2025img-3.jpeg",
+        "context": "mization recommendations (Section 4.3).\n\n### 4.1 Energy Measurements\n\n#### Significant variation in energy consumption.\n\nThe solid bars in Figure 3 (A100 GPUs in Figure 3(a) and H100 in Figure 3(b)) show the per-request energy consumption of various generative AI models across different tasks. First, energy consumption varies widely across models. In particular, Diffusion models generally consume energy that is on par with larger LLMs (e.g., Mistral Large (123B)). This![img-2.jpeg](img-2.jpeg)\n\n![img-3.jpeg](img-3.jpeg)\n(a) NVIDIA A100\n(b) NVIDIA H100\nFigure 3: Per-request energy consumption across various generative AI models. Black and orange represents text and vision modalities, respectively. Solid bars are energy measurements, whereas dimmed bars behind each solid bar are estimations based on the GPU's TDP, with numbers showing the ratio of overestimation. Note the log scale Y-axis.\n\n|  Model | TP | Max batch size  |   |   |   |   |\n| --- | --- | --- | --- | --- | --- | --- |\n|   |   |  4 | 8 | 16 | 32 | ",
+        "img_path": "extracted_data/document_3/img-3.jpeg",
+        "img_description": "The bar chart illustrates energy consumption values (in joules) for various AI models, categorized into three color codes: black, black with stripes, and orange. The left segment in black shows models like Gemini 2.2B consuming the most energy, with multipliers such as 3.2x above baseline, while the orange category on the right includes models like SVD XT indicating lower energy usage relative to the others, with multipliers like 1.1x. The striped section depicts mid-range energy users like Chameleon 3B, demonstrating a blend of efficiency and capacity."
+    },
+    {
+        "doc_path": "extracted_data/document_3/doc_3.md",
+        "ref_id": "chung2025",
+        "ref_url": "https://arxiv.org/pdf/2505.06371",
+        "img_id": "img-4.jpeg",
+        "img_uid": "chung2025img-4.jpeg",
+        "context": "nterest of space, we defer systems implications on energy consumption to Appendix B.\n\nLLM response morbidity and energy. In Figure 3, we can see that energy consumption varies even among LLMs of similar sizes. This is because different LLMs generate responses of different length even when given the same prompt. Such differences in *verbosity* can be non-trivial; for instance, Mistral Large's responses were on average  $36\\%$  longer than that of Mixtral  $8 \\times 7\\mathrm{B}$ . As the number of![img-4.jpeg](img-4.jpeg)\n(a) Energy vs. Batch Size\n\n![img-5.jpeg](img-5.jpeg)\n(b) Batch Size vs. Max Batch Size config\n\n![img-6.jpeg](img-6.jpeg)\nFigure 4: Phi-3 Mini and Small [26] benchmarked with the chat task on one NVIDIA A100 GPU.\n(a) Llama 3.1 70B [73]\nFigure 5: Power consumption of Llama 3.1 70B and Stable Diffusion 3 Medium models.\n\n![img-7.jpeg](img-7.jpeg)\n(b) Stable Diffusion 3 Medium [25]\n\noutput tokens equals the number of forward passes through the model, longer responses leads to a proportional increase",
+        "img_path": "extracted_data/document_3/img-4.jpeg",
+        "img_description": "The graph displays energy consumption (in Joules) versus batch size for two models, Phi 3 mini (3.8B) and Phi 3 small (7B). Both models show a decreasing trend in energy consumption as batch size increases, with the mini model starting slightly higher but converging with the small model after a batch size of 100. The lines remain close together across larger batch sizes, indicating similar energy efficiency patterns for both models."
+    },
+    {
+        "doc_path": "extracted_data/document_3/doc_3.md",
+        "ref_id": "chung2025",
+        "ref_url": "https://arxiv.org/pdf/2505.06371",
+        "img_id": "img-5.jpeg",
+        "img_uid": "chung2025img-5.jpeg",
+        "context": "ergy consumption to Appendix B.\n\nLLM response morbidity and energy. In Figure 3, we can see that energy consumption varies even among LLMs of similar sizes. This is because different LLMs generate responses of different length even when given the same prompt. Such differences in *verbosity* can be non-trivial; for instance, Mistral Large's responses were on average  $36\\%$  longer than that of Mixtral  $8 \\times 7\\mathrm{B}$ . As the number of![img-4.jpeg](img-4.jpeg)\n(a) Energy vs. Batch Size\n\n![img-5.jpeg](img-5.jpeg)\n(b) Batch Size vs. Max Batch Size config\n\n![img-6.jpeg](img-6.jpeg)\nFigure 4: Phi-3 Mini and Small [26] benchmarked with the chat task on one NVIDIA A100 GPU.\n(a) Llama 3.1 70B [73]\nFigure 5: Power consumption of Llama 3.1 70B and Stable Diffusion 3 Medium models.\n\n![img-7.jpeg](img-7.jpeg)\n(b) Stable Diffusion 3 Medium [25]\n\noutput tokens equals the number of forward passes through the model, longer responses leads to a proportional increase in energy consumption. As humans are known to prefer",
+        "img_path": "extracted_data/document_3/img-5.jpeg",
+        "img_description": "The graph compares the batch size configurations of two models, Phi 3 mini (3.8B) and Phi 3 small (7B), against their respective maximum batch sizes. As the maximum batch size configuration increases from 0 to 800, the Phi 3 small model shows a significant rise, peaking at over 400, while the Phi 3 mini model remains constant around 200. This illustrates the difference in scalability and performance capacity between the two models in terms of handling larger batch sizes."
+    },
+    {
+        "doc_path": "extracted_data/document_3/doc_3.md",
+        "ref_id": "chung2025",
+        "ref_url": "https://arxiv.org/pdf/2505.06371",
+        "img_id": "img-6.jpeg",
+        "img_uid": "chung2025img-6.jpeg",
+        "context": "In Figure 3, we can see that energy consumption varies even among LLMs of similar sizes. This is because different LLMs generate responses of different length even when given the same prompt. Such differences in *verbosity* can be non-trivial; for instance, Mistral Large's responses were on average  $36\\%$  longer than that of Mixtral  $8 \\times 7\\mathrm{B}$ . As the number of![img-4.jpeg](img-4.jpeg)\n(a) Energy vs. Batch Size\n\n![img-5.jpeg](img-5.jpeg)\n(b) Batch Size vs. Max Batch Size config\n\n![img-6.jpeg](img-6.jpeg)\nFigure 4: Phi-3 Mini and Small [26] benchmarked with the chat task on one NVIDIA A100 GPU.\n(a) Llama 3.1 70B [73]\nFigure 5: Power consumption of Llama 3.1 70B and Stable Diffusion 3 Medium models.\n\n![img-7.jpeg](img-7.jpeg)\n(b) Stable Diffusion 3 Medium [25]\n\noutput tokens equals the number of forward passes through the model, longer responses leads to a proportional increase in energy consumption. As humans are known to prefer longer responses [85], this potentially introduces a trade-off betw",
+        "img_path": "extracted_data/document_3/img-6.jpeg",
+        "img_description": "The graph illustrates the power draw in watts against batch size for two configurations: 8 x A100 GPUs and 4 x H100 GPUs. Both setups display relatively stable power consumption across varying batch sizes, with the 8 x A100 configuration consistently drawing more power than the 4 x H100. The graph also includes dashed lines indicating the maximum theoretical power draw (TDP) for both configurations."
+    },
+    {
+        "doc_path": "extracted_data/document_3/doc_3.md",
+        "ref_id": "chung2025",
+        "ref_url": "https://arxiv.org/pdf/2505.06371",
+        "img_id": "img-7.jpeg",
+        "img_uid": "chung2025img-7.jpeg",
+        "context": "can be non-trivial; for instance, Mistral Large's responses were on average  $36\\%$  longer than that of Mixtral  $8 \\times 7\\mathrm{B}$ . As the number of![img-4.jpeg](img-4.jpeg)\n(a) Energy vs. Batch Size\n\n![img-5.jpeg](img-5.jpeg)\n(b) Batch Size vs. Max Batch Size config\n\n![img-6.jpeg](img-6.jpeg)\nFigure 4: Phi-3 Mini and Small [26] benchmarked with the chat task on one NVIDIA A100 GPU.\n(a) Llama 3.1 70B [73]\nFigure 5: Power consumption of Llama 3.1 70B and Stable Diffusion 3 Medium models.\n\n![img-7.jpeg](img-7.jpeg)\n(b) Stable Diffusion 3 Medium [25]\n\noutput tokens equals the number of forward passes through the model, longer responses leads to a proportional increase in energy consumption. As humans are known to prefer longer responses [85], this potentially introduces a trade-off between energy consumption and user satisfaction.\n\nThis is even more pronounced for reasoning models, which produce significantly more output tokens. Table 1 shows energy measurements for reasoning models on the GPQA dataset. Re",
+        "img_path": "extracted_data/document_3/img-7.jpeg",
+        "img_description": "The graph shows power draw (W) versus batch size for two different processors, A100 and H100. The A100 maintains a consistent power draw around 400W, while the H100 holds steady at around 700W across various batch sizes. Dashed lines indicate the maximum power draw (TDP) for each processor, with corresponding colors green for A100 and purple for H100."
+    },
+    {
+        "doc_path": "extracted_data/document_3/doc_3.md",
+        "ref_id": "chung2025",
+        "ref_url": "https://arxiv.org/pdf/2505.06371",
+        "img_id": "img-8.jpeg",
+        "img_uid": "chung2025img-8.jpeg",
+        "context": " maximum. This is because LLM decoding is characterized by low compute-intensity, meaning that the number of arithmetic operations (e.g., multiplication and addition) per byte of memory loaded is low [37, 58]. This leads to the GPU's computation throughput being bottlenecked by VRAM bandwidth and results in the GPU's computation units being underutilized, leading to low power draw. Appendix C dives deeper into power consumption with measurements for all models and GPU power breakdowns over time.![img-8.jpeg](img-8.jpeg)\n(a) Different Resolutions\n\n![img-9.jpeg](img-9.jpeg)\n(b) Varying Denoising Steps\n\n![img-10.jpeg](img-10.jpeg)\nFigure 6: Energy consumption of SDXL [61] and SDXL Turbo [7] on one NVIDIA A100 GPU.\n(a) Llama 3.1 8B [73]\nFigure 7: Time-energy Pareto frontiers constructed by the ML.ENERGY Benchmark.\n\n![img-11.jpeg](img-11.jpeg)\n(b) Stable Diffusion 2.1 [65]\n\nInference-time parameters and energy. Figure 6 shows the energy consumption of Stable Diffusion XL (SDXL) [61] and SDXL Turbo [7]. On the left,",
+        "img_path": "extracted_data/document_3/img-8.jpeg",
+        "img_description": "The graph shows energy consumption in joules plotted against batch size for two different configurations of SDXL: 1024x1024 (green) and 512x512 Turbo (purple). The SDXL (1024x1024) configuration maintains a higher and relatively consistent energy usage around 1000 J across various batch sizes. In contrast, the SDXL Turbo (512x512) configuration demonstrates significantly lower energy consumption, stabilizing below 500 J."
+    },
+    {
+        "doc_path": "extracted_data/document_3/doc_3.md",
+        "ref_id": "chung2025",
+        "ref_url": "https://arxiv.org/pdf/2505.06371",
+        "img_id": "img-9.jpeg",
+        "img_uid": "chung2025img-9.jpeg",
+        "context": "ed by low compute-intensity, meaning that the number of arithmetic operations (e.g., multiplication and addition) per byte of memory loaded is low [37, 58]. This leads to the GPU's computation throughput being bottlenecked by VRAM bandwidth and results in the GPU's computation units being underutilized, leading to low power draw. Appendix C dives deeper into power consumption with measurements for all models and GPU power breakdowns over time.![img-8.jpeg](img-8.jpeg)\n(a) Different Resolutions\n\n![img-9.jpeg](img-9.jpeg)\n(b) Varying Denoising Steps\n\n![img-10.jpeg](img-10.jpeg)\nFigure 6: Energy consumption of SDXL [61] and SDXL Turbo [7] on one NVIDIA A100 GPU.\n(a) Llama 3.1 8B [73]\nFigure 7: Time-energy Pareto frontiers constructed by the ML.ENERGY Benchmark.\n\n![img-11.jpeg](img-11.jpeg)\n(b) Stable Diffusion 2.1 [65]\n\nInference-time parameters and energy. Figure 6 shows the energy consumption of Stable Diffusion XL (SDXL) [61] and SDXL Turbo [7]. On the left, while SDXL and SDXL Turbo have identical model sizes",
+        "img_path": "extracted_data/document_3/img-9.jpeg",
+        "img_description": "The graph compares energy consumption in joules against the number of denoising steps for two methods: SXDL (1024x1024) and SDXL Turbo (512x512). The SXDL method shows a higher rate of energy consumption as the number of denoising steps increases, whereas the SDXL Turbo method demonstrates lower energy usage throughout. Both methods exhibit a linear trend in energy consumption relative to denoising steps, with SXDL consuming significantly more energy than SDXL Turbo."
+    },
+    {
+        "doc_path": "extracted_data/document_3/doc_3.md",
+        "ref_id": "chung2025",
+        "ref_url": "https://arxiv.org/pdf/2505.06371",
+        "img_id": "img-10.jpeg",
+        "img_uid": "chung2025img-10.jpeg",
+        "context": " arithmetic operations (e.g., multiplication and addition) per byte of memory loaded is low [37, 58]. This leads to the GPU's computation throughput being bottlenecked by VRAM bandwidth and results in the GPU's computation units being underutilized, leading to low power draw. Appendix C dives deeper into power consumption with measurements for all models and GPU power breakdowns over time.![img-8.jpeg](img-8.jpeg)\n(a) Different Resolutions\n\n![img-9.jpeg](img-9.jpeg)\n(b) Varying Denoising Steps\n\n![img-10.jpeg](img-10.jpeg)\nFigure 6: Energy consumption of SDXL [61] and SDXL Turbo [7] on one NVIDIA A100 GPU.\n(a) Llama 3.1 8B [73]\nFigure 7: Time-energy Pareto frontiers constructed by the ML.ENERGY Benchmark.\n\n![img-11.jpeg](img-11.jpeg)\n(b) Stable Diffusion 2.1 [65]\n\nInference-time parameters and energy. Figure 6 shows the energy consumption of Stable Diffusion XL (SDXL) [61] and SDXL Turbo [7]. On the left, while SDXL and SDXL Turbo have identical model sizes and architectures, their energy consumption is significa",
+        "img_path": "extracted_data/document_3/img-10.jpeg",
+        "img_description": "The graph depicts the energy consumption (in joules) versus the average time per output token (in seconds) for two different configurations, A100 and H100, where green and purple dots represent each respectively. The Pareto frontier is highlighted, showing the optimal trade-off points where energy consumption is minimized for a given time. The A100 configuration generally shows lower energy consumption for shorter output times compared to the H100 configuration."
+    },
+    {
+        "doc_path": "extracted_data/document_3/doc_3.md",
+        "ref_id": "chung2025",
+        "ref_url": "https://arxiv.org/pdf/2505.06371",
+        "img_id": "img-11.jpeg",
+        "img_uid": "chung2025img-11.jpeg",
+        "context": "utation units being underutilized, leading to low power draw. Appendix C dives deeper into power consumption with measurements for all models and GPU power breakdowns over time.![img-8.jpeg](img-8.jpeg)\n(a) Different Resolutions\n\n![img-9.jpeg](img-9.jpeg)\n(b) Varying Denoising Steps\n\n![img-10.jpeg](img-10.jpeg)\nFigure 6: Energy consumption of SDXL [61] and SDXL Turbo [7] on one NVIDIA A100 GPU.\n(a) Llama 3.1 8B [73]\nFigure 7: Time-energy Pareto frontiers constructed by the ML.ENERGY Benchmark.\n\n![img-11.jpeg](img-11.jpeg)\n(b) Stable Diffusion 2.1 [65]\n\nInference-time parameters and energy. Figure 6 shows the energy consumption of Stable Diffusion XL (SDXL) [61] and SDXL Turbo [7]. On the left, while SDXL and SDXL Turbo have identical model sizes and architectures, their energy consumption is significantly different. This is because SDXL Turbo is tuned to generate smaller resolution images  $(512\\times 512)$  than SDXL  $(1024\\times 1024)$ , which leads to different latent sizes and amounts of computation. On the",
+        "img_path": "extracted_data/document_3/img-11.jpeg",
+        "img_description": "The graph displays a comparison of energy consumption (in joules) versus generation latency (in seconds) for two systems, A100 and H100, illustrated by green and purple dots, respectively. The plot highlights a Pareto frontier indicating the trade-offs between the two metrics. The H100 system demonstrates lower energy consumption, with data points clustering along the Pareto frontier, whereas the A100 system shows a wider spread with higher energy usage."
+    },
+    {
+        "doc_path": "extracted_data/document_3/doc_3.md",
+        "ref_id": "chung2025",
+        "ref_url": "https://arxiv.org/pdf/2505.06371",
+        "img_id": "img-12.jpeg",
+        "img_uid": "chung2025img-12.jpeg",
+        "context": "g them back (or, restore). For LLM inference, there are two widely-used mechanisms for preemption: Recomputation and Swapping [39]. Recomputation simply drops all temporary request data or state on preemption and recomputes everything from scratch on restoration. On the other hand, Swapping moves the request state to the CPU's memory, and then returns it to the GPU on restoration. The best preemption mechanism depends on the computing hardware and software configuration and the LLM being served.![img-12.jpeg](img-12.jpeg)\nFigure 8: Energy consumption per generation while varying the maximum batch size for Mistral Nemo (12B). The LLM inference server's preemption mechanism is compared.\n\n![img-13.jpeg](img-13.jpeg)\nFigure 9: Energy consumption per generation while varying batch size for Llama 3.1 8B. The number of NVIDIA A100 GPUs used to run the same model is scaled up.\n\nFigure 8, we compare the energy consumption per generation of the two preemption mechanisms with the Mistral Nemo (12B) model by intentionally o",
+        "img_path": "extracted_data/document_3/img-12.jpeg",
+        "img_description": "The graph illustrates energy consumption in Joules against maximum batch size configuration, comparing two methods: Recomputation and Swapping. Energy consumption rapidly decreases for both methods up to a batch size of 250, after which it stabilizes, with Recomputation consistently consuming slightly more energy than Swapping. A dashed line at batch size 250 indicates a point where the server is overloaded."
+    },
+    {
+        "doc_path": "extracted_data/document_3/doc_3.md",
+        "ref_id": "chung2025",
+        "ref_url": "https://arxiv.org/pdf/2505.06371",
+        "img_id": "img-13.jpeg",
+        "img_uid": "chung2025img-13.jpeg",
+        "context": "on preemption and recomputes everything from scratch on restoration. On the other hand, Swapping moves the request state to the CPU's memory, and then returns it to the GPU on restoration. The best preemption mechanism depends on the computing hardware and software configuration and the LLM being served.![img-12.jpeg](img-12.jpeg)\nFigure 8: Energy consumption per generation while varying the maximum batch size for Mistral Nemo (12B). The LLM inference server's preemption mechanism is compared.\n\n![img-13.jpeg](img-13.jpeg)\nFigure 9: Energy consumption per generation while varying batch size for Llama 3.1 8B. The number of NVIDIA A100 GPUs used to run the same model is scaled up.\n\nFigure 8, we compare the energy consumption per generation of the two preemption mechanisms with the Mistral Nemo (12B) model by intentionally overloading the server with a high maximum batch size configuration and causing preemption. It can be seen that when the server is overloaded, Swapping consistently consumes less energy. This is b",
+        "img_path": "extracted_data/document_3/img-13.jpeg",
+        "img_description": "The graph depicts energy consumption (in joules) versus batch size for different numbers of GPUs (1, 2, 4, and 8). As the batch size increases, energy consumption decreases sharply for all GPU configurations initially, then levels off, with 8 GPUs consistently exhibiting the highest energy consumption. The colors represent each configuration: green for 1 GPU, purple for 2 GPUs, orange for 4 GPUs, and red for 8 GPUs."
+    },
+    {
+        "doc_path": "extracted_data/document_3/doc_3.md",
+        "ref_id": "chung2025",
+        "ref_url": "https://arxiv.org/pdf/2505.06371",
+        "img_id": "img-14.jpeg",
+        "img_uid": "chung2025img-14.jpeg",
+        "context": "d processed alongside decode iterations, improving GPU utilization and reducing the interference between long prefills and decode iterations [5]. For chunked prefetch, the max number of batched tokens is a key parameter that controls the chunk size. Table 5 shows the impact of this parameter on energy consumption.\n\nTable 5 shows that the more sequences or tokens you batch, the better the energy amortization you get and energy per generation decreases, and after a certain point, returns diminish.![img-14.jpeg](img-14.jpeg)\n(a) Llama 3.1 8B\n\n![img-15.jpeg](img-15.jpeg)\n(b) Llama 3.1 70B\n\n![img-16.jpeg](img-16.jpeg)\n(c) LLaVA 1.5 7B\n\n![img-17.jpeg](img-17.jpeg)\n(d) Stable Diffusion 3 Medium\n\n![img-18.jpeg](img-18.jpeg)\n(e) Stable Diffusion 2.1\nFigure 10: Power consumption of various models on A100 and H100 GPUs.\n\n![img-19.jpeg](img-19.jpeg)\n(f) Stable Video Diffusion\n\n# C Power Consumption Analysis\n\nFigure 10 shows the power consumption of various models on A100 and H100 GPUs. Figure 11 further shows the ratio of a",
+        "img_path": "extracted_data/document_3/img-14.jpeg",
+        "img_description": "The graph compares power draw in watts for two processors, A100 and H100, against batch size ranging from 0 to 1000. The A100 maintains a consistent power draw slightly below 200W across all batch sizes, while the H100 shows a gradual decrease from about 280W to just above 250W. Dashed lines indicate the maximum power draw (TDP) for H100 at 700W and A100 at 400W."
+    },
+    {
+        "doc_path": "extracted_data/document_3/doc_3.md",
+        "ref_id": "chung2025",
+        "ref_url": "https://arxiv.org/pdf/2505.06371",
+        "img_id": "img-15.jpeg",
+        "img_uid": "chung2025img-15.jpeg",
+        "context": "ving GPU utilization and reducing the interference between long prefills and decode iterations [5]. For chunked prefetch, the max number of batched tokens is a key parameter that controls the chunk size. Table 5 shows the impact of this parameter on energy consumption.\n\nTable 5 shows that the more sequences or tokens you batch, the better the energy amortization you get and energy per generation decreases, and after a certain point, returns diminish.![img-14.jpeg](img-14.jpeg)\n(a) Llama 3.1 8B\n\n![img-15.jpeg](img-15.jpeg)\n(b) Llama 3.1 70B\n\n![img-16.jpeg](img-16.jpeg)\n(c) LLaVA 1.5 7B\n\n![img-17.jpeg](img-17.jpeg)\n(d) Stable Diffusion 3 Medium\n\n![img-18.jpeg](img-18.jpeg)\n(e) Stable Diffusion 2.1\nFigure 10: Power consumption of various models on A100 and H100 GPUs.\n\n![img-19.jpeg](img-19.jpeg)\n(f) Stable Video Diffusion\n\n# C Power Consumption Analysis\n\nFigure 10 shows the power consumption of various models on A100 and H100 GPUs. Figure 11 further shows the ratio of a model's power consumption to the maximum GPU ",
+        "img_path": "extracted_data/document_3/img-15.jpeg",
+        "img_description": "The graph compares power draw in watts versus batch size for two GPU configurations: 8 x A100 and 4 x H100. Both configurations maintain a relatively stable power draw of around 1000W across increasing batch sizes from 0 to 1000, with the A100 slightly lower overall. The maximum power draw thresholds are indicated at 3200W for 8 x A100 and 3000W for 4 x H100."
+    },
+    {
+        "doc_path": "extracted_data/document_3/doc_3.md",
+        "ref_id": "chung2025",
+        "ref_url": "https://arxiv.org/pdf/2505.06371",
+        "img_id": "img-16.jpeg",
+        "img_uid": "chung2025img-16.jpeg",
+        "context": "nce between long prefills and decode iterations [5]. For chunked prefetch, the max number of batched tokens is a key parameter that controls the chunk size. Table 5 shows the impact of this parameter on energy consumption.\n\nTable 5 shows that the more sequences or tokens you batch, the better the energy amortization you get and energy per generation decreases, and after a certain point, returns diminish.![img-14.jpeg](img-14.jpeg)\n(a) Llama 3.1 8B\n\n![img-15.jpeg](img-15.jpeg)\n(b) Llama 3.1 70B\n\n![img-16.jpeg](img-16.jpeg)\n(c) LLaVA 1.5 7B\n\n![img-17.jpeg](img-17.jpeg)\n(d) Stable Diffusion 3 Medium\n\n![img-18.jpeg](img-18.jpeg)\n(e) Stable Diffusion 2.1\nFigure 10: Power consumption of various models on A100 and H100 GPUs.\n\n![img-19.jpeg](img-19.jpeg)\n(f) Stable Video Diffusion\n\n# C Power Consumption Analysis\n\nFigure 10 shows the power consumption of various models on A100 and H100 GPUs. Figure 11 further shows the ratio of a model's power consumption to the maximum GPU power draw across all models. Generally, LLMs a",
+        "img_path": "extracted_data/document_3/img-16.jpeg",
+        "img_description": "The graph compares power draw (in watts) versus batch size for the A100 and H100 GPUs. The A100, plotted in green, shows a steady increase in power consumption from approximately 200W to 220W as batch size increases from 32 to 128. The H100, plotted in purple, starts around 350W and slightly increases to just under 400W, both remaining under their respective thermal design power (TDP) limits."
+    },
+    {
+        "doc_path": "extracted_data/document_3/doc_3.md",
+        "ref_id": "chung2025",
+        "ref_url": "https://arxiv.org/pdf/2505.06371",
+        "img_id": "img-17.jpeg",
+        "img_uid": "chung2025img-17.jpeg",
+        "context": "s [5]. For chunked prefetch, the max number of batched tokens is a key parameter that controls the chunk size. Table 5 shows the impact of this parameter on energy consumption.\n\nTable 5 shows that the more sequences or tokens you batch, the better the energy amortization you get and energy per generation decreases, and after a certain point, returns diminish.![img-14.jpeg](img-14.jpeg)\n(a) Llama 3.1 8B\n\n![img-15.jpeg](img-15.jpeg)\n(b) Llama 3.1 70B\n\n![img-16.jpeg](img-16.jpeg)\n(c) LLaVA 1.5 7B\n\n![img-17.jpeg](img-17.jpeg)\n(d) Stable Diffusion 3 Medium\n\n![img-18.jpeg](img-18.jpeg)\n(e) Stable Diffusion 2.1\nFigure 10: Power consumption of various models on A100 and H100 GPUs.\n\n![img-19.jpeg](img-19.jpeg)\n(f) Stable Video Diffusion\n\n# C Power Consumption Analysis\n\nFigure 10 shows the power consumption of various models on A100 and H100 GPUs. Figure 11 further shows the ratio of a model's power consumption to the maximum GPU power draw across all models. Generally, LLMs and VLMs consume significantly less power than ",
+        "img_path": "extracted_data/document_3/img-17.jpeg",
+        "img_description": "The graph compares the power draw (W) of two GPU models, A100 and H100, across different batch sizes. The A100 maintains a consistent power draw around 400W, while the H100 remains steady near 700W. Both models show stable power usage across the batch sizes, marked by green and purple lines respectively, with dashed lines indicating their maximum power draw (TDP)."
+    },
+    {
+        "doc_path": "extracted_data/document_3/doc_3.md",
+        "ref_id": "chung2025",
+        "ref_url": "https://arxiv.org/pdf/2505.06371",
+        "img_id": "img-18.jpeg",
+        "img_uid": "chung2025img-18.jpeg",
+        "context": "ns is a key parameter that controls the chunk size. Table 5 shows the impact of this parameter on energy consumption.\n\nTable 5 shows that the more sequences or tokens you batch, the better the energy amortization you get and energy per generation decreases, and after a certain point, returns diminish.![img-14.jpeg](img-14.jpeg)\n(a) Llama 3.1 8B\n\n![img-15.jpeg](img-15.jpeg)\n(b) Llama 3.1 70B\n\n![img-16.jpeg](img-16.jpeg)\n(c) LLaVA 1.5 7B\n\n![img-17.jpeg](img-17.jpeg)\n(d) Stable Diffusion 3 Medium\n\n![img-18.jpeg](img-18.jpeg)\n(e) Stable Diffusion 2.1\nFigure 10: Power consumption of various models on A100 and H100 GPUs.\n\n![img-19.jpeg](img-19.jpeg)\n(f) Stable Video Diffusion\n\n# C Power Consumption Analysis\n\nFigure 10 shows the power consumption of various models on A100 and H100 GPUs. Figure 11 further shows the ratio of a model's power consumption to the maximum GPU power draw across all models. Generally, LLMs and VLMs consume significantly less power than the GPU's TDP because LLM decoding, the dominant operation ",
+        "img_path": "extracted_data/document_3/img-18.jpeg",
+        "img_description": "The graph displays power draw (in watts) versus batch size for two GPUs, A100 and H100, showcasing their thermal design power (TDP) at maximum power draw. The H100's power draw, represented in purple, starts around 600W and stabilizes near its TDP line as batch size increases, while the A100, shown in green, remains steady around 400W. Both GPUs stabilize quickly after a batch size of around 10, indicating their efficiency at various load levels."
+    },
+    {
+        "doc_path": "extracted_data/document_3/doc_3.md",
+        "ref_id": "chung2025",
+        "ref_url": "https://arxiv.org/pdf/2505.06371",
+        "img_id": "img-19.jpeg",
+        "img_uid": "chung2025img-19.jpeg",
+        "context": " 5 shows that the more sequences or tokens you batch, the better the energy amortization you get and energy per generation decreases, and after a certain point, returns diminish.![img-14.jpeg](img-14.jpeg)\n(a) Llama 3.1 8B\n\n![img-15.jpeg](img-15.jpeg)\n(b) Llama 3.1 70B\n\n![img-16.jpeg](img-16.jpeg)\n(c) LLaVA 1.5 7B\n\n![img-17.jpeg](img-17.jpeg)\n(d) Stable Diffusion 3 Medium\n\n![img-18.jpeg](img-18.jpeg)\n(e) Stable Diffusion 2.1\nFigure 10: Power consumption of various models on A100 and H100 GPUs.\n\n![img-19.jpeg](img-19.jpeg)\n(f) Stable Video Diffusion\n\n# C Power Consumption Analysis\n\nFigure 10 shows the power consumption of various models on A100 and H100 GPUs. Figure 11 further shows the ratio of a model's power consumption to the maximum GPU power draw across all models. Generally, LLMs and VLMs consume significantly less power than the GPU's TDP because LLM decoding, the dominant operation for LLM serving, is memory-intensive and does not fully utilize the GPU's compute resources. VLMs show slightly higher power",
+        "img_path": "extracted_data/document_3/img-19.jpeg",
+        "img_description": "The graph compares the power draw (in watts) of two processors, A100 and H100, across different batch sizes from 1 to 3. The A100 maintains a consistent power draw just below 400 W, while the H100 maintains a higher power draw around 700 W. The graph indicates that both processors have a stable power draw across the tested batch sizes."
+    },
+    {
+        "doc_path": "extracted_data/document_3/doc_3.md",
+        "ref_id": "chung2025",
+        "ref_url": "https://arxiv.org/pdf/2505.06371",
+        "img_id": "img-20.jpeg",
+        "img_uid": "chung2025img-20.jpeg",
+        "context": "ration: Prefill and Decode. Prefill happens once at the beginning of a request to digest the input prompt, which is then followed by hundreds to thousands of Decode phases, each of which generates one output token. Importantly, Prefill has high compute-intensity (and also high power draw) because it needs to digest the whole input prompt, whereas Decode has low compute-intensity (and low power draw) as it does not entail very much computation. With this, we can first understand the initial spike![img-20.jpeg](img-20.jpeg)\n\n![img-21.jpeg](img-21.jpeg)\n(a) NVIDIA A100\n(b) NVIDIA H100\n\n![img-22.jpeg](img-22.jpeg)\nFigure 11: Ratio of power consumption to maximum GPU power draw across various models.\n\n![img-23.jpeg](img-23.jpeg)\n(a) Llama 3.1 8B\n(b) Stable Video Diffusion XT\nFigure 12: GPU power draw breakdown over time on one NVIDIA H100 GPU. \"Entire GPU\" and \"Only VRAM\" (memory) were measured, and the two were subtracted to derive \"Entire GPU excluding VRAM.\"\n\nin power draw \u2013 when the benchmark begins, the server b",
+        "img_path": "extracted_data/document_3/img-20.jpeg",
+        "img_description": "The bar graph displays average power draw as a fraction of maximum power across various models, categorized into three groups with black, striped, and orange bars. The black bars represent models like \"Llama 2 7B\" and \"Code Llama 34B,\" showing moderate power use. The striped and orange bars, exemplified by \"LLaMA 1.5 13B\" and \"SDXL,\" indicate a higher power draw nearing maximum levels."
+    },
+    {
+        "doc_path": "extracted_data/document_3/doc_3.md",
+        "ref_id": "chung2025",
+        "ref_url": "https://arxiv.org/pdf/2505.06371",
+        "img_id": "img-21.jpeg",
+        "img_uid": "chung2025img-21.jpeg",
+        "context": "refill happens once at the beginning of a request to digest the input prompt, which is then followed by hundreds to thousands of Decode phases, each of which generates one output token. Importantly, Prefill has high compute-intensity (and also high power draw) because it needs to digest the whole input prompt, whereas Decode has low compute-intensity (and low power draw) as it does not entail very much computation. With this, we can first understand the initial spike![img-20.jpeg](img-20.jpeg)\n\n![img-21.jpeg](img-21.jpeg)\n(a) NVIDIA A100\n(b) NVIDIA H100\n\n![img-22.jpeg](img-22.jpeg)\nFigure 11: Ratio of power consumption to maximum GPU power draw across various models.\n\n![img-23.jpeg](img-23.jpeg)\n(a) Llama 3.1 8B\n(b) Stable Video Diffusion XT\nFigure 12: GPU power draw breakdown over time on one NVIDIA H100 GPU. \"Entire GPU\" and \"Only VRAM\" (memory) were measured, and the two were subtracted to derive \"Entire GPU excluding VRAM.\"\n\nin power draw \u2013 when the benchmark begins, the server begins admitting new requests,",
+        "img_path": "extracted_data/document_3/img-21.jpeg",
+        "img_description": "The bar graph displays the average power consumption as a fraction of maximum power for various models, with black bars representing models from \"Gemini\" to \"Chameleon,\" and orange bars indicating those from \"SDXL\" onwards. Each model is labeled on the x-axis, showcasing a transition from black to orange bars, with the latter group generally nearing the maximum power draw threshold. The dashed line signifies the maximum power draw, highlighting that the orange-labeled models operate closer to this limit compared to the black-labeled ones."
+    },
+    {
+        "doc_path": "extracted_data/document_3/doc_3.md",
+        "ref_id": "chung2025",
+        "ref_url": "https://arxiv.org/pdf/2505.06371",
+        "img_id": "img-22.jpeg",
+        "img_uid": "chung2025img-22.jpeg",
+        "context": "he input prompt, which is then followed by hundreds to thousands of Decode phases, each of which generates one output token. Importantly, Prefill has high compute-intensity (and also high power draw) because it needs to digest the whole input prompt, whereas Decode has low compute-intensity (and low power draw) as it does not entail very much computation. With this, we can first understand the initial spike![img-20.jpeg](img-20.jpeg)\n\n![img-21.jpeg](img-21.jpeg)\n(a) NVIDIA A100\n(b) NVIDIA H100\n\n![img-22.jpeg](img-22.jpeg)\nFigure 11: Ratio of power consumption to maximum GPU power draw across various models.\n\n![img-23.jpeg](img-23.jpeg)\n(a) Llama 3.1 8B\n(b) Stable Video Diffusion XT\nFigure 12: GPU power draw breakdown over time on one NVIDIA H100 GPU. \"Entire GPU\" and \"Only VRAM\" (memory) were measured, and the two were subtracted to derive \"Entire GPU excluding VRAM.\"\n\nin power draw \u2013 when the benchmark begins, the server begins admitting new requests, creating a short period where numerous Prefills are executed",
+        "img_path": "extracted_data/document_3/img-22.jpeg",
+        "img_description": "The graph illustrates the power draw (in watts) over time (in seconds) for three components: the entire GPU, only VRAM, and the GPU excluding VRAM, with a TDP limit marked at 700W. The entire GPU starts with a high peak, stabilizes, and fluctuates more significantly than the VRAM, which remains relatively constant. The GPU excluding VRAM follows a similar pattern to the entire GPU but with lower power draw values."
+    },
+    {
+        "doc_path": "extracted_data/document_3/doc_3.md",
+        "ref_id": "chung2025",
+        "ref_url": "https://arxiv.org/pdf/2505.06371",
+        "img_id": "img-23.jpeg",
+        "img_uid": "chung2025img-23.jpeg",
+        "context": "t token. Importantly, Prefill has high compute-intensity (and also high power draw) because it needs to digest the whole input prompt, whereas Decode has low compute-intensity (and low power draw) as it does not entail very much computation. With this, we can first understand the initial spike![img-20.jpeg](img-20.jpeg)\n\n![img-21.jpeg](img-21.jpeg)\n(a) NVIDIA A100\n(b) NVIDIA H100\n\n![img-22.jpeg](img-22.jpeg)\nFigure 11: Ratio of power consumption to maximum GPU power draw across various models.\n\n![img-23.jpeg](img-23.jpeg)\n(a) Llama 3.1 8B\n(b) Stable Video Diffusion XT\nFigure 12: GPU power draw breakdown over time on one NVIDIA H100 GPU. \"Entire GPU\" and \"Only VRAM\" (memory) were measured, and the two were subtracted to derive \"Entire GPU excluding VRAM.\"\n\nin power draw \u2013 when the benchmark begins, the server begins admitting new requests, creating a short period where numerous Prefills are executed back-to-back, leading to high power draw. After the initial spike, power draw repeats a periodic fluctuation. This ",
+        "img_path": "extracted_data/document_3/img-23.jpeg",
+        "img_description": "The graph shows the power draw (in watts) of an H100 GPU over 300 seconds, with separate lines for the entire GPU, only VRAM, and the GPU excluding VRAM. The power draw for the entire GPU fluctuates around 700W, peaking periodically, while the VRAM consistently uses significantly less power, remaining under 100W. The GPU excluding VRAM maintains a nearly constant power draw between 500W and 600W, showing intermittent dips."
+    }
+]

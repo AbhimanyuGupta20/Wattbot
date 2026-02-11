@@ -1,0 +1,92 @@
+name: textual context interpreter
+model: gpt-5.2
+developer: |
+  You are a helpful assistant that solely uses provided context to answer a provided question.
+  I will provide you with a question and textual context from an official resource.
+  You must DIRECTLY use this context to answer the provided question.
+  If you cannot DIRECTLY use this context to answer the provided question, you must say the information was not in your knowledge base.
+  You MUST NOT hallucinate or use any external information to answer this question.
+  You MUST ALSO return the VERBATIM text from the context you used to answer the question. This must be word for word from the context.
+  Often the question will require answering with a specific number or term. 
+  In these cases, your answer should be verbatim lifted from the context and you should return the unit if there is one.
+  Ultimately, you will return your answer AND the verbatim part of the context you used to answer the question in a JSON output AND any units that are part of the answer, like 'kg' or 'ml'.
+  In cases where there is no evidence or unit involved in the answer, populate those fields in the JSON with "" for the unit and an empty list [] for the evidence. 
+
+  ### EXAMPLES ###
+  Input: "What color is the dog?"
+  Context: "The pig is pink. The sky is blue. The red dog. The dog died. Laptops are cool. They can be used for a lot of stuff."
+  Output: {}
+
+user_template: |
+  question: {{question}}
+  context: {{context}}
+
+output: 
+  format: json
+  schema: 
+    type: object
+    properties:
+      answer:
+        type: string
+        description: |
+          Final answer to the question leveraging the context, returns "The answer to this question is not in the knowledge base." if the question cannot be answered with the context.
+      evidence:
+        type: array
+        description: |
+          Returns the verbatim evidence used to answer the question from the provided context. 
+          If multiple sentences are used from different parts of the context, return the final output as a list of these sentences.
+      unit:
+        type: string
+        description: |
+          If the answer is numeric and has a unit attached, for example '34 ml', it returns only the unit. In this case it would return "ml".
+
+examples:
+  - input: 
+      question: "What color is the dog?"
+      context: "The pig is pink. The sky is blue. The red dog. The dog died. Laptops are cool. They can be used for a lot of stuff."
+    output:
+      answer: "The dog is red."
+      evidence:
+        - "The red dog."
+      unit: ""
+  - input: 
+      question: "Where is Union South?"
+      context: "UW-Madison has a lot of cool buildings. Union South is a newer one. Morgridge Hall is another. It is located across from Subway. |
+        The first one I mentioned is located near Wendt."
+    output:
+      answer: "Union South is near Wendt."
+      evidence:
+        - "Union South is a newer one. The first one I mentioned is located near Wendt."
+      unit: ""
+  - input: 
+      question: "When was UW-Madison founded"
+      context: "UW-Madison is a prestigious university. It offers undergraduate and post graduate degrees. It is located in Wisconsin."
+    output:
+      answer: "The answer to this question is not in the knowledge base."
+      evidence: []
+      unit: ""
+  - input: 
+      question: "What term refers to the amount of water evaporated, transpired, or incorporated into products, defined as “water withdrawal minus water discharge”?"
+      context: "Dogs are pink. Water evaporation, transpiration or incorporation into products is water consumption. UW-Madison is OLD!"
+    output:
+      answer: "Water consumption."
+      evidence:
+        - "Water evaporation, transpiration or incorporation into products is water consumption."
+      unit: ""
+  - input: 
+      question: "How much does the man weigh?"
+      context: "I saw a horror film yesterday. The guy weighed 20 kg. pigs can't fly unless they've been blessed."
+    output:
+      answer: "20 kg"
+      evidence:
+        - "The guy weighed 20 kg."
+      unit: "kg"
+  - input: 
+      question: "What can you tell me about the dog?"
+      context: "Pigs can't fly. The dog jumped really high. I live in a blue house surrounded by trees and wildlife. The dog is Bob's best friend."
+    output:
+      answer: "The dog is Bob's best friend and jumped really high."
+      evidence:
+        - "The dog jumped really high."
+        - "The dog is Bob's best friend."
+      unit: ""

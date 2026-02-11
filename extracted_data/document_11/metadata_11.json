@@ -1,0 +1,202 @@
+[
+    {
+        "doc_path": "extracted_data/document_11/doc_11.md",
+        "ref_id": "jegham2025",
+        "ref_url": "https://arxiv.org/pdf/2505.09598",
+        "img_id": "img-0.jpeg",
+        "img_uid": "jegham2025img-0.jpeg",
+        "context": " H100 and A100.\n\n|  Class | GPU Count | DGPU (H100) | DGPU (A100) | UGPU total (H100) | UGPU total (A100) | Unon-GPU total  |\n| --- | --- | --- | --- | --- | --- | --- |\n|  Nano | 1 | 35\u201365% | 80\u201390% | 0.55\u20131.00% | 1.25\u20131.5% | 0.87%  |\n|  Micro | 1 | 50\u201380% | 90\u2013100% | 0.75\u20131.25% | 1.5\u20131.6% | 0.87%  |\n|  Small | 2 | 55\u201380% | N/A | 1.70\u20132.50% | N/A | 1.6%  |\n|  Medium | 4 | 50\u201370% | 100\u2013110% | 3.00\u20134.50% | 6.25\u20137% | 3.125%  |\n|  Large | 8 | 45\u201360% | 100\u2013120% | 5.50\u20137.50% | 12.5\u201315.0% | 6.25%  |\n\n![img-0.jpeg](img-0.jpeg)\nFigure 1: (Left) Mean energy consumption of GPT-4o and GPT-4o mini across providers and GPU types, measured by output size. (Right) Distribution of TPS (averaged across output sizes)\n\n![img-1.jpeg](img-1.jpeg)\n\n# 4.3.1 GPT-4, GPT-4 Turbo, and GPT-4o mini Hardware Estimation\n\nIn our experiment, we observed a performance discrepancy: GPT-4o mini showed significantly lower throughput and higher latency on OpenAI's API compared to Microsoft Azure under identical prompt settings, as shown in Figure ",
+        "img_path": "extracted_data/document_11/img-0.jpeg",
+        "img_description": "The bar chart displays the mean energy consumption in watt-hours for different models, providers, and GPUs, categorized by output sizes of 300, 1000, and 1500 tokens. Energy consumption increases with larger output sizes, with the 1500-token category showing the highest energy use across all configurations. Each token category features three bars, indicating comparisons across different models or providers."
+    },
+    {
+        "doc_path": "extracted_data/document_11/doc_11.md",
+        "ref_id": "jegham2025",
+        "ref_url": "https://arxiv.org/pdf/2505.09598",
+        "img_id": "img-1.jpeg",
+        "img_uid": "jegham2025img-1.jpeg",
+        "context": "0% | 1.25\u20131.5% | 0.87%  |\n|  Micro | 1 | 50\u201380% | 90\u2013100% | 0.75\u20131.25% | 1.5\u20131.6% | 0.87%  |\n|  Small | 2 | 55\u201380% | N/A | 1.70\u20132.50% | N/A | 1.6%  |\n|  Medium | 4 | 50\u201370% | 100\u2013110% | 3.00\u20134.50% | 6.25\u20137% | 3.125%  |\n|  Large | 8 | 45\u201360% | 100\u2013120% | 5.50\u20137.50% | 12.5\u201315.0% | 6.25%  |\n\n![img-0.jpeg](img-0.jpeg)\nFigure 1: (Left) Mean energy consumption of GPT-4o and GPT-4o mini across providers and GPU types, measured by output size. (Right) Distribution of TPS (averaged across output sizes)\n\n![img-1.jpeg](img-1.jpeg)\n\n# 4.3.1 GPT-4, GPT-4 Turbo, and GPT-4o mini Hardware Estimation\n\nIn our experiment, we observed a performance discrepancy: GPT-4o mini showed significantly lower throughput and higher latency on OpenAI's API compared to Microsoft Azure under identical prompt settings, as shown in Figure 1. Both variants also underperformed relative to OpenAI's GPT-4o, with  $60\\%$  and  $27\\%$  lower TPS, respectively. Given GPT-4o mini's smaller size and H200's architectural advantages, its performance would ",
+        "img_path": "extracted_data/document_11/img-1.jpeg",
+        "img_description": "The box plot graph displays the distribution of average tokens per second (TPS) across three models: OpenAI GPT-4o, OpenAI GPT-4o mini, and Microsoft Azure GPT-4o mini. OpenAI GPT-4o shows the highest median TPS and widest range, while OpenAI GPT-4o mini and Microsoft Azure GPT-4o mini have significantly lower and closer median TPS values with narrower distributions. The vertical lines indicate the variability in TPS for each model."
+    },
+    {
+        "doc_path": "extracted_data/document_11/doc_11.md",
+        "ref_id": "jegham2025",
+        "ref_url": "https://arxiv.org/pdf/2505.09598",
+        "img_id": "img-2.jpeg",
+        "img_uid": "jegham2025img-2.jpeg",
+        "context": "sustainability metric, and download the full dataset. Additionally, the dashboard tracks day-to-day changes in each model\u2019s footprint, visualizing time-series trends and the average in energy, water, and carbon metrics across data centers and hardware setups. It includes an extended list of models beyond those analyzed in this study and automatically incorporates new ones as they are released, allowing continuous monitoring of inference-phase sustainability and cross-model comparisons over time.![img-2.jpeg](img-2.jpeg)\n(a) Overview of the main dashboard displaying the energy consumption per model, latency, TPS, benchmark scores, and equivalent environmental impacts for an example model (GPT-5 minimal).\n\n![img-3.jpeg](img-3.jpeg)\n(b) Overview of the timeseries dashboard displaying average energy consumption per model, and the daily fluctuations of the selected model (Grok 4).\nFigure 2: Visual overview of the AI sustainability dashboard.\n\n# 5 Experimental Evaluation\n\nWe benchmark the environmental footprint of ",
+        "img_path": "extracted_data/document_11/img-2.jpeg",
+        "img_description": "The image displays a dashboard titled \"How Hungry is AI?\" featuring a comparative analysis of AI models based on carbon emissions (gCO2eq), latency, tokens-per-second (TPS), and environmental footprint equivalent. Metrics such as average carbon emissions for various models and sizes, as well as performance comparisons for GPT-3 across different conditions, are visualized through line graphs and bar charts. The sidebar includes options for adjusting parameters like company, query length, and the number of queries."
+    },
+    {
+        "doc_path": "extracted_data/document_11/doc_11.md",
+        "ref_id": "jegham2025",
+        "ref_url": "https://arxiv.org/pdf/2505.09598",
+        "img_id": "img-3.jpeg",
+        "img_uid": "jegham2025img-3.jpeg",
+        "context": "rics across data centers and hardware setups. It includes an extended list of models beyond those analyzed in this study and automatically incorporates new ones as they are released, allowing continuous monitoring of inference-phase sustainability and cross-model comparisons over time.![img-2.jpeg](img-2.jpeg)\n(a) Overview of the main dashboard displaying the energy consumption per model, latency, TPS, benchmark scores, and equivalent environmental impacts for an example model (GPT-5 minimal).\n\n![img-3.jpeg](img-3.jpeg)\n(b) Overview of the timeseries dashboard displaying average energy consumption per model, and the daily fluctuations of the selected model (Grok 4).\nFigure 2: Visual overview of the AI sustainability dashboard.\n\n# 5 Experimental Evaluation\n\nWe benchmark the environmental footprint of 30 LLMs across three modalities: Energy consumption, water usage, and carbon emissions, based on equations 2, 4, and 5, respectively. For the long-form query evaluation, GPT-4 and LLaMA-3 (8B and 70B) are excluded ",
+        "img_path": "extracted_data/document_11/img-3.jpeg",
+        "img_description": "The image displays a dashboard comparing the energy consumption of various AI models with two main visualizations: a bar chart on the left depicting the average energy consumption in watt-hours for different models and a line graph on the right showing the daily average energy consumption over time. The graphs suggest varying energy use across models and an upward trend in daily energy consumption. The layout includes filtering options for company, model size, and query length on the left sidebar."
+    },
+    {
+        "doc_path": "extracted_data/document_11/doc_11.md",
+        "ref_id": "jegham2025",
+        "ref_url": "https://arxiv.org/pdf/2505.09598",
+        "img_id": "img-4.jpeg",
+        "img_uid": "jegham2025img-4.jpeg",
+        "context": "nergy consumption per model, and the daily fluctuations of the selected model (Grok 4).\nFigure 2: Visual overview of the AI sustainability dashboard.\n\n# 5 Experimental Evaluation\n\nWe benchmark the environmental footprint of 30 LLMs across three modalities: Energy consumption, water usage, and carbon emissions, based on equations 2, 4, and 5, respectively. For the long-form query evaluation, GPT-4 and LLaMA-3 (8B and 70B) are excluded due to context window limitations.\n\n# 5.1 Energy Consumption\n\n![img-4.jpeg](img-4.jpeg)\nFigure 3: Energy consumption per model across three prompt sizes (Wh, log-scale).\n\nTable 4: Energy consumption (mean \u00b1 std dev) per model across three prompt sizes (Wh).\n\n|  Model | Energy Consumption (100 input-300 output) (Wh) | Energy Consumption (3h input-3h output) (Wh) | Energy Consumption (10h input-1.5h output) (Wh)  |\n| --- | --- | --- | --- |\n|  GPT-4.1 | 0.871 \u00b1 0.302 | 3.161 \u00b1 0515 | 4.833 \u00b1 0.850  |\n|  GPT-4.1 mini | 0.450 \u00b1 0.081 | 1.545 \u00b1 0.211 | 2.122 \u00b1 0.108  |\n|  GPT-4.1 nano ",
+        "img_path": "extracted_data/document_11/img-4.jpeg",
+        "img_description": "The image displays three box plots illustrating energy consumption per model at different scale levels: 300, 1000, and 1500 words, measured in watt-hours (Wh). Each plot compares energy consumption across various models, categorized by companies marked in different colors (DeepMind, Anthropic, OpenAI, Google, Meta). The plots depict a general trend of decreasing energy consumption across models as the size or scale increases."
+    },
+    {
+        "doc_path": "extracted_data/document_11/doc_11.md",
+        "ref_id": "jegham2025",
+        "ref_url": "https://arxiv.org/pdf/2505.09598",
+        "img_id": "img-5.jpeg",
+        "img_uid": "jegham2025img-5.jpeg",
+        "context": "orld energy use. For context, a single long query to DeepSeek-R1 (DS) consumes about as much electricity as running a 65-inch LED television  $(\\approx 130\\mathrm{W})$  for roughly 13 minutes. GPT-4o and GPT-4o mini also show that infrastructure can outweigh model size in determining energy efficiency. For instance GPT-4o consumes around 2.875 Wh while GPT-4o mini's consumption is slightly higher at 3.098 Wh due to deployment on A100 hardware instead of H100s.\n\n# 5.2 Water and Carbon Emissions\n\n![img-5.jpeg](img-5.jpeg)\n\n![img-6.jpeg](img-6.jpeg)\n\n![img-7.jpeg](img-7.jpeg)\n\n![img-8.jpeg](img-8.jpeg)\n\n![img-9.jpeg](img-9.jpeg)\n(a) Water consumption per model across three prompt sizes (ml, log-scale).\n\n![img-10.jpeg](img-10.jpeg)\n(b) Carbon emissions per model across three prompt sizes  $(\\mathrm{gCO}_2\\mathrm{e},\\log$  -scale)\nFigure 4: Water consumption and carbon emissions per model.\n\nFigure 4 showcases the water consumption and carbon emissions of models across all prompt sizes. The most resource-efficient s",
+        "img_path": "extracted_data/document_11/img-5.jpeg",
+        "img_description": "The image is a box plot graph comparing water consumption per model (liters/kilogram live weight) across various companies represented by different colors in categories such as Overall, Anticipate, Developed, and Media. The x-axis lists the models, while the y-axis measures mean consumption per model, with the data showing variability among models and notable differences in consumption levels, with some models significantly higher in consumption than others. The plot highlights a decreasing trend from left to right, indicating variation in water usage efficiency."
+    },
+    {
+        "doc_path": "extracted_data/document_11/doc_11.md",
+        "ref_id": "jegham2025",
+        "ref_url": "https://arxiv.org/pdf/2505.09598",
+        "img_id": "img-6.jpeg",
+        "img_uid": "jegham2025img-6.jpeg",
+        "context": "t, a single long query to DeepSeek-R1 (DS) consumes about as much electricity as running a 65-inch LED television  $(\\approx 130\\mathrm{W})$  for roughly 13 minutes. GPT-4o and GPT-4o mini also show that infrastructure can outweigh model size in determining energy efficiency. For instance GPT-4o consumes around 2.875 Wh while GPT-4o mini's consumption is slightly higher at 3.098 Wh due to deployment on A100 hardware instead of H100s.\n\n# 5.2 Water and Carbon Emissions\n\n![img-5.jpeg](img-5.jpeg)\n\n![img-6.jpeg](img-6.jpeg)\n\n![img-7.jpeg](img-7.jpeg)\n\n![img-8.jpeg](img-8.jpeg)\n\n![img-9.jpeg](img-9.jpeg)\n(a) Water consumption per model across three prompt sizes (ml, log-scale).\n\n![img-10.jpeg](img-10.jpeg)\n(b) Carbon emissions per model across three prompt sizes  $(\\mathrm{gCO}_2\\mathrm{e},\\log$  -scale)\nFigure 4: Water consumption and carbon emissions per model.\n\nFigure 4 showcases the water consumption and carbon emissions of models across all prompt sizes. The most resource-efficient systems, such as LLaMA-3.2 1",
+        "img_path": "extracted_data/document_11/img-6.jpeg",
+        "img_description": "The image is a box plot comparing carbon emissions per model across different companies, with data segmented into two intervals: \"100 in \u2014 500 out\" and \"1000 in \u2014 1000 out,\" measured in \u00b5gCO2e. Each box plot represents a company, with distinct colors for CoreML, ONNX-RT, PyTorch, DeepJax, and a fifth unnamed company. The plots indicate that carbon emissions generally decrease from left to right, with CoreML and ONNX-RT showing higher emissions and DeepJax and the unnamed company exhibiting lower emissions."
+    },
+    {
+        "doc_path": "extracted_data/document_11/doc_11.md",
+        "ref_id": "jegham2025",
+        "ref_url": "https://arxiv.org/pdf/2505.09598",
+        "img_id": "img-7.jpeg",
+        "img_uid": "jegham2025img-7.jpeg",
+        "context": "eepSeek-R1 (DS) consumes about as much electricity as running a 65-inch LED television  $(\\approx 130\\mathrm{W})$  for roughly 13 minutes. GPT-4o and GPT-4o mini also show that infrastructure can outweigh model size in determining energy efficiency. For instance GPT-4o consumes around 2.875 Wh while GPT-4o mini's consumption is slightly higher at 3.098 Wh due to deployment on A100 hardware instead of H100s.\n\n# 5.2 Water and Carbon Emissions\n\n![img-5.jpeg](img-5.jpeg)\n\n![img-6.jpeg](img-6.jpeg)\n\n![img-7.jpeg](img-7.jpeg)\n\n![img-8.jpeg](img-8.jpeg)\n\n![img-9.jpeg](img-9.jpeg)\n(a) Water consumption per model across three prompt sizes (ml, log-scale).\n\n![img-10.jpeg](img-10.jpeg)\n(b) Carbon emissions per model across three prompt sizes  $(\\mathrm{gCO}_2\\mathrm{e},\\log$  -scale)\nFigure 4: Water consumption and carbon emissions per model.\n\nFigure 4 showcases the water consumption and carbon emissions of models across all prompt sizes. The most resource-efficient systems, such as LLaMA-3.2 1B, LLaMA-3.2 3B, LLaMA-3.1-",
+        "img_path": "extracted_data/document_11/img-7.jpeg",
+        "img_description": "The image shows a box plot comparing the mean gene expression (in log scale) across various conditions or treatments, represented on the x-axis, with each condition color-coded by category such as Control, Treated, or others. The y-axis indicates the expression levels, with a detailed spread of data points observed for each category, showcasing variability and potential outliers. A legend on the right clarifies the color coding for different companies or conditions involved in the study."
+    },
+    {
+        "doc_path": "extracted_data/document_11/doc_11.md",
+        "ref_id": "jegham2025",
+        "ref_url": "https://arxiv.org/pdf/2505.09598",
+        "img_id": "img-8.jpeg",
+        "img_uid": "jegham2025img-8.jpeg",
+        "context": "out as much electricity as running a 65-inch LED television  $(\\approx 130\\mathrm{W})$  for roughly 13 minutes. GPT-4o and GPT-4o mini also show that infrastructure can outweigh model size in determining energy efficiency. For instance GPT-4o consumes around 2.875 Wh while GPT-4o mini's consumption is slightly higher at 3.098 Wh due to deployment on A100 hardware instead of H100s.\n\n# 5.2 Water and Carbon Emissions\n\n![img-5.jpeg](img-5.jpeg)\n\n![img-6.jpeg](img-6.jpeg)\n\n![img-7.jpeg](img-7.jpeg)\n\n![img-8.jpeg](img-8.jpeg)\n\n![img-9.jpeg](img-9.jpeg)\n(a) Water consumption per model across three prompt sizes (ml, log-scale).\n\n![img-10.jpeg](img-10.jpeg)\n(b) Carbon emissions per model across three prompt sizes  $(\\mathrm{gCO}_2\\mathrm{e},\\log$  -scale)\nFigure 4: Water consumption and carbon emissions per model.\n\nFigure 4 showcases the water consumption and carbon emissions of models across all prompt sizes. The most resource-efficient systems, such as LLaMA-3.2 1B, LLaMA-3.2 3B, LLaMA-3.1-8B, LLaMA-3-8B, and GPT-4.1",
+        "img_path": "extracted_data/document_11/img-8.jpeg",
+        "img_description": "The image is a box plot graph comparing coarse bran consumption per capita in Europe across 23 countries, categorized by company (OpenAI, Anthropic, DeepMind, and Meta), with values displayed in liters. The x-axis lists the countries, while the y-axis measures consumption levels from 0 to 2.0 liters, showing a decreasing trend from left to right. Each box plot represents variance and distribution within each company's data for a specific country."
+    },
+    {
+        "doc_path": "extracted_data/document_11/doc_11.md",
+        "ref_id": "jegham2025",
+        "ref_url": "https://arxiv.org/pdf/2505.09598",
+        "img_id": "img-9.jpeg",
+        "img_uid": "jegham2025img-9.jpeg",
+        "context": "running a 65-inch LED television  $(\\approx 130\\mathrm{W})$  for roughly 13 minutes. GPT-4o and GPT-4o mini also show that infrastructure can outweigh model size in determining energy efficiency. For instance GPT-4o consumes around 2.875 Wh while GPT-4o mini's consumption is slightly higher at 3.098 Wh due to deployment on A100 hardware instead of H100s.\n\n# 5.2 Water and Carbon Emissions\n\n![img-5.jpeg](img-5.jpeg)\n\n![img-6.jpeg](img-6.jpeg)\n\n![img-7.jpeg](img-7.jpeg)\n\n![img-8.jpeg](img-8.jpeg)\n\n![img-9.jpeg](img-9.jpeg)\n(a) Water consumption per model across three prompt sizes (ml, log-scale).\n\n![img-10.jpeg](img-10.jpeg)\n(b) Carbon emissions per model across three prompt sizes  $(\\mathrm{gCO}_2\\mathrm{e},\\log$  -scale)\nFigure 4: Water consumption and carbon emissions per model.\n\nFigure 4 showcases the water consumption and carbon emissions of models across all prompt sizes. The most resource-efficient systems, such as LLaMA-3.2 1B, LLaMA-3.2 3B, LLaMA-3.1-8B, LLaMA-3-8B, and GPT-4.1 nano, emit less than  $0.3",
+        "img_path": "extracted_data/document_11/img-9.jpeg",
+        "img_description": "The image displays a box plot graph showing water consumption per model, measured in cubic meters, across various models labeled on the x-axis. The water consumption values are plotted on the y-axis, ranging from approximately 10 to 220 cubic meters, with different companies represented by color-coded boxes. The data shows a downward trend in water consumption as the model numbers increase from left to right."
+    },
+    {
+        "doc_path": "extracted_data/document_11/doc_11.md",
+        "ref_id": "jegham2025",
+        "ref_url": "https://arxiv.org/pdf/2505.09598",
+        "img_id": "img-10.jpeg",
+        "img_uid": "jegham2025img-10.jpeg",
+        "context": " mini also show that infrastructure can outweigh model size in determining energy efficiency. For instance GPT-4o consumes around 2.875 Wh while GPT-4o mini's consumption is slightly higher at 3.098 Wh due to deployment on A100 hardware instead of H100s.\n\n# 5.2 Water and Carbon Emissions\n\n![img-5.jpeg](img-5.jpeg)\n\n![img-6.jpeg](img-6.jpeg)\n\n![img-7.jpeg](img-7.jpeg)\n\n![img-8.jpeg](img-8.jpeg)\n\n![img-9.jpeg](img-9.jpeg)\n(a) Water consumption per model across three prompt sizes (ml, log-scale).\n\n![img-10.jpeg](img-10.jpeg)\n(b) Carbon emissions per model across three prompt sizes  $(\\mathrm{gCO}_2\\mathrm{e},\\log$  -scale)\nFigure 4: Water consumption and carbon emissions per model.\n\nFigure 4 showcases the water consumption and carbon emissions of models across all prompt sizes. The most resource-efficient systems, such as LLaMA-3.2 1B, LLaMA-3.2 3B, LLaMA-3.1-8B, LLaMA-3-8B, and GPT-4.1 nano, emit less than  $0.3\\mathrm{gCO}_2\\mathrm{e}$  and consume under  $4\\mathrm{mL}$  of water even for long-form prompts, demon",
+        "img_path": "extracted_data/document_11/img-10.jpeg",
+        "img_description": "The image displays a box plot comparing carbon emissions per model for various companies, with model names on the x-axis and carbon emissions (in 1000 kg CO2e) on the y-axis. The plot illustrates a general downward trend in emissions, with models from \"Delta\" and \"Omega\" appearing to produce lower emissions compared to others. Different colors represent emissions from four companies: A method, B method, C method, and D method, as indicated in the legend."
+    },
+    {
+        "doc_path": "extracted_data/document_11/doc_11.md",
+        "ref_id": "jegham2025",
+        "ref_url": "https://arxiv.org/pdf/2505.09598",
+        "img_id": "img-11.jpeg",
+        "img_uid": "jegham2025img-11.jpeg",
+        "context": " in their data centers, including higher PUE, suboptimal cooling technologies, and less efficient hardware.\n\nWhile these per-query values may seem modest when isolated, their impact becomes considerable at scale. A single model, such as GPT-4o, serving hundreds of millions of daily requests, can emit as much carbon as thousands of transatlantic flights and consume water equivalent to the annual drinking needs of millions of people. We revisit this scaling analysis in greater detail in Section 6.![img-11.jpeg](img-11.jpeg)\n\n![img-12.jpeg](img-12.jpeg)\n\n![img-13.jpeg](img-13.jpeg)\nFigure 5: (Top Left) Per-query and daily energy consumption of GPT-4o. (Top Right) Estimated total annual energy usage of GPT-4o in 2025. (Bottom Left) The estimated 2025 annual water consumption of GPT-4o. (Bottom Right) The estimated 2025 annual carbon emissions of GPT-4o.\n\n![img-14.jpeg](img-14.jpeg)\n\n# 5.3 Validation Against Public Disclosures\n\nPublic disclosures of inference-level energy and carbon data remain limited, but a few rec",
+        "img_path": "extracted_data/document_11/img-11.jpeg",
+        "img_description": "The bar graph displays the per-request and daily energy consumption of GPT-4o for various query types compared to web baselines, measured in watt-hours (Wh). A single Google search consumes the least energy, while charging two phones using Energy Star standards consumes the most at 10 Wh. The energy use of GPT-4o sessions increases with query length, with medium queries reaching 1.87 Wh and short daily sessions consuming up to 8.71 Wh."
+    },
+    {
+        "doc_path": "extracted_data/document_11/doc_11.md",
+        "ref_id": "jegham2025",
+        "ref_url": "https://arxiv.org/pdf/2505.09598",
+        "img_id": "img-12.jpeg",
+        "img_uid": "jegham2025img-12.jpeg",
+        "context": "ding higher PUE, suboptimal cooling technologies, and less efficient hardware.\n\nWhile these per-query values may seem modest when isolated, their impact becomes considerable at scale. A single model, such as GPT-4o, serving hundreds of millions of daily requests, can emit as much carbon as thousands of transatlantic flights and consume water equivalent to the annual drinking needs of millions of people. We revisit this scaling analysis in greater detail in Section 6.![img-11.jpeg](img-11.jpeg)\n\n![img-12.jpeg](img-12.jpeg)\n\n![img-13.jpeg](img-13.jpeg)\nFigure 5: (Top Left) Per-query and daily energy consumption of GPT-4o. (Top Right) Estimated total annual energy usage of GPT-4o in 2025. (Bottom Left) The estimated 2025 annual water consumption of GPT-4o. (Bottom Right) The estimated 2025 annual carbon emissions of GPT-4o.\n\n![img-14.jpeg](img-14.jpeg)\n\n# 5.3 Validation Against Public Disclosures\n\nPublic disclosures of inference-level energy and carbon data remain limited, but a few recent statements provide useful",
+        "img_path": "extracted_data/document_11/img-12.jpeg",
+        "img_description": "The bar graph compares the 2025 energy consumption of GPT-4o inference with real-world electricity usage in gigawatt-hours (GWh). It shows that the maximum energy consumption estimate for GPT-4o inference (463.27 GWh) exceeds the aggregate electricity usage of 35,000 residential units, 50 inpatient hospitals, and 325 universities, with values of 377.89 GWh, 381.55 GWh, and 390.65 GWh, respectively. The minimum estimate for GPT-4o inference is 301.51 GWh."
+    },
+    {
+        "doc_path": "extracted_data/document_11/doc_11.md",
+        "ref_id": "jegham2025",
+        "ref_url": "https://arxiv.org/pdf/2505.09598",
+        "img_id": "img-13.jpeg",
+        "img_uid": "jegham2025img-13.jpeg",
+        "context": "ooling technologies, and less efficient hardware.\n\nWhile these per-query values may seem modest when isolated, their impact becomes considerable at scale. A single model, such as GPT-4o, serving hundreds of millions of daily requests, can emit as much carbon as thousands of transatlantic flights and consume water equivalent to the annual drinking needs of millions of people. We revisit this scaling analysis in greater detail in Section 6.![img-11.jpeg](img-11.jpeg)\n\n![img-12.jpeg](img-12.jpeg)\n\n![img-13.jpeg](img-13.jpeg)\nFigure 5: (Top Left) Per-query and daily energy consumption of GPT-4o. (Top Right) Estimated total annual energy usage of GPT-4o in 2025. (Bottom Left) The estimated 2025 annual water consumption of GPT-4o. (Bottom Right) The estimated 2025 annual carbon emissions of GPT-4o.\n\n![img-14.jpeg](img-14.jpeg)\n\n# 5.3 Validation Against Public Disclosures\n\nPublic disclosures of inference-level energy and carbon data remain limited, but a few recent statements provide useful reference points for cross-v",
+        "img_path": "extracted_data/document_11/img-13.jpeg",
+        "img_description": "The bar graph compares the projected 2025 GPT-4o water consumption with real-world usage in million liters (ML). It features four bars representing the water usage of 500 Olympic swimming pools (1250.0 ML), annual drinking water of 1-200,000 people (1314.0 ML), and GPT-4o inference estimated minimum and maximum usage at 1335.0 ML and 1579.7 ML, respectively. The GPT-4o maximum estimate surpasses all other categories, indicating the highest water usage prediction."
+    },
+    {
+        "doc_path": "extracted_data/document_11/doc_11.md",
+        "ref_id": "jegham2025",
+        "ref_url": "https://arxiv.org/pdf/2505.09598",
+        "img_id": "img-14.jpeg",
+        "img_uid": "jegham2025img-14.jpeg",
+        "context": "ume water equivalent to the annual drinking needs of millions of people. We revisit this scaling analysis in greater detail in Section 6.![img-11.jpeg](img-11.jpeg)\n\n![img-12.jpeg](img-12.jpeg)\n\n![img-13.jpeg](img-13.jpeg)\nFigure 5: (Top Left) Per-query and daily energy consumption of GPT-4o. (Top Right) Estimated total annual energy usage of GPT-4o in 2025. (Bottom Left) The estimated 2025 annual water consumption of GPT-4o. (Bottom Right) The estimated 2025 annual carbon emissions of GPT-4o.\n\n![img-14.jpeg](img-14.jpeg)\n\n# 5.3 Validation Against Public Disclosures\n\nPublic disclosures of inference-level energy and carbon data remain limited, but a few recent statements provide useful reference points for cross-validation. In June 2025, OpenAI CEO Sam Altman reported that the default ChatGPT model consumed approximately 0.34 Wh per query [68]. Knowing that GPT-4o was the default deployment at that time, this estimate likely corresponds to GPT-4o-level inference. Our framework estimates 0.42 Wh (\u00b10.13 Wh) for a s",
+        "img_path": "extracted_data/document_11/img-14.jpeg",
+        "img_description": "The bar chart compares the estimated 2025 carbon emissions of GPT-4o inference, ranging from a minimum of 139,125 tons CO2e to a maximum of 163,441 tons CO2e, against real-world equivalents. These equivalents include emissions from 272 one-way flights from Boston to London (137,000 tons CO2e), 30,000 gasoline cars (138,000 tons CO2e), and carbon sequestration by 139,000 acres of forest (138,000 tons CO2e). The chart highlights the environmental impact of AI model inference relative to other common emissions sources."
+    },
+    {
+        "doc_path": "extracted_data/document_11/doc_11.md",
+        "ref_id": "jegham2025",
+        "ref_url": "https://arxiv.org/pdf/2505.09598",
+        "img_id": "img-15.jpeg",
+        "img_uid": "jegham2025img-15.jpeg",
+        "context": "able to the upper bounds observed among the most energy-intensive models analyzed in this study.\n\nThese results suggest that while adaptive routing optimizes computational resources by tailoring inference depth to task complexity, it also amplifies the environmental footprint of cognitively demanding prompts. This finding underscores the growing importance of prompt-level efficiency analysis for next-generation LLMs that blend lightweight and high-reasoning architectures within a unified system.![img-15.jpeg](img-15.jpeg)\nFigure 6: Energy consumption of GPT-5 across query lengths and reasoning modes\n\n# 8 Discussion and Policy Implications\n\n# 8.1 The Critical Role of Infrastructure in AI Sustainability\n\nOur findings indicate that infrastructure is a crucial determinant of AI inference sustainability. While model design enhances theoretical efficiency, real-world outcomes can substantially diverge based on deployment conditions and factors such as renewable energy usage and hardware efficiency. For instance, GPT-4",
+        "img_path": "extracted_data/document_11/img-15.jpeg",
+        "img_description": "The bar graph illustrates the average energy consumption (in Wh) of GPT-5 across different query lengths (Short, Medium, Long) and reasoning modes (Minimal, Low, Medium, High). Energy consumption increases significantly with both longer query lengths and higher reasoning modes, peaking at 33.8 Wh for long queries in high reasoning mode. Short queries with minimal reasoning have the lowest energy consumption at 0.67 Wh."
+    },
+    {
+        "doc_path": "extracted_data/document_11/doc_11.md",
+        "ref_id": "jegham2025",
+        "ref_url": "https://arxiv.org/pdf/2505.09598",
+        "img_id": "img-16.jpeg",
+        "img_uid": "jegham2025img-16.jpeg",
+        "context": "fic batch size used during inference can significantly influence energy consumption due to changes in GPU and system utilization.\n\nTo assess this effect, we present a sensitivity analysis using GPT-4o as a representative model. The only parameter varied is batch size, allowing us to examine how plausible batching configurations can significantly shift energy outcomes. This variation underscores the rationale behind our use of batch size 8 as a representative midpoint in real-world deployments.\n\n![img-16.jpeg](img-16.jpeg)\nFigure 7: GPT-4o per-prompt energy consumption (Wh) across batch sizes and prompt lengths.\n\n![img-17.jpeg](img-17.jpeg)\n\n![img-18.jpeg](img-18.jpeg)\n\nTable 5 summarizes the utilization rates applied to each batch size, following the same method used in our methodology section 4, which drives the corresponding per-prompt energy estimates shown in Figure 7.\n\nThe results show substantial efficiency gains with higher batching: moving from batch size 4 to 8 reduces energy per prompt by approximately",
+        "img_path": "extracted_data/document_11/img-16.jpeg",
+        "img_description": "The box plot graph displays the energy consumption in watt-hours (Wh) for different batch sizes (4, 8, 16) of the GPT-4o model, with an output token size of 300. Each box represents the distribution range, with the largest variability observed at batch size 4, and similar lower variability for batch sizes 8 and 16. The energy consumption median decreases as the batch size increases."
+    },
+    {
+        "doc_path": "extracted_data/document_11/doc_11.md",
+        "ref_id": "jegham2025",
+        "ref_url": "https://arxiv.org/pdf/2505.09598",
+        "img_id": "img-17.jpeg",
+        "img_uid": "jegham2025img-17.jpeg",
+        "context": "lization.\n\nTo assess this effect, we present a sensitivity analysis using GPT-4o as a representative model. The only parameter varied is batch size, allowing us to examine how plausible batching configurations can significantly shift energy outcomes. This variation underscores the rationale behind our use of batch size 8 as a representative midpoint in real-world deployments.\n\n![img-16.jpeg](img-16.jpeg)\nFigure 7: GPT-4o per-prompt energy consumption (Wh) across batch sizes and prompt lengths.\n\n![img-17.jpeg](img-17.jpeg)\n\n![img-18.jpeg](img-18.jpeg)\n\nTable 5 summarizes the utilization rates applied to each batch size, following the same method used in our methodology section 4, which drives the corresponding per-prompt energy estimates shown in Figure 7.\n\nThe results show substantial efficiency gains with higher batching: moving from batch size 4 to 8 reduces energy per prompt by approximately  $45\\%$ , while increasing from 8 to 16 yields a further  $43\\%$  reduction. If we had used a batch size of 4 throughou",
+        "img_path": "extracted_data/document_11/img-17.jpeg",
+        "img_description": "The box plot graph depicts the variability of three different batch sizes (4, 8, and 16) on the y-axis labeled with numerical values ranging from 0 to 5, while indicating an output token size of 1000. Each box represents the dispersion and central tendency of the data, showing a decreasing trend in median value as the batch size increases. Outliers are present in the batch size 4 data set, suggesting a wider spread of values compared to batch sizes 8 and 16."
+    },
+    {
+        "doc_path": "extracted_data/document_11/doc_11.md",
+        "ref_id": "jegham2025",
+        "ref_url": "https://arxiv.org/pdf/2505.09598",
+        "img_id": "img-18.jpeg",
+        "img_uid": "jegham2025img-18.jpeg",
+        "context": "ect, we present a sensitivity analysis using GPT-4o as a representative model. The only parameter varied is batch size, allowing us to examine how plausible batching configurations can significantly shift energy outcomes. This variation underscores the rationale behind our use of batch size 8 as a representative midpoint in real-world deployments.\n\n![img-16.jpeg](img-16.jpeg)\nFigure 7: GPT-4o per-prompt energy consumption (Wh) across batch sizes and prompt lengths.\n\n![img-17.jpeg](img-17.jpeg)\n\n![img-18.jpeg](img-18.jpeg)\n\nTable 5 summarizes the utilization rates applied to each batch size, following the same method used in our methodology section 4, which drives the corresponding per-prompt energy estimates shown in Figure 7.\n\nThe results show substantial efficiency gains with higher batching: moving from batch size 4 to 8 reduces energy per prompt by approximately  $45\\%$ , while increasing from 8 to 16 yields a further  $43\\%$  reduction. If we had used a batch size of 4 throughout our study, energy estimates",
+        "img_path": "extracted_data/document_11/img-18.jpeg",
+        "img_description": "The box plot compares differences in token computation times across batch sizes of 4, 8, and 16, with an output token size of 1500. The median computation time decreases as the batch size increases, with the most variation noted at batch size 4 and the least at batch size 16. The plot illustrates that larger batch sizes tend to result in lower and more consistent computation times."
+    },
+    {
+        "doc_path": "extracted_data/document_11/doc_11.md",
+        "ref_id": "jegham2025",
+        "ref_url": "https://arxiv.org/pdf/2505.09598",
+        "img_id": "img-19.jpeg",
+        "img_uid": "jegham2025img-19.jpeg",
+        "context": "e 3 Considerations\n\nWhile this study focuses on operational emissions and resource consumption during inference (Scopes 1 and 2), it is important to briefly discuss the Scope 3 impacts associated with the manufacturing, transportation, and end-of-life disposal of the hardware used to power LLMs.\n\nScope 3 emissions are typically the most significant contributor to the lifecycle footprint of data center infrastructure, encompassing embodied carbon from GPU fabrication, water usage in semiconductor![img-19.jpeg](img-19.jpeg)\nFigure 8: Cross efficiency DEA scores. Bar labels show the AI Index (top) and cross-efficiency score (bottom).\n\nmanufacturing, emissions from global logistics, and hardware retirement. For instance, Microsoft's Scope 3  $\\mathrm{CO}_{2}\\mathrm{e}$  emissions in 2023 accounted for  $66\\%$  of the total emissions [16]. Yet, these values are highly variable across vendors, manufacturing locations, and fabrication nodes, and they lack deployment-specific attribution when applied to real-time infere",
+        "img_path": "extracted_data/document_11/img-19.jpeg",
+        "img_description": "The bar chart displays the DEA Cross Efficiency Scores of various models from different companies, with the highest score of 0.884 achieved by OpenAI's GPT-4-tintl model and the lowest score of 0.059 by DeepSeek's DeepSeek R1 (humg). Companies are represented using different colors: OpenAI in green, Anthropic in yellow, Meta in purple, and DeepSeek in blue, highlighting the performance variations among their models."
+    }
+]

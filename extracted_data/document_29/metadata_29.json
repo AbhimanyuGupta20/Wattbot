@@ -1,0 +1,152 @@
+[
+    {
+        "doc_path": "extracted_data/document_29/doc_29.md",
+        "ref_id": "wu2021a",
+        "ref_url": "https://arxiv.org/pdf/2111.00364",
+        "img_id": "img-0.jpeg",
+        "img_uid": "wu2021aimg-0.jpeg",
+        "context": "sts for efficient and scalable ways to store and utilize renewable energy [4], predicting renewable energy availability in advance to improve energy utilization [5], operating hyperscale data centers efficiently [6], growing plants using less natural resources [7], and, at the same time, being used to tackle climate changes [8], [9]. It is projected that, in the next five years, the market for AI will increase by  $10 \\times$  into hundreds of billions of dollars [10]. All of these investments\n\n![img-0.jpeg](img-0.jpeg)\nFig. 1. The growth of ML is exceeding that of many other scientific disciplines. Significant research growth in machine learning is observed in recent years as illustrated by the increasing cumulative number of papers published in machine learning with respect to other scientific disciplines based on the monthly count (y-axis measures the cumulative number of articles on arXiv).\n\nin research, development, and deployment have led to a superlinear growth in AI data, models, and infrastructure cap",
+        "img_path": "extracted_data/document_29/img-0.jpeg",
+        "img_description": "The graph titled \"AI in Different Disciplines\" shows the cumulative arXiv article counts from 2011 to 2019, with distinct curves for Computer Science, Math, Machine Learning, and Physics. Machine Learning exhibits the most significant growth, reaching nearly 200,000 articles by 2019, while Computer Science and Math show more gradual increases. The data likely highlights the rising interest and research focus on AI across these fields."
+    },
+    {
+        "doc_path": "extracted_data/document_29/doc_29.md",
+        "ref_id": "wu2021a",
+        "ref_url": "https://arxiv.org/pdf/2111.00364",
+        "img_id": "img-1.jpeg",
+        "img_uid": "wu2021aimg-1.jpeg",
+        "context": "ase in AI training data and model capacity. Figure 2(b) illustrates that the amount of training data at Facebook for two recommendation use cases \u2014 one of the fastest growing areas of ML usage at Facebook\u2014has increased by  $2.4 \\times$  and  $1.9 \\times$  in the last two years, reaching exabyte scale. The increase in data size has led to a  $3.2 \\times$  increase in data ingestion bandwidth demand. Given this increase, data storage and the ingestion pipeline accounts for a significant portion of![img-1.jpeg](img-1.jpeg)\n(a) 1000x Model Size Scaling\n\n![img-2.jpeg](img-2.jpeg)\n(b) Data Growth Trend\nFig. 2. Deep learning has witnessed an exponential growth in data, model parameters, and system resources over the recent years. (a) The  $1000 \\times$  model size growth has led to higher model accuracy for various ML tasks. For example, with GPT-3, to increase the model quality BLEU score from 5 to 40 requires a model  $1,000 \\times$  larger in size. (b) At Facebook, the amount of data for recommendation use cases h",
+        "img_path": "extracted_data/document_29/img-1.jpeg",
+        "img_description": "The graph illustrates the relationship between model size (in billions of parameters, log scale) and performance metrics, including BLEU Score and Absolute AUC Improvement, for various tasks such as GPT translations (English to French, French to English) and recommendation systems (RecSys Search, RecSys Images). Performance generally improves with increased model size, with points marked by different symbols and colors representing specific tasks. A prominent 1,000x metric is highlighted, indicating a key point of comparison for scalability and improvement across the tasks."
+    },
+    {
+        "doc_path": "extracted_data/document_29/doc_29.md",
+        "ref_id": "wu2021a",
+        "ref_url": "https://arxiv.org/pdf/2111.00364",
+        "img_id": "img-2.jpeg",
+        "img_uid": "wu2021aimg-2.jpeg",
+        "context": "illustrates that the amount of training data at Facebook for two recommendation use cases \u2014 one of the fastest growing areas of ML usage at Facebook\u2014has increased by  $2.4 \\times$  and  $1.9 \\times$  in the last two years, reaching exabyte scale. The increase in data size has led to a  $3.2 \\times$  increase in data ingestion bandwidth demand. Given this increase, data storage and the ingestion pipeline accounts for a significant portion of![img-1.jpeg](img-1.jpeg)\n(a) 1000x Model Size Scaling\n\n![img-2.jpeg](img-2.jpeg)\n(b) Data Growth Trend\nFig. 2. Deep learning has witnessed an exponential growth in data, model parameters, and system resources over the recent years. (a) The  $1000 \\times$  model size growth has led to higher model accuracy for various ML tasks. For example, with GPT-3, to increase the model quality BLEU score from 5 to 40 requires a model  $1,000 \\times$  larger in size. (b) At Facebook, the amount of data for recommendation use cases has roughly doubled between 2019 and 2021, leading to 3.2",
+        "img_path": "extracted_data/document_29/img-2.jpeg",
+        "img_description": "The image consists of two graphs related to data and model trends over time. The top graph shows data and ingestion bandwidth with three lines representing RM1 Data, RM2 Data, and Data Ingestion BW, indicating that RM1 data has higher variability and peaks compared to RM2 and ingestion bandwidth. The bottom graph depicts a model growth trend with RM Parameter numbers increasing significantly over time, reaching a 20x growth from 2019 to 2021."
+    },
+    {
+        "doc_path": "extracted_data/document_29/doc_29.md",
+        "ref_id": "wu2021a",
+        "ref_url": "https://arxiv.org/pdf/2111.00364",
+        "img_id": "img-3.jpeg",
+        "img_uid": "wu2021aimg-3.jpeg",
+        "context": "re from 5 to 40 requires a model  $1,000 \\times$  larger in size. (b) At Facebook, the amount of data for recommendation use cases has roughly doubled between 2019 and 2021, leading to 3.2 times increase in the data ingestion bandwidth demand. (c) Facebook's recommendation and ranking model sizes have increased by 20 times during the same time period [11]. (d) The explosive growth in AI has driven  $2.9 \\times$  and  $2.5 \\times$  capacity increases for AI training and inference, respectively.\n\n![img-3.jpeg](img-3.jpeg)\n(d) System Growth Trend\n\nthe infrastructure and power capacity compared to ML training and end-to-end machine learning life cycles.\n\nAI Model Growth. The ever-increasing data volume has also driven a super-linear trend in model size growth. Figure 2(a) depicts the  $1000 \\times$  model size increase for GPT3-based language translation tasks [12], [13], whereas for Baidu's search engine, the model of  $1000 \\times$  larger in size improves accuracy in AUC by 0.030. Despite small, the accuracy im",
+        "img_path": "extracted_data/document_29/img-3.jpeg",
+        "img_description": "The graph illustrates the growth of AI System Capacity over time, comparing Training and Inference processes from Year 1, Quarter 1 (Yr1-Q1) to Year 2, Quarter 2 (Yr2-Q2). Both metrics show a positive trend, with Training capacity increasing more sharply, reaching 2.9 times its initial value by Yr2-Q2, while Inference achieves a 2.5 times increase over the same period. The data points are represented with green crosses for Training and black dots for Inference."
+    },
+    {
+        "doc_path": "extracted_data/document_29/doc_29.md",
+        "ref_id": "wu2021a",
+        "ref_url": "https://arxiv.org/pdf/2111.00364",
+        "img_id": "img-4.jpeg",
+        "img_uid": "wu2021aimg-4.jpeg",
+        "context": "lysis for both operational and embodied carbon footprint for AI training and inference (Section III). Based on the industry experience and lessons learned, we chart out opportunities and important development directions across the dimensions of AI including data, algorithm, systems, metrics, standards, and best practices (Section IV). We hope the key messages (Section VI) and the insights in this paper can inspire the community to advance the field of AI in an environmentally-responsible manner.![img-4.jpeg](img-4.jpeg)\nFig. 3. Model Development Phases over AI System Hardware Life Cycle: (a) At Facebook, we observe a rough power capacity breakdown of 10:20:70 for AI infrastructures devoted to the three key phases \u2014 Experimentation, Training, and Inference; (b) Considering the primary stages of the ML pipeline end-to-end, the energy footprint of RM1 is roughly 31:29:40 over Data, Experimentation/Training, and Inference; (c) Despite the investment to neutralize the operational footprint with carbon-free energy, ",
+        "img_path": "extracted_data/document_29/img-4.jpeg",
+        "img_description": "The image illustrates the machine learning model development and deployment phases, comprising data, experimentation, training, and inference stages, with a focus on data efficiency and resource-efficient methodologies. It also outlines the system life cycle, including storage, network, compute, and deep learning frameworks, emphasizing environmentally sustainable AI system hardware. Additionally, it depicts the broader process from manufacturing through product use to recycling."
+    },
+    {
+        "doc_path": "extracted_data/document_29/doc_29.md",
+        "ref_id": "wu2021a",
+        "ref_url": "https://arxiv.org/pdf/2111.00364",
+        "img_id": "img-5.jpeg",
+        "img_uid": "wu2021aimg-5.jpeg",
+        "context": "power capacity breakdown of 10:20:70 for AI infrastructures devoted to the three key phases \u2014 Experimentation, Training, and Inference; (b) Considering the primary stages of the ML pipeline end-to-end, the energy footprint of RM1 is roughly 31:29:40 over Data, Experimentation/Training, and Inference; (c) Despite the investment to neutralize the operational footprint with carbon-free energy, the overall data center electricity use continues to grow, demanding over 7.17 million MWh in 2020 [23].\n\n![img-5.jpeg](img-5.jpeg)\n\n# II. MODEL DEVELOPMENT PHASES AND AI SYSTEM HARDWARE LIFE CYCLE\n\nFigure 3 depicts the major development phases for ML \u2014 Data Processing, Experimentation, Training, and Inference (Section II-A) \u2014 over the life cycle of AI system hardware (Section II-B). Driven by distinct objectives of AI research and advanced product development, infrastructure is designed and built specifically to maximize data storage and ingestion efficiency for the phase of Data Processing, developer efficiency for the ph",
+        "img_path": "extracted_data/document_29/img-5.jpeg",
+        "img_description": "The image consists of three views: (a) Fleet View, a pie chart showing segments for experimentation, training, and inference, with experimentation as the smallest portion; (b) Machine Learning Task View, a horizontal bar chart showing the distribution of time spent on data, offline training, online training/evaluation, and deployment, with deployment occupying the largest segment; and (c) Infrastructure View, a stacked bar chart displaying metric tons of CO2 emissions across different categories, including operational renewable energy and manufacturing, over the years 2016 to 2020, with noted carbon removal efforts."
+    },
+    {
+        "doc_path": "extracted_data/document_29/doc_29.md",
+        "ref_id": "wu2021a",
+        "ref_url": "https://arxiv.org/pdf/2111.00364",
+        "img_id": "img-6.jpeg",
+        "img_uid": "wu2021aimg-6.jpeg",
+        "context": "we to its value chain \u2014 Scope 3 of Facebook's GHG emission. As a result, a significant embodied carbon cost is paid upfront for every system component brought into Facebook's fleet of datacenters, where AI is the biggest growth driver.\n\n$^{2}$ Recycling is an important domain, for which the industry is developing a circular economy model to up-cycle system components \u2014 design with recycling in mind.\n3Facebook Sustainability Data: https://sustainability.fb.com/report/2020-sust ainability-report/.![img-6.jpeg](img-6.jpeg)\nOperational Carbon Footprint of Large-Scale ML Tasks\nFig. 4. The carbon footprint of the LM model is dominated by Inference whereas, for RM1 - RM5, the carbon footprint of Training versus Inference is roughly equal. The average carbon footprint for ML training tasks at Facebook is 1.8 times larger than that of Meena used in modern conversational agents and 0.3 times of GPT-3's carbon footprint. Carbon footprint for inference tasks is included for models that are used in production. Note: the op",
+        "img_path": "extracted_data/document_29/img-6.jpeg",
+        "img_description": "The graph illustrates the CO2 emissions (in kg) associated with different machine learning models, broken down into offline training, online training, and inference phases. Facebook models, such as RM-1 and RM-2, show higher emissions compared to OSS large-scale ML models like BERT-NAS and Evolved Transformer, with GPT-3 having the highest total emissions. The chart highlights the significant carbon footprint differences between various models, emphasizing the environmental impact of large-scale machine learning."
+    },
+    {
+        "doc_path": "extracted_data/document_29/doc_29.md",
+        "ref_id": "wu2021a",
+        "ref_url": "https://arxiv.org/pdf/2111.00364",
+        "img_id": "img-7.jpeg",
+        "img_uid": "wu2021aimg-7.jpeg",
+        "context": "ly result in longer training time nor higher carbon emissions. Training the Switch Transformer model equipped with 1.5 trillion parameters [29] produces significantly less carbon emission than that of GPT-3 (750 billion parameters) [13]. This illustrates the carbon footprint advantage of operationally-efficient model architectures.\n\n4In total, the six models account for a vast majority of compute resources for the overall inference predictions at Facebook, serving billions of users world wide.\n\n![img-7.jpeg](img-7.jpeg)\nOverall Carbon Footprint of Large-Scale ML Tasks\n\nBoth Training and Inference can contribute significantly to the overall carbon footprint of machine learning tasks at Facebook. The exact breakdown between the two phases varies across ML use cases.\n\nThe overall operational carbon footprint is categorized into offline training, online training, and inference. Offline training encompasses both experimentation and training models with historical data. Online training is particularly relevant to re",
+        "img_path": "extracted_data/document_29/img-7.jpeg",
+        "img_description": "The bar graph illustrates CO2e emissions in millions for different models (LM, RM-1 to RM-5) with the breakdown of operational carbon costs (both offset with solar and rest) and projected embodied carbon costs. RM-1 exhibits the highest total emissions, predominantly due to its operational carbon cost offset with solar, while the other models show a balanced distribution between all categories. The chart highlights the significant impact of carbon-free energy in reducing operational emissions."
+    },
+    {
+        "doc_path": "extracted_data/document_29/doc_29.md",
+        "ref_id": "wu2021a",
+        "ref_url": "https://arxiv.org/pdf/2111.00364",
+        "img_id": "img-8.jpeg",
+        "img_uid": "wu2021aimg-8.jpeg",
+        "context": "ions of Facebook's models we measure the total energy consumed, assume location-based carbon intensities for energy mixes, $^{5}$  and use a data center Power Usage Effectiveness (PUE) of 1.1. In addition to model-level and hardware-level optimizations, Facebook's renewable energy procurement [23] programs mitigates these emissions.\n\nEmbodied Carbon Footprint: To quantify the embodied carbon footprint of AI hardware, we use LCA (Section II-B). We assume GPU-based AI training systems have similar![img-8.jpeg](img-8.jpeg)\nFig. 6. Optimization is an iterative process \u2014 we have achieved an average of  $20\\%$  operational energy footprint reduction every 6 months across the machine learning hardware-software stack.\n\nembodied footprint as the production footprint of Apple's 28-core CPU with dual AMD Radeon GPUs (2000kg  $\\mathrm{CO}_{2}$ ) [31]. For CPU-only systems, we assume half the embodied emissions. Based on the characterization of model training and inference at Facebook, we assume an average utilization of  ",
+        "img_path": "extracted_data/document_29/img-8.jpeg",
+        "img_description": "The image is a stacked bar chart titled \"Optimization is an Iterative Process,\" displaying operational power footprint improvement normalized to overall AI infrastructure over a two-year period. The chart is segmented into four categories: Hardware (blue), Infrastructure (gray), Platform (orange), and Model (yellow), with annotations indicating contributions from \"Performance-per-Watt [Moore's Law],\" \"Performance-per-Watt [Domain-Specific Acceleration],\" \"Utilization [At-Scale Data Center Optimization; Low-Precision Hardware],\" and \"Resource-Efficient AI Models [Figure 8].\" The data visually represents incremental improvements in power efficiency, with varying contributions from each category to the total increase in efficiency."
+    },
+    {
+        "doc_path": "extracted_data/document_29/doc_29.md",
+        "ref_id": "wu2021a",
+        "ref_url": "https://arxiv.org/pdf/2111.00364",
+        "img_id": "img-9.jpeg",
+        "img_uid": "wu2021aimg-9.jpeg",
+        "context": "tions: model (e.g., designing resource-efficient models), platform (e.g., PyTorch's support for quantization), infrastructure (e.g., data center optimization and low-precision hardware), and hardware (e.g., domain-specific acceleration). Each bar illustrates the operational power reduction across Facebook's AI fleet over 6-month period from each of the optimization areas. The optimizations in aggregate provide, on average, a  $20\\%$  reduction in operational power consumption every six months.\n\n![img-9.jpeg](img-9.jpeg)\nFig. 7. For the cross-lingual ML task (LM), the operational energy footprint can be significantly reduced by more than  $800 \\times$  using platform-level caching, GPUs, low precision data format, and additional algorithmic optimization.\n\nThe compounded benefits highlight the need for cross-stack optimizations.\n\nOptimizing the Carbon Footprint of LMs: We dive into a specific machine learning task at Facebook: language translation using a Transformer-based architecture (LM). LM is designed based",
+        "img_path": "extracted_data/document_29/img-9.jpeg",
+        "img_description": "The bar chart compares the operational power footprint of different computational setups normalized to an optimized transformer on GPUs. The CPU baseline has the highest footprint at 810, while optimizations through platform-level caching, GPU accelerators, and numerical optimization progressively reduce the footprint to 121, 12, and 5, respectively. This highlights the significant efficiency gains achieved by transitioning from CPU to GPU-based computations with optimized transformers."
+    },
+    {
+        "doc_path": "extracted_data/document_29/doc_29.md",
+        "ref_id": "wu2021a",
+        "ref_url": "https://arxiv.org/pdf/2111.00364",
+        "img_id": "img-10.jpeg",
+        "img_uid": "wu2021aimg-10.jpeg",
+        "context": "ergy efficiency gain can be achieved by using custom operators to schedule encoding steps within a single kernel of the Transformer module, such as [32].\n\nOptimizing the Carbon Footprint of RMs: The LM analysis is used as an example to highlight the optimization opportunities available with judicious cross-stack, hardware/software optimization. In addition to optimizing the carbon footprint for the language translation task, we describe additional optimization techniques tailored for ranking and![img-10.jpeg](img-10.jpeg)\nFig. 8. The iterative optimization process has led to  $28.5\\%$  operational energy footprint reduction over the two-year time period (Section III-B). Despite the significant operational power footprint reduction, we continue to see the overall electricity demand for AI to increase over time \u2014 an example of Jevon's Paradox, where efficiency improvement stimulates additional novel AI use cases.\n\nrecommendation use cases.\n\nA major infrastructure challenge faced by deep learning RM training and de",
+        "img_path": "extracted_data/document_29/img-10.jpeg",
+        "img_description": "The graph compares the operational power footprint over different time periods (Yr1-H1 to Yr2-H2) between two lines: \"Baseline\" and \"Optimized (Section 3.2).\" The \"Baseline\" line, depicted in black, shows a steady increase, while the \"Optimized\" line, in green, maintains a lower trajectory, resulting in a 28.5% improvement by Yr2-H2. The vertical axis measures the operational power footprint, with the \"Optimized\" method displaying consistently lower values."
+    },
+    {
+        "doc_path": "extracted_data/document_29/doc_29.md",
+        "ref_id": "wu2021a",
+        "ref_url": "https://arxiv.org/pdf/2111.00364",
+        "img_id": "img-11.jpeg",
+        "img_uid": "wu2021aimg-11.jpeg",
+        "context": " data centers with carbon-free energy sources can reduce emissions, the solution may not scale to all AI use cases. Infrastructure for carbon free energy is limited by rare metals and materials, and takes significant economic resources and time to build. Furthermore, the carbon footprint of federated learning and optimization use cases at the edge is estimated to be similar to that of training a Transformer Big model (Figure 11). As on-device learning becomes more ubiquitously adopted to improve![img-11.jpeg](img-11.jpeg)\nFig. 9. As accelerator utilization improves over time, both operational and embodied carbon footprints of AI improve. Carbon-free energy helps reduce the operational carbon footprint, making embodied carbon cost the dominating factor. To reduce the rising carbon footprint of AI computing at-scale, we must complement efficiency and utilization optimization with novel approaches to reduce the remaining embodied carbon footprint of AI systems.\n\ndata privacy, we expect to see more computation being",
+        "img_path": "extracted_data/document_29/img-11.jpeg",
+        "img_description": "The bar chart illustrates the LM Carbon Footprint, normalized to 75%, across different GPU utilization levels (20%, 30%, 50%, and 75%), with components categorized as Embodied, Operational (rest), and Operational (offset with solar). As GPU utilization increases, the overall carbon footprint decreases, with noticeable reductions in the Embodied and Operational (offset with solar) components. The chart highlights the significant impact of GPU utilization on reducing carbon emissions."
+    },
+    {
+        "doc_path": "extracted_data/document_29/doc_29.md",
+        "ref_id": "wu2021a",
+        "ref_url": "https://arxiv.org/pdf/2111.00364",
+        "img_id": "img-12.jpeg",
+        "img_uid": "wu2021aimg-12.jpeg",
+        "context": "to efficiently scale training [61], [62] by reducing communication cost via compression [63], [64], pipelining [65], and sharding [66], [67]. The advances have enabled efficient scaling to larger models and larger datasets. We expect efficient training methods to continue as an important domain. While this paper has focused on supervised learning relying labeled data, algorithmic efficiency extends to other learning paradigms including self-supervised and semi-supervised learning (Appendix C).\n\n![img-12.jpeg](img-12.jpeg)\nFig. 10. A vast majority of model experimentation (over tens of thousands of training workflows) utilizes GPUs at only  $30 - 50\\%$ , leaving room for utilization and efficiency improvements.\n\n# C. Efficient, Environmentally-Sustainable AI Infrastructure and System Hardware\n\nTo amortize the embodied carbon footprint, model developers and system architects must maximize the utilization of accelerator and system resources when in use and prolong the lifetime of AI infrastructures. Existing practi",
+        "img_path": "extracted_data/document_29/img-12.jpeg",
+        "img_description": "The image is a histogram displaying the probability distribution of GPU utilization percentages, with the x-axis ranging from 0 to 90 and the y-axis representing probability. The histogram shows higher frequencies of utilization concentrated around 30-70%, with noticeable peaks near 60% and 70%. This indicates that GPU utilization often falls within this range during observation."
+    },
+    {
+        "doc_path": "extracted_data/document_29/doc_29.md",
+        "ref_id": "wu2021a",
+        "ref_url": "https://arxiv.org/pdf/2111.00364",
+        "img_id": "img-13.jpeg",
+        "img_uid": "wu2021aimg-13.jpeg",
+        "context": "here is an interesting design space to achieve 24/7 carbon-free AI computing.\n\nOn-Device Learning On-device AI is becoming more ubiquitously adopted to enable model personalization [84], [85], [86] while improving data privacy [87], [88], [89], [90], yet its impact in terms of carbon emission is often overlooked. On-device learning emits non-negligible carbon. Figure 11 illustrates that the operational carbon footprint for training a small ML task using federated learning (FL) is comparable to\n\n![img-13.jpeg](img-13.jpeg)\nFig. 11. Federated learning and optimization can result in a non-negligible amount of carbon emissions, equivalent to the carbon footprint of training TransformerBig [21]. FL-1 and FL-2 represent two production FL applications. P100-Base represents the carbon footprint of TransformerBig training on P100 GPU whereas TPU-base is TransformerBig training on TPU. P100-Green and TPU-Green consider renewable energy at the cloud (Methodology detail in Appendix B).\n\nthat of training an orders-of-magnitu",
+        "img_path": "extracted_data/document_29/img-13.jpeg",
+        "img_description": "The bar graph compares the carbon footprint (CO2e kg) of different processes in Facebook and Transformer-big (non-FL) models, categorized by download, upload, and compute activities. Facebook's FL-1 and FL-2 processes show significant carbon emissions, with FL-1 having the highest values dominated by upload emissions, while FL-2 displays relatively lower values across all categories. Transformer-big models (TPU-Base, TPU-Green, P100-Base, P100-Green) exhibit notably lower emissions with P100-Base as the only one showing a considerable amount, primarily in the compute area."
+    },
+    {
+        "doc_path": "extracted_data/document_29/doc_29.md",
+        "ref_id": "wu2021a",
+        "ref_url": "https://arxiv.org/pdf/2111.00364",
+        "img_id": "img-14.jpeg",
+        "img_uid": "wu2021aimg-14.jpeg",
+        "context": "e International conference on machine learning, pp. 1597-1607, 2020.\n[119] M. Assran, M. Caron, I. Misra, P. Bojanowski, A. Joulin, N. Ballas, and M. Rabbat, \"Semi-supervised learning of visual features by nonparametrically predicting view assignments with support samples,\" arXiv preprint arXiv:2104.13963, 2021.\n[120] L. M. Dery, P. Michel, A. Talwalkar, and G. Neubig, \"Should we be pre-training? an argument for end-task aware training as an alternative,\" arXiv preprint arXiv:2109.07437, 2021.\n\n![img-14.jpeg](img-14.jpeg)\nFig. 12. Model quality of recommendation use cases improves as we scale up the amount of data and/or the number of model parameters (e.g., embedding cardinality or dimension), leading to higher energy and carbon footprint. Maximizing model accuracy for the specific recommendation use case comes with significant energy cost \u2014 Roughly  $4 \\times$  energy saving can be achieved with only 0.004 model quality degradation (green vs. yellow stars).\n\n# APPENDIX\n\nDespite the recent calls-to-action [28],",
+        "img_path": "extracted_data/document_29/img-14.jpeg",
+        "img_description": "The graph plots model error against energy per step, showing that model error decreases as energy increases across various data and model scales. Data scales are represented by solid lines in shades of blue, while model scales, represented by dashed lines, show varying improvement trends in shades of pink and red. Notable points are marked with stars on the 16X data scale and 128X model scale, indicating specific insights or benchmarks."
+    }
+]

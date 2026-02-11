@@ -1,0 +1,102 @@
+[
+    {
+        "doc_path": "extracted_data/document_22/doc_22.md",
+        "ref_id": "patterson2021",
+        "ref_url": "https://arxiv.org/pdf/2104.10350",
+        "img_id": "img-0.jpeg",
+        "img_uid": "patterson2021img-0.jpeg",
+        "context": "   | 3.2 | 0.81 | 0.62  |\n|  Total Computation (floating point operations) | 1.61E+19 |   | 1.03E+19 | 1.61E+19 | 1.03E+19  |\n|  Energy consumption (KWh) | 316 | 221 | 185 | 40 | 30  |\n|  Gross CO2e for Model Training (metric ton) (Section 2.4 and Appendix D) | 0.1357 | 0.1055 | 0.0883 | 0.0189 | 0.0143  |\n|  Net CO2e for Model Training (metric ton) (Section 2.4 and Appendix D) | 0.1357 | 0.0177 | 0.0148 | 0.0032 | 0.0024  |\n|  % 24/7 net carbon free energy (CY 2019) | N/A | 78%  |   |   |   |\n\n![img-0.jpeg](img-0.jpeg)\nFigure 1. Improvement in  $\\mathrm{CO}_{2}\\mathrm{e}$  over Transformer (Big) on P100 GPUs in an average US datacenter versus Evolved Transformer (Medium) on TPU v2s in the Google Iowa datacenter.\n\nTable 1. See Appendix A for more detail. Estimates of  $\\mathrm{CO}_{2}\\mathrm{e}$  for Transformer and Evolved Transformer for P100 and TPU v2 are based on power measurements. $^{5}$  Evolved Transformer (Medium) reached the same accuracy as Transformer (Big) in [So19].  $\\mathrm{CO}_{2}\\mathrm{e}$ ",
+        "img_path": "extracted_data/document_22/img-0.jpeg",
+        "img_description": "The graph illustrates the CO2e gain in comparison to P100s within a US average data center under various conditions, depicted along the x-axis labeled by sections. Starting with \"Evolved Transformer vs Transformer\" at a CO2e gain of 1.3, the graph progresses through \"TPU v2 vs P100 GPU\" at 7.4, \"Google Iowa DC PUE vs US average\" at 10.5, and culminates with \"Google Iowa DC net CO2e/KWh vs US average\" at 56.5. The trend is upward, indicating increasing CO2e gains through each successive scenario."
+    },
+    {
+        "doc_path": "extracted_data/document_22/doc_22.md",
+        "ref_id": "patterson2021",
+        "ref_url": "https://arxiv.org/pdf/2104.10350",
+        "img_id": "img-1.jpeg",
+        "img_uid": "patterson2021img-1.jpeg",
+        "context": "dia headlines. $^{13}$  It is now available for commercial use. One potential energy benefit of a large language model like GPT-3 is that they exhibit few-shot generalization, which means that they don't need to be retrained for every new task like smaller models [Wan20]. Its estimated carbon emissions due to training are  $552\\mathrm{tCO}_2\\mathrm{e}$  and its energy consumption is 1287 MWh. $^{14}$\n\nTable 4 also lists the neural architecture search for Evolved Transformer, discussed shortly.\n\n![img-1.jpeg](img-1.jpeg)\nFigure 2. Total FLOPS versus number of parameters relative to Transformer (Big) in a log-log graph (Table 1). While all are not doing the same tasks, a reason T5 has relatively lower FLOPS relative to its number of parameters is that it trains until the accuracy is good enough instead of to the best possible accuracy. [Kap20] notes that some architectures have a much lower footprint than others at equivalent accuracy and suggests that significant power might be saved by revisiting accuracy requ",
+        "img_path": "extracted_data/document_22/img-1.jpeg",
+        "img_description": "The scatter plot displays five AI models\u2014Meena, T5, GPT-3, Gshard-600B, and Switch Transformer\u2014comparing their FLOPS and parameters relative to a Transformer model (210M) on a log-log scale. The x-axis represents parameters, while the y-axis represents FLOPS, indicating that GPT-3 has the highest parameter count at over 5,000 and Switch Transformer has the highest FLOPS at 19,474. Meena, with 6,963 FLOPS and the least parameters, is contrasted with T5 and Gshard-600B, which exhibit lower FLOPS and parameters respectively."
+    },
+    {
+        "doc_path": "extracted_data/document_22/doc_22.md",
+        "ref_id": "patterson2021",
+        "ref_url": "https://arxiv.org/pdf/2104.10350",
+        "img_id": "img-2.jpeg",
+        "img_uid": "patterson2021img-2.jpeg",
+        "context": "Total FLOPS versus number of parameters relative to Transformer (Big) in a log-log graph (Table 1). While all are not doing the same tasks, a reason T5 has relatively lower FLOPS relative to its number of parameters is that it trains until the accuracy is good enough instead of to the best possible accuracy. [Kap20] notes that some architectures have a much lower footprint than others at equivalent accuracy and suggests that significant power might be saved by revisiting accuracy requirements.\n\n![img-2.jpeg](img-2.jpeg)\nFigure 3. Accelerator years of computation, energy consumption, and  $\\mathrm{CO}_{2}\\mathrm{e}$  for five large NLP DNNs.Figures 2 and 3 present the same data graphically. Figure 2 plots the number of parameters on the X axis and number of total FLOPS on the Y axis relative to Transformer (Big) [So19] using a log-log graph. Sparsely activated models use many more parameters with much lower total FLOPS. Since performance is not necessarily linear in FLOPS (see [Li21]), Figure 3 shows computatio",
+        "img_path": "extracted_data/document_22/img-2.jpeg",
+        "img_description": "The bar chart compares five machine learning models\u2014Meena, T5, GPT-3, Gshard-600B, and Switch Transformer\u2014across three metrics: accelerator years (blue), energy consumption (MWh, red), and net CO2 emissions (metric tons, yellow). GPT-3 (V100) shows the highest values for both energy consumption (1,287 MWh) and net CO2 emissions (552 metric tons), while Gshard-600B has the lowest energy use and emissions values. Meena and Switch Transformer present balanced profiles with moderate numbers, exceeding T5's lower metrics in all categories."
+    },
+    {
+        "doc_path": "extracted_data/document_22/doc_22.md",
+        "ref_id": "patterson2021",
+        "ref_url": "https://arxiv.org/pdf/2104.10350",
+        "img_id": "img-3.jpeg",
+        "img_uid": "patterson2021img-3.jpeg",
+        "context": " making it impossible to compare this analysis to prior work, and preventing straightforward comparison among different approaches more generally.\n\nThis lack of training development costs is one example of how adopting higher standards for measuring and reporting ML model energy requirements would lead to a better understanding of cost-accuracy tradeoffs in ML models, potentially further reducing overall emissions by empowering more informed ML model selection, as the next subsection explains.\n\n![img-3.jpeg](img-3.jpeg)\nFigure 4: Reproduction of Figure 4 from So et al. Dots on the blue line represent various sizes of plain Transformer NLP models, while dots on the red line represent various sizes of the open-sourced Evolved Transformer architecture that was discovered by the neural architecture search run in [So19]. Red arrows are at 131M and 210M parameters and show that an Evolved Transformer can achieve higher accuracy at less cost: it runs 1.3X faster and produces 1.3x less  $\\mathrm{CO}_{2}\\mathrm{e}$ .\n\n",
+        "img_path": "extracted_data/document_22/img-3.jpeg",
+        "img_description": "The graph compares the performance of Base and Big Transformer models against Evolved Transformers, measured by BLEU scores on the WMT14 En-De dataset, as a function of model parameters in millions. The Evolved Transformer consistently outperforms the standard Transformers, showing higher BLEU scores across all parameter ranges. Shaded regions indicate variability, and both Transformers' improvement plateaus as the parameter count increases towards 250 million."
+    },
+    {
+        "doc_path": "extracted_data/document_22/doc_22.md",
+        "ref_id": "patterson2021",
+        "ref_url": "https://arxiv.org/pdf/2104.10350",
+        "img_id": "img-4.jpeg",
+        "img_uid": "patterson2021img-4.jpeg",
+        "context": "te your results was an effective deterrent to fudging the numbers. If more computationally intensive ML papers included energy consumption and carbon footprint of the final training run with sufficient details that others could check,that would be a great step forward. Perhaps ML practitioners could study the total lifecycle to develop rules of thumb to estimate the overall carbon footprint based on its final training cost. $^{16}$\n\nThe next subsection also emphasizes the value of measurement.\n\n![img-4.jpeg](img-4.jpeg)\nMeasured Perf (TFLOPS/s) and Peak Perf (TFLOPS/s)\n\n![img-5.jpeg](img-5.jpeg)\nMeasured System Power (Watts) and Peak Chip Power (TDP in Watts)\n\n![img-6.jpeg](img-6.jpeg)\nMeasured TFLOPS/sec/Watt and Peak TFLOPS/sec/Watt/W\nFigure 5. Measured vs peak performance, measured system power vs peak chip power (TDP), and measured vs peak performance/Watt for V100 GPU and TPU v3 (see Table 4 and Appendix A).\n\n# 4.3 Measurements are more interesting than extrapolations\n\nAlthough extrapolations of carbon em",
+        "img_path": "extracted_data/document_22/img-4.jpeg",
+        "img_description": "The bar and line graph compares the measured performance (in TeraFLOPS/sec) of five different AI models using TPUv3 and V100 systems against their peak performance. The measured performance values are 42 for Meena, 46 for T5, 25 for GPT-3, 48 for Gshard-600B, and 34 for Switch Transformer. The peak performance remains constant across all models at around 123-125 TeraFLOPS/sec, indicating a significant disparity between measured and peak capabilities."
+    },
+    {
+        "doc_path": "extracted_data/document_22/doc_22.md",
+        "ref_id": "patterson2021",
+        "ref_url": "https://arxiv.org/pdf/2104.10350",
+        "img_id": "img-5.jpeg",
+        "img_uid": "patterson2021img-5.jpeg",
+        "context": "mputationally intensive ML papers included energy consumption and carbon footprint of the final training run with sufficient details that others could check,that would be a great step forward. Perhaps ML practitioners could study the total lifecycle to develop rules of thumb to estimate the overall carbon footprint based on its final training cost. $^{16}$\n\nThe next subsection also emphasizes the value of measurement.\n\n![img-4.jpeg](img-4.jpeg)\nMeasured Perf (TFLOPS/s) and Peak Perf (TFLOPS/s)\n\n![img-5.jpeg](img-5.jpeg)\nMeasured System Power (Watts) and Peak Chip Power (TDP in Watts)\n\n![img-6.jpeg](img-6.jpeg)\nMeasured TFLOPS/sec/Watt and Peak TFLOPS/sec/Watt/W\nFigure 5. Measured vs peak performance, measured system power vs peak chip power (TDP), and measured vs peak performance/Watt for V100 GPU and TPU v3 (see Table 4 and Appendix A).\n\n# 4.3 Measurements are more interesting than extrapolations\n\nAlthough extrapolations of carbon emissions are relatively easy, more attention should be paid to actual experime",
+        "img_path": "extracted_data/document_22/img-5.jpeg",
+        "img_description": "The image is a bar and line graph comparing the measured system power in watts (blue bars) with peak chip power (TDP in watts, red line) across five models: Meena (TPUv3), T5 (TPUv3), GPT-3 (V100), Gshard-600B (TPUv3), and Switch Transformer (TPUv3). The measured system power ranges from 245 watts for the Switch Transformer to 330 watts for GPT-3, while the peak chip power is steady at 450 watts for all models except GPT-3, which has a peak at 300 watts. The graph highlights the variance in efficiency between system power consumption and the theoretical maximum power capacity of the chips."
+    },
+    {
+        "doc_path": "extracted_data/document_22/doc_22.md",
+        "ref_id": "patterson2021",
+        "ref_url": "https://arxiv.org/pdf/2104.10350",
+        "img_id": "img-6.jpeg",
+        "img_uid": "patterson2021img-6.jpeg",
+        "context": "nal training run with sufficient details that others could check,that would be a great step forward. Perhaps ML practitioners could study the total lifecycle to develop rules of thumb to estimate the overall carbon footprint based on its final training cost. $^{16}$\n\nThe next subsection also emphasizes the value of measurement.\n\n![img-4.jpeg](img-4.jpeg)\nMeasured Perf (TFLOPS/s) and Peak Perf (TFLOPS/s)\n\n![img-5.jpeg](img-5.jpeg)\nMeasured System Power (Watts) and Peak Chip Power (TDP in Watts)\n\n![img-6.jpeg](img-6.jpeg)\nMeasured TFLOPS/sec/Watt and Peak TFLOPS/sec/Watt/W\nFigure 5. Measured vs peak performance, measured system power vs peak chip power (TDP), and measured vs peak performance/Watt for V100 GPU and TPU v3 (see Table 4 and Appendix A).\n\n# 4.3 Measurements are more interesting than extrapolations\n\nAlthough extrapolations of carbon emissions are relatively easy, more attention should be paid to actual experiments that have been conducted rather than to hypothetical case studies. As a problematic exam",
+        "img_path": "extracted_data/document_22/img-6.jpeg",
+        "img_description": "The line graph compares the measured and peak performance of different AI models, in TFLOPS/second/Watt, across five configurations: Meena (TPUv3), T5 (TPUv3), GPT-3 (V100), Gshard-600B (TPUv3), and Switch Transformer (TPUv3). The peak performance is highest for GPT-3 (V100) at 0.42 TFLOPS/second/Watt, while the measured performance is highest for Gshard-600B (TPUv3) at 0.17 TFLOPS/second/Watt. Overall, the peak performances are consistently higher than the measured values in all configurations."
+    },
+    {
+        "doc_path": "extracted_data/document_22/doc_22.md",
+        "ref_id": "patterson2021",
+        "ref_url": "https://arxiv.org/pdf/2104.10350",
+        "img_id": "img-7.jpeg",
+        "img_uid": "patterson2021img-7.jpeg",
+        "context": " Green Algorithms calculators do not estimate net  $\\mathrm{CO}_{2}\\mathrm{e}$ , which could be up to 10X lower. The figure once again shows the increase in accuracy of measurement over indirect calculations. The authors of the Emissions Calculator agree that measurement is preferred, with some calculator as the best alternative if measurement is difficult to perform [Luc21].\n\nThe next discussion topic reminds us that improving the algorithm is often more important than improving the hardware.\n\n![img-7.jpeg](img-7.jpeg)\nFigure 6. Ratio of ML Emissions and Green Algorithm calculators vs gross  $\\mathrm{CO}_{2}\\mathrm{e}$  in Tables 1 and 4.\n\n# 4.4 Standard ML algorithmic techniques can improve energy efficiency\n\nThere are many algorithmic techniques that can improve the energy efficiency of machine learning models. Some techniques can achieve the same accuracy with less overall computation. Others can use a large, already-trained model as a starting point and yield a lighter-weight, more computationally efficie",
+        "img_path": "extracted_data/document_22/img-7.jpeg",
+        "img_description": "The bar graph compares the CO2 emissions of machine learning computations, using two different calculators: \"ML Calculator\" (red bars) and \"Green Algorithms\" (green bars), across various processors, deep neural networks (DNN), and locations. It shows that \"Green Algorithms\" generally reports higher CO2 emissions compared to the \"ML Calculator\" for the same setups, with notable increases in emissions for TPU v2 and v3 configurations. The emissions for setups such as TPU v3 Gshard North Carolina and TPU v2 Transform Iowa show the most significant differences between the two calculators."
+    },
+    {
+        "doc_path": "extracted_data/document_22/doc_22.md",
+        "ref_id": "patterson2021",
+        "ref_url": "https://arxiv.org/pdf/2104.10350",
+        "img_id": "img-8.jpeg",
+        "img_uid": "patterson2021img-8.jpeg",
+        "context": "m 2.8$  MWh and produced  $0.13\\mathrm{tCO}_2\\mathrm{e}$ , about one-tenth of a SF-NY round trip by one passenger.[24]\n\nA more widespread example is the use of BERT in search. English is the most popular language on the web. This use of BERT takes models that learn from improvements in English and applies them to other languages. In particular, BERT significantly improved featured snippets\u2014short text summary at the top of Google research results\u2014in languages like Hindi, Korean, and Portuguese.\n\n![img-8.jpeg](img-8.jpeg)\nFigure 7: Reproduction of Figure 6 from [Lep20] with annotations. Translation quality comparison of multilingual Mixture of Expert (MoE) Transformer models trained with GShard showing the increase in BLEU score versus a separate baseline Transformer model trained on each language pair for 100 languages to English. MoE models have large model capacity but are only partially activated for any given token. The source languages are grouped on the x-axis by the resources available for each language ",
+        "img_path": "extracted_data/document_22/img-8.jpeg",
+        "img_description": "The graph compares the performance (measured in \u0394BLEU) of various models, differentiated by size and layer configuration, across languages with varying resource levels, from high-resource to low-resource. The models include MoE architectures ranging from 12.5B to 600B parameters with varying layers, as well as a dense model with 2.3B parameters across 96 layers. Generally, larger MoE models demonstrate superior performance, particularly in low-resource languages, compared to the dense model."
+    },
+    {
+        "doc_path": "extracted_data/document_22/doc_22.md",
+        "ref_id": "patterson2021",
+        "ref_url": "https://arxiv.org/pdf/2104.10350",
+        "img_id": "img-9.jpeg",
+        "img_uid": "patterson2021img-9.jpeg",
+        "context": "enerator companies that can supply clean energy 24/7 and offer marketplaces that allow companies to acquire clean energy at any time of day will be more compelling to expand future growth of compute from a carbon impact perspective. A great example is Oklahoma, which allowed Google to average  $95.6\\%$  net CFE for 2020. This is a case of where the grass actually is greener in Oklahoma than in Georgia. As mentioned above, in 2021 many new TPU v4 accelerators will be deployed in windy Oklahoma.\n\n![img-9.jpeg](img-9.jpeg)\nFigure 8. This figure explains how fixed-floating swaps work for Renewable Energy Certificates (RECs). (Reproduced from [Goo16].) Instead of accounting over a full year at a mix of locations as in step 4, 24/7 CFE does the accounting separately for every hour in the year in the same single location.\n\n# 1. FIXED- PRICE PPA\n\nGoogle purchases bundled physical renewable energy and RECs directly from a wind or solar farm using a negotiated, long-term, fixed- price structure. These contracts are call",
+        "img_path": "extracted_data/document_22/img-9.jpeg",
+        "img_description": "The image illustrates the flow of energy and Renewable Energy Credits (RECs) from renewable and other generators to a Google data center via the electricity market. Renewable generators send energy bundled with RECs to Google, which then distributes RECs to the data center. Non-renewable energy goes directly to the electricity market, which supplies electricity to the data center."
+    }
+]

@@ -1,0 +1,42 @@
+[
+    {
+        "doc_path": "extracted_data/document_15/doc_15.md",
+        "ref_id": "li2025b",
+        "ref_url": "https://arxiv.org/pdf/2304.03271",
+        "img_id": "img-0.jpeg",
+        "img_uid": "li2025bimg-0.jpeg",
+        "context": "y 3-10 cycles, depending on water quality) before discharge, requiring continuous clean freshwater replenishment to prevent mineral and salt buildup. Thus, to keep the cooling tower working, new water must be constantly added to make up for the evaporated water and discharged water. Importantly, clean freshwater (potable water in many cases [4]) is needed to avoid pipe clogs and/or bacterial growth.\n\nFor cooling towers, water withdrawal refers to the amount of added water, including both evapo\n\n![img-0.jpeg](img-0.jpeg)\nFigure 1: An example of data center's operational water usage: on-site scope-1 water usage for data center cooling (via cooling towers in the example), and off-site scope-2 water usage for electricity generation. The icons for AI models are only for illustration purposes.\n\nrated water and discharged water, while water consumption exclusively indicates the amount of evaporated water. With good water quality, roughly  $80\\%$  of water withdrawal is evaporated and considered \"consumption\" [4]. On ",
+        "img_path": "extracted_data/document_15/img-0.jpeg",
+        "img_description": "The image illustrates a data center cooling system divided into Scope-1 and Scope-2 water uses. Scope-1 features a cooling tower, heat exchanger, and pump circulating warm and chilled water, while Scope-2 connects a power plant to a separate cooling tower, both utilizing water resources. The data center comprises server racks labeled with AI technologies like ChatGPT, AlphaGO, BLOOM, and Meta OPT-175B, indicating computational resource demands."
+    },
+    {
+        "doc_path": "extracted_data/document_15/doc_15.md",
+        "ref_id": "li2025b",
+        "ref_url": "https://arxiv.org/pdf/2304.03271",
+        "img_id": "img-1.jpeg",
+        "img_uid": "li2025bimg-1.jpeg",
+        "context": "request, each with approximately  $\\leq 800$  words of input and  $150 - 300$  words of output [30]. The official estimate indicates that GPT-3 consumes an order of  $0.4\\mathrm{kWh}$  of electricity to generate 100 pages of content, equivalent to roughly  $0.004\\mathrm{kWh}$  per page [11]. While no details are provided, the estimate likely considers only the GPU energy used during token generation.\n\nTo account for both the prompt phase and the non-GPU energy consumption of servers, we assume a![img-1.jpeg](img-1.jpeg)\n(a) Carbon/water efficiency\n\n![img-2.jpeg](img-2.jpeg)\n(b) Hourly carbon/water efficiency\nFigure 2: (a) The U.S. eGRID-level scope-2 water consumption intensity factor vs. carbon emission rate [8, 33]. The dashed line represents a linear regression model, showing that the eGRID-level scope-2 carbon emission and water consumption efficiencies are not aligned. (b) A 5-day snapshot of scope-2 carbon emission rate and water consumption intensity in Virginia, starting from April 4, 2022. The values ",
+        "img_path": "extracted_data/document_15/img-1.jpeg",
+        "img_description": "The scatter plot displays the relationship between water usage (L/kWh) on the y-axis and carbon emissions (kg/kWh) on the x-axis across various regions. Data points are scattered, with a general negative trend indicated by a dashed line, suggesting that as carbon emissions increase, water usage tends to decrease. Several regions are labeled, including AKMS and NYUP, with most data points clustered around the middle to lower carbon and water usage values."
+    },
+    {
+        "doc_path": "extracted_data/document_15/doc_15.md",
+        "ref_id": "li2025b",
+        "ref_url": "https://arxiv.org/pdf/2304.03271",
+        "img_id": "img-2.jpeg",
+        "img_uid": "li2025bimg-2.jpeg",
+        "context": "input and  $150 - 300$  words of output [30]. The official estimate indicates that GPT-3 consumes an order of  $0.4\\mathrm{kWh}$  of electricity to generate 100 pages of content, equivalent to roughly  $0.004\\mathrm{kWh}$  per page [11]. While no details are provided, the estimate likely considers only the GPU energy used during token generation.\n\nTo account for both the prompt phase and the non-GPU energy consumption of servers, we assume a![img-1.jpeg](img-1.jpeg)\n(a) Carbon/water efficiency\n\n![img-2.jpeg](img-2.jpeg)\n(b) Hourly carbon/water efficiency\nFigure 2: (a) The U.S. eGRID-level scope-2 water consumption intensity factor vs. carbon emission rate [8, 33]. The dashed line represents a linear regression model, showing that the eGRID-level scope-2 carbon emission and water consumption efficiencies are not aligned. (b) A 5-day snapshot of scope-2 carbon emission rate and water consumption intensity in Virginia, starting from April 4, 2022. The values are calculated based on the fuel mixes, carbon emission",
+        "img_path": "extracted_data/document_15/img-2.jpeg",
+        "img_description": "The graph displays water and carbon usage per kilowatt-hour over five days (Monday to Friday), with water usage shown in blue peaking daily between 2.0 and 2.8 L/kWh, and carbon usage shown in orange consistently fluctuating between 0.25 and 0.38 kg/kWh. Water usage shows a clear daily pattern of spikes and troughs, while carbon usage maintains a relatively stable pattern with minor variations. The x-axis represents days of the week, while the y-axis presents measurements for both water (L/kWh) and carbon (kg/kWh)."
+    },
+    {
+        "doc_path": "extracted_data/document_15/doc_15.md",
+        "ref_id": "li2025b",
+        "ref_url": "https://arxiv.org/pdf/2304.03271",
+        "img_id": "img-3.jpeg",
+        "img_uid": "li2025bimg-3.jpeg",
+        "context": "efficiencies are not aligned. (b) A 5-day snapshot of scope-2 carbon emission rate and water consumption intensity in Virginia, starting from April 4, 2022. The values are calculated based on the fuel mixes, carbon emission rate and water consumption intensity for each fuel type [8, 20, 33]. The scope-2 carbon and water efficiencies only have a weak Pearson correlation coefficient of 0.06 in Virginia. (c) A 5-day snapshot of energy fuel mixes serving Virginia, starting from April 4, 2022 [20].\n\n![img-3.jpeg](img-3.jpeg)\n(c) Hourly energy fuel mixes\n\nper-request server energy consumption of  $0.004\\mathrm{kWh}$  for our conversation task. The PUE, WUE, and EWIF are the same as those used for estimating the training water consumption. Our estimate of inference water consumption for GPT-3 is on the conservative side, and the actual water consumption could be several times higher. Specifically, when considering service level objectives (SLOs) for LLM response times in enterprise-grade Nvidia DGX H100 systems for c",
+        "img_path": "extracted_data/document_15/img-3.jpeg",
+        "img_description": "The line graph displays the percentage contribution of various energy sources\u2014Coal, Natural Gas, Nuclear, Oil, Wind, Solar, Hydro, and Other\u2014over a five-day period from Monday to Friday. Coal, Natural Gas, and Nuclear consistently maintain higher percentages, with Coal and Natural Gas hovering around the 30% to 40% range. Other sources like Solar, Wind, Hydro, and Oil contribute lower percentages, typically remaining below 10%."
+    }
+]

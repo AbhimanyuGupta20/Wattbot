@@ -1,0 +1,22 @@
+[
+    {
+        "doc_path": "extracted_data/document_21/doc_21.md",
+        "ref_id": "morrison2025",
+        "ref_url": "https://arxiv.org/pdf/2503.05804",
+        "img_id": "img-0.jpeg",
+        "img_uid": "morrison2025img-0.jpeg",
+        "context": "Importantly, we calculate (i) electricity consumption, (ii) carbon emissions, and (iii) water consumption at three points in the machine learning pipeline: early model development (e.g., hyperparameter tuning and experiments before the final training run), training of the main model, and inference. To the best of our knowledge, we are the first to report this information for model development of large language models, and we find the environmental impact of developing even our relatively small\n\n![img-0.jpeg](img-0.jpeg)\nFigure 1: Environmental impact for a selection of the final training runs described in Section 4.1, where we rank each model by both its total water consumption and its  $\\mathrm{CO}_{2}$  emissions. Our small models (&lt;1B parameters) were trained on 1.7 trillion tokens, OLMo 1B was trained on 3 trillion, OLMo 2 7B was trained on 4 trillion, OLMoE was trained on 5 trillion, and OLMo 2 13B was trained on 5.6 trillion. We see that the total environmental impact for larger training runs is quite",
+        "img_path": "extracted_data/document_21/img-0.jpeg",
+        "img_description": "The graph displays a relationship between carbon emissions (tCO2eq) on the x-axis, ranging from 1 to 100, and water consumption (kL) on the y-axis, ranging from 1 to 1000, with different data points representing various labeled models (OLMo 20M to OLMo 2 13B). Each point is color-coded, indicating different water usage levels corresponding to their carbon emission levels. There is a clear positive trend where larger models correlate with higher water and carbon metrics."
+    },
+    {
+        "doc_path": "extracted_data/document_21/doc_21.md",
+        "ref_id": "morrison2025",
+        "ref_url": "https://arxiv.org/pdf/2503.05804",
+        "img_id": "img-1.jpeg",
+        "img_uid": "morrison2025img-1.jpeg",
+        "context": "and deploy, limiting how widespread they could become, and how financially feasible they were to be used in a variety of scenarios.\n\nRecently, however, continuing to train models on more and more tokens beyond the \"compute-optimal\" limit[22] has been extremely successful in making \"deployment-optimized\" models that can be substantially cheaper to perform inference with. This has led to an explosion in both training cost for small models, and total inference compute cost, as API-based models be\n\n![img-1.jpeg](img-1.jpeg)\nFigure 2: Average GPU power for a single node for the first 300 logging steps during OLMo 2 7B training. The first spike is the beginning of training, and each drop happens when a model checkpoint is saved. When actively training, the average GPU power is over 600W, over  $85\\%$  of an H100's maximum power draw of 700W, and during checkpointing, power usage drops to just over 100W, or about  $15\\%$  maximum.\n\ncome cheaper to use $^{23,24}$  and small models are deployed on-device (Gunter et al.",
+        "img_path": "extracted_data/document_21/img-1.jpeg",
+        "img_description": "The graph displays the average GPU power consumption as a function of logging steps, showing a repeating pattern of high power usage around 600-700 units with periodic sharp drops to near 100 units. This cyclical pattern occurs at regular intervals throughout the 300 logging steps. The consistent peaks and troughs suggest a recurring process or task influencing power consumption."
+    }
+]

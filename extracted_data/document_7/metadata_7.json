@@ -1,0 +1,372 @@
+[
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-0.jpeg",
+        "img_uid": "erben2023img-0.jpeg",
+        "context": " $/h | 0.802 $/h | 0.489 $/h  |\n|  Traffic (inter-zone) | 0.01 $/GB | 0.01 $/GB | 0.00 $/GB  |\n|  Traffic (inter-region) US | 0.01 $/GB | 0.01 $/GB | 0.02 $/GB  |\n|  Traffic (inter-region) EU | 0.02 $/GB | 0.01 $/GB | 0.02 $/GB  |\n|  Traffic (inter-region) ASIA | 0.05 $/GB | 0.01 $/GB | 0.08 $/GB  |\n|  Traffic (inter-region) OCE | 0.08 $/GB | 0.01 $/GB | 0.08 $/GB  |\n|  Traffic ANY-OCE | 0.15 $/GB | 0.02 $/GB | 0.08 $/GB  |\n|  Traffic (between continents) | 0.08 $/GB | 0.02 $/GB | 0.02 $/GB  |\n\n![img-0.jpeg](img-0.jpeg)\nFigure 1: Cost to throughput tradeoff for ConvNextLarge at different instance types. Our training setups (circled) are cheaper (8xT4) and faster (8xA10) than centralized offerings (DGX-2).\n\nBut what if we could use spot pricing for long-running, distributed jobs and reduce bandwidth requirements to leverage multiple low-cost GPUs? This could be possible through a framework for collaborative DL training, Hivemind [39], which inherently deals with peers that can stop running at any time. While th",
+        "img_path": "extracted_data/document_7/img-0.jpeg",
+        "img_description": "The graph displays a comparison of different computing instances based on their cost ($ per million samples) and performance (samples per second), with \"Spot\" instances represented by blue dots and \"On-Demand\" instances by orange crosses. The 8xA10 instance offers the highest performance with over 500 samples per second at around $3 per million samples, while the DGX-2 instances are spread across higher cost ranges with varying performance. Notably, the DDP 4xT4 instances cluster around a moderate cost and performance balance."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-1.jpeg",
+        "img_uid": "erben2023img-1.jpeg",
+        "context": ". We are working with the maintainers to fix this issue *(7)*. On the other hand, the disadvantage of synchronization is minimal under the perfect conditions of a good interconnect. The global speed in Figures 2a and 2b only degrades at best to 97% (CONV) to at worst to 87% (RBase) compared to the local throughput, meaning that the communication under these conditions only accounts for a fraction of the total training time. This degradation is inversely correlated to the model size due to larger![img-1.jpeg](img-1.jpeg)\n(a) CV\n\n![img-2.jpeg](img-2.jpeg)\n(b) NLP\n\n![img-3.jpeg](img-3.jpeg)\nFigure 2: Hivemind penalty on normalized throughputs.\n(a) CV 1xA10\n\n![img-4.jpeg](img-4.jpeg)\n(b) CV 2xA10\n\n![img-5.jpeg](img-5.jpeg)\n(c) NLP 1xA10\nFigure 3: Throughput comparison between single GPU baselines and the Hivemind runs with two GPUs.\n\n![img-6.jpeg](img-6.jpeg)\n(d) NLP 2xA10\n\nmodels training quadratically longer per parameter, but the communication only increases linearly [37]. While an implementation issue currentl",
+        "img_path": "extracted_data/document_7/img-1.jpeg",
+        "img_description": "The bar graph displays throughput performance, measured in samples per second, across various models (RN18, RN50, RN152, WRN101, CONV) under three throughput types: baseline, hivemind local, and hivemind global. RN18 exhibits the highest performance across all types, with baseline type showing the peak at 1462 samples per second. Performance decreases progressively through RN50, RN152, WRN101, to CONV, with the baseline consistently outperforming both hivemind local and global types across all models."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-2.jpeg",
+        "img_uid": "erben2023img-2.jpeg",
+        "context": "ers to fix this issue *(7)*. On the other hand, the disadvantage of synchronization is minimal under the perfect conditions of a good interconnect. The global speed in Figures 2a and 2b only degrades at best to 97% (CONV) to at worst to 87% (RBase) compared to the local throughput, meaning that the communication under these conditions only accounts for a fraction of the total training time. This degradation is inversely correlated to the model size due to larger![img-1.jpeg](img-1.jpeg)\n(a) CV\n\n![img-2.jpeg](img-2.jpeg)\n(b) NLP\n\n![img-3.jpeg](img-3.jpeg)\nFigure 2: Hivemind penalty on normalized throughputs.\n(a) CV 1xA10\n\n![img-4.jpeg](img-4.jpeg)\n(b) CV 2xA10\n\n![img-5.jpeg](img-5.jpeg)\n(c) NLP 1xA10\nFigure 3: Throughput comparison between single GPU baselines and the Hivemind runs with two GPUs.\n\n![img-6.jpeg](img-6.jpeg)\n(d) NLP 2xA10\n\nmodels training quadratically longer per parameter, but the communication only increases linearly [37]. While an implementation issue currently affects performance, and the wor",
+        "img_path": "extracted_data/document_7/img-2.jpeg",
+        "img_description": "The bar graph compares sample throughput in three categories: baseline, hivemind local, and hivemind global across different configurations, RBase, RIrg, and RXIM. RBase shows the highest throughput, with baseline reaching 1310 samples per second and hivemind global at 700. RXIM has the lowest throughput, with baseline at 463, and hivemind global at 215 samples per second."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-3.jpeg",
+        "img_uid": "erben2023img-3.jpeg",
+        "context": " other hand, the disadvantage of synchronization is minimal under the perfect conditions of a good interconnect. The global speed in Figures 2a and 2b only degrades at best to 97% (CONV) to at worst to 87% (RBase) compared to the local throughput, meaning that the communication under these conditions only accounts for a fraction of the total training time. This degradation is inversely correlated to the model size due to larger![img-1.jpeg](img-1.jpeg)\n(a) CV\n\n![img-2.jpeg](img-2.jpeg)\n(b) NLP\n\n![img-3.jpeg](img-3.jpeg)\nFigure 2: Hivemind penalty on normalized throughputs.\n(a) CV 1xA10\n\n![img-4.jpeg](img-4.jpeg)\n(b) CV 2xA10\n\n![img-5.jpeg](img-5.jpeg)\n(c) NLP 1xA10\nFigure 3: Throughput comparison between single GPU baselines and the Hivemind runs with two GPUs.\n\n![img-6.jpeg](img-6.jpeg)\n(d) NLP 2xA10\n\nmodels training quadratically longer per parameter, but the communication only increases linearly [37]. While an implementation issue currently affects performance, and the worst total performance drop is at  $4",
+        "img_path": "extracted_data/document_7/img-3.jpeg",
+        "img_description": "The bar chart compares the performance of five models (RN18, RN50, RN152, WRN101, and CONV) in samples per second across three minibatch sizes: 8192, 16384, and 32768. RN18 consistently achieves the highest performance, peaking at 1466 samples per second across all batch sizes, while CONV shows the lowest performance, with a maximum of 188 samples per second at the smallest batch size. There is a noticeable trend where smaller batch sizes result in slightly higher samples per second for each model compared to the largest batch size."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-4.jpeg",
+        "img_uid": "erben2023img-4.jpeg",
+        "context": "good interconnect. The global speed in Figures 2a and 2b only degrades at best to 97% (CONV) to at worst to 87% (RBase) compared to the local throughput, meaning that the communication under these conditions only accounts for a fraction of the total training time. This degradation is inversely correlated to the model size due to larger![img-1.jpeg](img-1.jpeg)\n(a) CV\n\n![img-2.jpeg](img-2.jpeg)\n(b) NLP\n\n![img-3.jpeg](img-3.jpeg)\nFigure 2: Hivemind penalty on normalized throughputs.\n(a) CV 1xA10\n\n![img-4.jpeg](img-4.jpeg)\n(b) CV 2xA10\n\n![img-5.jpeg](img-5.jpeg)\n(c) NLP 1xA10\nFigure 3: Throughput comparison between single GPU baselines and the Hivemind runs with two GPUs.\n\n![img-6.jpeg](img-6.jpeg)\n(d) NLP 2xA10\n\nmodels training quadratically longer per parameter, but the communication only increases linearly [37]. While an implementation issue currently affects performance, and the worst total performance drop is at  $47\\%$  (CONV baseline vs. global), scaling is still possible with a ratio of roughly 2:1 of GPU",
+        "img_path": "extracted_data/document_7/img-4.jpeg",
+        "img_description": "The bar graph displays performance metrics, specifically samples per second, across four models (RN18, RN50, RN152, WRN101, and CONV) at three different tensor batch sizes (TBS): 8192, 16384, and 32768. RN50 consistently shows the highest performance across all batch sizes, peaking at 1954 samples per second for the 16384 batch size. In contrast, the CONV model displays the lowest performance across all batch sizes."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-5.jpeg",
+        "img_uid": "erben2023img-5.jpeg",
+        "context": "igures 2a and 2b only degrades at best to 97% (CONV) to at worst to 87% (RBase) compared to the local throughput, meaning that the communication under these conditions only accounts for a fraction of the total training time. This degradation is inversely correlated to the model size due to larger![img-1.jpeg](img-1.jpeg)\n(a) CV\n\n![img-2.jpeg](img-2.jpeg)\n(b) NLP\n\n![img-3.jpeg](img-3.jpeg)\nFigure 2: Hivemind penalty on normalized throughputs.\n(a) CV 1xA10\n\n![img-4.jpeg](img-4.jpeg)\n(b) CV 2xA10\n\n![img-5.jpeg](img-5.jpeg)\n(c) NLP 1xA10\nFigure 3: Throughput comparison between single GPU baselines and the Hivemind runs with two GPUs.\n\n![img-6.jpeg](img-6.jpeg)\n(d) NLP 2xA10\n\nmodels training quadratically longer per parameter, but the communication only increases linearly [37]. While an implementation issue currently affects performance, and the worst total performance drop is at  $47\\%$  (CONV baseline vs. global), scaling is still possible with a ratio of roughly 2:1 of GPUs to throughput. We further refine this ",
+        "img_path": "extracted_data/document_7/img-5.jpeg",
+        "img_description": "The image shows a bar graph comparing the performance of three models\u2014RBase, RLrg, and RXLm\u2014measured in samples per second across three minibatch sizes: 8192, 16384, and 32768. For each minibatch size, RBase consistently achieves the highest performance, followed by RLrg, with RXLm exhibiting the lowest performance. The performance figures are 1316, 1307, and 1310 for RBase; 659, 660, and 661 for RLrg; and 462, 461, and 463 for RXLm, respectively."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-6.jpeg",
+        "img_uid": "erben2023img-6.jpeg",
+        "context": "ation under these conditions only accounts for a fraction of the total training time. This degradation is inversely correlated to the model size due to larger![img-1.jpeg](img-1.jpeg)\n(a) CV\n\n![img-2.jpeg](img-2.jpeg)\n(b) NLP\n\n![img-3.jpeg](img-3.jpeg)\nFigure 2: Hivemind penalty on normalized throughputs.\n(a) CV 1xA10\n\n![img-4.jpeg](img-4.jpeg)\n(b) CV 2xA10\n\n![img-5.jpeg](img-5.jpeg)\n(c) NLP 1xA10\nFigure 3: Throughput comparison between single GPU baselines and the Hivemind runs with two GPUs.\n\n![img-6.jpeg](img-6.jpeg)\n(d) NLP 2xA10\n\nmodels training quadratically longer per parameter, but the communication only increases linearly [37]. While an implementation issue currently affects performance, and the worst total performance drop is at  $47\\%$  (CONV baseline vs. global), scaling is still possible with a ratio of roughly 2:1 of GPUs to throughput. We further refine this ratio in the following section by comparing which models are most suitable to be trained in a distributed environment.\n\n(2) Less suitable m",
+        "img_path": "extracted_data/document_7/img-6.jpeg",
+        "img_description": "The bar graph compares the performance of three models\u2014RBase, RLrg, and RXLM\u2014in terms of samples per second across three different TBS values: 8192, 16384, and 32768. RBase consistently shows the highest performance, with values of 680, 1257, and 1401 samples per second respectively, followed by RLrg and RXLM in decreasing order of performance. The RXLM model shows the lowest performance across all TBS values."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-7.jpeg",
+        "img_uid": "erben2023img-7.jpeg",
+        "context": " calculation time can decrease with improved hardware, which we evaluate in Section 6. Another parameter that affects the calculation time is the TBS that all peers work to accumulate. There is a practical limit to the TBS where a model is still trainable, which is currently at 64K with the LAMB optimizer [44]. This limits the possibility of improving the speedup of small models by increasing the batch size, meaning that at some point, the speed will be limited by the communication time. It is\n\n![img-7.jpeg](img-7.jpeg)\n(a) CV\n\n![img-8.jpeg](img-8.jpeg)\n(b) NLP\nFigure 4: TBS vs. total training time on 2xA10s. Granularity is shown above each bar. Dotted lines separate different models.\n\nimportant to remember that just increasing the TBS to create more calculation time can have a grave effect on training performance if the optimizer is not adequately selected and configured.\n\nOur experimental results in Figure 3 show the practical implications of this observation. For the 2xGPU experiments in Figures 3b and 3d, ",
+        "img_path": "extracted_data/document_7/img-7.jpeg",
+        "img_description": "The bar graph displays the time in seconds taken for calculation and communication for different models (RN18, RN50, RN152, WRN101, CONV) using varying batch sizes (8192, 16384, 32768). Calculation times, shown in green, increase with batch size across all models, with the highest at 32768 for the CONV model at 21.6 seconds. Communication times, shown in purple, are consistently lower than calculation times and also rise with batch size."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-8.jpeg",
+        "img_uid": "erben2023img-8.jpeg",
+        "context": "h improved hardware, which we evaluate in Section 6. Another parameter that affects the calculation time is the TBS that all peers work to accumulate. There is a practical limit to the TBS where a model is still trainable, which is currently at 64K with the LAMB optimizer [44]. This limits the possibility of improving the speedup of small models by increasing the batch size, meaning that at some point, the speed will be limited by the communication time. It is\n\n![img-7.jpeg](img-7.jpeg)\n(a) CV\n\n![img-8.jpeg](img-8.jpeg)\n(b) NLP\nFigure 4: TBS vs. total training time on 2xA10s. Granularity is shown above each bar. Dotted lines separate different models.\n\nimportant to remember that just increasing the TBS to create more calculation time can have a grave effect on training performance if the optimizer is not adequately selected and configured.\n\nOur experimental results in Figure 3 show the practical implications of this observation. For the 2xGPU experiments in Figures 3b and 3d, we can see the effect of a TBS inc",
+        "img_path": "extracted_data/document_7/img-8.jpeg",
+        "img_description": "The bar graph displays the time in seconds for \"Calculation\" (in green) and \"Communication\" (in purple) across three tasks (RBSe, RLrg, and RXLm) with varying data sizes (8192, 16384, 32768). Calculation time generally increases with data size, with notable jumps, especially in RXLm at 32768 data size, where it peaks at 4.2 seconds. Communication time remains relatively low and stable across all tasks and data sizes."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-9.jpeg",
+        "img_uid": "erben2023img-9.jpeg",
+        "context": "xtent but depends on the specific training task and optimizer configuration.\n\n(3) Per-GPU speedup decreases with low granularity. To evaluate the scalability with additional hardware, we profile all models on 2,3,4, and 8 GPUs with a TBS of 32K. Figure 5 shows the throughput for all models in the different hardware scenarios. Generally, all models scale well regardless of size, with the best speedup of  $4.37\\mathrm{x}$  (RN152) and the lowest at  $2.29\\mathrm{x}$  (RXLM) with 8 GPUs. There is a![img-9.jpeg](img-9.jpeg)\n(a) CV\n\n![img-10.jpeg](img-10.jpeg)\n(b) NLP\n\n![img-11.jpeg](img-11.jpeg)\nFigure 5: Throughput comparison from 1 to 8 A10 GPUs.\n(a) CV\nFigure 6: Multi-GPU scalability at 32K TBS. Granularity is shown above each bar. Dotted lines separate different models.\n\n![img-12.jpeg](img-12.jpeg)\n(b) NLP\n\nTable 2: Geo-distributed experiments on GC with T4 VMs.\n\n|  Exp. Name | Resources | Total  |\n| --- | --- | --- |\n|  A-{1,2,3,4,6,8} | [1, 2, 3, 4, 6, 8]xUS | 1,2,3,4,6,8  |\n|  B-{2,4,6,8} | [1, 2, 3, 4]xUS ",
+        "img_path": "extracted_data/document_7/img-9.jpeg",
+        "img_description": "The line graph compares the performance of five different models (RN18, RN50, RN152, WRN101, and CONV) in terms of samples processed per second against varying A10 counts from 1 to 8. RN18 shows the steepest increase, reaching over 4000 samples per second at 8 A10s, while the other models exhibit more modest scalability. WRN101 and CONV demonstrate the lowest performance, with samples per second remaining below 1000."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-10.jpeg",
+        "img_uid": "erben2023img-10.jpeg",
+        "context": "training task and optimizer configuration.\n\n(3) Per-GPU speedup decreases with low granularity. To evaluate the scalability with additional hardware, we profile all models on 2,3,4, and 8 GPUs with a TBS of 32K. Figure 5 shows the throughput for all models in the different hardware scenarios. Generally, all models scale well regardless of size, with the best speedup of  $4.37\\mathrm{x}$  (RN152) and the lowest at  $2.29\\mathrm{x}$  (RXLM) with 8 GPUs. There is a![img-9.jpeg](img-9.jpeg)\n(a) CV\n\n![img-10.jpeg](img-10.jpeg)\n(b) NLP\n\n![img-11.jpeg](img-11.jpeg)\nFigure 5: Throughput comparison from 1 to 8 A10 GPUs.\n(a) CV\nFigure 6: Multi-GPU scalability at 32K TBS. Granularity is shown above each bar. Dotted lines separate different models.\n\n![img-12.jpeg](img-12.jpeg)\n(b) NLP\n\nTable 2: Geo-distributed experiments on GC with T4 VMs.\n\n|  Exp. Name | Resources | Total  |\n| --- | --- | --- |\n|  A-{1,2,3,4,6,8} | [1, 2, 3, 4, 6, 8]xUS | 1,2,3,4,6,8  |\n|  B-{2,4,6,8} | [1, 2, 3, 4]xUS + {1, 2, 3, 4}xEU | 2,4,6,8  |\n|  C-",
+        "img_path": "extracted_data/document_7/img-10.jpeg",
+        "img_description": "The line graph displays the relationship between \"A10 Count\" and \"Samples per Second\" for three models: RBase, RLrg, and RXLM. As A10 Count increases from 1 to 8, all models show an upward trend in performance, with RBase consistently outperforming the other models in terms of samples processed per second. The legend indicates distinct symbols and colors for each model, facilitating comparison across the dataset."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-11.jpeg",
+        "img_uid": "erben2023img-11.jpeg",
+        "context": "tion.\n\n(3) Per-GPU speedup decreases with low granularity. To evaluate the scalability with additional hardware, we profile all models on 2,3,4, and 8 GPUs with a TBS of 32K. Figure 5 shows the throughput for all models in the different hardware scenarios. Generally, all models scale well regardless of size, with the best speedup of  $4.37\\mathrm{x}$  (RN152) and the lowest at  $2.29\\mathrm{x}$  (RXLM) with 8 GPUs. There is a![img-9.jpeg](img-9.jpeg)\n(a) CV\n\n![img-10.jpeg](img-10.jpeg)\n(b) NLP\n\n![img-11.jpeg](img-11.jpeg)\nFigure 5: Throughput comparison from 1 to 8 A10 GPUs.\n(a) CV\nFigure 6: Multi-GPU scalability at 32K TBS. Granularity is shown above each bar. Dotted lines separate different models.\n\n![img-12.jpeg](img-12.jpeg)\n(b) NLP\n\nTable 2: Geo-distributed experiments on GC with T4 VMs.\n\n|  Exp. Name | Resources | Total  |\n| --- | --- | --- |\n|  A-{1,2,3,4,6,8} | [1, 2, 3, 4, 6, 8]xUS | 1,2,3,4,6,8  |\n|  B-{2,4,6,8} | [1, 2, 3, 4]xUS + {1, 2, 3, 4}xEU | 2,4,6,8  |\n|  C-{3,6} | [1, 2]xUS + {1, 2}xEU + {1, 2",
+        "img_path": "extracted_data/document_7/img-11.jpeg",
+        "img_description": "The bar chart displays the time in seconds taken for calculation and communication across different A10 counts (2, 3, 4, 8) for five model types: RN18, RN50, RN152, WRN101, and CONV. Calculation time is represented in green, while communication time is shown in purple, with calculation generally dominating as the A10 count increases. The CONV model exhibits the highest calculation time at 21.6 seconds for an A10 count of 2, while the communication time peaks at 8.4 seconds for the same model and count."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-12.jpeg",
+        "img_uid": "erben2023img-12.jpeg",
+        "context": "l models in the different hardware scenarios. Generally, all models scale well regardless of size, with the best speedup of  $4.37\\mathrm{x}$  (RN152) and the lowest at  $2.29\\mathrm{x}$  (RXLM) with 8 GPUs. There is a![img-9.jpeg](img-9.jpeg)\n(a) CV\n\n![img-10.jpeg](img-10.jpeg)\n(b) NLP\n\n![img-11.jpeg](img-11.jpeg)\nFigure 5: Throughput comparison from 1 to 8 A10 GPUs.\n(a) CV\nFigure 6: Multi-GPU scalability at 32K TBS. Granularity is shown above each bar. Dotted lines separate different models.\n\n![img-12.jpeg](img-12.jpeg)\n(b) NLP\n\nTable 2: Geo-distributed experiments on GC with T4 VMs.\n\n|  Exp. Name | Resources | Total  |\n| --- | --- | --- |\n|  A-{1,2,3,4,6,8} | [1, 2, 3, 4, 6, 8]xUS | 1,2,3,4,6,8  |\n|  B-{2,4,6,8} | [1, 2, 3, 4]xUS + {1, 2, 3, 4}xEU | 2,4,6,8  |\n|  C-{3,6} | [1, 2]xUS + {1, 2}xEU + {1, 2}xASIA | 3,6  |\n|  C-{4,8} | [1, 2]xUS + {1, 2}xEU + {1, 2}xASIA + {1, 2}xAUS | 4,8  |\n\nvisible trend in the per-GPU contribution to the speedup  $\\left(\\frac{\\text{speedup}}{\\text{SCPUs}}\\right)$ . The more GPU",
+        "img_path": "extracted_data/document_7/img-12.jpeg",
+        "img_description": "The bar graph displays the time in seconds for calculations and communications across different A10 counts for three systems: RBse, RLrg, and RXLM. Each system shows a series of stacked bars, with green representing calculation time and purple for communication time, with time values decreasing as A10 count increases. RXLM shows the shortest times at higher A10 counts, indicating improved efficiency compared to RBse and RLrg."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-13.jpeg",
+        "img_uid": "erben2023img-13.jpeg",
+        "context": "5.98 | 272.08 | 131.42 | 0.64  |\n\n(A) Intra-zone scalability. Figure 7 shows the result of the intra-zone experiments, which we used as a baseline to compare geodistributed deployments to. As the scalability of the CV and NLP models was already shown with much better hardware and slightly worse network connectivity (cf. Section 3), the scalability with the T4 GPUs is not too surprising. We do not see an improvement in throughput for two GPUs for either model due to the Hivemind penalty discussed![img-13.jpeg](img-13.jpeg)\n(a) Throughput\n\n![img-14.jpeg](img-14.jpeg)\n(b) Granularity\n\n![img-15.jpeg](img-15.jpeg)\nFigure 7: (A) Intra-zone performance for CV and NLP.\n(a) Throughput\nFigure 8: (B) Transatlantic performance for CV and NLP.\n\n![img-16.jpeg](img-16.jpeg)\n(b) Granularity\n\nin Section 3. However, starting with three GPUs, we see an increase in throughput with a maximum speedup of up to  $3.2\\mathrm{x}$  CV and  $2.75\\mathrm{x}$  for NLP at eight GPUs. CV's per-GPU speedup  $\\left(\\frac{\\text{speedup}}{\\# \\text",
+        "img_path": "extracted_data/document_7/img-13.jpeg",
+        "img_description": "The image is a line graph comparing the performance of two models, CONV and RXLM, in terms of samples per second as a function of T4 count. The RXLM model shows a steeper increase in performance, reaching about 600 samples per second at a T4 count of 8, while the CONV model increases gradually, reaching around 250 samples per second at the same T4 count. Both models exhibit a positive trend with increasing T4 count, but RXLM is consistently and significantly faster."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-14.jpeg",
+        "img_uid": "erben2023img-14.jpeg",
+        "context": "zone scalability. Figure 7 shows the result of the intra-zone experiments, which we used as a baseline to compare geodistributed deployments to. As the scalability of the CV and NLP models was already shown with much better hardware and slightly worse network connectivity (cf. Section 3), the scalability with the T4 GPUs is not too surprising. We do not see an improvement in throughput for two GPUs for either model due to the Hivemind penalty discussed![img-13.jpeg](img-13.jpeg)\n(a) Throughput\n\n![img-14.jpeg](img-14.jpeg)\n(b) Granularity\n\n![img-15.jpeg](img-15.jpeg)\nFigure 7: (A) Intra-zone performance for CV and NLP.\n(a) Throughput\nFigure 8: (B) Transatlantic performance for CV and NLP.\n\n![img-16.jpeg](img-16.jpeg)\n(b) Granularity\n\nin Section 3. However, starting with three GPUs, we see an increase in throughput with a maximum speedup of up to  $3.2\\mathrm{x}$  CV and  $2.75\\mathrm{x}$  for NLP at eight GPUs. CV's per-GPU speedup  $\\left(\\frac{\\text{speedup}}{\\# \\text{GPUs}}\\right)$  is almost linear (0.43, 0.4",
+        "img_path": "extracted_data/document_7/img-14.jpeg",
+        "img_description": "The bar graph compares the time spent on \"Calculation\" and \"Communication\" tasks across various categories labeled CV and NLP, with \"Calculation\" consistently taking longer. The CV tasks, especially CV A-2, have significantly higher times than NLP tasks in both activities. The green bars represent \"Calculation\" while the purple bars denote \"Communication,\" with the y-axis measuring time in seconds."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-15.jpeg",
+        "img_uid": "erben2023img-15.jpeg",
+        "context": "f the intra-zone experiments, which we used as a baseline to compare geodistributed deployments to. As the scalability of the CV and NLP models was already shown with much better hardware and slightly worse network connectivity (cf. Section 3), the scalability with the T4 GPUs is not too surprising. We do not see an improvement in throughput for two GPUs for either model due to the Hivemind penalty discussed![img-13.jpeg](img-13.jpeg)\n(a) Throughput\n\n![img-14.jpeg](img-14.jpeg)\n(b) Granularity\n\n![img-15.jpeg](img-15.jpeg)\nFigure 7: (A) Intra-zone performance for CV and NLP.\n(a) Throughput\nFigure 8: (B) Transatlantic performance for CV and NLP.\n\n![img-16.jpeg](img-16.jpeg)\n(b) Granularity\n\nin Section 3. However, starting with three GPUs, we see an increase in throughput with a maximum speedup of up to  $3.2\\mathrm{x}$  CV and  $2.75\\mathrm{x}$  for NLP at eight GPUs. CV's per-GPU speedup  $\\left(\\frac{\\text{speedup}}{\\# \\text{GPUs}}\\right)$  is almost linear (0.43, 0.42, 0.43, 0.41, 0.41), while NLP starts droppi",
+        "img_path": "extracted_data/document_7/img-15.jpeg",
+        "img_description": "The image is a line graph comparing the performance of two models, CONV and RXLM, in terms of \"Samples per Second\" as a function of \"T4 Count\" ranging from 0 to 10. The RXLM model shows a higher performance, increasing from approximately 200 to 500 samples per second, while the CONV model's performance increases steadily at a lower rate, from around 100 to 300 samples per second. The graph includes a legend for model identification and a shaded area representing some variation for the RXLM model."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-16.jpeg",
+        "img_uid": "erben2023img-16.jpeg",
+        "context": "dy shown with much better hardware and slightly worse network connectivity (cf. Section 3), the scalability with the T4 GPUs is not too surprising. We do not see an improvement in throughput for two GPUs for either model due to the Hivemind penalty discussed![img-13.jpeg](img-13.jpeg)\n(a) Throughput\n\n![img-14.jpeg](img-14.jpeg)\n(b) Granularity\n\n![img-15.jpeg](img-15.jpeg)\nFigure 7: (A) Intra-zone performance for CV and NLP.\n(a) Throughput\nFigure 8: (B) Transatlantic performance for CV and NLP.\n\n![img-16.jpeg](img-16.jpeg)\n(b) Granularity\n\nin Section 3. However, starting with three GPUs, we see an increase in throughput with a maximum speedup of up to  $3.2\\mathrm{x}$  CV and  $2.75\\mathrm{x}$  for NLP at eight GPUs. CV's per-GPU speedup  $\\left(\\frac{\\text{speedup}}{\\# \\text{GPUs}}\\right)$  is almost linear (0.43, 0.42, 0.43, 0.41, 0.41), while NLP starts dropping off faster (0.51, 0.47, 0.45, 0.40, 0.34) for 2, 3, 4, 6 and 8 GPUs, respectively. The reason for this is the NLP granularity of 1.15 with 8 GPUs indi",
+        "img_path": "extracted_data/document_7/img-16.jpeg",
+        "img_description": "The bar graph illustrates the time in seconds spent on calculation and communication tasks across various CV and NLP benchmarks. Calculation times, represented in green bars, are significantly higher than communication times, shown in purple, for all benchmarks. The most time-consuming calculation is CV_A2 at 600 seconds, while communication time peaks at 14.4 seconds in the same category."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-17.jpeg",
+        "img_uid": "erben2023img-17.jpeg",
+        "context": "orkload continues to be mostly computation, with a throughput of 135.8 (B-4), only  $3\\%$  slower than the intra-zone experiment with 140.4 SPS (A-4). However, at NLP, things get more interesting as we now have more overall communication with four peers, but they can average locally first and only later transmit across the Atlantic. However, compared to their A-counterparts, we do not see a difference in relative scalability with either B-4, B-6, or B-8. This means that training across regions\n\n![img-17.jpeg](img-17.jpeg)\n(a) Throughput\n\n![img-18.jpeg](img-18.jpeg)\n(b) Granularity\nFigure 9: (C) Intercontinental performance for CV and NLP.\n\n(B) is slower, but the contribution per GPU decreases at the same rate as in training within a zone (A). The per-GPU speedup with additional hardware reduces at the same rate for either setup (between 0.05 and 0.06). This results in two observations: First, communication overhead scales linearly with the number of peers. Second, we only have to pay the penalty for transatlanti",
+        "img_path": "extracted_data/document_7/img-17.jpeg",
+        "img_description": "The line graph shows the performance of two models, CONV and RXLM, in terms of samples per second as the T4 count increases from 1 to 9. The RXLM model consistently outperforms CONV, starting at around 250 samples per second and increasing to just above 350, while CONV starts below 200 and ends near 250. The trends indicate a positive correlation between T4 count and performance for both models."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-18.jpeg",
+        "img_uid": "erben2023img-18.jpeg",
+        "context": "with a throughput of 135.8 (B-4), only  $3\\%$  slower than the intra-zone experiment with 140.4 SPS (A-4). However, at NLP, things get more interesting as we now have more overall communication with four peers, but they can average locally first and only later transmit across the Atlantic. However, compared to their A-counterparts, we do not see a difference in relative scalability with either B-4, B-6, or B-8. This means that training across regions\n\n![img-17.jpeg](img-17.jpeg)\n(a) Throughput\n\n![img-18.jpeg](img-18.jpeg)\n(b) Granularity\nFigure 9: (C) Intercontinental performance for CV and NLP.\n\n(B) is slower, but the contribution per GPU decreases at the same rate as in training within a zone (A). The per-GPU speedup with additional hardware reduces at the same rate for either setup (between 0.05 and 0.06). This results in two observations: First, communication overhead scales linearly with the number of peers. Second, we only have to pay the penalty for transatlantic training once. However, we cannot expect a",
+        "img_path": "extracted_data/document_7/img-18.jpeg",
+        "img_description": "The bar graph displays the time in seconds spent on \"Calculation\" and \"Communication\" tasks for different CV and NLP models, with green bars representing calculation times and purple bars for communication times. Calculation times are considerably higher in CV models, particularly CV A-3 and CV A-4, while NLP models show lower overall times with a more balanced distribution between calculation and communication. The legend on top right differentiates the tasks, aligning with the color scheme used in the graph."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-19.jpeg",
+        "img_uid": "erben2023img-19.jpeg",
+        "context": "s, one GPU on each continent (C-4) is slower by  $6\\%$  for CV and  $20\\%$  for NLP compared to two GPUs on two continents (B-4). This reinforces that local hardware should be preferred whenever possible. However, we are always faster than the baseline (A-1), starting from 4 GPUs in both the transatlantic and intercontinental settings. While these experiments were specifically designed to be a worst-case scenario, what about a more balanced GPU distribution with at least two GPUs in each region?![img-19.jpeg](img-19.jpeg)\n(a) Throughput\n\n![img-20.jpeg](img-20.jpeg)\n(b) Granularity\nFigure 10: Multi-cloud performance for CV and NLP.\n\nWhen comparing the C-6 experiment with two GPUs in three continents to the local A-6 experiments, the throughput slowdown is almost identical (CV  $7\\%$ , NLP  $35\\%$ ) as with C-4 (CV  $9\\%$ , NLP  $36\\%$ ) to A-4. Scaling further to two GPUs in four continents, C-8 is slightly slower at NLP ( $41\\%$ ) compared to C-4 ( $36\\%$ ) to their respective local runs (A-8 and A-4), due to th",
+        "img_path": "extracted_data/document_7/img-19.jpeg",
+        "img_description": "The graph displays the performance of two models, CONV and RXLM, in terms of samples processed per second across three T4 counts (D-1, D-2, D-3). The RXLM model consistently processes over 300 samples per second, while the CONV model remains close to 200 samples per second. The performance remains stable for both models across all T4 counts."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-20.jpeg",
+        "img_uid": "erben2023img-20.jpeg",
+        "context": " by  $6\\%$  for CV and  $20\\%$  for NLP compared to two GPUs on two continents (B-4). This reinforces that local hardware should be preferred whenever possible. However, we are always faster than the baseline (A-1), starting from 4 GPUs in both the transatlantic and intercontinental settings. While these experiments were specifically designed to be a worst-case scenario, what about a more balanced GPU distribution with at least two GPUs in each region?![img-19.jpeg](img-19.jpeg)\n(a) Throughput\n\n![img-20.jpeg](img-20.jpeg)\n(b) Granularity\nFigure 10: Multi-cloud performance for CV and NLP.\n\nWhen comparing the C-6 experiment with two GPUs in three continents to the local A-6 experiments, the throughput slowdown is almost identical (CV  $7\\%$ , NLP  $35\\%$ ) as with C-4 (CV  $9\\%$ , NLP  $36\\%$ ) to A-4. Scaling further to two GPUs in four continents, C-8 is slightly slower at NLP ( $41\\%$ ) compared to C-4 ( $36\\%$ ) to their respective local runs (A-8 and A-4), due to the decreasing granularity of 0.4 (Figure 9b).",
+        "img_path": "extracted_data/document_7/img-20.jpeg",
+        "img_description": "The bar graph compares the time in seconds spent on calculation and communication tasks across two sets of activities, labeled as CV and NLP. The CV tasks (CV D-1, CV D-2, CV D-3) show significantly higher calculation times (around 12.7 to 14.5 seconds) compared to communication times, while the NLP tasks (NLP D-1, NLP D-2, NLP D-3) have minimal calculation and slightly more communication time (2.0 to 2.7 seconds). The green bars represent calculation times, and the purple bars represent communication times."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-21.jpeg",
+        "img_uid": "erben2023img-21.jpeg",
+        "context": "the cloud provider. We have summarized the cost of egress traffic within a zone (intra-zone), between zones in each region (inter-zone), and between continents in Section 1. Notably, any traffic to Oceania (Australia, New Zealand, and others, abbreviated as OCE) generates the highest cost of  $0.15/GB for GC. We have broken down the costs for the multi-cloud experiment in Figure 11a on an hourly per-VM basis. With only four peers in the D-1/2/3 experiments, we have an N-to-N communication, i.e.,![img-21.jpeg](img-21.jpeg)\n(a) Intra- and inter-zone in the US region (D-2/3).\n\n![img-22.jpeg](img-22.jpeg)\n(b) Intercontinental in the US, EU, ASIA and AUS (C-8).\nFigure 11: Costs breakdown for D-2/3 and C-8 experiments.\n\neach peer sends its gradients to every other peer. This means that  $\\frac{1}{3}$  of the egress was internal to the partner VM in the same cloud, and the remaining  $\\frac{2}{3}$  went to the remaining two peers in the other cloud.\n\nFirst, loading data from Backblaze costs \\(0.01/GB from anywhere in t",
+        "img_path": "extracted_data/document_7/img-21.jpeg",
+        "img_description": "The image shows a bar graph comparing the hourly costs of different cloud services\u2014GC, AWS, and Azure\u2014across various parameters like VM On-Demand, VM Spot, Egress Internal, Egress External, and Dataloading. Each cloud service is divided into two models, CONV and RXL, represented by red and blue bars respectively. The graph illustrates that VM On-Demand is generally the most expensive option across all platforms, with Azure showing the highest cost at 0.763 per hour for the RXL model."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-22.jpeg",
+        "img_uid": "erben2023img-22.jpeg",
+        "context": "intra-zone), between zones in each region (inter-zone), and between continents in Section 1. Notably, any traffic to Oceania (Australia, New Zealand, and others, abbreviated as OCE) generates the highest cost of  $0.15/GB for GC. We have broken down the costs for the multi-cloud experiment in Figure 11a on an hourly per-VM basis. With only four peers in the D-1/2/3 experiments, we have an N-to-N communication, i.e.,![img-21.jpeg](img-21.jpeg)\n(a) Intra- and inter-zone in the US region (D-2/3).\n\n![img-22.jpeg](img-22.jpeg)\n(b) Intercontinental in the US, EU, ASIA and AUS (C-8).\nFigure 11: Costs breakdown for D-2/3 and C-8 experiments.\n\neach peer sends its gradients to every other peer. This means that  $\\frac{1}{3}$  of the egress was internal to the partner VM in the same cloud, and the remaining  $\\frac{2}{3}$  went to the remaining two peers in the other cloud.\n\nFirst, loading data from Backblaze costs \\(0.01/GB from anywhere in the world, which gives us a rate of \\)0.144/h for the CV and $0.083/h for the NLP ",
+        "img_path": "extracted_data/document_7/img-22.jpeg",
+        "img_description": "The image depicts a bar chart comparing the cost per hour in dollars for different cloud services: Google Cloud (GC), AWS, and Azure, across various categories such as VM On-Demand, Fores Internal, Fores External, and Dataloading. The costs are broken down for two models, CONV and RXLM, with RXLM generally incurring higher costs, especially in the \"Fores External\" category across all cloud providers. Each category is visually represented with distinct colors for each model, indicating a significant cost disparity, particularly on GC for RXLM."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-23.jpeg",
+        "img_uid": "erben2023img-23.jpeg",
+        "context": "four groups of two VMs average locally and then distribute the gradients across the other groups. This results in  $\\frac{8}{20}$  internal egress calls (two calls between each group),  $\\frac{6}{20}$  intercontinental egress calls (two calls between three regions), and  $\\frac{6}{20}$  AUS egress calls (three regions share their gradients with AUS and vice versa).\n\nFigure 11b shows the resulting egress traffic cost per VM. The high cost between continents scales to a multiple of the remaining\n\n![img-23.jpeg](img-23.jpeg)\n(a) CV\nFigure 12: Baseline egress rate on 2-8 A10 GPUs.\n\n![img-24.jpeg](img-24.jpeg)\n(b) NLP\n\ncost for CV and NLP with GC and Azure. For NLP, the external egress cost for GC is  $4.329/h, more than \\(90\\%$  of the total cost per VM ($4.804/h). Even with Azure having a more moderate rate of $0.02/GB for intercontinental communication and only $0.08/GB for OCE traffic, it still results in $1.882/h external egress cost ($2.101/h total). This is in contrast to AWS, which has a cap of $0.02/GB to an",
+        "img_path": "extracted_data/document_7/img-23.jpeg",
+        "img_description": "The bar chart compares egress MB per second across various neural network models (RN18, RN50, RN152, WRN101, CONV) for different GPU counts (2, 3, 4, 8). The GPU count is indicated by colors, with higher GPU counts generally showing increased egress rates. Notably, model WRN101 with 8 GPUs exhibits the highest egress rate among all configurations."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-24.jpeg",
+        "img_uid": "erben2023img-24.jpeg",
+        "context": "ther groups. This results in  $\\frac{8}{20}$  internal egress calls (two calls between each group),  $\\frac{6}{20}$  intercontinental egress calls (two calls between three regions), and  $\\frac{6}{20}$  AUS egress calls (three regions share their gradients with AUS and vice versa).\n\nFigure 11b shows the resulting egress traffic cost per VM. The high cost between continents scales to a multiple of the remaining\n\n![img-23.jpeg](img-23.jpeg)\n(a) CV\nFigure 12: Baseline egress rate on 2-8 A10 GPUs.\n\n![img-24.jpeg](img-24.jpeg)\n(b) NLP\n\ncost for CV and NLP with GC and Azure. For NLP, the external egress cost for GC is  $4.329/h, more than \\(90\\%$  of the total cost per VM ($4.804/h). Even with Azure having a more moderate rate of $0.02/GB for intercontinental communication and only $0.08/GB for OCE traffic, it still results in $1.882/h external egress cost ($2.101/h total). This is in contrast to AWS, which has a cap of $0.02/GB to any location, resulting in the best total cost of $1.376/h per VM. The relatively high ",
+        "img_path": "extracted_data/document_7/img-24.jpeg",
+        "img_description": "The bar graph illustrates the egress performance, measured in MB per second, for different GPU counts (2, 3, 4, 8) across three models: RBse, RLrg, and RXLM, with each model having results for 2XA10, 3XA10, and 4XA10 configurations. Performance increases with a higher number of GPUs, and RXLM consistently shows the highest egress rates across configurations. The graph uses color coding to differentiate between GPU counts, with a noticeable performance scaling observed in RXLM as the GPU count increases."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-25.jpeg",
+        "img_uid": "erben2023img-25.jpeg",
+        "context": "-- | --- | --- | --- | --- | --- | --- | --- |\n|  RTX8000 | 0.45 | 0.06 | 0.05 | RTX8000 | 16.73 | 330.80 | 159.05  |\n|  DGX-2 (8xV100) | 0.55 | 0.08 | 0.07 | DGX-2 (8xV100) | 16.19 | 330.27 | 158.58  |\n\nTable 6: Hybrid- vs. cloud-only throughput for the (E) setting.\n\n|  Setup Model | RTX8000 | E-A-8 | E-B-8 | E-C-8 | 8xT4 | 8xA10  |\n| --- | --- | --- | --- | --- | --- | --- |\n|  CONV | 194.8 | 316.8 | 283.5 | 429.3 | 261.9 | 620.6  |\n|  RXLM | 431.8 | 556.7 | 330.6 | 223.7 | 575.1 | 1059.9  |\n\n![img-25.jpeg](img-25.jpeg)\n(a) CV Throughput\n\n![img-26.jpeg](img-26.jpeg)\n(b) CV Granularity\n\n![img-27.jpeg](img-27.jpeg)\n(c) NLP Throughput\nFigure 13: Hybrid-cloud experiments for the (E) setting.\n\n![img-28.jpeg](img-28.jpeg)\n(d) NLP Granularity\n\nsettings: (E), where a consumer-grade GPU, the RTX8000, is deployed on-site, and (F), where a server-grade node, the DGX-2 (8xV100), is deployed on-site. We vary the extra resources, between one to eight T4 EU ([E,F]-A), T4 US ([E,F]-B) and A10 US ([E,F]-C) GPUs.\n\nExperimental ",
+        "img_path": "extracted_data/document_7/img-25.jpeg",
+        "img_description": "The graph displays the relationship between GPU Count and Samples per Second for four different GPU types: RTX8000, EU T4, US T4, and US A10. As the GPU count increases from 1 to 9, all GPU types show a steady increase in samples per second, with US A10 showing the highest performance. The plot uses distinct colors and markers to differentiate between the GPU types."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-26.jpeg",
+        "img_uid": "erben2023img-26.jpeg",
+        "context": "|  RTX8000 | 0.45 | 0.06 | 0.05 | RTX8000 | 16.73 | 330.80 | 159.05  |\n|  DGX-2 (8xV100) | 0.55 | 0.08 | 0.07 | DGX-2 (8xV100) | 16.19 | 330.27 | 158.58  |\n\nTable 6: Hybrid- vs. cloud-only throughput for the (E) setting.\n\n|  Setup Model | RTX8000 | E-A-8 | E-B-8 | E-C-8 | 8xT4 | 8xA10  |\n| --- | --- | --- | --- | --- | --- | --- |\n|  CONV | 194.8 | 316.8 | 283.5 | 429.3 | 261.9 | 620.6  |\n|  RXLM | 431.8 | 556.7 | 330.6 | 223.7 | 575.1 | 1059.9  |\n\n![img-25.jpeg](img-25.jpeg)\n(a) CV Throughput\n\n![img-26.jpeg](img-26.jpeg)\n(b) CV Granularity\n\n![img-27.jpeg](img-27.jpeg)\n(c) NLP Throughput\nFigure 13: Hybrid-cloud experiments for the (E) setting.\n\n![img-28.jpeg](img-28.jpeg)\n(d) NLP Granularity\n\nsettings: (E), where a consumer-grade GPU, the RTX8000, is deployed on-site, and (F), where a server-grade node, the DGX-2 (8xV100), is deployed on-site. We vary the extra resources, between one to eight T4 EU ([E,F]-A), T4 US ([E,F]-B) and A10 US ([E,F]-C) GPUs.\n\nExperimental design. In both settings, we want to investigat",
+        "img_path": "extracted_data/document_7/img-26.jpeg",
+        "img_description": "The image is a bar graph depicting time in seconds for three categories of events (EA, EB, EC) divided into subcategories, illustrating time spent on calculation (green) and communication (purple). Each subcategory is labeled (e.g., EA-1, EB-1, EC-1), with calculation times generally higher than communication times, except in a few instances like EB-1 and EC-1. The highest total time appears in the EA-1 subcategory with significant calculation time, while the lowest is in EC-8 with minimal communication time."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-27.jpeg",
+        "img_uid": "erben2023img-27.jpeg",
+        "context": "3 | 330.80 | 159.05  |\n|  DGX-2 (8xV100) | 0.55 | 0.08 | 0.07 | DGX-2 (8xV100) | 16.19 | 330.27 | 158.58  |\n\nTable 6: Hybrid- vs. cloud-only throughput for the (E) setting.\n\n|  Setup Model | RTX8000 | E-A-8 | E-B-8 | E-C-8 | 8xT4 | 8xA10  |\n| --- | --- | --- | --- | --- | --- | --- |\n|  CONV | 194.8 | 316.8 | 283.5 | 429.3 | 261.9 | 620.6  |\n|  RXLM | 431.8 | 556.7 | 330.6 | 223.7 | 575.1 | 1059.9  |\n\n![img-25.jpeg](img-25.jpeg)\n(a) CV Throughput\n\n![img-26.jpeg](img-26.jpeg)\n(b) CV Granularity\n\n![img-27.jpeg](img-27.jpeg)\n(c) NLP Throughput\nFigure 13: Hybrid-cloud experiments for the (E) setting.\n\n![img-28.jpeg](img-28.jpeg)\n(d) NLP Granularity\n\nsettings: (E), where a consumer-grade GPU, the RTX8000, is deployed on-site, and (F), where a server-grade node, the DGX-2 (8xV100), is deployed on-site. We vary the extra resources, between one to eight T4 EU ([E,F]-A), T4 US ([E,F]-B) and A10 US ([E,F]-C) GPUs.\n\nExperimental design. In both settings, we want to investigate how to extend local hardware with cloud resour",
+        "img_path": "extracted_data/document_7/img-27.jpeg",
+        "img_description": "The graph displays the performance comparison of various GPU types (RTX8000, EU T4, US T4, US A10) by plotting samples per second against GPU count, ranging from 1 to 9. The RTX8000 shows the highest performance increase, reaching over 500 samples per second at nine GPU counts, while the other GPUs display more moderate increases. Each GPU type is represented with a distinct line and marker for clarity."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-28.jpeg",
+        "img_uid": "erben2023img-28.jpeg",
+        "context": " |\n\nTable 6: Hybrid- vs. cloud-only throughput for the (E) setting.\n\n|  Setup Model | RTX8000 | E-A-8 | E-B-8 | E-C-8 | 8xT4 | 8xA10  |\n| --- | --- | --- | --- | --- | --- | --- |\n|  CONV | 194.8 | 316.8 | 283.5 | 429.3 | 261.9 | 620.6  |\n|  RXLM | 431.8 | 556.7 | 330.6 | 223.7 | 575.1 | 1059.9  |\n\n![img-25.jpeg](img-25.jpeg)\n(a) CV Throughput\n\n![img-26.jpeg](img-26.jpeg)\n(b) CV Granularity\n\n![img-27.jpeg](img-27.jpeg)\n(c) NLP Throughput\nFigure 13: Hybrid-cloud experiments for the (E) setting.\n\n![img-28.jpeg](img-28.jpeg)\n(d) NLP Granularity\n\nsettings: (E), where a consumer-grade GPU, the RTX8000, is deployed on-site, and (F), where a server-grade node, the DGX-2 (8xV100), is deployed on-site. We vary the extra resources, between one to eight T4 EU ([E,F]-A), T4 US ([E,F]-B) and A10 US ([E,F]-C) GPUs.\n\nExperimental design. In both settings, we want to investigate how to extend local hardware with cloud resources and when this leads to better throughput. The cloud resources, in this case, are the same US/EU GC T4",
+        "img_path": "extracted_data/document_7/img-28.jpeg",
+        "img_description": "The bar graph compares the time in seconds spent on \"Calculation\" and \"Communication\" tasks across nine different experimental conditions (EA-1 to EC-4). The x-axis represents the conditions, while the y-axis shows time in seconds, with \"Communication\" consistently taking more time than \"Calculation\" in each scenario. Notably, EB-1 and EB-3 see the highest total times, with \"Communication\" showing a significant contribution."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-29.jpeg",
+        "img_uid": "erben2023img-29.jpeg",
+        "context": " at E-A-1 than NLP (1.27) (Figures 13b and 13d), and scales regardless of the location of the cloud resources (Figure 13a). We almost match the baseline throughput of 195 SPS at 5 GPUs in all settings for CV (E-A-4, E-B-4, E-C-4). The best throughput was reached at E-C-8 with the US A10 GPUs with 429 SPS. For NLP, only the E-A-8 experiment beats the baseline with a speedup of  $1.29\\mathrm{x}$  and 556 SPS due to the low granularity and the intercontinental base penalty for the US experiments.\n\n![img-29.jpeg](img-29.jpeg)\n(a) CV Throughput\n\n![img-30.jpeg](img-30.jpeg)\n(b) CV Granularity\n\n![img-31.jpeg](img-31.jpeg)\n(c) NLP Throughput\nFigure 14: Hybrid-cloud experiments for the (F) setting.\n\n![img-32.jpeg](img-32.jpeg)\n(d) NLP Granularity\n\nHowever, is combining on-premise and remote cloud resources better than using the cloud without paying the intercontinental bandwidth tax? To analyze this, we compare the (E) experiments with the 8xA10 experiment from Section 3 and 8xT4 experiment from Section 4 in Section 6. F",
+        "img_path": "extracted_data/document_7/img-29.jpeg",
+        "img_description": "The image is a line graph comparing the performance of different GPU types\u20148xV100, EU T4 (F-A), US T4 (F-B), and US A10 (F-C)\u2014in terms of \"Samples per Second\" across varying \"GPU Counts\" from 1 to 9. The graph shows a positive trend for all GPU types, with the performance (samples per second) generally increasing as the GPU count increases. The legend indicates distinct colored lines to differentiate between each GPU type, showing 8xV100 with the highest samples per second performance as GPU count increases."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-30.jpeg",
+        "img_uid": "erben2023img-30.jpeg",
+        "context": ", and scales regardless of the location of the cloud resources (Figure 13a). We almost match the baseline throughput of 195 SPS at 5 GPUs in all settings for CV (E-A-4, E-B-4, E-C-4). The best throughput was reached at E-C-8 with the US A10 GPUs with 429 SPS. For NLP, only the E-A-8 experiment beats the baseline with a speedup of  $1.29\\mathrm{x}$  and 556 SPS due to the low granularity and the intercontinental base penalty for the US experiments.\n\n![img-29.jpeg](img-29.jpeg)\n(a) CV Throughput\n\n![img-30.jpeg](img-30.jpeg)\n(b) CV Granularity\n\n![img-31.jpeg](img-31.jpeg)\n(c) NLP Throughput\nFigure 14: Hybrid-cloud experiments for the (F) setting.\n\n![img-32.jpeg](img-32.jpeg)\n(d) NLP Granularity\n\nHowever, is combining on-premise and remote cloud resources better than using the cloud without paying the intercontinental bandwidth tax? To analyze this, we compare the (E) experiments with the 8xA10 experiment from Section 3 and 8xT4 experiment from Section 4 in Section 6. First, the 8xA10 experiments are the fastest for",
+        "img_path": "extracted_data/document_7/img-30.jpeg",
+        "img_description": "The bar chart displays the time in seconds for Calculation (in green) and Communication (in purple) across different tasks labeled F-A, F-B, and F-C. The F-A tasks show higher values for both categories compared to F-B and F-C, with F-A-1 having the highest overall time. The tasks are arranged sequentially, with each bar summarizing the combined calculation and communication time for each task."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-31.jpeg",
+        "img_uid": "erben2023img-31.jpeg",
+        "context": "loud resources (Figure 13a). We almost match the baseline throughput of 195 SPS at 5 GPUs in all settings for CV (E-A-4, E-B-4, E-C-4). The best throughput was reached at E-C-8 with the US A10 GPUs with 429 SPS. For NLP, only the E-A-8 experiment beats the baseline with a speedup of  $1.29\\mathrm{x}$  and 556 SPS due to the low granularity and the intercontinental base penalty for the US experiments.\n\n![img-29.jpeg](img-29.jpeg)\n(a) CV Throughput\n\n![img-30.jpeg](img-30.jpeg)\n(b) CV Granularity\n\n![img-31.jpeg](img-31.jpeg)\n(c) NLP Throughput\nFigure 14: Hybrid-cloud experiments for the (F) setting.\n\n![img-32.jpeg](img-32.jpeg)\n(d) NLP Granularity\n\nHowever, is combining on-premise and remote cloud resources better than using the cloud without paying the intercontinental bandwidth tax? To analyze this, we compare the (E) experiments with the 8xA10 experiment from Section 3 and 8xT4 experiment from Section 4 in Section 6. First, the 8xA10 experiments are the fastest for both CV and NLP, which removes the respective h",
+        "img_path": "extracted_data/document_7/img-31.jpeg",
+        "img_description": "The graph displays the relationship between GPU count (x-axis) and samples per second (y-axis) for different GPU types: 8xV100, EU T4 (F-A), US T4 (F-B), and US A10 (F-C). It shows that as the GPU count increases, the performance in samples per second generally rises slightly, with 8xV100 maintaining the highest performance among the listed GPUs. The range of samples per second spans from roughly 0 to 1500."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-32.jpeg",
+        "img_uid": "erben2023img-32.jpeg",
+        "context": " for CV (E-A-4, E-B-4, E-C-4). The best throughput was reached at E-C-8 with the US A10 GPUs with 429 SPS. For NLP, only the E-A-8 experiment beats the baseline with a speedup of  $1.29\\mathrm{x}$  and 556 SPS due to the low granularity and the intercontinental base penalty for the US experiments.\n\n![img-29.jpeg](img-29.jpeg)\n(a) CV Throughput\n\n![img-30.jpeg](img-30.jpeg)\n(b) CV Granularity\n\n![img-31.jpeg](img-31.jpeg)\n(c) NLP Throughput\nFigure 14: Hybrid-cloud experiments for the (F) setting.\n\n![img-32.jpeg](img-32.jpeg)\n(d) NLP Granularity\n\nHowever, is combining on-premise and remote cloud resources better than using the cloud without paying the intercontinental bandwidth tax? To analyze this, we compare the (E) experiments with the 8xA10 experiment from Section 3 and 8xT4 experiment from Section 4 in Section 6. First, the 8xA10 experiments are the fastest for both CV and NLP, which removes the respective hybrid-cloud combination from contention (E-C-8). Second, the 8xT4 experiments for NLP are faster than any",
+        "img_path": "extracted_data/document_7/img-32.jpeg",
+        "img_description": "The bar graph illustrates the time in seconds dedicated to two activities, calculation (green) and communication (purple), across three groups labeled FA, FB, and FC, each having four subcategories. Communication generally takes significantly more time than calculation across all categories, with noted peaks in FB-2 and FC-8. The data points for each subcategory indicate that calculation times are consistently low, whereas communication times vary more broadly, exemplified by high values particularly in subcategories like FB-4 and FC-8."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-33.jpeg",
+        "img_uid": "erben2023img-33.jpeg",
+        "context": "C experiments mainly consist of communication (Figure 14d) with a granularity of up to 0.02, which results in a nonlinear, unstable training time due to the minimum matchmaking time issue (2) from Section 3.\n\nIn summary, the hybrid-cloud experiments conclude that while on-premise hardware can be augmented with cloud resources, it will likely be cost-efficient if all resources are on the same continent. Using only cloud resources is more advantageous if the on-premises hardware is not co-located.![img-33.jpeg](img-33.jpeg)\nFigure 15: Cost to throughput tradeoff for RoBERTaXLM at different instance types. Our training setups (circled), that are due the low granularity of the NLP model, neither cheaper, nor faster than the centralized offering (DGX-2).\n\n# 7 FURTHER INSIGHTS\n\nCommunication time can decrease with more peers. Let us compare the granularity of the experiments for E-B (Figure 13b), which uses T4 GPUs in the US as an additional cloud resource. Both the computation and communication time decrease with the",
+        "img_path": "extracted_data/document_7/img-33.jpeg",
+        "img_description": "The graph displays the performance and cost efficiency of different computing instance types (1xA10, 1xT4, 8xA10, 8xT4, DGX-2) in terms of samples per second versus cost in dollars per 1M samples. Instances are represented by blue and orange symbols, indicating spot and on-demand types, respectively, with DGX-2 achieving the highest performance at around $1 per 1M samples. The 8xT4 and 8xA10 instances show a balanced performance between $1 and $2 per 1M samples."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-34.jpeg",
+        "img_uid": "erben2023img-34.jpeg",
+        "context": "tributed deep learning with relatively small models. Our insights show some potential that can further improve distributed training performance, such as optimizers with higher minibatch sizes and improvements regarding the communication time with, e.g., better compression.\n\n# 11 APPENDIX: ASR CASE STUDY\n\nWe perform a case study on Automatic Speech Recognition (ASR) to showcase spot training on weaker GPUs. Whisper [34] is a state-of-the-art ASR model trained on 680,000 hours of labeled data to\n\n![img-34.jpeg](img-34.jpeg)\n(a) Throughput\n\n![img-35.jpeg](img-35.jpeg)\n(b) Granuarity\n\n![img-36.jpeg](img-36.jpeg)\nFigure 16: WhisperSmall performance with varying TBS.\nFigure 17: Cost to throughput tradeoff for WhisperSmall at TBS-1024 with different instance types. Our training setups (circled) provide mixed result of being slightly faster and more expensive than comparable, centralized DDP offering.\n\ntranscribe audio. It features different sizes, from 37.8M to 1.5B parameters, and was trained with a minibatch size of ",
+        "img_path": "extracted_data/document_7/img-34.jpeg",
+        "img_description": "The line graph displays the relationship between T4 Count and Samples per Second for three different TBS values: 256, 512, and 1024. Each line represents a TBS value, showing that as the T4 Count increases, the Samples per Second generally increase, with the TBS 1024 line showing the steepest positive slope. The graph highlights that higher TBS values result in greater samples per second, especially noticeable beyond a T4 Count of 2."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-35.jpeg",
+        "img_uid": "erben2023img-35.jpeg",
+        "context": " models. Our insights show some potential that can further improve distributed training performance, such as optimizers with higher minibatch sizes and improvements regarding the communication time with, e.g., better compression.\n\n# 11 APPENDIX: ASR CASE STUDY\n\nWe perform a case study on Automatic Speech Recognition (ASR) to showcase spot training on weaker GPUs. Whisper [34] is a state-of-the-art ASR model trained on 680,000 hours of labeled data to\n\n![img-34.jpeg](img-34.jpeg)\n(a) Throughput\n\n![img-35.jpeg](img-35.jpeg)\n(b) Granuarity\n\n![img-36.jpeg](img-36.jpeg)\nFigure 16: WhisperSmall performance with varying TBS.\nFigure 17: Cost to throughput tradeoff for WhisperSmall at TBS-1024 with different instance types. Our training setups (circled) provide mixed result of being slightly faster and more expensive than comparable, centralized DDP offering.\n\ntranscribe audio. It features different sizes, from 37.8M to 1.5B parameters, and was trained with a minibatch size of 256. We use the Commonvoice [11] dataset, pr",
+        "img_path": "extracted_data/document_7/img-35.jpeg",
+        "img_description": "The image is a bar graph comparing the time in seconds taken for \"Calculation\" and \"Communication\" tasks across different T4 Counts (2, 4, and 8) for three Transmission Block Sizes (TBS=256, TBS=512, TBS=1024). Each grouping of three bars represents a different TBS, illustrating that as the TBS increases, the calculation time significantly increases for T4 Count 2 but reduces for T4 Count 8. The communication time remains relatively lower and consistent across all combinations of T4 Counts and TBS values."
+    },
+    {
+        "doc_path": "extracted_data/document_7/doc_7.md",
+        "ref_id": "erben2023",
+        "ref_url": "https://arxiv.org/pdf/2306.03163",
+        "img_id": "img-36.jpeg",
+        "img_uid": "erben2023img-36.jpeg",
+        "context": "at can further improve distributed training performance, such as optimizers with higher minibatch sizes and improvements regarding the communication time with, e.g., better compression.\n\n# 11 APPENDIX: ASR CASE STUDY\n\nWe perform a case study on Automatic Speech Recognition (ASR) to showcase spot training on weaker GPUs. Whisper [34] is a state-of-the-art ASR model trained on 680,000 hours of labeled data to\n\n![img-34.jpeg](img-34.jpeg)\n(a) Throughput\n\n![img-35.jpeg](img-35.jpeg)\n(b) Granuarity\n\n![img-36.jpeg](img-36.jpeg)\nFigure 16: WhisperSmall performance with varying TBS.\nFigure 17: Cost to throughput tradeoff for WhisperSmall at TBS-1024 with different instance types. Our training setups (circled) provide mixed result of being slightly faster and more expensive than comparable, centralized DDP offering.\n\ntranscribe audio. It features different sizes, from 37.8M to 1.5B parameters, and was trained with a minibatch size of 256. We use the Commonvoice [11] dataset, preprocessed to Log-Mel spectrograms. In our d",
+        "img_path": "extracted_data/document_7/img-36.jpeg",
+        "img_description": "The scatter plot compares computing instances based on \"Samples per Second\" (y-axis) and \"Cost in $ per 1M Samples\" (x-axis), featuring two types: Spot (blue dots) and On-Demand (orange crosses). Notably, \"8xT4\" Spot instances offer the highest samples per second with a moderate cost, while \"1xT4\" and \"DDP 2xT4\" are among the lower-performing, lower-cost options. \"A100\" instances are present across both instance types with varying performance and cost."
+    }
+]

@@ -1,0 +1,202 @@
+[
+    {
+        "doc_path": "extracted_data/document_2/doc_2.md",
+        "ref_id": "chen2024",
+        "ref_url": "https://arxiv.org/pdf/2405.01814",
+        "img_id": "img-0.jpeg",
+        "img_uid": "chen2024img-0.jpeg",
+        "context": " the memory capacity needed to store the KV cache expands accordingly; with a fixed resource ratio, a substantial portion of computational resources remains underutilized when processing requests with long contexts. By pooling heterogeneous accelerators, we can adjust the number of each kind of accelerators to better match the LLM and workload and hence improve resource utilization.\n\nThe primary challenge associated with attention offloading arises from the substantial communication demands be\n\n![img-0.jpeg](img-0.jpeg)\nFigure 1: The disaggregated architecture of LLM serving.\n\ntween heterogeneous accelerators when sending and receiving the inputs and outputs of self-attention operators. Unlike the original prefetch-decode disaggregation, where the KV cache is transferred only once between the prefetch nodes and the decode nodes, our model-attention disaggregation architecture requires inter-GPU communication for every layer of the model. Even worse, communication between heterogeneous GPUs must rely on data ce",
+        "img_path": "extracted_data/document_2/img-0.jpeg",
+        "img_description": "The diagram illustrates a system architecture focusing on the disaggregation of prefill/decode and model/attention processes using CPU and GPU resources. It depicts prefill workers utilizing model weights on compute-optimized GPUs, while attention workers handle KV cache on memory-optimized GPUs, all coordinated by a local scheduler, which includes request management, continuous batching, and paged cache management. This setup is designed to efficiently distribute tasks between model workers and attention workers, facilitated by a global scheduler."
+    },
+    {
+        "doc_path": "extracted_data/document_2/doc_2.md",
+        "ref_id": "chen2024",
+        "ref_url": "https://arxiv.org/pdf/2405.01814",
+        "img_id": "img-1.jpeg",
+        "img_uid": "chen2024img-1.jpeg",
+        "context": "perators\n\nTo improve GPU utilization in LLM decoding, continuous batching is widely adopted [16, 20, 46]. By processing multiple inputs concurrently, the model parameters in GPU memory can be reused, making the workload more computation-intensive. For a batch of  $B$  requests, the non-attention operator requires approximately  $2NB$  floating-point operations. Additionally, these operators involve loading model parameters  $eN$  and reading/writing a total of  $2eBd$  input and output data from![img-1.jpeg](img-1.jpeg)\nFigure 2: Measured time consumption and MFU of non-attention operators in LLaMA3-70B during one decode iteration. Results with different tensor parallelisms are presented. The dotted lines indicate the projected values using the roofline model.\n\n![img-2.jpeg](img-2.jpeg)\n\n![img-3.jpeg](img-3.jpeg)\n\nGPU memory. The resulting arithmetic intensity,  $\\frac{2NB}{e(N + 2Bd)}$ , increases rapidly with larger batch sizes.\n\nFigure 2 shows the latency and memory throughput utilization (MFU) of non-atten",
+        "img_path": "extracted_data/document_2/img-1.jpeg",
+        "img_description": "The graph displays the relationship between batch size and two metrics, time (in seconds) on the left y-axis and MFU on the right y-axis, when using 2 x NVIDIA H100. As the batch size increases from 1 to 1000 and beyond, both the time and MFU increase, with time exhibiting a steeper curve starting at larger batch sizes. The time is represented by a blue line and the MFU by a brown line, with both showing significant increases past a batch size of approximately 100."
+    },
+    {
+        "doc_path": "extracted_data/document_2/doc_2.md",
+        "ref_id": "chen2024",
+        "ref_url": "https://arxiv.org/pdf/2405.01814",
+        "img_id": "img-2.jpeg",
+        "img_uid": "chen2024img-2.jpeg",
+        "context": "uests, the non-attention operator requires approximately  $2NB$  floating-point operations. Additionally, these operators involve loading model parameters  $eN$  and reading/writing a total of  $2eBd$  input and output data from![img-1.jpeg](img-1.jpeg)\nFigure 2: Measured time consumption and MFU of non-attention operators in LLaMA3-70B during one decode iteration. Results with different tensor parallelisms are presented. The dotted lines indicate the projected values using the roofline model.\n\n![img-2.jpeg](img-2.jpeg)\n\n![img-3.jpeg](img-3.jpeg)\n\nGPU memory. The resulting arithmetic intensity,  $\\frac{2NB}{e(N + 2Bd)}$ , increases rapidly with larger batch sizes.\n\nFigure 2 shows the latency and memory throughput utilization (MFU) of non-attention operators in LLaMA3-70B, measured on an NVIDIA H100 GPU, alongside projections based on the roofline model. For small batch sizes (less than 100), the workload is bandwidth-bound, with latency predominantly caused by accessing model parameters from GPU memory. In thi",
+        "img_path": "extracted_data/document_2/img-2.jpeg",
+        "img_description": "The graph displays the relationship between batch size and two metrics on a logarithmic scale, with batch size on the x-axis and two different metrics on the y-axis, represented by the blue and red lines. The blue line shows a slight increase, while the red line, which includes both solid and dotted styles, indicates a steep rise, emphasizing a significant change for larger batch sizes. The chart is labeled \"4 x NVIDIA H100,\" suggesting the context involves performance metrics of the NVIDIA H100 hardware."
+    },
+    {
+        "doc_path": "extracted_data/document_2/doc_2.md",
+        "ref_id": "chen2024",
+        "ref_url": "https://arxiv.org/pdf/2405.01814",
+        "img_id": "img-3.jpeg",
+        "img_uid": "chen2024img-3.jpeg",
+        "context": "erator requires approximately  $2NB$  floating-point operations. Additionally, these operators involve loading model parameters  $eN$  and reading/writing a total of  $2eBd$  input and output data from![img-1.jpeg](img-1.jpeg)\nFigure 2: Measured time consumption and MFU of non-attention operators in LLaMA3-70B during one decode iteration. Results with different tensor parallelisms are presented. The dotted lines indicate the projected values using the roofline model.\n\n![img-2.jpeg](img-2.jpeg)\n\n![img-3.jpeg](img-3.jpeg)\n\nGPU memory. The resulting arithmetic intensity,  $\\frac{2NB}{e(N + 2Bd)}$ , increases rapidly with larger batch sizes.\n\nFigure 2 shows the latency and memory throughput utilization (MFU) of non-attention operators in LLaMA3-70B, measured on an NVIDIA H100 GPU, alongside projections based on the roofline model. For small batch sizes (less than 100), the workload is bandwidth-bound, with latency predominantly caused by accessing model parameters from GPU memory. In this regime, the MFU remains b",
+        "img_path": "extracted_data/document_2/img-3.jpeg",
+        "img_description": "The graph displays the relationship between batch size and two performance metrics for 8 NVIDIA H100 GPUs: efficiency (blue line on a scale of 0.0 to 0.2) and MFU in TFLOPS (red line on a scale of 0 to 2000). As the batch size increases from 1 to 1000, the MFU (TFLOPS) increases sharply, while efficiency shows a moderate rise, leveling off after an initial increase. This indicates a significant gain in MFU performance with larger batch sizes, whereas efficiency experiences only a slight improvement."
+    },
+    {
+        "doc_path": "extracted_data/document_2/doc_2.md",
+        "ref_id": "chen2024",
+        "ref_url": "https://arxiv.org/pdf/2405.01814",
+        "img_id": "img-4.jpeg",
+        "img_uid": "chen2024img-4.jpeg",
+        "context": "ncreased  $G$  times, but is still quite low compared with other operators.\n\nAs shown in Figure 3, the bandwidth utilization of attention operators remains above  $70\\%$  even for small batch sizes, such as 20. This holds true even on memory-specialized accelerators like H20, which delivers only  $15\\%$  of the TFLOPs of the H100. However, the batch size achievable for attention operations is constrained by GPU memory capacity, particularly due to the high memory demand of KV caches for longer\n\n![img-4.jpeg](img-4.jpeg)\nFigure 3: Measured time consumption and model bandwidth utilization (MBU) of attention operators in LLaMA3-70B during one decode iteration. Results with different sequence lengths and hardware configurations are presented.\n\ncontext lengths. For example, with a context length of 8192, the full memory of an H100 can only hold KV caches for about 30 requests, with the actual number being lower due to memory used by model weights. Consequently, the limited batch size for attention operations become",
+        "img_path": "extracted_data/document_2/img-4.jpeg",
+        "img_description": "The image consists of four line graphs comparing performance metrics for different batch sizes using NVIDIA H100 and H20 GPUs, with variables being \"Time (s)\" and \"MBU (GB/s)\" across varying indices (4096 and 8192). Each graph displays two lines: one representing time, which increases with batch size, and another for MBU, which also follows an increasing trend. The vertical axis on the left represents time in seconds, while the right axis shows MBU in gigabytes per second, highlighting the computational efficiency versus data throughput trade-off."
+    },
+    {
+        "doc_path": "extracted_data/document_2/doc_2.md",
+        "ref_id": "chen2024",
+        "ref_url": "https://arxiv.org/pdf/2405.01814",
+        "img_id": "img-5.jpeg",
+        "img_uid": "chen2024img-5.jpeg",
+        "context": "M E} (B , l) ]} \\\\ \\end{array}\n$$\n\nwhere  $\\mathrm{MTIME}(B)$  and  $\\mathrm{ATIME}(B,l)$  is running time of nonattention and attention operators at batch size  $B$  and sequence length  $l$ , respectively, and they can be measured experimentally. The estimated minimum bandwidths required for different batch sizes, when  $\\alpha = 0.2$ , are calculated and presented in Figure 4.\n\nAs evident from the data presented, the required interconnect bandwidth does not exceed 30 GB/s, even when dealing\n\n![img-5.jpeg](img-5.jpeg)\n(a)  $\\mathrm{DOP} = (2,2)$\n\n![img-6.jpeg](img-6.jpeg)\n(b)  $\\mathrm{DOP} = (2,4)$\nFigure 4: The required network bandwidth for decoding LLaMA3-70B using attention offloading with H100 and H20, with at most  $20\\%$  latency slow-down for network overhead.\n\nwith batch sizes as high as 300. This bandwidth demand can be easily met by networking technologies like 400Gbps Ethernet. Indeed, contemporary data centers already fulfill this requirement, where each GPU is typically equipped with an exclus",
+        "img_path": "extracted_data/document_2/img-5.jpeg",
+        "img_description": "The graph displays the relationship between batch size and bandwidth (GB/s), showing two lines representing different values of \"l\" (4096 and 8192). The blue line (l=4096) consistently demonstrates higher bandwidth than the orange line (l=8192) across the batch sizes. Both lines exhibit a positive correlation between batch size and bandwidth, with the blue line achieving a bandwidth of approximately 15 GB/s at the largest batch size."
+    },
+    {
+        "doc_path": "extracted_data/document_2/doc_2.md",
+        "ref_id": "chen2024",
+        "ref_url": "https://arxiv.org/pdf/2405.01814",
+        "img_id": "img-6.jpeg",
+        "img_uid": "chen2024img-6.jpeg",
+        "context": "E}(B)$  and  $\\mathrm{ATIME}(B,l)$  is running time of nonattention and attention operators at batch size  $B$  and sequence length  $l$ , respectively, and they can be measured experimentally. The estimated minimum bandwidths required for different batch sizes, when  $\\alpha = 0.2$ , are calculated and presented in Figure 4.\n\nAs evident from the data presented, the required interconnect bandwidth does not exceed 30 GB/s, even when dealing\n\n![img-5.jpeg](img-5.jpeg)\n(a)  $\\mathrm{DOP} = (2,2)$\n\n![img-6.jpeg](img-6.jpeg)\n(b)  $\\mathrm{DOP} = (2,4)$\nFigure 4: The required network bandwidth for decoding LLaMA3-70B using attention offloading with H100 and H20, with at most  $20\\%$  latency slow-down for network overhead.\n\nwith batch sizes as high as 300. This bandwidth demand can be easily met by networking technologies like 400Gbps Ethernet. Indeed, contemporary data centers already fulfill this requirement, where each GPU is typically equipped with an exclusive 400Gbps NIC to provide sufficient networking bandwi",
+        "img_path": "extracted_data/document_2/img-6.jpeg",
+        "img_description": "The graph depicts the relationship between batch size and bandwidth (GB/s) with two different line plots, blue for I=4096 and orange for I=8192. Both plots show an increasing trend, indicating that bandwidth improves as batch size increases, with the I=4096 line achieving slightly higher bandwidth at larger batch sizes. The grid and labeled axes provide a clear and structured presentation of the data."
+    },
+    {
+        "doc_path": "extracted_data/document_2/doc_2.md",
+        "ref_id": "chen2024",
+        "ref_url": "https://arxiv.org/pdf/2405.01814",
+        "img_id": "img-7.jpeg",
+        "img_uid": "chen2024img-7.jpeg",
+        "context": "ial register in the *user access region* (UAR) of the RNIC. The UAR is part of the RNIC\u2019s mmio region and is mapped to the address space of unprivileged applications to allow kernel-bypass RDMA operations. All above steps are implemented in the RDMA userspace library (libibverbs).\n\nTo enable direct RDMA command submission on GPUs, we have to allow GPUs to directly access the UAR via PCIe P2P. Specifically, we use the cudaHostRegisterIoMemory API to map the UAR into the GPU\u2019s address space. Then,![img-7.jpeg](img-7.jpeg)\nFigure 5: Diagram of WR submission with FHBN send and conventional GPU-aware send implementations.\n\nwe reimplement the RDMA command submission logic in CUDA device code. To further decrease latency, we leverage the BlueFlame mechanism, a hardware feature provided by Mellanox RNICs [4]. This approach allows the WR to be directly submitted to the RNIC with mmio write to UAR, eliminating the need for the RNIC to fetch the WR from host memory via an expensive PCIe DMA read. Note that the WR should ",
+        "img_path": "extracted_data/document_2/img-7.jpeg",
+        "img_description": "The diagram illustrates a data communication process involving a Host CPU, GPU, PCIe Switch, and RNIC, highlighting two pathways: a regular GPU-aware send (red arrows) and an FHBN send (blue arrows). The CPU Core utilizes `ibv_post_send` and `cudaDeviceSync` to interact with Host DRAM's RDMA Send Queue, which contains Work Queue (WQ) and Completion Queue (CQ) elements. The User Access Region on the RNIC shows interaction with a BlueFlame interface through a DB component."
+    },
+    {
+        "doc_path": "extracted_data/document_2/doc_2.md",
+        "ref_id": "chen2024",
+        "ref_url": "https://arxiv.org/pdf/2405.01814",
+        "img_id": "img-8.jpeg",
+        "img_uid": "chen2024img-8.jpeg",
+        "context": "strated in Figure 6. Given the LLM source code, the splitter uses symbolic execution to generate a weighted computation graph. The weight of each edge denotes the size of the data passed between the operators, which is derived from the model's shape specification.\n\nDue to the presence of residual connections and other intricate model constructs, directly removing the attention operator does not always result in a disconnected computation graph. Therefore, we compute the minimum weighted cut of\n\n![img-8.jpeg](img-8.jpeg)\nFigure 6: The partitioned computation graph of an LLM.\n\nthe remaining graph, from the input to the output of the attention operator. The edges in this minimum cut, representing the context that must be saved between slice invocations, are removed from the computation graphs. This process is iteratively applied to each attention operator, ultimately yielding  $n + 1$  model slices, where  $n$  denotes the original number of the attention operators.\n\n# 4.2.2 Resource Utilization Overlapping\n\nWhil",
+        "img_path": "extracted_data/document_2/img-8.jpeg",
+        "img_description": "The image depicts a schematic representation of a multi-slice pipeline architecture for processing inputs, consisting of three slices with distinct operation blocks. Each slice contains embedded input leading to layer normalization (LN), followed by an attention mechanism and a multi-layer perceptron (MLP), with data flows interconnected between slices. The diagram includes annotations for dimensions, such as 10240 and 30720, and highlights specific operational components like attention layers and min cut points between slices."
+    },
+    {
+        "doc_path": "extracted_data/document_2/doc_2.md",
+        "ref_id": "chen2024",
+        "ref_url": "https://arxiv.org/pdf/2405.01814",
+        "img_id": "img-9.jpeg",
+        "img_uid": "chen2024img-9.jpeg",
+        "context": "evious tokens (prev) and the newly generated token (new). Note that  $[A_q(\\mathrm{prev}), S_q(\\mathrm{prev})]$  can be computed as soon as  $q_n$  is ready; therefore, we may eagerly execute Q-Proj and transfer  $q_n$ , and then execute K-Proj, V-Proj and transfer  $k_n, \\nu_n$  to the attentionworkers. As illustrated in Figure 7, this does not only improve the GPU utilization on both kinds of workers, but also reduces the end-to-end latency by hiding the communication behind the computation.\n\n![img-9.jpeg](img-9.jpeg)\n(a) Without resource utilization overlapping.\n\n![img-10.jpeg](img-10.jpeg)\n(b) With resource utilization overlapping.\nFigure 7: Illustration of resource utilization overlapping by splitting the attention computation.\n\nThe above attention splitting optimization is integrated in our automated model converter. After dissecting the original model, the converter will generate a serial program of each model slice by computing a topological order of its computation graph. During this topological sort,",
+        "img_path": "extracted_data/document_2/img-9.jpeg",
+        "img_description": "The image is a schematic of an attention mechanism in a neural network model, showing two layers: \"Model Workers\" and \"Attention Workers.\" The \"Model Workers\" layer includes Q-Proj, K-Proj, and V-Proj blocks that process inputs into QKV, feeding into an \"Attn\" block in the \"Attention Workers\" layer, which then outputs to an Out-Proj block. Arrows indicate the flow of data, with QKV directed into Attn and Attn Out flowing into Out-Proj."
+    },
+    {
+        "doc_path": "extracted_data/document_2/doc_2.md",
+        "ref_id": "chen2024",
+        "ref_url": "https://arxiv.org/pdf/2405.01814",
+        "img_id": "img-10.jpeg",
+        "img_uid": "chen2024img-10.jpeg",
+        "context": "q(\\mathrm{prev}), S_q(\\mathrm{prev})]$  can be computed as soon as  $q_n$  is ready; therefore, we may eagerly execute Q-Proj and transfer  $q_n$ , and then execute K-Proj, V-Proj and transfer  $k_n, \\nu_n$  to the attentionworkers. As illustrated in Figure 7, this does not only improve the GPU utilization on both kinds of workers, but also reduces the end-to-end latency by hiding the communication behind the computation.\n\n![img-9.jpeg](img-9.jpeg)\n(a) Without resource utilization overlapping.\n\n![img-10.jpeg](img-10.jpeg)\n(b) With resource utilization overlapping.\nFigure 7: Illustration of resource utilization overlapping by splitting the attention computation.\n\nThe above attention splitting optimization is integrated in our automated model converter. After dissecting the original model, the converter will generate a serial program of each model slice by computing a topological order of its computation graph. During this topological sort, we always put the Q-Proj operator and all its dependencies as early as pos",
+        "img_path": "extracted_data/document_2/img-10.jpeg",
+        "img_description": "The image depicts a schematic flowchart of a transformer attention mechanism, differentiating between \"Model Workers\" and \"Attention Workers.\" The process involves \"Q-Proj,\" \"K-Proj,\" and \"V-Proj\" that compute queries (Q), keys, and values (KV), leading to attention outputs via \"Out-Proj.\" Underlying attention computations involve previous attention (Prev Attn) and new attention combinations."
+    },
+    {
+        "doc_path": "extracted_data/document_2/doc_2.md",
+        "ref_id": "chen2024",
+        "ref_url": "https://arxiv.org/pdf/2405.01814",
+        "img_id": "img-11.jpeg",
+        "img_uid": "chen2024img-11.jpeg",
+        "context": "the serial nature of transformer-based models, if there is only one batch under processing, the memory device is idle when the computation device is working, and vice versa. To address this resource underutilization problem and increase system throughput, we may run multiple batches concurrently in a pipelined fashion. With properly designed pipelining, better hardware utilization can be achieved without sacrificing latency. We propose the rotational staggered pipelining to solve this problem.\n\n![img-11.jpeg](img-11.jpeg)\nFigure 8: Illustration of rotational staggered pipelining.\n\nAssume that we execute  $n$  batches concurrently. Let  $t_m, t_a$  represent the time required for executing one model slice and one attention operator, respectively. As illustrated in Figure 8, we deploy  $n - 1$  model replicas, with each replica starting its\n\ntasks at a time of  $\\frac{t_m}{n-1}$  later than the previous one. All batches share a common set of memory devices to maximize aggregated memory bandwidth and improve memory",
+        "img_path": "extracted_data/document_2/img-11.jpeg",
+        "img_description": "The image displays a comparison of outputs from three models labeled Model 1, Model 2, and Model 3, each depicting sequences of colored blocks with specific labels such as A1, D1, C3, and B5. Below the models, an \"Attention\" sequence is shown consisting of blocks labeled A2, B2, C2, and so on, indicating a different arrangement and possibly a focus or weighting of elements. Each sequence aligns horizontally with arrows, suggesting a flow or progression of data."
+    },
+    {
+        "doc_path": "extracted_data/document_2/doc_2.md",
+        "ref_id": "chen2024",
+        "ref_url": "https://arxiv.org/pdf/2405.01814",
+        "img_id": "img-12.jpeg",
+        "img_uid": "chen2024img-12.jpeg",
+        "context": "nchronously transferred in a layer-by-layer fashion to hide the communication latency behind computation. Moreover, the data transfer is controlled by the attention workers: the attention workers only reads the KV cache from prefetch workers during the free periods between receiving QKV tensors from model workers. This approach minimizes interference with ongoing decoding tasks.\n\nAttention parallelism. Given the limited capability of a single device, we may use multiple memory devices to jointly![img-12.jpeg](img-12.jpeg)\n(a) Request-level partition.\n\n![img-13.jpeg](img-13.jpeg)\n(b) Head-level partition.\nFigure 9: Work partition methods of the attention operator.\n\nstore the KV caches and compute the attention operators. As depicted in Figure 9, the attention operators can be parallelized among memory devices in various ways. One method is to distribute different requests across different devices; an alternative strategy is to partition and distribute the attention heads, which can also be computed independently,",
+        "img_path": "extracted_data/document_2/img-12.jpeg",
+        "img_description": "The image displays four labeled requests, each accompanied by a grid of rectangles, where \"Request 1\" and \"Request 2\" have shaded grids of different sizes, and \"Request 3\" and \"Request 4\" have non-shaded grids. Each grid varies in the number of rectangles across the different requests, suggesting varying sizes or capacities. The labeling and shading indicate possible categories or states of the requests, such as allocation or usage."
+    },
+    {
+        "doc_path": "extracted_data/document_2/doc_2.md",
+        "ref_id": "chen2024",
+        "ref_url": "https://arxiv.org/pdf/2405.01814",
+        "img_id": "img-13.jpeg",
+        "img_uid": "chen2024img-13.jpeg",
+        "context": "e the communication latency behind computation. Moreover, the data transfer is controlled by the attention workers: the attention workers only reads the KV cache from prefetch workers during the free periods between receiving QKV tensors from model workers. This approach minimizes interference with ongoing decoding tasks.\n\nAttention parallelism. Given the limited capability of a single device, we may use multiple memory devices to jointly![img-12.jpeg](img-12.jpeg)\n(a) Request-level partition.\n\n![img-13.jpeg](img-13.jpeg)\n(b) Head-level partition.\nFigure 9: Work partition methods of the attention operator.\n\nstore the KV caches and compute the attention operators. As depicted in Figure 9, the attention operators can be parallelized among memory devices in various ways. One method is to distribute different requests across different devices; an alternative strategy is to partition and distribute the attention heads, which can also be computed independently, to different devices. The head-level partitioning approac",
+        "img_path": "extracted_data/document_2/img-13.jpeg",
+        "img_description": "The image depicts a series of four request queues, each represented by a grid, with various rows shaded to indicate either \"device 1\" or \"device 2.\" The grid for \"Request 1\" highlights a specific column with labels \"head\" and \"token,\" signifying a particular point of interest in the queue. Each request queue shows different patterns of shading, illustrating distinct allocation or access patterns for the two devices."
+    },
+    {
+        "doc_path": "extracted_data/document_2/doc_2.md",
+        "ref_id": "chen2024",
+        "ref_url": "https://arxiv.org/pdf/2405.01814",
+        "img_id": "img-14.jpeg",
+        "img_uid": "chen2024img-14.jpeg",
+        "context": "amina | vLLM  |\n| --- | --- | --- |\n|  LLaMA-33B | DOP=(1,2) | 2\u00d7H100  |\n|   |  ($20.32/hr) | ($22.12/hr)  |\n|  LLaMA-65B, LLaMA3-70B | DOP=(2,4) | 4\u00d7H100  |\n|   |  ($40.64/hr) | ($44.24/hr)  |\n\nAs illustrated in Figure 10, Lamina consistently achieves  $16.1 \\sim 90.1\\%$  higher throughput than vLLM among all models and traces, given comparable hardware costs. This enhancement is primarily attributed to the larger batch size attained by Lamina, which is  $2.39 \\times$  of vLLM on average. These![img-14.jpeg](img-14.jpeg)\nFigure 10: LLM decoding performance metrics of Lamina and vLLM, using hardware of approximately equal costs.\n\n![img-15.jpeg](img-15.jpeg)\nFigure 11: Decoding throughput and hardware cost with various hardware configurations. The DOPs for Lamina and tensor parallelisms for vLLM are annotated in the plot. The configuration with best cost efficiency is bolded.\n\nresults demonstrate that Lamina effectively leverages the extra memory capacity provided by memory-optimized devices to boost decoding thr",
+        "img_path": "extracted_data/document_2/img-14.jpeg",
+        "img_description": "The image displays a series of bar charts comparing two methods, Lamina and vLLM, across different configurations: Azure-Conv, Azure-Code, Kimi-Conv, and Kimi-TA. Each configuration includes three metrics: Throughput (tokens/s), TBT (ms), and Mean Batch Size, measured across LLaMA models with variations of 33B, 65B, and 70B. Generally, Lamina shows higher values in throughput and mean batch size, especially prominent in the LLaMA3-70B configuration, while vLLM tends to have lower TBT values."
+    },
+    {
+        "doc_path": "extracted_data/document_2/doc_2.md",
+        "ref_id": "chen2024",
+        "ref_url": "https://arxiv.org/pdf/2405.01814",
+        "img_id": "img-15.jpeg",
+        "img_uid": "chen2024img-15.jpeg",
+        "context": "P=(2,4) | 4\u00d7H100  |\n|   |  ($40.64/hr) | ($44.24/hr)  |\n\nAs illustrated in Figure 10, Lamina consistently achieves  $16.1 \\sim 90.1\\%$  higher throughput than vLLM among all models and traces, given comparable hardware costs. This enhancement is primarily attributed to the larger batch size attained by Lamina, which is  $2.39 \\times$  of vLLM on average. These![img-14.jpeg](img-14.jpeg)\nFigure 10: LLM decoding performance metrics of Lamina and vLLM, using hardware of approximately equal costs.\n\n![img-15.jpeg](img-15.jpeg)\nFigure 11: Decoding throughput and hardware cost with various hardware configurations. The DOPs for Lamina and tensor parallelisms for vLLM are annotated in the plot. The configuration with best cost efficiency is bolded.\n\nresults demonstrate that Lamina effectively leverages the extra memory capacity provided by memory-optimized devices to boost decoding throughput. Note that the throughput and batch size of LLaMA3-70B is much larger than LLaMA-33B and LLaMA-65B; this is because LLaMA3-70B ado",
+        "img_path": "extracted_data/document_2/img-15.jpeg",
+        "img_description": "The image displays a set of four scatter plots comparing throughput (tokens/s) versus price ($/hr) for different models and configurations: LLaMA-65B and LLaMA3-70B with Azure-Conv and Kimi-Conv. Each plot contains data points marked by two symbols: blue crosses for \"Lamina\" and orange circles for \"vLLM,\" with annotations showing coordinate pairs, highlighting performance comparisons across configurations. The data indicate variations in throughput and cost efficiency across the models, with specific points marked for reference."
+    },
+    {
+        "doc_path": "extracted_data/document_2/doc_2.md",
+        "ref_id": "chen2024",
+        "ref_url": "https://arxiv.org/pdf/2405.01814",
+        "img_id": "img-16.jpeg",
+        "img_uid": "chen2024img-16.jpeg",
+        "context": "del-part execution latency. An exception is the LLaMA3-70B model, where the attainable batch size reaches 800 for  $\\mathrm{DOP} = (2,4)$ , which already saturates the computation resources on model workers; hence, adding more memory devices will not dramatically improve the throughput. This indicates that the optimal ratio between model and attention workers varies for different models and workloads. In practice, we may conduct a performance profiling and select the best hardware configuration.![img-16.jpeg](img-16.jpeg)\nFigure 12: Token generation latency breakdown.\n\n# 6.2 Latency Breakdown\n\nLatency is a crucial indicator of the service quality offered by LLM applications. In this subsection, we measure the time between tokens (TBT) across various system configurations, as well as the execution time for model and attention workers and the networking overhead. We use requests with fixed sequence lengths (4096 or 8192) as the workload and disable rotational pipelining to better reveal the time breakdown.\n\nAs we ",
+        "img_path": "extracted_data/document_2/img-16.jpeg",
+        "img_description": "The image consists of six bar graphs comparing latency (in milliseconds) across various batch sizes for different LLaMA models, with parameters such as DOP and I varying. Each graph illustrates four components: TBT, Model, Attention, and Network, each represented by different colored bars. The graphs demonstrate how latency changes with batch size for LLaMA-33B, LLaMA-65B, and LLaMA-70B models under specified configurations."
+    },
+    {
+        "doc_path": "extracted_data/document_2/doc_2.md",
+        "ref_id": "chen2024",
+        "ref_url": "https://arxiv.org/pdf/2405.01814",
+        "img_id": "img-17.jpeg",
+        "img_uid": "chen2024img-17.jpeg",
+        "context": "istinct nodes, using NCCL, NCCL without GPUDirect RDMA, Gloo, and FHBN as the networking engine. The initiator GPU sends a varying amount of data to the remote GPU. Upon receiving the complete data, the remote GPU immediately sends it back to the initiator. We measure the round-trip time from the initiator GPU's perspective, which encompasses the time interval from the completion of the kernel that generates the data for transmission to the start of the kernel that consumes\n\nthe received data.\n\n![img-17.jpeg](img-17.jpeg)\nFigure 13: Network ping-pong test between two GPUs on different nodes, interconnected with 400Gbps RoCE.\n\nAs illustrated in Figure 13, for smaller data sizes, the round-trip time is primarily determined by network latency. In this case, FHBN achieves an end-to-end latency of  $33.0\\mu \\mathrm{s}$ , representing a  $50.5\\%$  reduction compared to NCCL's  $66.6\\mu \\mathrm{s}$  latency. This improvement is attributed to the removal of host CPU involvement in data transmission, eliminating expensiv",
+        "img_path": "extracted_data/document_2/img-17.jpeg",
+        "img_description": "The image consists of two graphs comparing networking protocols: Gloo, NCCL (with and without GDR), and FHB, based on payload sizes. The left graph shows round-trip time (in microseconds) increasing with payload size, where Gloo has the highest latency, while FHB depicts the lowest. The right graph illustrates bandwidth utilization (in GB/s), with FHB achieving the highest bandwidth as payload size increases, significantly surpassing the other protocols."
+    },
+    {
+        "doc_path": "extracted_data/document_2/doc_2.md",
+        "ref_id": "chen2024",
+        "ref_url": "https://arxiv.org/pdf/2405.01814",
+        "img_id": "img-18.jpeg",
+        "img_uid": "chen2024img-18.jpeg",
+        "context": " to existing communication libraries for point-to-point transmission of large GPU memory blocks within DCNs.# 6.4 Resource Utilization Overlapping\n\nTo assess the efficacy of resource utilization overlapping (subsubsection 4.2.2) implemented in our automated model converter, we conducted a series of experiments on the LLaMA-65B and LLaMA3-70B models, with the optimization either enabled or disabled. We use request batches of varying sizes and the context length of each request is fixed at 4096.\n\n![img-18.jpeg](img-18.jpeg)\n(a) LLaMA-65B,  $\\mathrm{DOP} = (2,2)$\nFigure 14: Time between tokens (TBT) results with automatic resource utilization overlapping enabled and disabled.\n\n![img-19.jpeg](img-19.jpeg)\n(b) LLaMA3-70B,  $\\mathrm{DOP} = (2,4)$ .\n\nAs illustrated in Figure 14, the LLaMA-65B model experiences a significant improvement in performance, achieving up to a  $13.2\\%$  with through automated resource utilization overlapping. The speedup is particularly notable for larger batch sizes, which produce larger KV ",
+        "img_path": "extracted_data/document_2/img-18.jpeg",
+        "img_description": "The line graph compares the Total Blocking Time (TBT) in milliseconds for two conditions, \"Enabled\" and \"Disabled,\" as batch size increases from 1 to 25. The \"Disabled\" condition shows a steep upward trend, reaching over 60 ms, while the \"Enabled\" condition exhibits a more gradual rise, remaining below 55 ms. This suggests that enabling the feature results in more consistent performance with larger batch sizes."
+    },
+    {
+        "doc_path": "extracted_data/document_2/doc_2.md",
+        "ref_id": "chen2024",
+        "ref_url": "https://arxiv.org/pdf/2405.01814",
+        "img_id": "img-19.jpeg",
+        "img_uid": "chen2024img-19.jpeg",
+        "context": "utilization overlapping (subsubsection 4.2.2) implemented in our automated model converter, we conducted a series of experiments on the LLaMA-65B and LLaMA3-70B models, with the optimization either enabled or disabled. We use request batches of varying sizes and the context length of each request is fixed at 4096.\n\n![img-18.jpeg](img-18.jpeg)\n(a) LLaMA-65B,  $\\mathrm{DOP} = (2,2)$\nFigure 14: Time between tokens (TBT) results with automatic resource utilization overlapping enabled and disabled.\n\n![img-19.jpeg](img-19.jpeg)\n(b) LLaMA3-70B,  $\\mathrm{DOP} = (2,4)$ .\n\nAs illustrated in Figure 14, the LLaMA-65B model experiences a significant improvement in performance, achieving up to a  $13.2\\%$  with through automated resource utilization overlapping. The speedup is particularly notable for larger batch sizes, which produce larger KV tensors and result in greater latency reduction. The effectiveness is less pronounced for the LLaMA3-70B model, where the maximum latency reduction is only  $3.5\\%$ . This is because ",
+        "img_path": "extracted_data/document_2/img-19.jpeg",
+        "img_description": "The line graph displays the relationship between batch size and TBT (ms) with two datasets, represented by blue circles and orange triangles. Both lines show a general upward trend as batch size increases from 25 to 100, with the orange line consistently higher than the blue, indicating higher TBT values. The graph suggests that while TBT increases with batch size for both datasets, the orange dataset shows a more pronounced rise compared to the blue."
+    }
+]

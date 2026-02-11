@@ -1,0 +1,82 @@
+[
+    {
+        "doc_path": "extracted_data/document_25/doc_25.md",
+        "ref_id": "schwartz2019",
+        "ref_url": "https://arxiv.org/pdf/1907.10597",
+        "img_id": "img-0.jpeg",
+        "img_uid": "schwartz2019img-0.jpeg",
+        "context": "st of reaching the reported accuracy.\n\nWe advocate increasing research activity in Green AI\u2014AI research that is more environmentally friendly and inclusive. We emphasize that Red AI research has been yielding valuable contributions to the field of AI, but it\u2019s been overly dominant. We want to shift the balance towards the Green AI option\u2014to ensure that any inspired undergraduate with a laptop has the opportunity to write high-quality papers that could be accepted at premier research conferences.![img-0.jpeg](img-0.jpeg)\nFigure 1: The amount of compute used to train deep learning models has increased  $300,000\\mathrm{x}$  in 6 years. Figure taken from [2].\n\nSpecifically, we propose making efficiency a more common evaluation criterion for AI papers alongside accuracy and related measures.\n\nAI research can be computationally expensive in a number of ways, but each provides opportunities for efficient improvements; for example, papers could be required to plot accuracy as a function of computational cost and of tr",
+        "img_path": "extracted_data/document_25/img-0.jpeg",
+        "img_description": "The graph displays the exponential increase in computational power required to train AI models from 2012 to 2019, measured in petaflops per day. Notable model milestones, such as AlexNet, VGG, and AlphaGo Zero, are plotted along a trend line indicating ascending computational demands over the years. The trend highlights the rapidly growing resource intensity in training more complex models."
+    },
+    {
+        "doc_path": "extracted_data/document_25/doc_25.md",
+        "ref_id": "schwartz2019",
+        "ref_url": "https://arxiv.org/pdf/1907.10597",
+        "img_id": "img-1.jpeg",
+        "img_uid": "schwartz2019img-1.jpeg",
+        "context": "inear gain in performance, an exponentially larger model is required [18]. Similar trends exist with increasing the quantity of training data [41, 13] and the number of experiments [9]. In each of these cases, diminishing returns come at increased computational cost.\n\nThis section analyzes the factors contributing to Red AI and shows how it is resulting in diminishing returns over time (see Figure 3). We note again that Red AI work is valuable, and in fact, much of it contributes to what we know![img-1.jpeg](img-1.jpeg)\nFigure 2: AI papers tend to target accuracy rather than efficiency. The figure shows the proportion of papers that target accuracy, efficiency, both or other from a sample of 60 papers from top AI conferences.\n\nby pushing the boundaries of AI. Our exposition here is meant to highlight areas where computational expense is high, and to present each as an opportunity for developing more efficient techniques.\n\nTo demonstrate the prevalence of Red AI, we sampled 60 papers from top AI conferences (AC",
+        "img_path": "extracted_data/document_25/img-1.jpeg",
+        "img_description": "The bar chart compares the number of academic papers focused on different criteria\u2014Accuracy, Efficiency, Both, and Other\u2014across three conferences: ACL 2018, CVPR 2019, and NeurIPS 2018. For each conference, Accuracy overwhelmingly dominates, especially at ACL 2018 and CVPR 2019, while NeurIPS 2018 shows a more balanced distribution with significant contributions in both Efficiency and Other categories. The legend indicates that red represents Accuracy, green Efficiency, orange Both, and blue Other."
+    },
+    {
+        "doc_path": "extracted_data/document_25/doc_25.md",
+        "ref_id": "schwartz2019",
+        "ref_url": "https://arxiv.org/pdf/1907.10597",
+        "img_id": "img-2.jpeg",
+        "img_uid": "schwartz2019img-2.jpeg",
+        "context": "rove performance on object detection and language modeling. With a fixed architecture, researchers from DeepMind *[26]* evaluated 1,500 hyperparameter assignments to demonstrate that an LSTM language model *[15]* can reach state-of-the-art perplexity results. Despite the value of this result in showing that the performance of an LSTM does not plateau after only a few hyperparameter trials, fully exploring the potential of other competitive models for a fair comparison is prohibitively expensive.![img-2.jpeg](img-2.jpeg)\n\n![img-3.jpeg](img-3.jpeg)\n\n![img-4.jpeg](img-4.jpeg)\nFigure 3: Diminishing returns of training on more data: object detection accuracy increases linearly as the number of training examples increases exponentially [25].\n\n![img-5.jpeg](img-5.jpeg)\n\nThe topic of massive number of experiments is not as well studied as the first two discussed above. In fact, the number of experiments performed during model construction is often underreported. Nonetheless, evidence for a logarithmic relation exists ",
+        "img_path": "extracted_data/document_25/img-2.jpeg",
+        "img_description": "The graph displays the ImageNet top-1 accuracy percentage on the y-axis against the number of training images (in logarithmic scale) from Instagram on the x-axis, with various configurations of ResNeXt-101 models differing in tag counts (1.5k and 17k) and capacities (32x4d, 32x8d, 32x16d). It shows that accuracy generally improves with more training images, with models trained on 17k tags outperforming those on 1.5k tags across all capacities. The highest performance is achieved by the 17k tags/32x16d configuration at high image counts."
+    },
+    {
+        "doc_path": "extracted_data/document_25/doc_25.md",
+        "ref_id": "schwartz2019",
+        "ref_url": "https://arxiv.org/pdf/1907.10597",
+        "img_id": "img-3.jpeg",
+        "img_uid": "schwartz2019img-3.jpeg",
+        "context": "detection and language modeling. With a fixed architecture, researchers from DeepMind *[26]* evaluated 1,500 hyperparameter assignments to demonstrate that an LSTM language model *[15]* can reach state-of-the-art perplexity results. Despite the value of this result in showing that the performance of an LSTM does not plateau after only a few hyperparameter trials, fully exploring the potential of other competitive models for a fair comparison is prohibitively expensive.![img-2.jpeg](img-2.jpeg)\n\n![img-3.jpeg](img-3.jpeg)\n\n![img-4.jpeg](img-4.jpeg)\nFigure 3: Diminishing returns of training on more data: object detection accuracy increases linearly as the number of training examples increases exponentially [25].\n\n![img-5.jpeg](img-5.jpeg)\n\nThe topic of massive number of experiments is not as well studied as the first two discussed above. In fact, the number of experiments performed during model construction is often underreported. Nonetheless, evidence for a logarithmic relation exists here as well, between the n",
+        "img_path": "extracted_data/document_25/img-3.jpeg",
+        "img_description": "The graph displays the ImageNet top-1 accuracy percentage against the number of training images in a source task on Instagram, with a range from 10^6 to 10^9 images. Multiple lines, both solid and dashed, represent different models or conditions, all showing an upward trend as the number of training images increases, achieving accuracies between 30% and 55%. The title indicates that the target task is ImageNet-5k."
+    },
+    {
+        "doc_path": "extracted_data/document_25/doc_25.md",
+        "ref_id": "schwartz2019",
+        "ref_url": "https://arxiv.org/pdf/1907.10597",
+        "img_id": "img-4.jpeg",
+        "img_uid": "schwartz2019img-4.jpeg",
+        "context": "ling. With a fixed architecture, researchers from DeepMind *[26]* evaluated 1,500 hyperparameter assignments to demonstrate that an LSTM language model *[15]* can reach state-of-the-art perplexity results. Despite the value of this result in showing that the performance of an LSTM does not plateau after only a few hyperparameter trials, fully exploring the potential of other competitive models for a fair comparison is prohibitively expensive.![img-2.jpeg](img-2.jpeg)\n\n![img-3.jpeg](img-3.jpeg)\n\n![img-4.jpeg](img-4.jpeg)\nFigure 3: Diminishing returns of training on more data: object detection accuracy increases linearly as the number of training examples increases exponentially [25].\n\n![img-5.jpeg](img-5.jpeg)\n\nThe topic of massive number of experiments is not as well studied as the first two discussed above. In fact, the number of experiments performed during model construction is often underreported. Nonetheless, evidence for a logarithmic relation exists here as well, between the number of experiments and pe",
+        "img_path": "extracted_data/document_25/img-4.jpeg",
+        "img_description": "The graph displays the relationship between the number of training images in a source task (Instagram) and the ImageNet top-1 accuracy percentage achieved on the target task (ImageNet-9k). As the number of training images increases from \\(10^7\\) to \\(10^9\\), there is a noticeable upward trend in accuracy, with multiple solid and dashed lines representing different models or configurations. The solid lines generally show higher accuracy levels compared to the dashed lines across all data points."
+    },
+    {
+        "doc_path": "extracted_data/document_25/doc_25.md",
+        "ref_id": "schwartz2019",
+        "ref_url": "https://arxiv.org/pdf/1907.10597",
+        "img_id": "img-5.jpeg",
+        "img_uid": "schwartz2019img-5.jpeg",
+        "context": "ity results. Despite the value of this result in showing that the performance of an LSTM does not plateau after only a few hyperparameter trials, fully exploring the potential of other competitive models for a fair comparison is prohibitively expensive.![img-2.jpeg](img-2.jpeg)\n\n![img-3.jpeg](img-3.jpeg)\n\n![img-4.jpeg](img-4.jpeg)\nFigure 3: Diminishing returns of training on more data: object detection accuracy increases linearly as the number of training examples increases exponentially [25].\n\n![img-5.jpeg](img-5.jpeg)\n\nThe topic of massive number of experiments is not as well studied as the first two discussed above. In fact, the number of experiments performed during model construction is often underreported. Nonetheless, evidence for a logarithmic relation exists here as well, between the number of experiments and performance gains [9].\n\nDiscussion The benefits of pouring more resources into models are certainly of interest to the AI community. Indeed, there is value in pushing the limits of model size, da",
+        "img_path": "extracted_data/document_25/img-5.jpeg",
+        "img_description": "The graph displays the relationship between the number of training images in the source task (Instagram) and accuracy percentage for the CUB2011 target task. It illustrates multiple curves, indicating an overall trend of increasing accuracy as the number of training images rises, with all curves approaching or exceeding 80% accuracy at higher image counts. The graph suggests that a larger dataset size from the source task positively influences performance on the target task."
+    },
+    {
+        "doc_path": "extracted_data/document_25/doc_25.md",
+        "ref_id": "schwartz2019",
+        "ref_url": "https://arxiv.org/pdf/1907.10597",
+        "img_id": "img-6.jpeg",
+        "img_uid": "schwartz2019img-6.jpeg",
+        "context": " different approaches, unlike the measures described above. Third, FPO is strongly correlated with the running time of the model *[4]*. Unlike asymptotic runtime, FPO also considers the amount of work done at each time step.\n\nSeveral packages exist for computing FPO in various neural network libraries, though none of them contains all the building blocks required to construct all modern AI models. We encourage the builders of neural network libraries to implement such functionality directly.\n\n##![img-6.jpeg](img-6.jpeg)\n(a) Different models.\n\n![img-7.jpeg](img-7.jpeg)\n(b) Different layers of the ResNet model.\nFigure 4: Increase in FPO results in diminishing return for object detection top-1 accuracy. Plots (bottom to top): model parameters (in million), FPO (in billions), top-1 accuracy on ImageNet. (4a): Different models: AlexNet [20], ResNet [14], ResNext [47], DPN107 [5], SENet154 [17]. (4b): Comparison of different sizes (measured by the number of layers) of the ResNet model [14].\n\nDiscussion Efficient mac",
+        "img_path": "extracted_data/document_25/img-6.jpeg",
+        "img_description": "The image displays three line graphs comparing different neural network models (AlexNet, ResNet152, ResNext, DPN107, and SENet154) across various metrics from 2012 to 2018. The top graph shows an increase in accuracy (acc.), starting at 56.4 for AlexNet in 2012 and reaching 81.3 for SENet154 in 2018. The middle graph shows the floating point operations per second (FPO) rising from 0.7 billion to 20.8 billion, while the bottom graph indicates an increase in parameters (params) from 61.1 million to 115.1 million over the same period."
+    },
+    {
+        "doc_path": "extracted_data/document_25/doc_25.md",
+        "ref_id": "schwartz2019",
+        "ref_url": "https://arxiv.org/pdf/1907.10597",
+        "img_id": "img-7.jpeg",
+        "img_uid": "schwartz2019img-7.jpeg",
+        "context": "bed above. Third, FPO is strongly correlated with the running time of the model *[4]*. Unlike asymptotic runtime, FPO also considers the amount of work done at each time step.\n\nSeveral packages exist for computing FPO in various neural network libraries, though none of them contains all the building blocks required to construct all modern AI models. We encourage the builders of neural network libraries to implement such functionality directly.\n\n##![img-6.jpeg](img-6.jpeg)\n(a) Different models.\n\n![img-7.jpeg](img-7.jpeg)\n(b) Different layers of the ResNet model.\nFigure 4: Increase in FPO results in diminishing return for object detection top-1 accuracy. Plots (bottom to top): model parameters (in million), FPO (in billions), top-1 accuracy on ImageNet. (4a): Different models: AlexNet [20], ResNet [14], ResNext [47], DPN107 [5], SENet154 [17]. (4b): Comparison of different sizes (measured by the number of layers) of the ResNet model [14].\n\nDiscussion Efficient machine learning approaches have received attention ",
+        "img_path": "extracted_data/document_25/img-7.jpeg",
+        "img_description": "The image consists of three line graphs showing the progression of three different metrics\u2014accuracy (acc.), floating-point operations (FPO, in billions), and parameters (in millions)\u2014as the number of layers in a model increases. The accuracy graph indicates a gradual increase from 70.1 to 78.4 as layers increase from 18 to 152. Similarly, both the FPO and parameters graphs display a consistent rise, with FPO ranging from 1.8 to 11.6 billion and parameters from 11.7 to 60.2 million over the same range of layers."
+    }
+]
