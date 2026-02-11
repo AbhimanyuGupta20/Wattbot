@@ -14,9 +14,6 @@ Wattbot is a full-stack project designed to help researchers, engineers and poli
 - **Backend:** Python, Pandas, LLM APIs
 - **Data and Database Management:** Mistral OCR, LlamaIndex (for chunking and embedding)
 
-## Model Accuracy Note
-This chatbot leverages a limited dataset of around 20 documents. As such, it may return "out of scope" for questions that seem relevant but fall out of scope. This is also a work in progress, and I am currently working on modifying parameters to improve performance. 
-
 ## How to Experiment with the Bot
 1. [Install Python 3.11+](https://www.python.org/downloads/)
 2. Install dependencies
@@ -27,3 +24,6 @@ pip install -r requirements.txt
 ```bash
 streamlit run app.py
 ```
+
+## Model Accuracy Note
+This chatbot leverages a limited dataset of around 20 documents. As such, it may return "out of scope" for questions that seem relevant but fall out of scope. This is also a work in progress, and I am currently working on modifying parameters to improve performance. 
